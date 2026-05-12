@@ -1,0 +1,94 @@
+name: Gerar Newsletter Posto em Dia
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Backup: Sexta 20:30 UTC = 17:30 BRT.
+    # Cron primário é o n8n (workflow "Newsletter — Agendador 17:30 sexta")
+    # que dispara via workflow_dispatch da GitHub API.
+    - cron: "30 20 * * 5"
+
+permissions:
+  contents: write
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Node deps
+        run: npm install
+
+      - name: Install Playwright + Chromium
+        run: |
+          pip install playwright
+          playwright install chromium --with-deps
+
+      - name: Gerar HTML + PDFs
+        id: gerar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/gerar-newsletter.mjs
+
+      - name: Commit + push edição
+        env:
+          EDICAO: ${{ steps.gerar.outputs.edicao }}
+          PERIODO: ${{ steps.gerar.outputs.periodo }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add editions/
+          if git diff --cached --quiet; then
+            echo "Sem mudanças para commitar (edição já existe?)"
+          else
+            git commit -m "newsletter: edição ${EDICAO} (${PERIODO})"
+            git push
+          fi
+
+      - name: Avisar n8n
+        if: success() && steps.gerar.outputs.edicao != ''
+        env:
+          N8N_NEWSLETTER_URL: ${{ secrets.N8N_NEWSLETTER_URL }}
+          EDICAO: ${{ steps.gerar.outputs.edicao }}
+          PERIODO: ${{ steps.gerar.outputs.periodo }}
+          MOBILE_PATH: ${{ steps.gerar.outputs.mobile_path }}
+          A4_PATH: ${{ steps.gerar.outputs.a4_path }}
+        run: |
+          if [ -z "$N8N_NEWSLETTER_URL" ]; then
+            echo "N8N_NEWSLETTER_URL não configurado — pulando notificação"
+            exit 0
+          fi
+          REPO="${{ github.repository }}"
+          SHA="${{ github.sha }}"
+          MOBILE_URL="https://github.com/${REPO}/raw/${SHA}/${MOBILE_PATH}"
+          A4_URL="https://github.com/${REPO}/raw/${SHA}/${A4_PATH}"
+          PAYLOAD=$(cat <<EOF
+          {
+            "edicao": "${EDICAO}",
+            "periodo": "${PERIODO}",
+            "mobile_url": "${MOBILE_URL}",
+            "a4_url": "${A4_URL}",
+            "mobile_filename": "PostoEmDia_Semana${EDICAO}_Mobile.pdf",
+            "a4_filename": "PostoEmDia_Semana${EDICAO}_A4.pdf"
+          }
+          EOF
+          )
+          echo "Enviando para n8n: $N8N_NEWSLETTER_URL"
+          echo "$PAYLOAD"
+          curl -fsS -X POST "$N8N_NEWSLETTER_URL" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD"

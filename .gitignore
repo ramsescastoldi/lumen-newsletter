@@ -1,0 +1,4 @@
+node_modules/
+debug-raw-response.txt
+.env
+*.log

@@ -1,0 +1,13 @@
+{
+  "name": "lumen-newsletter",
+  "version": "1.0.0",
+  "description": "Newsletter semanal Posto em Dia — geração automatizada via Claude API + GitHub Actions",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "gerar": "node scripts/gerar-newsletter.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0"
+  }
+}

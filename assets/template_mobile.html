@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<meta name="theme-color" content="#0D1B2A">
+<title>Posto em Dia | Edição {{EDICAO}} — Lumen Posto Club</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #1a1a1a;
+    background: #f0ece2;
+    font-size: 19px;
+    line-height: 1.55;
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #ffffff;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .header {
+    background: #0D1B2A;
+    color: #ffffff;
+    padding: 22px 20px;
+    border-bottom: 6px solid #C9A84C;
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .logo-badge {
+    width: 56px; height: 56px;
+    border: 3px solid #C9A84C;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0D1B2A;
+    color: #C9A84C;
+    font-size: 30px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .header-title {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    line-height: 1.05;
+  }
+  .header-sub {
+    font-size: 13px;
+    color: #C9A84C;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    font-weight: 600;
+  }
+  .header-meta {
+    border-top: 1px solid #C9A84C;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #C9A84C;
+    font-size: 16px;
+  }
+  .header-meta .ed {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 21px;
+  }
+
+  /* SECTION TITLE */
+  .section-title {
+    background: #0D1B2A;
+    color: #C9A84C;
+    padding: 14px 20px;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin-top: 24px;
+    border-left: 6px solid #C9A84C;
+  }
+
+  /* INDICADORES — cards empilhados */
+  .indicators-list {
+    padding: 0 16px;
+    margin-top: 14px;
+  }
+  .ind-card {
+    background: #fafaf6;
+    border: 1px solid #e6e2d6;
+    border-left: 5px solid #C9A84C;
+    border-radius: 4px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .ind-card.up { border-left-color: #c0392b; }
+  .ind-card.down { border-left-color: #1e8449; }
+  .ind-card.pending { border-left-color: #b58800; }
+  .ind-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0D1B2A;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 4px;
+  }
+  .ind-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .ind-value {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Courier New', monospace;
+    color: #0D1B2A;
+  }
+  .ind-var {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .ind-var.up { color: #c0392b; }
+  .ind-var.down { color: #1e8449; }
+  .ind-var.neutral { color: #555; font-style: italic; }
+  .ind-var.pending { color: #b58800; font-style: italic; }
+  .ind-source {
+    font-size: 13px;
+    color: #777;
+    margin-top: 6px;
+    font-style: italic;
+  }
+  .ind-pending-value {
+    font-size: 20px;
+    color: #b58800;
+    font-style: italic;
+    font-weight: 600;
+  }
+  .source-note {
+    background: #fff8e5;
+    border-left: 4px solid #b58800;
+    padding: 12px 14px;
+    margin: 12px 16px 0 16px;
+    font-size: 15px;
+    color: #555;
+    font-style: italic;
+    border-radius: 3px;
+  }
+
+  /* CARDS EDITORIAIS */
+  .cards-wrap {
+    padding: 0 16px;
+    margin-top: 12px;
+  }
+  .card {
+    background: #fafaf6;
+    border-left: 6px solid #888;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .card.red    { border-left-color: #c0392b; }
+  .card.yellow { border-left-color: #d4a017; }
+  .card.green  { border-left-color: #1e8449; }
+  .card.blue   { border-left-color: #2c6e8f; }
+
+  .card-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .tag-red    { background: #c0392b; }
+  .tag-yellow { background: #d4a017; }
+  .tag-green  { background: #1e8449; }
+  .tag-blue   { background: #2c6e8f; }
+
+  .card-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0D1B2A;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .card-block { margin-top: 14px; }
+  .block-label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #0D1B2A;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-bottom: 2px dotted #C9A84C;
+    padding-bottom: 3px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .card p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2a2a2a;
+  }
+
+  /* AÇÕES "O QUE FAZER HOJE" */
+  .actions-box {
+    background: #0D1B2A;
+    color: #ffffff;
+    padding: 22px 20px;
+    margin: 20px 16px 0 16px;
+    border-top: 5px solid #C9A84C;
+    border-bottom: 5px solid #C9A84C;
+    border-radius: 4px;
+  }
+  .actions-box h3 {
+    color: #C9A84C;
+    font-size: 19px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .actions-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .actions-box li {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+    padding-left: 22px;
+    position: relative;
+  }
+  .actions-box li:before {
+    content: "▸";
+    color: #C9A84C;
+    font-weight: 800;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+  }
+  .actions-box li:last-child { margin-bottom: 0; }
+  .actions-box li strong { color: #C9A84C; }
+
+  /* BENEFÍCIO VERIMO */
+  .benefit-box {
+    background: #f7f4e8;
+    border: 2px solid #C9A84C;
+    padding: 20px;
+    margin: 20px 16px 0 16px;
+    border-radius: 4px;
+  }
+  .benefit-title {
+    font-size: 21px;
+    font-weight: 800;
+    color: #0D1B2A;
+    margin-bottom: 12px;
+    line-height: 1.25;
+  }
+  .benefit-box p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 10px;
+    color: #2a2a2a;
+  }
+  .benefit-box .ramos {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .benefit-box .savings {
+    color: #c0392b;
+    font-weight: 800;
+    font-size: 22px;
+    display: block;
+    margin: 12px 0 8px 0;
+  }
+  .contact-button {
+    display: block;
+    background: #0D1B2A;
+    color: #C9A84C !important;
+    padding: 16px 20px;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 14px;
+    box-shadow: 0 2px 6px rgba(13,27,42,0.25);
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 28px;
+    padding: 22px 20px;
+    border-top: 3px solid #C9A84C;
+    text-align: center;
+    color: #555;
+    background: #fafaf6;
+  }
+  .footer .brand {
+    color: #0D1B2A;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+  .footer .desc {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .footer .meta {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div class="logo-badge">L</div>
+    <div>
+      <div class="header-title">POSTO EM DIA</div>
+      <div class="header-sub">Lumen Posto Club</div>
+    </div>
+  </div>
+  <div class="header-meta">
+    <div class="ed">Edição {{EDICAO}}</div>
+    <div>{{PERIODO}}</div>
+  </div>
+</div>
+
+<!-- INDICADORES -->
+<div class="section-title">📊 Indicadores de Mercado</div>
+
+<div class="indicators-list">
+{{INDICADORES}}
+</div>
+
+{{NOTA_FONTE}}
+
+<!-- CARDS EDITORIAIS -->
+<div class="section-title">📰 Os 5 Movimentos da Semana</div>
+
+<div class="cards-wrap">
+{{CARDS}}
+</div>
+
+<!-- O QUE FAZER HOJE -->
+<div class="actions-box">
+  <h3>🎯 O Que Fazer Hoje</h3>
+  <ul>
+{{ACOES_HOJE}}
+  </ul>
+</div>
+
+<!-- BENEFÍCIO VERIMO (BLOCO FIXO) -->
+<div class="benefit-box">
+  <div class="benefit-title">🛡️ Benefício do Clube — Seguros Verimo</div>
+  <p>Acesso a <strong>todas as seguradoras</strong> via plataforma Verimo (Ramsés é franqueado). Cotação comparativa para qualquer apólice — pessoal, do posto, da família, dos funcionários.</p>
+  <p class="ramos">Auto · Patrimonial · Vida · Frota · RC Ambiental · RC Geral · Lucros Cessantes · Saúde &amp; Odonto · Vida em Grupo</p>
+  <span class="savings">💰 Economia média: 25%</span>
+  <p>📲 Apólice vencendo? Envie para análise:</p>
+  <a href="https://wa.me/5565992657008" class="contact-button">(65) 99265-7008</a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="brand">LUMEN POSTO CLUB</div>
+  <div class="desc">Inteligência de mercado para donos de posto e revendedores de combustíveis</div>
+  <div class="meta">
+    Edição {{EDICAO}} · {{PERIODO}}<br>
+    Fontes: {{FONTES}}
+  </div>
+</div>
+
+</div><!-- /container -->
+
+</body>
+</html>
