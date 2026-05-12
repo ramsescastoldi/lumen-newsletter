@@ -1,157 +1,148 @@
 # Fontes de Dados — Como Buscar
 
-Guia operacional para coleta dos indicadores e contexto editorial. Sempre buscar em paralelo (web_search múltiplo) para acelerar.
+Guia operacional pra coleta dos indicadores e contexto editorial. Sempre buscar EM PARALELO no início.
 
-## 1. Petróleo internacional (Brent + WTI)
+## 1. Petróleo internacional
 
-**Frequência**: diária
+**Brent + WTI** — preço de fechamento + variação % vs. dia anterior.
 
-**Buscas recomendadas**:
+Buscas:
 ```
 Brent crude oil price today [DD month YYYY]
 WTI crude oil price today
 ```
 
-**Fontes confiáveis**:
-- TradingEconomics (`tradingeconomics.com/commodity/brent-crude-oil`)
-- Investing.com (`investing.com/commodities/brent-oil`)
-- Reuters / Bloomberg
-- Fortune (`fortune.com/article/price-of-oil-...`)
+Fontes: TradingEconomics, Investing.com, Reuters, Bloomberg, ICE, NYMEX.
 
-**O que extrair**: preço de fechamento, variação % vs. dia anterior, contexto da movimentação (geopolítica, OPEP+, EIA stocks).
+Extrair também contexto (geopolítica, OPEP+, EIA stocks, Hormuz, Rússia).
 
-## 2. Câmbio USD/BRL
+## 2. Moedas
 
-**Frequência**: diária
+**USD/BRL, EUR/BRL** — cotação fechamento PTAX.
 
-**Buscas recomendadas**:
+Buscas:
 ```
-dólar real hoje cotação [DD mês YYYY]
+dólar real cotação hoje [DD mês YYYY]
 USD BRL exchange rate today
+EUR BRL hoje
 ```
 
-**Fontes confiáveis**:
-- Banco Central do Brasil (`bcb.gov.br`) — cotação oficial PTAX
-- Investing.com BR (`br.investing.com/currencies/usd-brl`)
+Fontes: Banco Central do Brasil (PTAX), Investing.com BR.
 
-**O que extrair**: cotação fechamento, tendência (estável/alta/queda).
+**DXY (Dollar Index)** — Buscar `DXY today` ou `dollar index today`. Fonte: ICE.
 
-## 3. ANP — Síntese Semanal de Preços
+**Bitcoin** — opcional, mas se for relevante (movimento >2% ou notícia), incluir. Fontes: Coinbase, Investing, Binance.
 
-**Frequência**: semanal (publicada nas quartas/quintas, referente à semana anterior)
+## 3. Bolsas
 
-**URL padrão (template)**:
+**Ibovespa** — fechamento mais recente + var %. Fonte: B3.
+**S&P 500, Nasdaq, Dow Jones** — fechamento + var %. Fontes: NYSE, Nasdaq.
+
+Buscas:
+```
+Ibovespa fechamento hoje
+S&P 500 close today
+Nasdaq close today
+```
+
+Inclua contexto: setores que puxaram alta/queda, notícias corporativas relevantes (Petrobras, Vale, Banco do Brasil em especial).
+
+## 4. Juros & Inflação
+
+**Selic** — taxa atual + última reunião do Copom (data + decisão). Fonte: BCB, ata Copom.
+**Fed Funds** — taxa atual + última decisão FOMC. Fonte: Federal Reserve.
+**IPCA / IPCA-15** — último número divulgado + acumulado 12 meses. Fonte: IBGE.
+**Focus IPCA 2026** — projeção mediana boletim mais recente. Fonte: BCB Focus (geralmente publicado segunda-feira).
+
+Buscas:
+```
+Selic atual Copom
+Focus boletim hoje IPCA 2026
+IPCA-15 último resultado IBGE
+Federal Reserve interest rate decision
+```
+
+## 5. ANP — Síntese Semanal
+
+**Frequência**: semanal (geralmente terças/quartas).
+
+URL padrão:
 ```
 https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/arq-sintese-semanal/2026/sintese-precos-NN.pdf
 ```
 
-Onde `NN` é o número da semana com 2 dígitos (ex: `sintese-precos-15.pdf`, `sintese-precos-16.pdf`).
+Buscar pelo número da semana mais recente disponível. Página índice:
+```
+https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/sintese-semanal-do-comportamento-dos-precos-dos-combustiveis
+```
 
-**Como descobrir o número da semana**:
-- Conte semanas do ano a partir de janeiro
-- Ou busque: `"ANP síntese semanal preços combustíveis semana [N] 2026"`
+Extrair preços médios Brasil de: Gasolina C, Etanol Hidratado, Diesel S-10, Diesel comum, GLP P-13.
 
-**O que extrair**:
-- Gasolina C comum — preço médio Brasil (R$/L)
-- Etanol Hidratado — preço médio Brasil (R$/L)
-- Diesel B S-10 — preço médio Brasil (R$/L)
-- GLP P-13 — preço médio Brasil (R$/13kg)
-- Variação % vs. semana anterior
+Se a síntese da semana corrente não estiver disponível, usar a anterior + marcar pending.
 
-**Atenção**: a ANP ocasionalmente atrasa publicação por problema técnico. Se a síntese da semana corrente não está disponível, marque indicadores como `pending` e cite o motivo na nota de fonte.
+## 6. CEPEA/ESALQ — Etanol Produtor
 
-**Página índice**: `https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/sintese-semanal-do-comportamento-dos-precos-dos-combustiveis`
+**Frequência**: semanal (terças-quintas).
 
-## 4. CEPEA/ESALQ — Etanol Produtor
-
-**Frequência**: semanal (boletim publicado às terças-quintas)
-
-**Buscas recomendadas**:
+Buscas:
 ```
 CEPEA ESALQ etanol hidratado anidro preço [mês] 2026
-ETANOL CEPEA semana [DD] [mês] 2026
 ```
 
-**Fontes confiáveis**:
-- Cepea direto: `cepea.esalq.usp.br/br/indicador/etanol.aspx`
-- Cepea diárias: `cepea.esalq.usp.br/br/diarias-de-mercado/etanol-cepea-...`
-- NovaCana (`novacana.com/noticias`) — agregador setorial confiável
-- UDOP (`udop.com.br`) — associação canavieira
+Fontes: cepea.esalq.usp.br, NovaCana, UDOP.
 
-**O que extrair**:
-- Indicador semanal hidratado SP (R$/L, líquido de ICMS e PIS/Cofins)
-- Indicador semanal anidro SP (R$/L, líquido de impostos)
-- Variação % vs. semana anterior
-- Contexto: estoques, safra, demanda, relação com gasolina (E/G)
+Extrair: indicador semanal hidratado SP (R$/L sem impostos) + indicador semanal anidro SP. Inclua variação % vs. semana anterior.
 
-**Importante**: O preço CEPEA é "produtor" (saída da usina, sem impostos). NÃO confundir com preço de bomba (que é o da ANP).
+## 7. Abicom — Defasagem Petrobras
 
-## 5. Abicom — Defasagem Petrobras
+**Frequência**: semanal (geralmente segunda/terça, fechamento da sexta anterior).
 
-**Frequência**: semanal (geralmente segunda ou terça, com fechamento da sexta anterior)
-
-**Buscas recomendadas**:
+Buscas:
 ```
 Abicom defasagem Petrobras diesel gasolina [mês] 2026
 defasagem combustíveis paridade importação [data]
 ```
 
-**Fontes confiáveis**:
-- Abicom direto: `abicom.com.br`
-- Brasil Postos (`brasilpostos.com.br`) — costuma publicar primeiro
-- Times Brasil (CNBC) — entrevistas com Sergio Araujo (presidente da Abicom)
-- Revista Oeste, Seu Dinheiro, ClickPetróleoeGás
+Fontes: abicom.com.br, Brasil Postos, Times Brasil (entrevistas Sergio Araujo).
 
-**O que extrair**:
-- Defasagem do diesel (% e R$/L)
-- Defasagem da gasolina (% e R$/L)
-- Quantos dias de janelas fechadas para importação
-- Comentário sobre risco de desabastecimento (especialmente em meses de safra)
+Extrair: defasagem diesel (% + R$/L), defasagem gasolina (% + R$/L), dias de janela fechada.
 
-## 6. Notícias setoriais (5 a 8 manchetes da semana)
+## 8. Notícias setoriais (10-15 manchetes da semana)
 
-**Buscas recomendadas**:
+Buscas amplas pra alimentar 5 manchetes + 6 matérias:
+
 ```
 combustíveis Brasil [mês] 2026 notícias
 ANP fiscalização postos [mês] 2026
-MP subsídio diesel 2026
-Petrobras reajuste gasolina diesel [mês] 2026
+MP subsídio combustíveis 2026
+STF ADI combustíveis
+Lula Petrobras paridade 2026
 CNPE biocombustíveis E30 B15 2026
+Petrobras reajuste gasolina diesel [mês] 2026
+Fecombustíveis vendas varejo combustíveis 2026
+Fenabrave vendas carros elétrico híbrido 2026
 ```
 
-**Fontes confiáveis para contexto editorial**:
-- **Brasil Postos** — referência setorial principal, foco no revendedor
-- **ClubPetro** — análises de mercado para postos
-- **Petróleo Hoje** — notícias técnicas
-- **Times Brasil (CNBC)** — entrevistas com lideranças setoriais
-- **Agência Câmara, Agência Senado, Agência Gov** — fonte primária de MPs e decretos
-- **Ministério da Justiça (gov.br/mj)** — balanços de fiscalização (Procon, ANP)
-- **Ministério da Fazenda (gov.br/fazenda)** — anúncios sobre subsídios e reformas
-- **MME (gov.br/mme)** — política energética
+Fontes específicas por seção:
 
-## 7. Datas de referência para 2026
+- **Política**: Agência Câmara, Agência Senado, Agência Gov, STF, Ministério da Fazenda, Ministério de Minas e Energia (MME), Casa Civil.
+- **Economia BR**: BCB, IBGE, IPEA, Folha, Estadão, Valor, InfoMoney, Daycoval, XP, Itaú Macro.
+- **Economia Internacional**: Reuters, Bloomberg, CNBC, FT, WSJ, Federal Reserve, IMF, OPEC.
+- **Varejo**: Fecombustíveis, Plural, ClubPetro, Brasil Postos, Abrasel (conveniência).
+- **Automotivo**: Fenabrave, Anfavea, ABEIFA, NovaCana (etanol-veículo), Quatro Rodas, AutoData.
+- **Combustíveis (setor)**: Brasil Postos, ClubPetro, Petróleo Hoje, NovaCana, UDOP, Times Brasil.
 
-| Semana | Início | Fim |
-|---|---|---|
-| 1 | 28/12/2025 | 03/01/2026 |
-| 2 | 04/01/2026 | 10/01/2026 |
-| ... | ... | ... |
-| 16 | 12/04/2026 | 18/04/2026 |
-| 17 | 19/04/2026 | 25/04/2026 |
-| 18 | 26/04/2026 | 02/05/2026 |
-
-Para descobrir a semana de qualquer data: `(número do dia do ano) / 7`, arredondado para cima.
-
-## 8. Padrão de busca — boas práticas
+## 9. Padrão de busca — boas práticas
 
 - **Buscas curtas**: 4-6 palavras-chave (não frases longas)
-- **Inclua o ano**: as buscas atuais devem incluir "2026" para evitar resultados antigos
-- **Combine instituição + produto + período**: ex: "ANP síntese gasolina semana 16 2026"
-- **Nunca use aspas** a menos que precise de termo exato
-- **Para datas**: prefira "[mês] 2026" a "[DD/MM/2026]" — funciona melhor
+- **Inclua o ano**: "2026" pra evitar resultados antigos
+- **Combine instituição + tema**: "Copom Selic decisão maio 2026"
+- **Pra datas**: prefira "[mês] 2026" a "[DD/MM/2026]"
 
-## 9. Quando os dados conflitam
+## 10. Quando os dados conflitam
 
-- Defasagem Petrobras pode variar entre fontes (Abicom vs. StoneX vs. Petrobras direto). Use **Abicom** como fonte primária do clube.
-- Brent pode variar entre Investing, TradingEconomics, Reuters em alguns centavos. Use a fonte com timestamp mais recente.
-- Etanol CEPEA tem variantes: indicador semanal SP, mensal SP, semanal MT/PE/GO. Use **semanal SP** como referência padrão (representa ~60% do mercado).
+- Defasagem Petrobras: Abicom é a fonte primária do clube (vs. StoneX, Petrobras direto)
+- Brent: use a fonte com timestamp mais recente
+- Etanol CEPEA: use indicador semanal SP (representa ~60% do mercado nacional)
+- Bolsas: B3 oficial pro Ibovespa, NYSE/Nasdaq pras americanas
+- Inflação: IBGE pro IPCA, BCB Focus pra projeções

@@ -1,102 +1,95 @@
 # Princípios Editoriais — Posto em Dia
 
-Este documento detalha os princípios não-negociáveis da newsletter. Em caso de dúvida, releia.
+## 1. Modelo editorial
 
-## 1. Tom e estilo
+É um JORNAL SEMANAL completo, não um boletim de indicadores. Estrutura fixa:
 
-- **Copy-ready**: texto entregue pronto para publicar. Sem necessidade de Ramsés revisar palavra por palavra.
-- **Operacional**: cada parágrafo tem implicação prática. Não é jornalismo econômico — é inteligência aplicada para quem opera bombas e tanques todo dia.
-- **Conciso**: Ramsés é direto. Sem rodeios, sem "Como vimos anteriormente", sem "Vale a pena destacar que".
-- **Sem preamble**: não comece respostas com "Claro!", "Ótimo!", "Vou fazer isso para você". Vai direto ao conteúdo.
+1. **Indicadores Financeiros** — 7 blocos de cotações fechadas (Petróleo, Moedas, Bolsas, Juros & Inflação, ANP, CEPEA, Abicom)
+2. **5 Manchetes da Semana** — as 5 notícias mais relevantes (com filtro "afeta dono de posto"), com numeração de capa
+3. **Mercado de Combustíveis** — matéria longa de análise setorial
+4. **Política · Quente** — uma matéria sobre conflito político/regulatório atual com impacto direto
+5. **Economia · Brasil** — leitura da semana sobre Selic, IPCA, Focus, câmbio, atividade
+6. **Economia · Internacional** — Fed, China, OPEP+, geopolítica, commodities
+7. **Varejo** — análise sobre varejo brasileiro, conveniência, hábitos de consumo
+8. **Automotivo** — carros, EVs, híbridos, infraestrutura, caminhões, tendências
 
-## 2. Voz do clube
+Cada matéria longa tem ~3 parágrafos (3-5 linhas cada). Tom de jornalismo econômico premium — Valor Econômico, FT, NYT Business.
 
-A newsletter fala **com** o revendedor, não **sobre** o revendedor. Tratamos o leitor como par profissional, não como aluno.
+## 2. Tom e voz
 
-- Use "você" e imperativo (`Confirme`, `Renegocie`, `Acelere`)
-- Linguagem técnica do setor sem explicação excessiva (PPI, defasagem, bandeira branca, TRR, E/G — termos do glossário do setor)
-- Tom firme, com opinião quando o dado justifica ("Não é teatro", "Janela curta")
-- Sem condescendência. Quem lê é dono de posto há anos.
+- **Copy-ready**: prontos pra publicar. Sem necessidade de revisão palavra por palavra.
+- **Operacional**: implicação prática pro dono de posto em cada matéria.
+- **Densidade jornalística**: números, datas, fontes oficiais citadas, nomes próprios.
+- **Sem condescendência**: leitor é dono de posto há anos. Linguagem técnica do setor sem explicar o óbvio.
+- **Sem preamble**: "Claro!", "Vou fazer isso", "Como podemos ver" — banidos.
+- **Imperativo quando há ação**: "Trave compras", "Renegocie", "Monitore".
 
-## 3. Regra dos dados
+## 3. Regras invioláveis dos dados
 
 ### Nunca fabricar valores
 
-Se um indicador não está disponível na fonte oficial, marca `a confirmar` com classe `pending`. Sempre cite o motivo na nota de fonte.
+Se um indicador não estiver disponível, use `direction: "pending"` + `value: "a confirmar"` + cite o motivo no `source`.
 
 ### Sempre citar fonte e data
 
 - ❌ "O Brent subiu nesta semana"
-- ✅ "O Brent saltou 3,59% em 22/04, segundo Investing/ICE"
+- ✅ "O Brent saltou 2,41% em 12/mai, segundo ICE/Investing — fechamento US$ 103,73"
 
 ### Hierarquia de fontes
 
-1. **Fonte primária oficial**: ANP, CEPEA/ESALQ, Banco Central, MME, Câmara, Senado, MJ
-2. **Associações setoriais**: Abicom (defasagem), UNICA (etanol), Plural, Fecombustíveis
-3. **Veículos especializados**: Brasil Postos, ClubPetro, Petróleo Hoje, Times Brasil
-4. **Imprensa econômica**: Reuters, Bloomberg, CNBC, Valor, Folha
-5. **Aggregators / blogs**: usar com ressalva, sempre verificar a fonte primária citada
+1. **Fonte primária oficial**: ANP, CEPEA/ESALQ, Banco Central, B3, MME, IBGE, Câmara, Senado, FOMC
+2. **Associações setoriais**: Abicom, Fecombustíveis, UNICA, Plural, Fenabrave, ABEIFA
+3. **Veículos especializados**: Brasil Postos, ClubPetro, Petróleo Hoje, NovaCana, Times Brasil
+4. **Imprensa econômica**: Reuters, Bloomberg, Valor, Folha, Estadão, CNBC, FT
+5. **Aggregators**: usar com ressalva, verificar a fonte primária citada
 
-Se uma notícia bombástica aparece só em fonte secundária, busque a fonte primária antes de publicar.
+## 4. Direção dos indicadores (perspectiva operacional)
 
-## 4. Estrutura de cards (reforço)
+A cor não é "subiu/desceu" — é "bom/ruim pro posto":
 
-A ordem é **sempre**:
+| Indicador | Subiu = | Desceu = |
+|---|---|---|
+| Brent / WTI | `up` (vermelho — pressiona defasagem) | `down` (verde) |
+| USD/BRL, EUR/BRL | `up` (vermelho — dólar caro) | `down` (verde) |
+| Bolsas (IBOV, S&P, Nasdaq) | `down` (verde, neutro pro posto) | `up` (vermelho — aversão a risco) |
+| Selic / Fed / juros | `up` (vermelho — crédito caro) | `down` (verde) |
+| IPCA / inflação | `up` (vermelho) | `down` (verde) |
+| ANP bomba | `up` (vermelho — margem espremida) | `down` (verde) |
+| CEPEA usina | `up` (vermelho — etanol caro) | `down` (verde — janela de compra) |
+| Defasagem Abicom | `up` (vermelho — risco repasse) | `down` (verde — paridade saudável) |
 
-```
-O que aconteceu  →  Por que importa  →  Ação da semana
-```
+Quando estável, use `neutral`. Quando pendente, `pending`.
 
-Nunca inverta. Nunca omita. Nunca renomeie ("Resumo", "Contexto", "Recomendação" são variações erradas).
+## 5. Manchetes
 
-## 5. Codificação de cores (urgência)
+- Numeradas de 1 a 5
+- Headline forte (uma frase com dado concreto)
+- Resumo de 2-3 linhas (~60-90 palavras), com fato + por que importa pro posto
+- Mix temático: pode misturar política, economia, geopolítica, setor — filtro é "afeta o dono de posto"
 
-| Cor | Quando |
-|---|---|
-| 🔴 Vermelho | Decisão operacional NESTA semana. Risco real de prejuízo se ignorado. |
-| 🟡 Amarelo | Mudança de cenário relevante. Monitorar e preparar resposta. |
-| 🟢 Verde | Janela de oportunidade. Movimento ofensivo (renegociar contrato, ampliar mix). |
-| 🔵 Azul | Educativo / contextual. Use raramente — se a notícia é só "interessante", talvez não mereça card. |
+## 6. Matérias longas
 
-**Regra do equilíbrio**: numa edição saudável, raramente todas as 5 cores são iguais. Edição com 5 vermelhos = pânico (perde força do alerta). Edição com 5 verdes = ingenuidade.
+- Estrutura: `headline` + `deck` (italic, linha-fina) + `body` (3 parágrafos)
+- Cada parágrafo: 3-5 linhas (~180-280 palavras por matéria)
+- Use `<strong>...</strong>` pra destacar números e nomes chave (vai aparecer em azul petróleo no PDF)
+- Sem subtítulos dentro do body — fluxo contínuo
+- Último parágrafo termina com implicação operacional pro dono de posto
 
-## 6. Seção "O Que Fazer Hoje" — só atualiza com mudança real
+## 7. Política · Quente
 
-Esta é a regra mais importante e mais violada. Esta seção **não é renovada toda semana por padrão**.
+A seção de política é INCISIVA — busca um conflito, uma disputa, um movimento controverso da semana com efeito direto no setor. Não é resumo neutro. Tem ângulo, tem lados, tem consequência.
 
-Atualize SOMENTE quando:
-- Brent rompeu uma faixa de patamar (saiu de 80s para 100s, ou o contrário)
-- Defasagem Petrobras saltou >10pp em uma semana
-- Nova MP/decreto/resolução CNPE entrou em vigor
-- Risco de desabastecimento abriu ou fechou
-- Janela de etanol abriu ou fechou
-- Mandato de mistura mudou (E27→E30, B15 etc.)
+Exemplos de bons temas: ADIs no STF, vetos presidenciais, MP que pode caducar, projeto polêmico no Congresso, disputa federativa sobre ICMS, conflito Lula × governadores.
 
-Se nada disso aconteceu, mantenha a seção idêntica à edição anterior. Repetição de orientação reforça o padrão de comportamento.
-
-## 7. O que NÃO entra na newsletter
+## 8. O que NÃO entra
 
 - Análise política partidária ("o governo X é melhor que o Y")
 - Especulação sem dado ("o Brent pode ir a US$ 150")
-- Conteúdo motivacional genérico ("siga seus sonhos no setor!")
-- Self-help empresarial ("5 hábitos do dono de posto bem-sucedido")
-- Notícia de fofoca corporativa sem implicação operacional
-- Conteúdo que serve mais ao Lumen do que ao revendedor (autopromoção excessiva)
+- Conteúdo motivacional ("siga seus sonhos")
+- Self-help empresarial
+- Fofoca corporativa sem implicação operacional
+- Autopromoção excessiva do Lumen
 
-## 8. O que SEMPRE entra
+## 9. Comprimento total
 
-- Os 5 cards (estrutura fixa)
-- Indicadores de mercado (todos os 11 do template)
-- Seção "O Que Fazer Hoje" (atualizada conforme regra acima)
-- Bloco Verimo (fixo, sem alteração a menos que pedido)
-- Citação de fontes no rodapé
-
-## 9. Comprimento
-
-- Card: 3 blocos de 3-5 linhas cada. Total por card: ~12-15 linhas de texto.
-- "Ação da semana" pode ter listagem numerada embutida (1, 2, 3) quando há checklist.
-- Newsletter inteira: ~9.000-10.000 caracteres no HTML útil (sem CSS).
-
-## 10. Ramsés diz
-
-Quando em dúvida, pergunte: "Ramsés mandaria isso para o grupo do clube hoje?" Se a resposta é não — corte ou reescreva.
+Newsletter completa: ~10.000-13.000 caracteres no HTML útil (sem CSS). Cada matéria longa: ~1.500-2.000 caracteres.

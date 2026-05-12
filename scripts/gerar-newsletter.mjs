@@ -3,15 +3,19 @@
  * gerar-newsletter.mjs
  *
  * Roda no GitHub Actions toda sexta 17:30 BRT. Chama Claude API com web_search,
- * coleta dados de mercado, monta o HTML da edição e dispara o render dos 2 PDFs.
+ * coleta dados de mercado, monta o HTML da edição (estilo jornal) e dispara o
+ * render dos 2 PDFs.
  *
- * Saída:
- *   editions/semana<N>/source.html
- *   editions/semana<N>/PostoEmDia_Semana<N>_Mobile.pdf
- *   editions/semana<N>/PostoEmDia_Semana<N>_A4.pdf
- *   editions/semana<N>/meta.json     (edicao, periodo, fontes, timestamps)
- *
- * Exporta para GITHUB_OUTPUT: edicao, periodo, mobile_path, a4_path
+ * Estrutura da edição:
+ *   - Indicadores Financeiros (7 blocos agrupados)
+ *   - As 5 Manchetes da Semana
+ *   - Mercado de Combustíveis
+ *   - Política (notícia quente)
+ *   - Economia Brasil
+ *   - Economia Internacional
+ *   - Varejo
+ *   - Automotivo
+ *   - Bloco fixo Verimo + colofon
  */
 
 import Anthropic from "@anthropic-ai/sdk";
@@ -31,23 +35,17 @@ const MONTHS_PT = [
 ];
 
 function computeEdition(today = new Date()) {
-  // Edição = número da semana ISO da sexta-feira da edição.
-  // Período = domingo (semana atual) a sábado (semana atual), no estilo "10 a 16 / Mai / 2026".
   const friday = new Date(today);
-  const dow = friday.getDay(); // 0=Dom, 5=Sex
+  const dow = friday.getDay();
   if (dow !== 5) {
-    const diff = (5 - dow + 7) % 7 || 7;
     friday.setDate(friday.getDate() + (dow <= 5 ? 5 - dow : 12 - dow));
   }
-
-  // ISO week da sexta
   const t = new Date(Date.UTC(friday.getFullYear(), friday.getMonth(), friday.getDate()));
   const dayNum = t.getUTCDay() || 7;
   t.setUTCDate(t.getUTCDate() + 4 - dayNum);
   const yearStart = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
   const isoWeek = Math.ceil(((t - yearStart) / 86400000 + 1) / 7);
 
-  // Período: domingo a sábado dessa semana (estilo dashboard newsletter)
   const sunday = new Date(friday);
   sunday.setDate(friday.getDate() - 5);
   const saturday = new Date(friday);
@@ -73,13 +71,15 @@ function loadRef(name) {
 
 function buildSystemPrompt() {
   const principles = loadRef("editorial_principles.md");
-  const cards = loadRef("format_cards.md");
-  const indicadores = loadRef("format_indicadores.md");
   const sources = loadRef("data_sources.md");
 
-  return `Você é o redator editorial da newsletter semanal "Posto em Dia" do Lumen Posto Club. Editor-chefe: Ramsés Castoldi. Público: donos de posto e revendedores de combustíveis no Brasil.
+  return `Você é o redator-chefe da newsletter semanal "Posto em Dia" do Lumen Posto Club. Editor-chefe: Ramsés Castoldi. Público: donos de posto e revendedores de combustíveis no Brasil.
 
-Sua tarefa é produzir UMA edição da newsletter retornando EXCLUSIVAMENTE um JSON válido conforme o schema abaixo. NÃO escreva texto fora do JSON. NÃO use markdown fences. Retorne o JSON puro.
+O formato é um JORNAL SEMANAL completo, não um boletim de indicadores. Tom de redação de jornal econômico premium (estilo Valor Econômico, Financial Times, NYT Business). Cada matéria deve ter densidade jornalística, números, fontes citadas e implicação operacional pro dono de posto.
+
+# OBJETIVO
+
+Retorne EXCLUSIVAMENTE um JSON válido conforme o schema abaixo. NÃO escreva texto fora do JSON. NÃO use markdown fences. Apenas o JSON puro.
 
 # SCHEMA DE SAÍDA (estrito)
 
@@ -87,46 +87,77 @@ Sua tarefa é produzir UMA edição da newsletter retornando EXCLUSIVAMENTE um J
 {
   "indicadores": [
     {
-      "name": "Brent (USD/barril)",
-      "value": "US$ 102,15",          // valor formatado para exibição
-      "variation": "▲ 3,59%",          // com seta ▲/▼/≈, ou null se pending
-      "direction": "up",                // "up" | "down" | "neutral" | "pending"
-      "source": "ICE / Investing"
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 103,73",          // valor formatado pra exibição
+          "variation": "+2,41%",          // formato livre, vai aparecer com seta automática
+          "direction": "up",              // "up" | "down" | "neutral" | "pending"
+          "source": "ICE / Investing"
+        }
+      ]
     },
-    ... 11 indicadores na ordem do format_indicadores.md
+    ... 7 blocos exatamente nesta ordem:
+    1. "Petróleo & Energia"           — Brent, WTI
+    2. "Moedas"                       — USD/BRL, EUR/BRL, DXY, Bitcoin
+    3. "Bolsas"                       — Ibovespa, S&P 500, Nasdaq, Dow Jones
+    4. "Juros & Inflação"             — Selic, Fed Funds, IPCA-15, Focus IPCA 2026
+    5. "Preço na Bomba (ANP)"         — Gasolina C, Etanol Hidratado, Diesel S-10, Diesel comum, GLP P-13
+    6. "Usina (CEPEA/ESALQ)"          — Etanol Hidratado SP, Etanol Anidro SP
+    7. "Defasagem Petrobras (Abicom)" — Diesel, Gasolina
   ],
-  "nota_fonte": null,                  // string com aviso de pendência, ou null
-  "cards": [
+
+  "manchetes": [
     {
-      "cor": "red",                    // "red" | "yellow" | "green" | "blue"
-      "tag_text": "🔴 Ação Imediata",
       "numero": 1,
-      "titulo": "Título forte com dado concreto",
-      "aconteceu": "Texto do 'O que aconteceu' (3-5 linhas, fato + número + data + fonte)",
-      "importa": "Texto do 'Por que importa' (3-5 linhas, conexão direta com operação do posto)",
-      "acao": "Texto da 'Ação da semana' (3-6 linhas, verbos no imperativo)"
+      "headline": "Headline forte em uma frase com dado concreto",
+      "resumo": "2-3 linhas de resumo (60-90 palavras), com fato + por que importa pro posto"
     },
-    ... exatamente 5 cards
+    ... exatamente 5 manchetes
   ],
-  "acoes": [
-    "Item da seção 'O Que Fazer Hoje' (com tags <strong> dentro se quiser destacar)",
-    ... 4 a 6 itens
-  ],
-  "fontes": "ANP, CEPEA/ESALQ, Abicom, ICE/Investing, Banco Central, Câmara, MME"
+
+  "mercado": {
+    "headline": "Título da matéria de mercado de combustíveis",
+    "deck": "Linha-fina italic de 1-2 linhas (entrelinha entre headline e corpo)",
+    "body": [
+      "Parágrafo 1 (3-5 linhas, com dados, fontes, datas)",
+      "Parágrafo 2",
+      "Parágrafo 3 com ação operacional"
+    ]
+  },
+
+  "politica": { headline, deck, body },        // notícia QUENTE sobre política que impacta o setor
+  "economiaBrasil": { headline, deck, body },  // economia BR (juros, inflação, câmbio, atividade)
+  "economiaInternacional": { headline, deck, body }, // economia global (Fed, China, geopolítica, commodities)
+  "varejo": { headline, deck, body },          // varejo brasileiro / convenience / hábitos de consumo
+  "automotivo": { headline, deck, body },      // carros, EVs, híbridos, infraestrutura, caminhões
+
+  "fontes": "Lista de fontes consultadas, separadas por vírgula"
 }
 \`\`\`
 
-# PRINCÍPIOS EDITORIAIS (não-negociáveis)
+# REGRAS DE DIREÇÃO DOS INDICADORES (operacional, ponto de vista do POSTO)
+
+A interpretação não é "subiu/desceu" — é "bom/ruim pro revendedor":
+
+| Indicador | Subiu = | Desceu = |
+|---|---|---|
+| Brent / WTI | up (vermelho) | down (verde) |
+| USD/BRL (dólar mais caro) | up (vermelho) | down (verde) |
+| EUR/BRL | up (vermelho) | down (verde) |
+| Bolsas (IBOV, S&P, Nasdaq) | down (verde, neutro pra posto) | up (vermelho) — bolsa caindo = aversão a risco = ruim |
+| Selic / Fed (juros) | up (vermelho — crédito mais caro) | down (verde) |
+| IPCA / inflação | up (vermelho) | down (verde) |
+| ANP bomba | up (vermelho — pressão de margem) | down (verde) |
+| CEPEA usina | up (vermelho — etanol caro) | down (verde — janela de compra) |
+| Abicom defasagem | up (vermelho — risco repasse) | down (verde — paridade saudável) |
+
+Quando não houver variação clara, use "neutral". Quando dado indisponível, use "pending" + value="a confirmar".
+
+# PRINCÍPIOS EDITORIAIS
 
 ${principles}
-
-# FORMATO DOS CARDS EDITORIAIS
-
-${cards}
-
-# FORMATO DOS INDICADORES
-
-${indicadores}
 
 # FONTES DE DADOS
 
@@ -134,62 +165,13 @@ ${sources}
 
 # REGRAS FINAIS
 
-1. Use web_search EM PARALELO no início para coletar todos os dados.
-2. NUNCA fabrique valores. Use direction="pending" e value="a confirmar" se faltar dado.
-3. Cada card deve seguir estrutura "O que aconteceu / Por que importa / Ação da semana" — sem desvios.
-4. Tag emoji + texto: "🔴 Ação Imediata", "🟡 Atenção", "🟢 Oportunidade", "🔵 Informativo".
-5. Os 11 indicadores na ordem: Brent, WTI, USD/BRL, Gasolina C, Etanol Hidratado bomba, Diesel B S-10, GLP P-13, Etanol Hidratado produtor, Etanol Anidro produtor, Defasagem Diesel, Defasagem Gasolina.
-6. RETORNE APENAS JSON. Sem prefácio, sem comentários, sem markdown.`;
-}
-
-function renderIndicadores(arr) {
-  return arr.map((ind) => {
-    if (ind.direction === "pending") {
-      return `  <div class="ind-card pending">
-    <div class="ind-name">${escapeHtml(ind.name)}</div>
-    <div class="ind-row">
-      <div class="ind-pending-value">a confirmar</div>
-    </div>
-    <div class="ind-source">${escapeHtml(ind.source)}</div>
-  </div>`;
-    }
-    const cardCls = ind.direction === "up" ? " up" : ind.direction === "down" ? " down" : "";
-    const varCls = ind.direction === "up" ? "up" : ind.direction === "down" ? "down" : "neutral";
-    return `  <div class="ind-card${cardCls}">
-    <div class="ind-name">${escapeHtml(ind.name)}</div>
-    <div class="ind-row">
-      <div class="ind-value">${escapeHtml(ind.value)}</div>
-      <div class="ind-var ${varCls}">${escapeHtml(ind.variation || "")}</div>
-    </div>
-    <div class="ind-source">${escapeHtml(ind.source)}</div>
-  </div>`;
-  }).join("\n");
-}
-
-function renderCards(arr) {
-  return arr.map((card) => `  <div class="card ${card.cor}">
-    <span class="card-tag tag-${card.cor}">${escapeHtml(card.tag_text)}</span>
-    <div class="card-title">${card.numero}. ${escapeHtml(card.titulo)}</div>
-
-    <div class="card-block">
-      <span class="block-label">O que aconteceu</span>
-      <p>${escapeHtmlKeepBasic(card.aconteceu)}</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Por que importa</span>
-      <p>${escapeHtmlKeepBasic(card.importa)}</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Ação da semana</span>
-      <p>${escapeHtmlKeepBasic(card.acao)}</p>
-    </div>
-  </div>`).join("\n");
-}
-
-function renderAcoes(arr) {
-  return arr.map((item) => `    <li>${escapeHtmlKeepBasic(item)}</li>`).join("\n");
+1. Use web_search EM PARALELO no início pra coletar TODOS os dados (cotações + notícias).
+2. NUNCA fabrique valores. Use direction="pending" + value="a confirmar" se faltar dado.
+3. Cada matéria longa tem ~3 parágrafos de 3-5 linhas (~180-280 palavras por matéria).
+4. Use <strong>...</strong> para destacar números e nomes chave nos parágrafos das matérias.
+5. Tom: jornalismo econômico, sem condescendência, com implicação operacional clara.
+6. Manchetes: substantivas, com pelo menos um dado concreto.
+7. RETORNE APENAS O JSON. Sem prefácio, sem comentários, sem markdown.`;
 }
 
 function escapeHtml(s) {
@@ -201,7 +183,6 @@ function escapeHtml(s) {
     .replace(/"/g, "&quot;");
 }
 
-// Para textos editoriais: permite <strong> e <em> mas escapa o resto.
 function escapeHtmlKeepBasic(s) {
   if (s == null) return "";
   return String(s)
@@ -210,11 +191,69 @@ function escapeHtmlKeepBasic(s) {
     .replace(/"/g, "&quot;");
 }
 
+function renderIndicador(item) {
+  if (item.direction === "pending") {
+    return `        <div class="indic">
+          <div class="indic-name">${escapeHtml(item.name)}</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">${escapeHtml(item.source)}</div>
+        </div>`;
+  }
+  const varCls = item.direction === "up" ? "up"
+              : item.direction === "down" ? "down"
+              : "neutral";
+  const varStr = item.variation
+    ? `<div class="indic-var ${varCls}">${escapeHtml(item.variation)}</div>`
+    : "";
+  return `        <div class="indic">
+          <div class="indic-name">${escapeHtml(item.name)}</div>
+          <div class="indic-row">
+            <div class="indic-value">${escapeHtml(item.value)}</div>
+            ${varStr}
+          </div>
+          <div class="indic-source">${escapeHtml(item.source)}</div>
+        </div>`;
+}
+
+function renderIndicadores(blocks) {
+  return blocks.map((block) => {
+    const items = (block.items || []).map(renderIndicador).join("\n");
+    return `    <div class="indic-block">
+      <div class="indic-block-title">${escapeHtml(block.title)}</div>
+      <div class="indic-grid">
+${items}
+      </div>
+    </div>`;
+  }).join("\n");
+}
+
+function renderManchetes(arr) {
+  return arr.map((m) => `    <div class="manchete">
+      <div class="manchete-num">${m.numero}</div>
+      <div class="manchete-body">
+        <div class="manchete-title">${escapeHtmlKeepBasic(m.headline)}</div>
+        <div class="manchete-summary">${escapeHtmlKeepBasic(m.resumo)}</div>
+      </div>
+    </div>`).join("\n");
+}
+
+function renderArticle(art) {
+  if (!art) return "";
+  const body = (art.body || []).map((p) => `      <p>${escapeHtmlKeepBasic(p)}</p>`).join("\n");
+  return `  <div class="article">
+    <div class="article-headline">${escapeHtmlKeepBasic(art.headline)}</div>
+    <div class="article-deck">${escapeHtmlKeepBasic(art.deck)}</div>
+    <div class="article-body">
+${body}
+    </div>
+  </div>`;
+}
+
 function extractJSON(text) {
-  // Remove possíveis fences ```json e ```
   let cleaned = text.trim();
   cleaned = cleaned.replace(/^```(?:json)?\s*\n?/i, "").replace(/\n?```\s*$/i, "");
-  // Pega substring entre o primeiro '{' e o último '}'
   const first = cleaned.indexOf("{");
   const last = cleaned.lastIndexOf("}");
   if (first === -1 || last === -1) throw new Error("JSON não encontrado na resposta");
@@ -228,18 +267,34 @@ async function gerar() {
   const client = new Anthropic({ apiKey: ANTHROPIC_API_KEY });
 
   const systemPrompt = buildSystemPrompt();
-  const userPrompt = `Produza a Edição ${edicao} do Posto em Dia para o período: ${periodo}.
+  const userPrompt = `Produza a Edição ${edicao} do Posto em Dia para o período ${periodo}.
 
-Hoje é ${fridayISO} (sexta-feira). Colete dados frescos usando web_search EM PARALELO logo no início:
+Hoje é ${fridayISO} (sexta-feira). Use web_search EM PARALELO no início pra coletar:
 
-1. Brent + WTI hoje + variação % diária
-2. USD/BRL hoje (fechamento PTAX se disponível)
-3. ANP — síntese semanal de preços mais recente (gasolina C, etanol hidratado, diesel B S-10, GLP P-13)
-4. CEPEA/ESALQ — etanol hidratado e anidro produtor SP da semana
-5. Abicom — defasagem Petrobras diesel/gasolina
-6. 5-8 notícias setoriais relevantes da semana (MPs, decretos, fiscalização, mercado)
+INDICADORES (cotações fechadas mais recentes):
+- Brent + WTI (preço + variação % diária)
+- USD/BRL + EUR/BRL + DXY + Bitcoin
+- Ibovespa + S&P 500 + Nasdaq + Dow Jones (fechamento + var %)
+- Selic atual + Fed Funds + IPCA-15 + Focus IPCA 2026 (boletim mais recente)
+- ANP síntese semanal de preços (Gasolina C, Etanol Hidratado, Diesel S-10, Diesel comum, GLP P-13)
+- CEPEA/ESALQ (Etanol Hidratado SP, Etanol Anidro SP)
+- Abicom defasagem Petrobras (Diesel + Gasolina)
 
-Depois selecione os 5 movimentos mais importantes da semana e produza o JSON conforme o schema. Retorne APENAS o JSON.`;
+NOTÍCIAS DA SEMANA (busque 10-15 manchetes recentes):
+- Combustíveis Brasil (MPs, decretos, fiscalização, mercado)
+- Política brasileira QUENTE (decisões, conflitos federativos, STF, Congresso) que afetem o setor
+- Economia BR (Copom, Focus, atividade, emprego)
+- Economia internacional (Fed, China, geopolítica, OPEP+, EIA)
+- Varejo BR (Fecombustíveis, redes, conveniência, hábitos)
+- Automotivo (Fenabrave, EVs, híbridos, infraestrutura)
+
+DEPOIS produza o JSON conforme o schema:
+- 7 blocos de indicadores
+- 5 manchetes da semana (mix temático com filtro "afeta o dono de posto")
+- 6 matérias longas (mercado, política QUENTE, economia BR, economia internacional, varejo, automotivo)
+- fontes
+
+RETORNE APENAS O JSON.`;
 
   console.log("→ Chamando Claude API (sonnet 4.6 + web_search)...");
   const t0 = Date.now();
@@ -251,7 +306,7 @@ Depois selecione os 5 movimentos mais importantes da semana e produza o JSON con
       {
         type: "web_search_20250305",
         name: "web_search",
-        max_uses: 15,
+        max_uses: 18,
       },
     ],
     system: [
@@ -270,7 +325,6 @@ Depois selecione os 5 movimentos mais importantes da semana e produza o JSON con
   console.log(`  input tokens: ${response.usage?.input_tokens} (cached: ${response.usage?.cache_read_input_tokens || 0})`);
   console.log(`  output tokens: ${response.usage?.output_tokens}`);
 
-  // Extrai texto final
   let finalText = "";
   for (const block of response.content) {
     if (block.type === "text") finalText += block.text;
@@ -287,36 +341,40 @@ Depois selecione os 5 movimentos mais importantes da semana e produza o JSON con
   }
 
   // Validação básica
-  if (!Array.isArray(data.indicadores) || data.indicadores.length === 0) {
-    throw new Error("indicadores ausente ou vazio");
+  if (!Array.isArray(data.indicadores) || data.indicadores.length < 5) {
+    throw new Error(`indicadores: esperado >= 5 blocos, recebido ${data.indicadores?.length}`);
   }
-  if (!Array.isArray(data.cards) || data.cards.length !== 5) {
-    throw new Error(`cards deve ter exatamente 5 itens (recebido: ${data.cards?.length})`);
+  if (!Array.isArray(data.manchetes) || data.manchetes.length !== 5) {
+    throw new Error(`manchetes: esperado 5 itens, recebido ${data.manchetes?.length}`);
+  }
+  for (const sec of ["mercado", "politica", "economiaBrasil", "economiaInternacional", "varejo", "automotivo"]) {
+    if (!data[sec]?.headline || !Array.isArray(data[sec]?.body)) {
+      throw new Error(`Matéria ausente ou inválida: ${sec}`);
+    }
   }
 
-  // Monta HTML final
+  // Monta HTML
   const template = fs.readFileSync("assets/template_mobile.html", "utf8");
-  const notaFonteHtml = data.nota_fonte
-    ? `<div class="source-note">⚠️ ${escapeHtmlKeepBasic(data.nota_fonte)}</div>`
-    : "<!-- VAZIO -->";
-
   const html = template
     .replaceAll("{{EDICAO}}", String(edicao))
     .replaceAll("{{PERIODO}}", periodo)
     .replace("{{INDICADORES}}", renderIndicadores(data.indicadores))
-    .replace("{{NOTA_FONTE}}", notaFonteHtml)
-    .replace("{{CARDS}}", renderCards(data.cards))
-    .replace("{{ACOES_HOJE}}", renderAcoes(data.acoes || []))
+    .replace("{{MANCHETES}}", renderManchetes(data.manchetes))
+    .replace("{{MERCADO}}", renderArticle(data.mercado))
+    .replace("{{POLITICA}}", renderArticle(data.politica))
+    .replace("{{ECONOMIA_BRASIL}}", renderArticle(data.economiaBrasil))
+    .replace("{{ECONOMIA_INTERNACIONAL}}", renderArticle(data.economiaInternacional))
+    .replace("{{VAREJO}}", renderArticle(data.varejo))
+    .replace("{{AUTOMOTIVO}}", renderArticle(data.automotivo))
     .replace("{{FONTES}}", escapeHtml(data.fontes || ""));
 
-  // Salva arquivos
   const editionDir = `editions/semana${edicao}`;
   fs.mkdirSync(editionDir, { recursive: true });
   const htmlPath = path.join(editionDir, "source.html");
   fs.writeFileSync(htmlPath, html);
   console.log(`✓ HTML salvo: ${htmlPath}`);
 
-  // Renderiza PDFs (chama o script Python existente)
+  // Renderiza PDFs
   console.log("→ Renderizando PDFs com Playwright...");
   execSync(`python scripts/render_pdfs.py "${htmlPath}" "${editionDir}" ${edicao}`, { stdio: "inherit" });
 
@@ -326,22 +384,20 @@ Depois selecione os 5 movimentos mais importantes da semana e produza o JSON con
     throw new Error("PDFs não foram criados");
   }
 
-  // Metadata pra rastreio
+  // Metadata
   const meta = {
     edicao,
     periodo,
     friday: fridayISO,
     generated_at: new Date().toISOString(),
     fontes: data.fontes,
-    indicadores_count: data.indicadores.length,
-    cards_count: data.cards.length,
-    acoes_count: data.acoes?.length || 0,
-    has_pending_data: data.indicadores.some((i) => i.direction === "pending"),
+    indicadores_blocks: data.indicadores.length,
+    manchetes_count: data.manchetes.length,
+    has_pending_data: data.indicadores.some((b) => b.items?.some((i) => i.direction === "pending")),
     usage: response.usage,
   };
   fs.writeFileSync(path.join(editionDir, "meta.json"), JSON.stringify(meta, null, 2));
 
-  // Outputs pro GitHub Actions
   if (process.env.GITHUB_OUTPUT) {
     const out = [
       `edicao=${edicao}`,
