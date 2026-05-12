@@ -74,8 +74,8 @@ jobs:
           fi
           REPO="${{ github.repository }}"
           SHA="${{ github.sha }}"
-          MOBILE_URL="https://github.com/${REPO}/raw/${SHA}/${MOBILE_PATH}"
-          A4_URL="https://github.com/${REPO}/raw/${SHA}/${A4_PATH}"
+          MOBILE_URL="https://raw.githubusercontent.com/${REPO}/${SHA}/${MOBILE_PATH}"
+          A4_URL="https://raw.githubusercontent.com/${REPO}/${SHA}/${A4_PATH}"
           PAYLOAD=$(cat <<EOF
           {
             "edicao": "${EDICAO}",
