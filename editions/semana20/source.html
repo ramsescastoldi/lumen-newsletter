@@ -2,583 +2,704 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
-<meta name="theme-color" content="#0D1B2A">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
 <title>Posto em Dia | Edição 20 — Lumen Posto Club</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { -webkit-text-size-adjust: 100%; }
+  html { -webkit-text-size-adjust: 100%; background: #f5f0e3; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color: #1a1a1a;
-    background: #f0ece2;
-    font-size: 19px;
+    color: #111;
+    background: #f5f0e3;
+    font-size: 16px;
     line-height: 1.55;
-    padding: 0;
-    margin: 0;
+    -webkit-font-smoothing: antialiased;
   }
-  .container {
-    max-width: 640px;
+  .paper {
+    max-width: 660px;
     margin: 0 auto;
     background: #ffffff;
-    min-height: 100vh;
+    box-shadow: 0 0 0 1px #e1d7b8;
+    padding-bottom: 24px;
   }
 
-  /* HEADER */
-  .header {
-    background: #0D1B2A;
-    color: #ffffff;
-    padding: 22px 20px;
-    border-bottom: 6px solid #C9A84C;
+  /* ============ MASTHEAD ============ */
+  .masthead {
+    border-bottom: 3px double #003459;
+    padding: 22px 20px 14px;
+    text-align: center;
+    background: #ffffff;
   }
-  .header-top {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 12px;
+  .masthead .top-rule {
+    border-top: 6px solid #003459;
+    margin: -22px -20px 16px;
   }
-  .logo-badge {
-    width: 56px; height: 56px;
-    border: 3px solid #C9A84C;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0D1B2A;
-    color: #C9A84C;
-    font-size: 30px;
-    font-weight: 800;
-    flex-shrink: 0;
-  }
-  .header-title {
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    color: #ffffff;
-    line-height: 1.05;
-  }
-  .header-sub {
-    font-size: 13px;
-    color: #C9A84C;
-    letter-spacing: 1.5px;
+  .masthead h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    margin-top: 4px;
-    font-weight: 600;
+    line-height: 1;
+    color: #111;
   }
-  .header-meta {
-    border-top: 1px solid #C9A84C;
-    padding-top: 10px;
+  .masthead .subtitle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #555;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+  .masthead .meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #C9A84C;
-    font-size: 16px;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #d0d0d0;
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
-  .header-meta .ed {
-    color: #ffffff;
-    font-weight: 800;
-    font-size: 21px;
+  .masthead .meta .edicao { color: #003459; font-weight: 800; }
+
+  /* ============ SECTION HEADER ============ */
+  .section-header {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #003459;
+    padding: 0 20px;
+    margin: 28px 0 14px;
+    border-top: 2px solid #003459;
+    padding-top: 10px;
+  }
+  .section-header::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #d0d0d0;
+    margin: 8px -20px 0;
   }
 
-  /* SECTION TITLE */
-  .section-title {
-    background: #0D1B2A;
-    color: #C9A84C;
-    padding: 14px 20px;
+  /* ============ INDICADORES FINANCEIROS (TABLOIDE DE COTAÇÕES) ============ */
+  .indic-wrap { padding: 0 20px; }
+  .indic-block {
+    margin-bottom: 14px;
+    border: 1px solid #d8d8d8;
+    background: #fbfbf7;
+  }
+  .indic-block-title {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #003459;
+    padding: 6px 10px;
+    font-weight: 700;
+  }
+  .indic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .indic {
+    padding: 9px 12px;
+    border-bottom: 1px solid #ecece4;
+    border-right: 1px solid #ecece4;
+  }
+  .indic:nth-child(2n) { border-right: none; }
+  .indic-full {
+    grid-column: span 2;
+    border-right: none;
+  }
+  .indic-name {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #555;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+  .indic-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .indic-value {
+    font-family: Georgia, serif;
     font-size: 17px;
     font-weight: 800;
-    letter-spacing: 1.3px;
-    text-transform: uppercase;
-    margin-top: 24px;
-    border-left: 6px solid #C9A84C;
+    color: #111;
   }
-
-  /* INDICADORES — cards empilhados */
-  .indicators-list {
-    padding: 0 16px;
-    margin-top: 14px;
-  }
-  .ind-card {
-    background: #fafaf6;
-    border: 1px solid #e6e2d6;
-    border-left: 5px solid #C9A84C;
-    border-radius: 4px;
-    padding: 14px 16px;
-    margin-bottom: 10px;
-  }
-  .ind-card.up { border-left-color: #c0392b; }
-  .ind-card.down { border-left-color: #1e8449; }
-  .ind-card.pending { border-left-color: #b58800; }
-  .ind-name {
-    font-size: 13px;
-    font-weight: 700;
-    color: #0D1B2A;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-bottom: 4px;
-  }
-  .ind-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .ind-value {
-    font-size: 24px;
-    font-weight: 800;
-    font-family: 'Courier New', monospace;
-    color: #0D1B2A;
-  }
-  .ind-var {
-    font-size: 18px;
-    font-weight: 700;
-  }
-  .ind-var.up { color: #c0392b; }
-  .ind-var.down { color: #1e8449; }
-  .ind-var.neutral { color: #555; font-style: italic; }
-  .ind-var.pending { color: #b58800; font-style: italic; }
-  .ind-source {
-    font-size: 13px;
-    color: #777;
-    margin-top: 6px;
-    font-style: italic;
-  }
-  .ind-pending-value {
-    font-size: 20px;
-    color: #b58800;
-    font-style: italic;
-    font-weight: 600;
-  }
-  .source-note {
-    background: #fff8e5;
-    border-left: 4px solid #b58800;
-    padding: 12px 14px;
-    margin: 12px 16px 0 16px;
-    font-size: 15px;
-    color: #555;
-    font-style: italic;
-    border-radius: 3px;
-  }
-
-  /* CARDS EDITORIAIS */
-  .cards-wrap {
-    padding: 0 16px;
-    margin-top: 12px;
-  }
-  .card {
-    background: #fafaf6;
-    border-left: 6px solid #888;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    padding: 18px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  }
-  .card.red    { border-left-color: #c0392b; }
-  .card.yellow { border-left-color: #d4a017; }
-  .card.green  { border-left-color: #1e8449; }
-  .card.blue   { border-left-color: #2c6e8f; }
-
-  .card-tag {
-    display: inline-block;
+  .indic-var {
+    font-family: Georgia, serif;
     font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    padding: 5px 12px;
-    border-radius: 3px;
-    color: #fff;
-    margin-bottom: 10px;
+    font-weight: 700;
   }
-  .tag-red    { background: #c0392b; }
-  .tag-yellow { background: #d4a017; }
-  .tag-green  { background: #1e8449; }
-  .tag-blue   { background: #2c6e8f; }
+  .indic-var.up { color: #c0392b; }
+  .indic-var.up::before { content: "▲ "; color: #c0392b; }
+  .indic-var.down { color: #1e8449; }
+  .indic-var.down::before { content: "▼ "; color: #1e8449; }
+  .indic-var.neutral { font-style: italic; color: #777; }
+  .indic-var.pending { font-style: italic; color: #777; }
+  .indic-source {
+    font-size: 9px;
+    color: #888;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
 
-  .card-title {
-    font-size: 22px;
-    font-weight: 800;
-    color: #0D1B2A;
-    line-height: 1.25;
-    margin-bottom: 14px;
+  /* ============ MANCHETES (5) ============ */
+  .manchetes-wrap { padding: 0 20px; }
+  .manchete {
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
   }
-  .card-block { margin-top: 14px; }
-  .block-label {
-    font-size: 13px;
-    font-weight: 800;
-    color: #0D1B2A;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    border-bottom: 2px dotted #C9A84C;
-    padding-bottom: 3px;
-    display: inline-block;
+  .manchete:first-child { border-top: none; padding-top: 6px; }
+  .manchete-num {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #003459;
+    line-height: 0.85;
+    min-width: 46px;
+    text-align: center;
+    margin-top: -2px;
+  }
+  .manchete-body { flex: 1; }
+  .manchete-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.22;
     margin-bottom: 8px;
   }
-  .card p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #2a2a2a;
-  }
-
-  /* AÇÕES "O QUE FAZER HOJE" */
-  .actions-box {
-    background: #0D1B2A;
-    color: #ffffff;
-    padding: 22px 20px;
-    margin: 20px 16px 0 16px;
-    border-top: 5px solid #C9A84C;
-    border-bottom: 5px solid #C9A84C;
-    border-radius: 4px;
-  }
-  .actions-box h3 {
-    color: #C9A84C;
-    font-size: 19px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 14px;
-  }
-  .actions-box ul {
-    list-style: none;
-    padding: 0;
-  }
-  .actions-box li {
-    font-size: 18px;
+  .manchete-summary {
+    font-size: 15px;
     line-height: 1.55;
-    margin-bottom: 12px;
-    padding-left: 22px;
-    position: relative;
-  }
-  .actions-box li:before {
-    content: "▸";
-    color: #C9A84C;
-    font-weight: 800;
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 20px;
-  }
-  .actions-box li:last-child { margin-bottom: 0; }
-  .actions-box li strong { color: #C9A84C; }
-
-  /* BENEFÍCIO VERIMO */
-  .benefit-box {
-    background: #f7f4e8;
-    border: 2px solid #C9A84C;
-    padding: 20px;
-    margin: 20px 16px 0 16px;
-    border-radius: 4px;
-  }
-  .benefit-title {
-    font-size: 21px;
-    font-weight: 800;
-    color: #0D1B2A;
-    margin-bottom: 12px;
-    line-height: 1.25;
-  }
-  .benefit-box p {
-    font-size: 18px;
-    line-height: 1.55;
-    margin-bottom: 10px;
-    color: #2a2a2a;
-  }
-  .benefit-box .ramos {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-  }
-  .benefit-box .savings {
-    color: #c0392b;
-    font-weight: 800;
-    font-size: 22px;
-    display: block;
-    margin: 12px 0 8px 0;
-  }
-  .contact-button {
-    display: block;
-    background: #0D1B2A;
-    color: #C9A84C !important;
-    padding: 16px 20px;
-    font-weight: 800;
-    font-size: 22px;
-    letter-spacing: 1px;
-    border-radius: 6px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 14px;
-    box-shadow: 0 2px 6px rgba(13,27,42,0.25);
+    color: #333;
   }
 
-  /* FOOTER */
-  .footer {
-    margin-top: 28px;
-    padding: 22px 20px;
-    border-top: 3px solid #C9A84C;
-    text-align: center;
-    color: #555;
-    background: #fafaf6;
-  }
-  .footer .brand {
-    color: #0D1B2A;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    font-size: 17px;
+  /* ============ ARTIGOS LONGOS ============ */
+  .article {
+    padding: 0 20px;
     margin-bottom: 6px;
   }
-  .footer .desc {
-    font-size: 15px;
-    margin-bottom: 10px;
+  .article-headline {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    margin-bottom: 8px;
   }
-  .footer .meta {
+  .article-deck {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .article-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+  .article-body p:first-of-type::first-letter {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    font-weight: 900;
+    float: left;
+    line-height: 0.9;
+    padding: 4px 8px 0 0;
+    color: #003459;
+  }
+  .article-body strong { color: #003459; }
+
+  /* ============ VERIMO (RODAPÉ) ============ */
+  .verimo {
+    margin: 32px 20px 0;
+    border: 2px solid #003459;
+    padding: 22px;
+    background: #fbfbf7;
+  }
+  .verimo-kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #003459;
+    margin-bottom: 8px;
+    font-weight: 800;
+  }
+  .verimo-title {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .verimo p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .verimo p strong { color: #003459; }
+  .verimo .ramos {
     font-size: 13px;
-    color: #888;
+    color: #555;
+    line-height: 1.6;
+  }
+  .verimo .savings {
+    display: block;
+    margin: 14px 0 6px;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #003459;
+  }
+  .verimo .cta {
+    display: block;
+    background: #003459;
+    color: #fff !important;
+    text-align: center;
+    padding: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+
+  /* ============ COLOFON ============ */
+  .colofon {
+    text-align: center;
+    padding: 30px 20px 12px;
+    border-top: 2px solid #003459;
+    margin-top: 30px;
+  }
+  .colofon .brand {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .colofon .tagline {
+    font-style: italic;
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+    font-family: Georgia, serif;
+  }
+  .colofon .fontes {
+    font-size: 11px;
+    color: #666;
+    margin-top: 14px;
     line-height: 1.5;
+    padding-top: 12px;
+    border-top: 1px solid #d0d0d0;
+  }
+  .colofon .fontes strong {
+    color: #003459;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 4px;
   }
 </style>
 </head>
 <body>
 
-<div class="container">
+<div class="paper">
 
-<!-- HEADER -->
-<div class="header">
-  <div class="header-top">
-    <div class="logo-badge">L</div>
-    <div>
-      <div class="header-title">POSTO EM DIA</div>
-      <div class="header-sub">Lumen Posto Club</div>
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="top-rule"></div>
+    <h1>Posto em Dia</h1>
+    <div class="subtitle">O Semanário do Revendedor de Combustíveis</div>
+    <div class="meta">
+      <span class="edicao">Edição 20</span>
+      <span>10 a 16 / Mai / 2026</span>
     </div>
   </div>
-  <div class="header-meta">
-    <div class="ed">Edição 20</div>
-    <div>10 a 16 / Mai / 2026</div>
+
+  <!-- INDICADORES FINANCEIROS -->
+  <div class="section-header">Indicadores Financeiros</div>
+  <div class="indic-wrap">
+    <div class="indic-block">
+      <div class="indic-block-title">Petróleo &amp; Energia</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Brent (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 107,57</div>
+            <div class="indic-var up">+3,36%</div>
+          </div>
+          <div class="indic-source">ICE / Investing.com — 12/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">WTI (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 101,38</div>
+            <div class="indic-var up">+3,38%</div>
+          </div>
+          <div class="indic-source">NYMEX / Investing.com — 12/mai/2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Moedas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">USD/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 4,89</div>
+            <div class="indic-var down">-0,35%</div>
+          </div>
+          <div class="indic-source">BCB PTAX / Investing.com — 15/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">EUR/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 5,77</div>
+            <div class="indic-var down">-0,30%</div>
+          </div>
+          <div class="indic-source">BCE / Investing.com — 15/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">DXY (Dollar Index)</div>
+          <div class="indic-row">
+            <div class="indic-value">97,90</div>
+            <div class="indic-var neutral">-0,05%</div>
+          </div>
+          <div class="indic-source">ICE / Yahoo Finance — 12/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Bitcoin (USD)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 81.204</div>
+            <div class="indic-var neutral">+0,50%</div>
+          </div>
+          <div class="indic-source">CoinMarketCap / Yahoo Finance — 15/mai/2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Bolsas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Ibovespa (pts)</div>
+          <div class="indic-row">
+            <div class="indic-value">184.530</div>
+            <div class="indic-var down">+1,83%</div>
+          </div>
+          <div class="indic-source">B3 — 15/mai/2026 (parcial intraday)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">S&amp;P 500</div>
+          <div class="indic-row">
+            <div class="indic-value">7.412,84</div>
+            <div class="indic-var down">+0,19%</div>
+          </div>
+          <div class="indic-source">NYSE / CNBC — 12/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Nasdaq</div>
+          <div class="indic-row">
+            <div class="indic-value">26.274,13</div>
+            <div class="indic-var down">+0,10%</div>
+          </div>
+          <div class="indic-source">Nasdaq / CNBC — 12/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Dow Jones</div>
+          <div class="indic-row">
+            <div class="indic-value">49.704,47</div>
+            <div class="indic-var down">+0,19%</div>
+          </div>
+          <div class="indic-source">NYSE / CNBC — 12/mai/2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Juros &amp; Inflação</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Selic (% a.a.)</div>
+          <div class="indic-row">
+            <div class="indic-value">14,50%</div>
+            <div class="indic-var down">-0,25 p.p.</div>
+          </div>
+          <div class="indic-source">BCB / Copom — reunião 29/abr/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Fed Funds (% a.a.)</div>
+          <div class="indic-row">
+            <div class="indic-value">3,50%–3,75%</div>
+            <div class="indic-var neutral">sem alt.</div>
+          </div>
+          <div class="indic-source">Federal Reserve / FOMC — reunião abr/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">IPCA-15 (abr/2026)</div>
+          <div class="indic-row">
+            <div class="indic-value">0,89% / 4,37% (12m)</div>
+            <div class="indic-var up">+0,45 p.p. vs mar</div>
+          </div>
+          <div class="indic-source">IBGE — 28/abr/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Focus IPCA 2026</div>
+          <div class="indic-row">
+            <div class="indic-value">4,91%</div>
+            <div class="indic-var up">+0,02 p.p. na semana</div>
+          </div>
+          <div class="indic-source">BCB Boletim Focus — 11/mai/2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Preço na Bomba (ANP)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Gasolina C (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,29</div>
+            <div class="indic-var up">referência jan/2026</div>
+          </div>
+          <div class="indic-source">ANP Síntese Semanal — edição mais recente disponível</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 4,31</div>
+            <div class="indic-var up">referência semana anterior</div>
+          </div>
+          <div class="indic-source">ANP Síntese Semanal 2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel S-10 (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,48</div>
+            <div class="indic-var up">+7% em abr (Ticket Log/ANP)</div>
+          </div>
+          <div class="indic-source">ANP / Ticket Log — abr/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel Comum (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,31</div>
+            <div class="indic-var up">referência semana anterior</div>
+          </div>
+          <div class="indic-source">ANP Síntese Semanal 2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">GLP P-13 (R$/botijão)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 104,80</div>
+            <div class="indic-var neutral">estável (subsídio federal ativo)</div>
+          </div>
+          <div class="indic-source">ANP / MP 1.349 — mai/2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Usina (CEPEA/ESALQ)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado SP (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 2,7236</div>
+            <div class="indic-var up">+0,19%</div>
+          </div>
+          <div class="indic-source">CEPEA/ESALQ — semana 05–09/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Anidro SP (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 3,1230</div>
+            <div class="indic-var up">+0,76%</div>
+          </div>
+          <div class="indic-source">CEPEA/ESALQ — semana 05–09/mai/2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Defasagem Petrobras (Abicom)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Diesel — Defasagem</div>
+          <div class="indic-row">
+            <div class="indic-value">~31%</div>
+            <div class="indic-var up">redução vs pico de 74% em mar</div>
+          </div>
+          <div class="indic-source">Abicom / StoneX — referência mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Gasolina — Defasagem</div>
+          <div class="indic-row">
+            <div class="indic-value">~41%</div>
+            <div class="indic-var up">Petrobras sem reajuste desde jan/2026</div>
+          </div>
+          <div class="indic-source">Abicom — referência mai/2026</div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- 5 MANCHETES -->
+  <div class="section-header">As 5 Manchetes da Semana</div>
+  <div class="manchetes-wrap">
+    <div class="manchete">
+      <div class="manchete-num">1</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Brent dispara acima de US$ 107 com cessar-fogo EUA–Irã em colapso e Trump rejeitando contraproposta de Teerã</div>
+        <div class="manchete-summary">O petróleo Brent fechou a semana em alta superior a 3%, pressionado pela recusa de Trump à contraproposta iraniana de paz, que exigia reparações de guerra e soberania sobre o Estreito de Ormuz. O CEO da Saudi Aramco, <strong>Amin Nasser</strong>, alertou que o mercado perde <strong>100 milhões de barris por semana</strong> com o bloqueio. Para o posto, o risco de novo repasse da Petrobras aumenta a cada sessão sem acordo.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">2</div>
+      <div class="manchete-body">
+        <div class="manchete-title">MP 1.349 do governo Lula vence em 31 de maio: subsídio de R$ 0,80/litro no diesel pode não ser renovado</div>
+        <div class="manchete-summary">A Medida Provisória 1.349, editada em 7 de abril com custo de <strong>R$ 4 bilhões</strong> (metade federal, metade estadual), cobre diesel e GLP até o fim de maio. O ministro <strong>Dario Durigan</strong> defende PLP no Congresso para usar receitas do petróleo em desonerações — mas Rondônia já rejeitou o acordo estadual. Revendedores devem monitorar a renovação ou extinção do mecanismo que segura o GLP P-13 em patamar controlado.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">3</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Focus projeta IPCA de 4,91% em 2026 — 9ª alta consecutiva e acima do teto da meta de 4,5%</div>
+        <div class="manchete-summary">O Boletim Focus de <strong>11 de maio</strong> registrou a nona elevação seguida na estimativa de inflação para 2026, agora em <strong>4,91%</strong>, contra 3,95% antes da guerra. O mercado projeta Selic em <strong>13,00%</strong> ao fim do ano — acima dos 14,50% atuais, mas refletindo ciclo de cortes lentos. Para o posto, custo do crédito de giro e financiamento de tanques segue elevado; planejamento de caixa precisa precificar inflação acima do teto.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">4</div>
+      <div class="manchete-body">
+        <div class="manchete-title">ANP prorroga até 30 de junho dispensa de estoque mínimo de gasolina e diesel para distribuidoras</div>
+        <div class="manchete-summary">A <strong>ANP</strong> prorrogou por dois meses a resolução que desobriga produtores e distribuidores de manter estoques mínimos, medida criada em 19 de março para garantir abastecimento após o choque da guerra no Irã. A decisão reduz custos de capital de giro para as distribuidoras, mas mantém o sistema com folga operacional menor. Revendedores em regiões periféricas devem manter estoque local acima do mínimo operacional — a margem de segurança diminuiu.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">5</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Venda direta de diesel pela Petrobras dispara 1.900% no 1T26, ameaçando distribuidoras e postos independentes</div>
+        <div class="manchete-summary">Dados apurados pela <strong>UDOP</strong> mostram que as vendas diretas da Petrobras a grandes consumidores — como a <strong>Vale</strong> — cresceram <strong>1.900%</strong> no primeiro trimestre de 2026. Distribuidoras enxergam o movimento como forma da estatal driblar restrições ao varejo. Para postos independentes que dependem de distribuidoras regionais, o risco é encarecimento ou estreitamento do canal de abastecimento com o aprofundamento do modelo.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MERCADO DE COMBUSTÍVEIS -->
+  <div class="section-header">Mercado de Combustíveis</div>
+    <div class="article">
+    <div class="article-headline">Defasagem de 41% na gasolina e 31% no diesel mantém mercado em alerta máximo com Petrobras sem reajuste desde janeiro</div>
+    <div class="article-deck">Enquanto o Brent supera US$ 107 e a MP de subsídios expira em 31 de maio, o setor de revenda pressiona por solução estrutural — e monitora cada despacho do Palácio do Planalto</div>
+    <div class="article-body">
+      <p>A <strong>Abicom</strong> mantém alerta vermelho sobre a defasagem dos combustíveis da <strong>Petrobras</strong>: no fechamento da última sexta-feira, o diesel S-10 nas refinarias estava <strong>31% abaixo</strong> do Preço de Paridade de Importação (PPI), e a gasolina A acumulava <strong>41% de defasagem</strong> — o equivalente a <strong>R$ 1,03/litro</strong> de pressão reprimida. O pico do ciclo foi registrado em 9 de março, com <strong>85% de defasagem no diesel</strong> e Brent próximo de US$ 120, quando a arbitragem média era de <strong>R$ 2,74/litro</strong> desfavorável ao importador. Desde então, o governo editou a MP 1.349 com subsídio de <strong>R$ 0,80/litro</strong> de diesel, mas a medida expira em <strong>31 de maio</strong>.</p>
+      <p>O quadro atual ainda exige cautela. A Petrobras não reajusta a gasolina desde <strong>27 de janeiro de 2026</strong> — quando cortou <strong>R$ 0,14/litro</strong> — e mantém o diesel sem movimentação há mais de <strong>100 dias</strong>. Com o Brent em rota de alta e o Estreito de Ormuz com fluxo reduzido, a pressão sobre a estatal é crescente. A <strong>Acelen</strong> (Refinaria de Mataripe), que opera pelo PPI, já efetuou reajustes pontuais na semana, elevando o diesel S-10 em <strong>R$ 0,1170/litro</strong> e a gasolina em <strong>R$ 0,1195/litro</strong>. O diferencial entre Mataripe e Petrobras cria distorções regionais que prejudicam postos no Nordeste. A ANP prorrogou até <strong>30 de junho</strong> a dispensa de estoque mínimo para distribuidoras, medida que alivia logística mas reduz margem de segurança no abastecimento.</p>
+      <p>Para o dono de posto, o cenário exige <strong>atenção redobrada ao prazo de validade da MP 1.349</strong>. Se o Congresso não renovar o mecanismo ou a Petrobras não praticar reajuste antes de 31 de maio, o choque pode chegar ao distribuidor com pouco prazo de adaptação. <strong>Revise contratos de fornecimento com prazo superior a 15 dias</strong>, acompanhe diariamente os comunicados da Abicom e da ANP e evite elongar o prazo de pagamento de remessas já contratadas acima do PPI — a janela de arbitragem pode se abrir rapidamente com qualquer movimento de paz no Oriente Médio.</p>
+    </div>
+  </div>
+
+  <!-- POLÍTICA (notícia quente) -->
+  <div class="section-header">Política &middot; Quente</div>
+    <div class="article">
+    <div class="article-headline">MP dos combustíveis expira em 31 de maio e Rondônia rompe frente dos governadores — Lula corre contra o relógio no Congresso</div>
+    <div class="article-deck">Governo busca aprovação de PLP que usa receitas do petróleo para desoneração, mas resistência estadual e oposição no Senado ameaçam mecanismo que segura preços</div>
+    <div class="article-body">
+      <p>A <strong>Medida Provisória 1.349</strong>, editada em 7 de abril pelo governo <strong>Lula</strong> com custo total de <strong>R$ 4 bilhões</strong>, vence em <strong>31 de maio</strong> sem possibilidade de prorrogação automática. O instrumento custeia o subsídio de <strong>R$ 0,80/litro</strong> no diesel e parte da estabilização do GLP P-13, com a conta dividida entre União e estados. O ministro da Fazenda, <strong>Dario Durigan</strong>, reconheceu que o impacto da alta do petróleo nos combustíveis brasileiros é da ordem de <strong>20%</strong> e que o país é um dos menos afetados globalmente — graças à política de preços da Petrobras e ao arsenal de medidas fiscais adotadas desde março.</p>
+      <p>O nó político se formou quando <strong>Rondônia</strong> recusou aderir ao acordo de participação estadual nos custos do subsídio, quebrando a unanimidade que o governo precisava para sustentar a narrativa de pacto federativo. Durigan sinalizou que a ausência do Estado representa &quot;dificuldade política&quot; e não &quot;problema técnico&quot;. No Congresso, o governo articula o <strong>PLP de desonerações</strong>, que autorizaria a União a usar receitas extraordinárias do petróleo para reduzir PIS/Cofins e outros tributos sobre combustíveis — mas o texto enfrenta resistência de senadores da oposição e de bancadas preocupadas com o impacto fiscal. Enquanto isso, a <strong>BRASILCOM</strong> levou ao senador <strong>Hamilton Mourão</strong> a pauta contra o tabelamento de preços e a obrigação de exposição de dados comerciais das distribuidoras — dois projetos em tramitação que ameaçam a livre precificação no varejo.</p>
+      <p>Para revendedores, o risco mais imediato é o <strong>vácuo regulatório pós-31 de maio</strong>: sem renovação da MP ou aprovação do PLP, o diesel pode sofrer reajuste brusco da Petrobras — que tem mais de 100 dias de preço represado. <strong>Monitore a pauta do plenário do Senado na semana de 19 a 23 de maio</strong>. Qualquer avanço ou empate no PLP define se haverá amortecimento ou choque direto nos preços da bomba.</p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA BRASIL -->
+  <div class="section-header">Economia · Brasil</div>
+    <div class="article">
+    <div class="article-headline">Copom corta Selic para 14,50% mas Focus projeta 4,91% de inflação — BC caminha em terreno minado</div>
+    <div class="article-deck">Ciclo de flexibilização segue cauteloso enquanto guerra mantém petróleo alto e expectativas de inflação batem recorde de altas consecutivas</div>
+    <div class="article-body">
+      <p>O <strong>Copom</strong> reduziu a <strong>Selic de 14,75% para 14,50% ao ano</strong> na reunião de 29 de abril — segundo corte consecutivo, por decisão unânime, após o ciclo de alta que manteve os juros em <strong>15% de junho de 2025 a março de 2026</strong>. A decisão foi considerada tecnicamente cautelosa: o comunicado destacou que os próximos passos dependem da evolução da guerra no Oriente Médio e de seus efeitos sobre a inflação. O <strong>IPCA-15 de abril</strong> já havia antecipado o problema: <strong>0,89%</strong> no mês, com acumulado de <strong>4,37% em 12 meses</strong> — puxado por transportes (<strong>+1,34%</strong>) e alimentos (<strong>+1,46%</strong>), impactos diretos do choque de energia.</p>
+      <p>O <strong>Boletim Focus de 11 de maio</strong> registrou a <strong>nona alta consecutiva</strong> na mediana do IPCA projetado para 2026, que chegou a <strong>4,91%</strong> — acima do teto da meta de 4,5%. O mercado projeta Selic em <strong>13,00%</strong> ao fim de 2026 e em <strong>11,25%</strong> para 2027, sinalizando que o ciclo de cortes será lento e dependente de convergência inflacionária. O <strong>PIB de 2026</strong> segue projetado em <strong>1,85%</strong>, com o câmbio estimado em <strong>R$ 5,20/dólar</strong> ao fim do ano. O Ibovespa fechou a segunda-feira (11) em queda de <strong>1,19%, a 181.909 pontos</strong>, pressionado por bancos e juros futuros, mesmo com alta de Petrobras e Vale impulsionadas pelo petróleo.</p>
+      <p>Para o dono de posto, a combinação de Selic ainda em <strong>14,50%</strong> com inflação acelerando significa custo de capital de giro elevado por mais tempo. Financiamentos de tanques, retrofits e obras sofrem nas condições de crédito. <strong>Priorize linhas pré-fixadas em bancos que ainda oferecem spread menor</strong> — a janela pode se estreitar caso o Focus continue subindo. O câmbio abaixo de R$ 5,00 (fechou a semana em <strong>R$ 4,89</strong>) é o único alívio atual: impacto positivo no custo de importação de equipamentos e no peso do dólar sobre o PPI dos combustíveis.</p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA INTERNACIONAL -->
+  <div class="section-header">Economia · Internacional</div>
+    <div class="article">
+    <div class="article-headline">Hormuz bloqueado, Brent em US$ 107 e inflação americana a 3,8%: a guerra do Irã redefine preço de energia global</div>
+    <div class="article-deck">Com 100 milhões de barris perdidos por semana segundo a Saudi Aramco, analistas do Citi alertam para riscos de demanda destruída em países emergentes</div>
+    <div class="article-body">
+      <p>O conflito entre <strong>EUA e Irã</strong>, iniciado em 28 de fevereiro, completou 10 semanas sem solução diplomática à vista. O presidente <strong>Trump</strong> classificou a contraproposta iraniana como &quot;totalmente inaceitável&quot; em 11 de maio, depois de Teerã exigir reparações de guerra, levantamento de sanções e soberania sobre o Estreito de Ormuz. O CEO da <strong>Saudi Aramco</strong>, <strong>Amin Nasser</strong>, alertou que o mercado global perde cerca de <strong>100 milhões de barris por semana</strong> com o bloqueio — e que, se as interrupções continuarem, a normalização pode não ocorrer antes de 2027. O <strong>Brent</strong> encerrou a semana em <strong>US$ 107,57</strong> (+3,36%) e o <strong>WTI</strong> em <strong>US$ 101,38</strong> (+3,38%), com tankers do Golfo Pérsico operando em fluxo mínimo.</p>
+      <p>O impacto chega à inflação americana: o <strong>CPI de abril</strong> registrou <strong>3,8% anual</strong> — o maior desde maio de 2023 — pressionado por energia e alimentos. O <strong>Federal Reserve</strong> manteve os juros na faixa <strong>3,50%–3,75%</strong> pela terceira reunião consecutiva em abril, com dissidência incomum de quatro membros — situação não vista desde outubro de 1992. O mercado precifica <strong>zero corte de juros em 2026</strong>. O presidente <strong>Kevin Warsh</strong>, indicado de Trump para liderar o Fed, assume formalmente em 15 de maio com viés a favor de cortes — criando nova fonte de tensão institucional. A reunião de Trump com o presidente <strong>Xi Jinping</strong> nos dias 14–15 de maio, em Pequim, dominou atenções com pauta de IA, Taiwan e Irã.</p>
+      <p>Para o revendedor brasileiro, o cenário externo é o principal vetor de risco de repasse no curto prazo. Analistas do <strong>Citi</strong> avaliam que o mercado espera um acordo EUA–Irã até o fim de maio — mas os riscos são &quot;skewed para cima&quot;, ou seja, a probabilidade de a Hormuz permanecer parcialmente fechada é maior do que o consenso. <strong>Qualquer quebra nas negociações ou novo incidente naval pode empurrar o Brent de volta a US$ 115–120</strong> e reabrir o debate de reajuste emergencial da Petrobras. Mantenha cenários de custo preparados para três faixas de Brent: US$ 95, US$ 107 e US$ 120.</p>
+    </div>
+  </div>
+
+  <!-- VAREJO -->
+  <div class="section-header">Varejo</div>
+    <div class="article">
+    <div class="article-headline">Etanol mais competitivo em apenas 4 estados e preço médio da gasolina acima de R$ 6,29 redefinem comportamento do consumidor no abastecimento</div>
+    <div class="article-deck">Mistura do etanol na gasolina sobe para 30% (E30) a partir de maio, mas janela de competitividade do hidratado segue fechada para a maioria dos estados</div>
+    <div class="article-body">
+      <p>Com o preço médio da <strong>gasolina C</strong> em torno de <strong>R$ 6,29/litro</strong> (referência ANP) e o <strong>etanol hidratado</strong> no indicador CEPEA/ESALQ em <strong>R$ 2,7236/litro</strong> na semana de 5 a 9 de maio, a paridade etanol/gasolina ficou em <strong>68,37%</strong> na média nacional — significativamente acima do limiar de 70% que define a vantagem econômica do hidratado. Segundo dados da <strong>Abegas</strong> compilados com base na ANP, o etanol era mais competitivo que a gasolina em apenas <strong>quatro estados</strong> na primeira semana de maio: São Paulo, Goiás, Mato Grosso e Paraná. Para postos fora dessas regiões, o mix de vendas tende a ser dominado pela gasolina — o que amplia a exposição ao risco de repasse da Petrobras.</p>
+      <p>A mudança da mistura obrigatória de etanol na gasolina de <strong>27% para 30% (E30)</strong>, confirmada pela Resolução CNPE e vigente a partir de 2026, altera a composição de custo da gasolina C. Com 30% de anidro na mistura (ante os anteriores 27%), o custo do componente etanol na gasolina C subiu proporcionalmente — e o aumento da alíquota de <strong>ICMS monofásico</strong> na gasolina, de <strong>R$ 1,47/litro para R$ 1,57/litro</strong> a partir de janeiro de 2026 (+R$ 0,10/litro), segundo dados da <strong>Fecombustíveis</strong>, pressionou ainda mais o preço final. No GLP P-13, a combinação de subsídio da MP 1.349 e política de preços da Petrobras manteve o botijão em relativa estabilidade — o ministro Durigan confirmou que os preços do GLP &quot;permanecem estáveis&quot; até agora.</p>
+      <p>Para o revendedor, o comportamento de consumo dos clientes flex está migrando para gasolina em quase todo o Brasil — o que significa volume maior de gasolina na bomba, mais exposição ao eventual reajuste da Petrobras e menor giro do etanol hidratado. <strong>Avalie o mix de tanques e o prazo de rotatividade do estoque de hidratado</strong>: produto parado em entressafra (safra nova começa em maio/junho em São Paulo) pode perder competitividade ainda mais rapidamente.</p>
+    </div>
+  </div>
+
+  <!-- AUTOMOTIVO -->
+  <div class="section-header">Automotivo</div>
+    <div class="article">
+    <div class="article-headline">Frota flex absorve choque de preços mas EVs perdem ímpeto: emplacamentos de elétricos recuam com crise no abastecimento e altas dos insumos</div>
+    <div class="article-deck">Fenabrave e ANFAVEA monitoram cenário de demanda reprimida enquanto híbridos ganham espaço no segmento premium e caminhões a diesel mantêm volume</div>
+    <div class="article-body">
+      <p>A combinação de gasolina acima de <strong>R$ 6,29/litro</strong> e diesel S-10 próximo a <strong>R$ 6,48/litro</strong> reforça a relevância estratégica dos motores flex na frota brasileira. Veículos com motor <strong>flex-fuel</strong> representam mais de 75% dos emplacamentos de carros de passeio no Brasil e seguem como a melhor proteção natural do consumidor contra volatilidade de combustíveis. O cenário atual — com etanol hidratado competitivo em apenas 4 estados — faz com que esses consumidores migrem para gasolina de forma praticamente unânime fora do Centro-Sul, aumentando o volume demandado no canal de revenda de gasolina C. Os dados da <strong>Fenabrave</strong> para março indicaram crescimento de 3,8% na receita da indústria de manufatura, mas o quadro para o segmento de veículos pesados é mais complexo, com caminhoneiros absorvendo impacto direto do diesel mais caro.</p>
+      <p>Veículos <strong>elétricos e híbridos</strong> passam por um momento ambíguo. De um lado, o choque de energia devolve interesse ao EV como alternativa de custo de operação; de outro, a inflação de insumos (lítio, cobre, semicondutores) e o câmbio mais alto em relação a 2025 encarecem os modelos importados — que dominam o segmento premium elétrico no Brasil. Híbridos plug-in de fabricação nacional, como os da <strong>Toyota</strong> e da linha <strong>Caoa Chery</strong>, ganham espaço por oferecerem menor dependência de infraestrutura de recarga. A rede de carregadores públicos ainda é insuficiente: o país tem menos de 12.000 pontos de recarga instalados para uma frota elétrica em expansão, concentrada nos estados de SP, RJ e MG. A crise de abastecimento — ainda que controlada — reforçou o argumento de quem defende diversificação de matriz veicular.</p>
+      <p>Para postos e conveniências, a mensagem automotiva desta semana é clara: <strong>a frota de caminhões a diesel segue o principal vetor de demanda operacional</strong>. Com a venda direta de diesel pela Petrobras disparando <strong>1.900%</strong> no 1T26 via contratos diretos com mineradoras e logísticas, o volume disponível para distribuidoras regionais pode se tornar mais escasso no médio prazo. Postos que atendem frota pesada devem <strong>negociar contratos de fornecimento de prazo maior com suas distribuidoras</strong> e avaliar a viabilidade de instalação de bomba de GNV, cuja demanda por veículos a gás vem crescendo como alternativa ao diesel em rotas urbanas de médio alcance.</p>
+    </div>
+  </div>
+
+  <!-- VERIMO -->
+  <div class="verimo">
+    <div class="verimo-kicker">Benefício do Clube</div>
+    <div class="verimo-title">Seguros Verimo — Economia média de 25%</div>
+    <p>Acesso a <strong>todas as seguradoras</strong> via plataforma Verimo (Ramsés é franqueado). Cotação comparativa para qualquer apólice — pessoal, do posto, da família, dos funcionários.</p>
+    <p class="ramos">Auto · Patrimonial · Vida · Frota · RC Ambiental · RC Geral · Lucros Cessantes · Saúde &amp; Odonto · Vida em Grupo</p>
+    <span class="savings">25% de economia média</span>
+    <p>Apólice vencendo? Envie para análise:</p>
+    <a href="https://wa.me/5565992657008" class="cta">(65) 99265-7008</a>
+  </div>
+
+  <!-- COLOFON -->
+  <div class="colofon">
+    <div class="brand">Lumen Posto Club</div>
+    <div class="tagline">Inteligência semanal para o revendedor de combustíveis</div>
+    <div class="fontes">
+      <strong>Fontes consultadas nesta edição</strong>
+      ICE / Investing.com (Brent, WTI), BCB PTAX / Investing.com (USD/BRL, EUR/BRL), Yahoo Finance / ICE (DXY), CoinMarketCap / Yahoo Finance (Bitcoin), B3 / Investing.com (Ibovespa), NYSE / CNBC (S&amp;P 500, Nasdaq, Dow Jones), BCB / Copom (Selic), Federal Reserve / FOMC (Fed Funds), IBGE Agência de Notícias (IPCA-15 abr/2026), BCB Boletim Focus 11/mai/2026 (IPCA 2026, Selic projetada), ANP Síntese Semanal de Preços 2026 (Gasolina C, Etanol Hidratado, Diesel S-10, Diesel comum, GLP P-13), CEPEA/ESALQ USP — semana 5–9/mai/2026 (Etanol Hidratado e Anidro SP), Abicom / StoneX (Defasagem Petrobras Diesel e Gasolina mai/2026), Ministério da Fazenda / Agência Gov (MP 1.349/2026), ANP / Compre Rural (prorrogação estoque mínimo — 7/mai/2026), Times Brasil / Brasil em Folhas (Abicom defasagem mar/abr/2026), ClubPetro (74% defasagem diesel), UDOP (venda direta diesel 1.900% 1T26), Fecombustíveis (ICMS combustíveis 2026), BRASILCOM / Senado (pauta tabelamento), Abegas (paridade etanol/gasolina), Gazeta Mercantil (Ibovespa 11/mai), Infomoney (Focus 11/mai/2026), CNBC (S&amp;P 500, Iran war, Fed), TradingEconomics (DXY, Fed Funds, Ibovespa), Exame/Future of Money (Bitcoin mai/2026), Poder360 / BM&amp;C News (Focus IPCA), Agência Brasil / A União (Selic 14,50%), CNN Brasil (dólar, Ibovespa), Bloomberg Línea Brasil (Ibovespa análise semanal)
+    </div>
+  </div>
+
 </div>
-
-<!-- INDICADORES -->
-<div class="section-title">📊 Indicadores de Mercado</div>
-
-<div class="indicators-list">
-  <div class="ind-card up">
-    <div class="ind-name">Brent (USD/barril)</div>
-    <div class="ind-row">
-      <div class="ind-value">US$ 104,34</div>
-      <div class="ind-var up">▲ 2,41%</div>
-    </div>
-    <div class="ind-source">ICE / Investing — fechamento 15/05</div>
-  </div>
-  <div class="ind-card up">
-    <div class="ind-name">WTI (USD/barril)</div>
-    <div class="ind-row">
-      <div class="ind-value">US$ 98,25</div>
-      <div class="ind-var up">▲ 0,18%</div>
-    </div>
-    <div class="ind-source">NYMEX / Yahoo Finance — fechamento 14/05</div>
-  </div>
-  <div class="ind-card down">
-    <div class="ind-name">USD / BRL</div>
-    <div class="ind-row">
-      <div class="ind-value">R$ 4,90</div>
-      <div class="ind-var down">▼ 1,62%</div>
-    </div>
-    <div class="ind-source">Banco Central / Investing.com — semana 10–15/05</div>
-  </div>
-  <div class="ind-card pending">
-    <div class="ind-name">Gasolina C (média BR)</div>
-    <div class="ind-row">
-      <div class="ind-pending-value">a confirmar</div>
-    </div>
-    <div class="ind-source">ANP síntese semana 20 — publicação prevista 19/05</div>
-  </div>
-  <div class="ind-card pending">
-    <div class="ind-name">Etanol Hidratado (bomba)</div>
-    <div class="ind-row">
-      <div class="ind-pending-value">a confirmar</div>
-    </div>
-    <div class="ind-source">ANP síntese semana 20 — publicação prevista 19/05</div>
-  </div>
-  <div class="ind-card pending">
-    <div class="ind-name">Diesel B S-10 (bomba)</div>
-    <div class="ind-row">
-      <div class="ind-pending-value">a confirmar</div>
-    </div>
-    <div class="ind-source">ANP síntese semana 20 — publicação prevista 19/05</div>
-  </div>
-  <div class="ind-card pending">
-    <div class="ind-name">GLP P-13 (R$/13kg)</div>
-    <div class="ind-row">
-      <div class="ind-pending-value">a confirmar</div>
-    </div>
-    <div class="ind-source">ANP síntese semana 20 — publicação prevista 19/05</div>
-  </div>
-  <div class="ind-card up">
-    <div class="ind-name">Etanol Hidratado produtor</div>
-    <div class="ind-row">
-      <div class="ind-value">R$ 2,7236/L</div>
-      <div class="ind-var up">▲ 0,19%</div>
-    </div>
-    <div class="ind-source">CEPEA/ESALQ-SP — semana 5–9/05</div>
-  </div>
-  <div class="ind-card up">
-    <div class="ind-name">Etanol Anidro produtor</div>
-    <div class="ind-row">
-      <div class="ind-value">R$ 3,1230/L</div>
-      <div class="ind-var up">▲ 0,76%</div>
-    </div>
-    <div class="ind-source">CEPEA/ESALQ-SP — semana 5–9/05</div>
-  </div>
-  <div class="ind-card pending">
-    <div class="ind-name">Defasagem Diesel (Petrobras)</div>
-    <div class="ind-row">
-      <div class="ind-pending-value">a confirmar</div>
-    </div>
-    <div class="ind-source">Abicom — fechamento 09/05 não divulgado até 15/05</div>
-  </div>
-  <div class="ind-card pending">
-    <div class="ind-name">Defasagem Gasolina (Petrobras)</div>
-    <div class="ind-row">
-      <div class="ind-pending-value">a confirmar</div>
-    </div>
-    <div class="ind-source">Abicom — fechamento 09/05 não divulgado até 15/05</div>
-  </div>
-</div>
-
-<div class="source-note">⚠️ ⚠️ ANP ainda não publicou a Síntese Semanal nº 20 (10–16/05); a página de levantamento foi atualizada em 08/05 com dados até a semana anterior. Gasolina C, Etanol bomba, Diesel S-10 e GLP P-13 ficam como 'a confirmar' e serão consolidados na próxima edição. Abicom não divulgou boletim de defasagem referente ao fechamento desta semana até o fechamento desta edição — os dados mais recentes disponíveis são do fechamento de 17/04 (diesel 31% / R$ 1,12/L; gasolina 41% / R$ 1,03/L), com Brent a US$ 90. Com Brent agora acima de US$ 104, a defasagem atual deve estar significativamente maior.</div>
-
-<!-- CARDS EDITORIAIS -->
-<div class="section-title">📰 Os 5 Movimentos da Semana</div>
-
-<div class="cards-wrap">
-  <div class="card red">
-    <span class="card-tag tag-red">🔴 Ação Imediata</span>
-    <div class="card-title">1. 1. Brent acima de US$ 104 com Hormuz bloqueado: defasagem Petrobras explode e reajuste é questão de quando, não de se</div>
-
-    <div class="card-block">
-      <span class="block-label">O que aconteceu</span>
-      <p>O barril do Brent fechou a semana em US$ 104,34 (+2,41% no dia 15/05), sustentado pelo bloqueio efetivo do Estreito de Ormuz desde o conflito EUA-Irã iniciado em 28/02. O WTI acompanhou, fechando a US$ 98,25. Trump rejeitou a contraproposta iraniana em 11/05 e declarou o cessar-fogo em 'suporte de vida massivo', elevando o prêmio de risco. O CEO da Saudi Aramco, Amin Nasser, alertou em 11/05 que o mercado perde cerca de 100 milhões de barris por semana e que a normalização pode se arrastar até 2026/27. O Brent acumula alta de 57,54% nos últimos 12 meses segundo TradingEconomics.</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Por que importa</span>
-      <p>Com Brent a US$ 104 e Petrobras sem reajustar a gasolina desde janeiro/2026 (corte de R$ 0,14/L) e o diesel desde março/2026 (+R$ 0,38/L em 14/03), a defasagem atual deve superar os 50% no diesel e 60% na gasolina — muito acima dos 31%/41% registrados no fechamento de 17/04, quando o Brent estava a US$ 90. A Acelen (Mataripe) já reajustou semanalmente e mantém preços acima do PPI. Postos abastecidos pela Petrobras têm preço represado, mas a janela se estreita. O governo editou a MP 1.349 (6/abr) com subsídio de R$ 0,80/L para o diesel produzido no Brasil e R$ 1,20/L para o importado — vigente até maio. A partir de junho, sem renovação da MP, o reajuste virá direto na nota da distribuidora.</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Ação da semana</span>
-      <p>1. Verifique hoje com sua distribuidora se ela aderiu ao Regime de Subvenção da MP 1.349 e qual o valor exato repassado por litro na nota fiscal de maio. 2. A MP vence em 31/05. Confirme por escrito se haverá renovação ou se o custo voltará integral em junho. 3. Se você compra de Acelen/Mataripe ou importador: o preço já está a mercado — não há hedge de Petrobras para você. Revise sua margem agora. 4. Acelere compras programadas para as próximas duas semanas enquanto subsídio ainda está em vigor.</p>
-    </div>
-  </div>
-  <div class="card red">
-    <span class="card-tag tag-red">🔴 Ação Imediata</span>
-    <div class="card-title">2. 2. CNPE aprova E32 e B16 em 07/05: mistura muda ainda neste mês — recalcule custo de compra e precificação</div>
-
-    <div class="card-block">
-      <span class="block-label">O que aconteceu</span>
-      <p>O CNPE (Conselho Nacional de Política Energética) aprovou em 07/05/2026 a elevação da mistura obrigatória de etanol anidro na gasolina de 30% para 32% (E32) e de biodiesel no diesel de 15% para 16% (B16). O anúncio havia sido antecipado pelo presidente Lula em 30/04 no Palácio do Planalto, com declaração de que 'ainda esta semana vamos sair de 30 para 32'. O MME afirmou que os testes do E30 (2025) já validam o E32. A medida pode zerar as importações de gasolina, segundo o ministro Alexandre Silveira (MME), reduzindo ~500 milhões de litros/mês de demanda por gasolina A importada. O B16 ainda aguarda testes mais amplos para fases posteriores (B20, B25).</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Por que importa</span>
-      <p>E32 significa que cada litro de gasolina C passará a ter 32% de etanol anidro, ante os 30% anteriores. Para o posto: a composição do custo de aquisição da gasolina C muda — mais anidro (mais caro: R$ 3,12/L produtor CEPEA), menos gasolina A. Com etanol anidro em alta (+0,76% na semana), o impacto pode pressionar o preço de custo da gasolina C mesmo sem reajuste de Petrobras. No diesel, B16 reduz marginalmente o componente fóssil por litro. Postos que travam preço-bomba no médio prazo precisam recalcular o custo unitário da mistura agora. A relação E/G (etanol hidratado / gasolina C) no posto pode se alterar levemente — monitore para ajustar orientação ao consumidor flex.</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Ação da semana</span>
-      <p>1. Solicite à sua distribuidora a data exata de início do fornecimento de gasolina C com mistura E32 e diesel B16. 2. Refaça o custo unitário da gasolina C considerando 32% de anidro (CEPEA: R$ 3,12/L) + 68% de gasolina A — compare com seu preço de compra atual e identifique se há descasamento. 3. Recalcule a relação E/G no seu posto: se etanol hidratado bomba / gasolina C bomba continuar acima de 70%, reforce a orientação ao consumidor flex de abastecer com etanol. 4. Guarde a nota do primeiro lote E32 para referência contábil.</p>
-    </div>
-  </div>
-  <div class="card red">
-    <span class="card-tag tag-red">🔴 Ação Imediata</span>
-    <div class="card-title">3. 3. ANP prorroga isenção de estoque mínimo até 30/06 — mas Petrobras vende diesel direto +1.900% e sinal de gargalo de distribuição cresce</div>
-
-    <div class="card-block">
-      <span class="block-label">O que aconteceu</span>
-      <p>A ANP prorrogou em 07/05/2026 a flexibilização de estoques mínimos obrigatórios de gasolina A e diesel A (S10 e S500) para produtores e distribuidoras até 30/06/2026 — extensão de dois meses sobre a medida emergencial de 19/03. A justificativa oficial é garantir abastecimento e conter escalada de preços derivada da guerra no Irã (Resolução ANP). Paralelamente, dado publicado em 08/05 aponta que a venda direta de diesel pela Petrobras a grandes consumidores (Vale e outros) disparou 1.900% no 1T2026, operação vista pelas distribuidoras como forma de a estatal driblar limitações do canal normal e maximizar receita em período de alta defasagem.</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Por que importa</span>
-      <p>A isenção de estoque mínimo facilita o fluxo de combustível no curto prazo, mas também significa que distribuidoras operam com colchão menor — qualquer interrupção logística (greve, acidente em refinaria, novo pico de Brent) pode gerar desabastecimento localizado mais rápido. A venda direta da Petrobras +1.900% para grandes consumidores reduz volumes disponíveis para o canal distribuidor. Postos que dependem de distribuidoras menores ou regionais, especialmente fora do eixo Rio-SP, são os mais vulneráveis. O Ministério da Fazenda declarou em 06/05 que o impacto da alta do petróleo nos preços BR é de 20% — mas não há garantia de abastecimento pleno se Hormuz permanecer fechado além de maio/junho.</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Ação da semana</span>
-      <p>1. Contate sua distribuidora principal esta semana e pergunte por escrito: qual o volume disponível para suas próximas 3 entregas programadas? Há prazo garantido? 2. Se você tem tanques com capacidade ociosa, avalie encher acima do nível habitual antes do fim de maio — enquanto o subsídio da MP 1.349 ainda está ativo. 3. Se sua distribuidora é de médio ou pequeno porte, mapeie um segundo fornecedor como backup logístico para junho. 4. Monitore avisos de desabastecimento regionalizado pelo canal da Fecombustíveis e do sindicato estadual.</p>
-    </div>
-  </div>
-  <div class="card yellow">
-    <span class="card-tag tag-yellow">🟡 Atenção</span>
-    <div class="card-title">4. 4. Real valorizado a R$ 4,90 amortece Brent — mas MP 1.349 vence em maio e câmbio pode reverter</div>
-
-    <div class="card-block">
-      <span class="block-label">O que aconteceu</span>
-      <p>O dólar operou na faixa R$ 4,89–4,91 na semana de 10–15/05, com baixa de ~1,62% no período segundo Investing.com/Wise. O real acumula valorização de ~12% em 12 meses, sustentado pela Selic em 14,75%, dólar globalmente fraco (DXY ~98 pontos) e fluxo positivo de exportadores beneficiados pelo petróleo acima de US$ 100. A previsão do mercado para maio/2026 aponta faixa R$ 4,95–5,15 com viés dependente do desfecho do conflito Irã, posse do novo presidente do Fed e próxima reunião do Copom (16–17/junho). Analistas consultados pelo Banco Central elevaram projeção da Selic para 2027.</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Por que importa</span>
-      <p>O câmbio a R$ 4,90 é o principal amortecedor que impede que o Brent a US$ 104 se traduza em um reajuste catastrófico imediato nos combustíveis. O PPI (preço de paridade de importação) é calculado em reais — com dólar fraco, o patamar de defasagem em R$/L é menor do que seria se o dólar estivesse a R$ 5,20 (como em out/2025). Para o posto, isso significa que o próximo reajuste da Petrobras, quando vier, pode ser menor do que o mercado teme — mas só se o câmbio se mantiver. Uma reversão para R$ 5,10–5,20 (cenário de piora do conflito ou mudança no Fed) amplificaria a defasagem em reais e aumentaria a pressão por reajuste.</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Ação da semana</span>
-      <p>1. Acompanhe o USD/BRL semanalmente — se romper R$ 5,05, reveja suas projeções de custo para junho. 2. Se você tem fornecedor com nota em dólar ou praticando PPI explícito, negocie travar o câmbio de referência no contrato de junho. 3. Não use o câmbio 'favorável atual' como argumento para afrouxar margem — ele é temporário. 4. Monitore a decisão do CNPE sobre renovação dos subsídios pós-31/05 e o tom do Copom em junho.</p>
-    </div>
-  </div>
-  <div class="card green">
-    <span class="card-tag tag-green">🟢 Oportunidade</span>
-    <div class="card-title">5. 5. Etanol hidratado produtor estável em R$ 2,72/L e competitivo na bomba: janela para postos flex fortalecerem mix</div>
-
-    <div class="card-block">
-      <span class="block-label">O que aconteceu</span>
-      <p>O Indicador CEPEA/ESALQ-SP do etanol hidratado fechou a semana de 5–9/05 em R$ 2,7236/L, variação de apenas +0,19% sobre a semana anterior. O etanol anidro subiu mais (+0,76%, a R$ 3,1230/L), refletindo a demanda aquecida das distribuidoras para atender o E30 e já precificar o E32. Segundo dados da ABEGÁS (semana encerrada em 2/05), o etanol hidratado bomba tinha paridade de 68,37% ante a gasolina na média nacional — abaixo do limiar de 70%, o que favorece o etanol em SP, GO, MT e PR. Com E32 aprovado, a composição da gasolina C fica mais cara, potencialmente ampliando a vantagem competitiva do hidratado nos próximos 30–60 dias.</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Por que importa</span>
-      <p>Para o posto com perfil de frota flex, esta é a janela mais clara da edição: etanol produtor estável em R$ 2,72/L significa que o preço de aquisição não deve subir abruptamente, enquanto a gasolina C acumula pressão de alta (Brent, E32, eventual reajuste Petrobras). Se a gasolina C bomba subir — o que é provável — e o hidratado permanecer controlado, a relação E/G cairá abaixo de 70% em mais estados, ampliando o mercado potencial para quem tem estrutura de hidratado. A safra 2026/27 de cana começa em ritmo normal (sem sinal de quebra), o que sustenta oferta de etanol ao longo do 2º semestre.</p>
-    </div>
-
-    <div class="card-block">
-      <span class="block-label">Ação da semana</span>
-      <p>1. Verifique sua relação E/G hoje: se etanol hidratado bomba / gasolina C bomba &lt; 70% no seu estado, comunique ativamente os consumidores flex — cartaz na bomba, grupo de WhatsApp de frotistas. 2. Se seu tanque de hidratado está abaixo de 60% de capacidade, avalie recompor estoque esta semana enquanto o produtor está estável. 3. Negocie volume maior com sua distribuidora de etanol para travar preço antes de qualquer impacto do E32 no anidro. 4. Se você não tem hidratado na bomba, avalie a viabilidade de instalação — a janela competitiva pode durar de 60 a 90 dias.</p>
-    </div>
-  </div>
-</div>
-
-<!-- O QUE FAZER HOJE -->
-<div class="actions-box">
-  <h3>🎯 O Que Fazer Hoje</h3>
-  <ul>
-    <li><strong>Verifique o subsídio na nota:</strong> Confirme por escrito com sua distribuidora se a subvenção da MP 1.349 (R$ 0,80/L diesel produzido) está sendo repassada na nota fiscal de maio. A MP vence em 31/05 — você precisa saber o que muda em junho.</li>
-    <li><strong>Antecipe compras de diesel antes de 31/05:</strong> Enquanto o subsídio estiver ativo, o custo efetivo de aquisição está amortecido. Se tiver capacidade de estocagem, encha os tanques antes do vencimento da MP. Não espere a distribuidora avisar.</li>
-    <li><strong>Recalcule o custo da gasolina C com E32:</strong> O CNPE aprovou E32 em 07/05. Refaça a planilha de custo unitário com 32% de etanol anidro (CEPEA: R$ 3,12/L) e 68% de gasolina A. Identifique o impacto na margem antes que o primeiro lote chegue.</li>
-    <li><strong>Monitore a relação E/G no seu estado:</strong> Se etanol hidratado bomba / gasolina C bomba &lt; 70%, comunique os consumidores flex ativamente. Esta é a janela de diferenciação competitiva da semana.</li>
-    <li><strong>Mapeie fornecedor backup para junho:</strong> Com ANP prorrogando isenção de estoque mínimo e venda direta da Petrobras disparando, distribuidoras regionais operam com colchão menor. Tenha um segundo fornecedor mapeado e contato ativo antes de uma eventual crise de abastecimento local.</li>
-    <li><strong>Acompanhe USD/BRL semanalmente:</strong> O câmbio a R$ 4,90 é o principal freio do reajuste de combustíveis. Se romper R$ 5,05, reveja projeções de custo para junho e renegocie condições de frete com distribuidora.</li>
-  </ul>
-</div>
-
-<!-- BENEFÍCIO VERIMO (BLOCO FIXO) -->
-<div class="benefit-box">
-  <div class="benefit-title">🛡️ Benefício do Clube — Seguros Verimo</div>
-  <p>Acesso a <strong>todas as seguradoras</strong> via plataforma Verimo (Ramsés é franqueado). Cotação comparativa para qualquer apólice — pessoal, do posto, da família, dos funcionários.</p>
-  <p class="ramos">Auto · Patrimonial · Vida · Frota · RC Ambiental · RC Geral · Lucros Cessantes · Saúde &amp; Odonto · Vida em Grupo</p>
-  <span class="savings">💰 Economia média: 25%</span>
-  <p>📲 Apólice vencendo? Envie para análise:</p>
-  <a href="https://wa.me/5565992657008" class="contact-button">(65) 99265-7008</a>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  <div class="brand">LUMEN POSTO CLUB</div>
-  <div class="desc">Inteligência de mercado para donos de posto e revendedores de combustíveis</div>
-  <div class="meta">
-    Edição 20 · 10 a 16 / Mai / 2026<br>
-    Fontes: ANP (gov.br/anp), CEPEA/ESALQ-SP (cepea.esalq.usp.br), Abicom (abicom.com.br), ICE/Investing.com, NYMEX/Yahoo Finance, Banco Central do Brasil (bcb.gov.br), Ministério da Fazenda (gov.br/fazenda), MME/CNPE (gov.br/mme), Agência Brasil (agenciabrasil.ebc.com.br), Brasil Postos (brasilpostos.com.br), Times Brasil/CNBC (timesbrasil.com.br), UDOP (udop.com.br), Novacana (novacana.com), TradingEconomics, Reuters
-  </div>
-</div>
-
-</div><!-- /container -->
-
 </body>
 </html>

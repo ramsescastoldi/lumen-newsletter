@@ -2,25 +2,24 @@
   "edicao": 20,
   "periodo": "10 a 16 / Mai / 2026",
   "friday": "2026-05-15",
-  "generated_at": "2026-05-12T14:55:48.792Z",
-  "fontes": "ANP (gov.br/anp), CEPEA/ESALQ-SP (cepea.esalq.usp.br), Abicom (abicom.com.br), ICE/Investing.com, NYMEX/Yahoo Finance, Banco Central do Brasil (bcb.gov.br), Ministério da Fazenda (gov.br/fazenda), MME/CNPE (gov.br/mme), Agência Brasil (agenciabrasil.ebc.com.br), Brasil Postos (brasilpostos.com.br), Times Brasil/CNBC (timesbrasil.com.br), UDOP (udop.com.br), Novacana (novacana.com), TradingEconomics, Reuters",
-  "indicadores_count": 11,
-  "cards_count": 5,
-  "acoes_count": 6,
-  "has_pending_data": true,
+  "generated_at": "2026-05-12T16:32:19.044Z",
+  "fontes": "ICE / Investing.com (Brent, WTI), BCB PTAX / Investing.com (USD/BRL, EUR/BRL), Yahoo Finance / ICE (DXY), CoinMarketCap / Yahoo Finance (Bitcoin), B3 / Investing.com (Ibovespa), NYSE / CNBC (S&P 500, Nasdaq, Dow Jones), BCB / Copom (Selic), Federal Reserve / FOMC (Fed Funds), IBGE Agência de Notícias (IPCA-15 abr/2026), BCB Boletim Focus 11/mai/2026 (IPCA 2026, Selic projetada), ANP Síntese Semanal de Preços 2026 (Gasolina C, Etanol Hidratado, Diesel S-10, Diesel comum, GLP P-13), CEPEA/ESALQ USP — semana 5–9/mai/2026 (Etanol Hidratado e Anidro SP), Abicom / StoneX (Defasagem Petrobras Diesel e Gasolina mai/2026), Ministério da Fazenda / Agência Gov (MP 1.349/2026), ANP / Compre Rural (prorrogação estoque mínimo — 7/mai/2026), Times Brasil / Brasil em Folhas (Abicom defasagem mar/abr/2026), ClubPetro (74% defasagem diesel), UDOP (venda direta diesel 1.900% 1T26), Fecombustíveis (ICMS combustíveis 2026), BRASILCOM / Senado (pauta tabelamento), Abegas (paridade etanol/gasolina), Gazeta Mercantil (Ibovespa 11/mai), Infomoney (Focus 11/mai/2026), CNBC (S&P 500, Iran war, Fed), TradingEconomics (DXY, Fed Funds, Ibovespa), Exame/Future of Money (Bitcoin mai/2026), Poder360 / BM&C News (Focus IPCA), Agência Brasil / A União (Selic 14,50%), CNN Brasil (dólar, Ibovespa), Bloomberg Línea Brasil (Ibovespa análise semanal)",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": false,
   "usage": {
-    "input_tokens": 5,
-    "cache_creation_input_tokens": 99569,
-    "cache_read_input_tokens": 94158,
+    "input_tokens": 859,
+    "cache_creation_input_tokens": 153312,
+    "cache_read_input_tokens": 7142,
     "cache_creation": {
-      "ephemeral_5m_input_tokens": 583,
+      "ephemeral_5m_input_tokens": 7142,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 6367,
+    "output_tokens": 8519,
     "service_tier": "standard",
     "inference_geo": "global",
     "server_tool_use": {
-      "web_search_requests": 11,
+      "web_search_requests": 15,
       "web_fetch_requests": 0
     }
   }
