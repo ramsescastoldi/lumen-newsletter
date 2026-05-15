@@ -2,24 +2,24 @@
   "edicao": 20,
   "periodo": "10 a 16 / Mai / 2026",
   "friday": "2026-05-15",
-  "generated_at": "2026-05-12T19:18:01.740Z",
-  "fontes": "ICE/Investing.com (Brent, WTI), BCB/PTAX via Investing.com BR (USD/BRL), Wise/Investing.com (histórico câmbio), B3/Investing.com (Ibovespa), NYSE/CNBC (S&P 500, Nasdaq, Dow Jones), Banco Central do Brasil — Copom (Selic 14,50%, 29/abr/2026), Federal Reserve (Fed Funds), IBGE (IPCA-15 abr/26), BCB Boletim Focus 11/mai/2026 (IPCA 4,91%, Selic projeção, câmbio), ANP — Síntese Semanal de Preços/Dados Abertos (Gasolina C, Diesel, GLP — referência parcial), Saber Tecnologias/ANP (gasolina média R$ 6,29), CEPEA/ESALQ-USP — Indicador Semanal Etanol (Hidratado R$ 2,7236 e Anidro R$ 3,1230, semana 5−9/mai/2026, via Visão Agro), Abicom/StoneX (defasagem diesel 31%, gasolina 41%), Brasil Postos, Times Brasil/CNBC, ClubPetro, UDOP, EIA Short-Term Energy Outlook mai/2026, CNBC (oil prices, S&P 500 live updates mai/2026), TradingEconomics (Brent, WTI, DXY), Reuters (câmbio, Ibovespa mai/2026), Agência Brasil/EBC (Copom, ANP, Selic), Poder360 (Boletim Focus 11/mai/2026), InfoMoney (Focus, Ibovespa), Gazeta Mercantil (Ibovespa 11/mai), Seu Dinheiro (Petrobras reajuste gasolina 12/mai/2026), Ministério da Fazenda/gov.br (MP 1.349/2026, subsídio diesel/GLP, impacto 20%), Casa Civil/gov.br (MP 1.340/2026, PIS/Cofins diesel), Agência Senado (MP 1.349, PLP 67/2026), Brasilcom/Federação (reunião senador Mourão, tabelamento), Bloomberg Línea BR (Ibovespa, Petrobras), Fenabrave (emplacamentos quadrimestre 2026, Programa Carro Sustentável), Anfavea (projeção eletrificados 420−450 mil unidades 2026), PortalContexto/O Tempo (emplacamentos abril 2026), ADVFN/Anfavea (eletrificados 18,3% mercado), Federal Reserve de Nova York (pesquisa consumo gasolina por renda mai/2026), Agência Brasil (ANP prorrogação estoque mínimo até 30/jun), Compre Rural (ANP prorrogação)",
+  "generated_at": "2026-05-15T20:33:46.035Z",
+  "fontes": "TradingEconomics (Brent, WTI), Investing.com (Brent, WTI, DXY, Ibovespa, S&P 500, Nasdaq, Dow Jones, USD/BRL), MixVale (USD/BRL, Bitcoin, Ibovespa intraday 15/mai/2026), Wise (USD/BRL histórico semanal), Reuters/InfoMoney (Ibovespa 14/mai, câmbio), CNBC (S&P 500, Nasdaq, Dow Jones fechamento 15/mai/2026), TheStreet (bolsas EUA 14/mai), Yahoo Finance (bolsas EUA 15/mai), OilPriceAPI (Brent/WTI 15/mai), Agência Brasil (Copom/Selic 29/abr, IPCA-15), BCB Banco Central do Brasil (Boletim Focus 11/mai/2026, Selic 14,50%), IBGE/Agência de Notícias (IPCA-15 0,89% em abril), Poder360 (Focus 11/mai), InfoMoney (Focus 4/mai e 11/mai), TradingEconomics (Fed Funds 3,50%-3,75%), Federal Reserve/CNN (FOMC abr/2026, mandato Powell), FRED St. Louis Fed (Fed Funds histórico), iShares (perspectiva Fed 2026), ANP/Gov.br (Síntese Semanal 19/2026 semana 03-09/mai, página de levantamentos), IPTL/Edenred Ticket Log via Diário do Grande ABC e Jornal de Brasília (preços bomba 1ª quinzena mai/2026), Times Brasil (preços ANP), CEPEA/ESALQ via Visão Agro (etanol hidratado R$ 2,7236 e anidro R$ 3,1230 semana 05-09/mai/2026), Abicom via Brasil Postos, clickpicui.com.br, brasilemfolhas.com.br, ClubPetro (defasagem diesel e gasolina mai/2026), Casa Civil/Gov.br (MP 1.358/2026 de 13/mai e Decreto 12.974/2026 de 14/mai), TV Brasil/EBC (MP subsídio gasolina/diesel), Senado Federal (MP 1.349/2026), Ministério da Fazenda/Gov.br (MP 1.349/2026 abr/2026, MP 1.340/2026 mar/2026), Fecombustíveis (Carta Aberta ao País 30/mar, dados varejo combustíveis mar/2026, Fenabrave estimativa 2026), Bloomberg Línea (contexto Ibovespa e Petrobras), Fenabrave via Autoindustria, Portalcontexto, Diário do Transporte, Encontracarros (emplacamentos eletrificados jan-abr/2026, Anfavea 450 mil projeção), IBGE via BPMoney (varejo mar/2026), Suno Research/InfoMoney (Petrobras dividendos 1T26), Agência Infra (defasagem diesel mar/2026)",
   "indicadores_blocks": 7,
   "manchetes_count": 5,
   "has_pending_data": true,
   "usage": {
     "input_tokens": 859,
-    "cache_creation_input_tokens": 125090,
+    "cache_creation_input_tokens": 157338,
     "cache_read_input_tokens": 7142,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 7142,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 9831,
+    "output_tokens": 8768,
     "service_tier": "standard",
     "inference_geo": "global",
     "server_tool_use": {
-      "web_search_requests": 12,
+      "web_search_requests": 15,
       "web_fetch_requests": 0
     }
   }
