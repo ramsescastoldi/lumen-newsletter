@@ -1,0 +1,26 @@
+{
+  "edicao": 21,
+  "periodo": "17 a 23 / Mai / 2026",
+  "friday": "2026-05-22",
+  "generated_at": "2026-05-22T20:34:20.544Z",
+  "fontes": "TradingEconomics, ICE/Investing.com (Brent, WTI), Yahoo Finance (DXY, S&P 500, Dow Jones, Nasdaq, Bitcoin), Investing.com BR (USD/BRL, Ibovespa), InfoMoney (Ibovespa, USD/BRL, Focus), TheStreet (S&P 500, Dow, Nasdaq — fechamento 22/mai/2026), Banco Central do Brasil — Copom (Selic 14,50%, ata 29/abr/2026), BCB Boletim Focus 11/mai/2026 (IPCA 4,91%), Agência Brasil / Poder360 (Focus, Copom), IBGE (IPCA-15 abr/2026: 4,37% acum. 12m), CEPEA/ESALQ-USP (etanol hidratado R$ 2,7236/L e anidro R$ 3,1230/L — semana 5–9/mai/2026), Abicom / InfoMoney (defasagem diesel -51%/-R$1,86 e gasolina -84%/-R$2,12 — 20/mai/2026), ANP Síntese Semanal (gasolina C R$ 6,29/L — referência 2026; semana corrente pendente), Fincred/ANP (GLP e preços semana 26/abr–2/mai), Agência Brasil (pacote combustíveis MP abr/2026, subsídio diesel R$1,20/L), Poder360/CNN Brasil (Petrobras reajuste gasolina 'já,já' — Chambriard 12/mai/2026), Seu Dinheiro (reajuste diesel R$0,38/L Petrobras 14/mar/2026), Federal Reserve / CNBC (FOMC 29/abr/2026, Fed Funds 3,50%-3,75%), CNBC (Kevin Warsh empossado Fed 22/mai/2026), EIA Short-Term Energy Outlook maio/2026 (Brent US$106/b, déficit 8,5 mbpd 2T26), IEA Oil Market Report mai/2026, OPEC.org (OPEP+ 3/mai/2026, 188 kbpd), Al Jazeera/CNBC (saída EAU da OPEP, Hormuz fechado), Barclays via Reuters (Brent forecast US$100/b), Confaz/Gazeta do Povo (PMPF combustíveis a partir 1/mai/2026), Comsefaz (ICMS ad rem 2026: gasolina R$1,57/L, diesel R$1,17/L), Fenabrave (emplacamentos 1T26: 94.700 eletrificados +89%; Top 10 mai/2026), SpeedRacing/Encontracarros/QGdoAutomovel (elétricos 15% mercado 2026, BYD Dolphin Mini), InfoMoney/Moneytimes (Ibovespa ao vivo 22/mai/2026), Reuters via Investing.com BR (USD/BRL)",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "usage": {
+    "input_tokens": 141395,
+    "cache_creation_input_tokens": 7142,
+    "cache_read_input_tokens": 7142,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 7142,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 11135,
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "server_tool_use": {
+      "web_search_requests": 18,
+      "web_fetch_requests": 0
+    }
+  }
+}
