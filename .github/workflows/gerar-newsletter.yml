@@ -45,6 +45,7 @@ jobs:
         run: node scripts/gerar-newsletter.mjs
 
       - name: Commit + push edição
+        id: commit
         env:
           EDICAO: ${{ steps.gerar.outputs.edicao }}
           PERIODO: ${{ steps.gerar.outputs.periodo }}
@@ -54,9 +55,14 @@ jobs:
           git add editions/
           if git diff --cached --quiet; then
             echo "Sem mudanças para commitar (edição já existe?)"
+            echo "new_sha=${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
           else
             git commit -m "newsletter: edição ${EDICAO} (${PERIODO})"
             git push
+            # Captura SHA do commit recém-criado pra URLs raw funcionarem
+            NEW_SHA=$(git rev-parse HEAD)
+            echo "new_sha=${NEW_SHA}" >> "$GITHUB_OUTPUT"
+            echo "✓ Novo commit: ${NEW_SHA}"
           fi
 
       - name: Avisar n8n
@@ -73,7 +79,8 @@ jobs:
             exit 0
           fi
           REPO="${{ github.repository }}"
-          SHA="${{ github.sha }}"
+          # SHA do commit recém-criado (não github.sha — esse é do trigger, ANTES do commit dos PDFs)
+          SHA="${{ steps.commit.outputs.new_sha }}"
           MOBILE_URL="https://raw.githubusercontent.com/${REPO}/${SHA}/${MOBILE_PATH}"
           A4_URL="https://raw.githubusercontent.com/${REPO}/${SHA}/${A4_PATH}"
           PAYLOAD=$(cat <<EOF
