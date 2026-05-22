@@ -104,6 +104,13 @@ Retorne EXCLUSIVAMENTE um JSON válido conforme o schema abaixo. NÃO escreva te
     3. "Bolsas"                       — Ibovespa, S&P 500, Nasdaq, Dow Jones
     4. "Juros & Inflação"             — Selic, Fed Funds, IPCA-15, Focus IPCA 2026
     5. "Preço na Bomba (ANP)"         — Gasolina C, Etanol Hidratado, Diesel S-10, Diesel comum, GLP P-13
+       ⚠️ CRÍTICO: este bloco NUNCA pode ficar todo "a confirmar". A ANP Síntese Semanal pode estar
+       atrasada (publicação típica ter/qua/qui da semana seguinte). Quando a semana corrente não
+       estiver publicada, USE OS VALORES DA ÚLTIMA SEMANA ANP PUBLICADA (busque "ANP síntese
+       semanal preços combustíveis última semana", "ANP levantamento preços postos")
+       e marque a fonte com a SEMANA EXATA dos dados (ex: "ref. semana 12–18/mai/2026"). Cinco
+       linhas devem ter valores reais — só use "a confirmar" se realmente não houver dado publicado
+       nas últimas 4 semanas. Direction: compare com a semana ANTERIOR à publicada.
     6. "Usina (CEPEA/ESALQ)"          — Etanol Hidratado SP, Etanol Anidro SP
     7. "Defasagem Petrobras (Abicom)" — Diesel, Gasolina
   ],

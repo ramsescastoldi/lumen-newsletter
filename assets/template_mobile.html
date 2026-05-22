@@ -326,6 +326,28 @@
     display: block;
     margin-bottom: 4px;
   }
+
+  /* ============ PDF PAGE BREAKS (evitar quebra no meio de blocos) ============ */
+  /* Cada quadro de indicadores (ANP, CEPEA, Abicom, Petróleo, etc.) fica numa página só */
+  .indic-block { break-inside: avoid; page-break-inside: avoid; }
+  .indic       { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Section header não fica órfão no fim de página */
+  .section-header { break-after: avoid; page-break-after: avoid; }
+
+  /* Cada manchete (1-5) fica unida */
+  .manchete { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Article: headline+deck unidos com primeiro parágrafo; parágrafos individuais não quebram */
+  .article-headline { break-after: avoid; page-break-after: avoid; }
+  .article-deck     { break-after: avoid; page-break-after: avoid; }
+  .article-body p   { break-inside: avoid; page-break-inside: avoid; orphans: 3; widows: 3; }
+
+  /* Bloco Verimo (rodapé editorial) fica unido */
+  .verimo { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Colofon (lista de fontes) — não quebra no meio */
+  .colofon { break-inside: avoid; page-break-inside: avoid; }
 </style>
 </head>
 <body>
