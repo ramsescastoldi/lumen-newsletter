@@ -89,6 +89,19 @@ jobs:
           )
           echo "Enviando para n8n: $N8N_NEWSLETTER_URL"
           echo "$PAYLOAD"
+          # Retry: VPS pode estar momentaneamente inacessível (já caiu em 22/05/2026).
+          # Tenta 5x com backoff, timeout total ~10min, falha de conexão = retry.
           curl -fsS -X POST "$N8N_NEWSLETTER_URL" \
             -H "Content-Type: application/json" \
-            -d "$PAYLOAD"
+            -d "$PAYLOAD" \
+            --connect-timeout 20 \
+            --max-time 60 \
+            --retry 5 \
+            --retry-delay 30 \
+            --retry-all-errors
+          STATUS=$?
+          if [ $STATUS -ne 0 ]; then
+            echo "::error::Webhook n8n falhou após 5 tentativas (exit $STATUS). PDFs ESTÃO commitados no repo — dispare manualmente: curl -X POST -H 'Content-Type: application/json' -d '$PAYLOAD' '$N8N_NEWSLETTER_URL'"
+            exit $STATUS
+          fi
+          echo "✓ Webhook n8n entregue."
