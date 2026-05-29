@@ -261,9 +261,7 @@ ${body}
 function extractJSON(text) {
   if (!text) throw new Error("Resposta vazia");
   let cleaned = text.trim();
-  cleaned = cleaned.replace(/^```(?:json)?s*
-?/i, "").replace(/
-?```s*$/i, "");
+  cleaned = cleaned.replace(/^```(?:json)?\s*\n?/i, "").replace(/\n?```\s*$/i, "");
 
   const start = cleaned.indexOf("{");
   if (start === -1) throw new Error("JSON não encontrado na resposta");
