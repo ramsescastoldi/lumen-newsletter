@@ -259,12 +259,39 @@ ${body}
 }
 
 function extractJSON(text) {
+  if (!text) throw new Error("Resposta vazia");
   let cleaned = text.trim();
-  cleaned = cleaned.replace(/^```(?:json)?\s*\n?/i, "").replace(/\n?```\s*$/i, "");
-  const first = cleaned.indexOf("{");
-  const last = cleaned.lastIndexOf("}");
-  if (first === -1 || last === -1) throw new Error("JSON não encontrado na resposta");
-  return JSON.parse(cleaned.slice(first, last + 1));
+  cleaned = cleaned.replace(/^```(?:json)?s*
+?/i, "").replace(/
+?```s*$/i, "");
+
+  const start = cleaned.indexOf("{");
+  if (start === -1) throw new Error("JSON não encontrado na resposta");
+
+  // Balanced bracket walk respeitando strings e escapes —
+  // para no primeiro } que fecha o objeto raiz, ignorando qualquer texto depois.
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+  let end = -1;
+  for (let i = start; i < cleaned.length; i++) {
+    const ch = cleaned[i];
+    if (inString) {
+      if (escaped) { escaped = false; continue; }
+      if (ch === "\\") { escaped = true; continue; }
+      if (ch === '"') { inString = false; }
+      continue;
+    }
+    if (ch === '"') { inString = true; continue; }
+    if (ch === "{") depth++;
+    else if (ch === "}") {
+      depth--;
+      if (depth === 0) { end = i; break; }
+    }
+  }
+
+  if (end === -1) throw new Error("JSON inválido (brackets desbalanceados)");
+  return JSON.parse(cleaned.slice(start, end + 1));
 }
 
 async function gerar() {
