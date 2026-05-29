@@ -2,24 +2,24 @@
   "edicao": 22,
   "periodo": "24 a 30 / Mai / 2026",
   "friday": "2026-05-29",
-  "generated_at": "2026-05-23T17:00:05.396Z",
-  "fontes": "TradingEconomics (Brent, WTI), ICE / Investing.com (Brent, DXY), NYMEX (WTI), Banco Central do Brasil (PTAX USD/BRL, Copom, Boletim Focus), Reuters (câmbio, bolsas, petróleo), Agência Brasil (Copom/Selic), IBGE (IPCA-15), Poder360 (Focus IPCA, Petrobras reajuste), InfoMoney (Focus), Exame (Focus), Suno (Focus), ANP Síntese Semanal (preços bomba, ref. semana 12–18/mai/2026), CEPEA/ESALQ-USP (etanol hidratado e anidro SP, semana 5–9/mai/2026), Abicom / Brasil Postos (defasagem Petrobras diesel e gasolina, ref. 17/mai/2026), ClubPetro (defasagem histórica), CNBC (S&P 500, Nasdaq, Dow Jones, Fed minutes, OPEC+), TradingEconomics (Dow Jones 22/mai), Fenabrave (emplacamentos veículos eletrificados 1ºtri e abril/2026), SpeedRacing / QGdoAutomovel (dados eletrificados mai/2026), CNN Brasil (Ibovespa, câmbio, Petrobras gasolina), Seu Dinheiro (reajuste diesel Petrobras mar/2026), Poder360 / CNN Brasil (Petrobras gasolina 'já já'), Federal Reserve / FOMC (ata mai/2026, Fed Funds), Equals Money (Fed Funds histórico), iShares (Fed outlook 2026), OPEC.org (reunião OPEC+ 3/mai/2026), CNBC (OPEC+ 188k bpd), Fecombustíveis (Carta Aberta, ExpoPostos 2026), Cade (Documento de Trabalho 1/2026 concentração postos), Brasilpostos.com.br (Abicom/Acelen), UDOP (CEPEA etanol, Abicom diesel), Agência Gov (combustíveis governo Lula), Brasil de Fato (Vibra/Petrobras debate reestatização), Poder360 (Operação Sem Refino, Ciro Nogueira), Bitmex (DXY mai/2026), Beincrypto (DXY/Bitcoin)",
+  "generated_at": "2026-05-29T23:17:25.491Z",
+  "fontes": "TradingEconomics (Brent/WTI/DXY), ICE Futures, NYMEX, Yahoo Finance, Investing.com BR, BCB/PTAX, Fortune (Bitcoin), Phemex, CNN Brasil, InfoMoney, Agência Brasil/EBC, IBGE (IPCA-15/PIB), BCB Boletim Focus (25/mai/2026), Copom/BCB, CNBC, TheStreet, Agência Brasil (Copom/Selic), Poder360, Exame, ANP Síntese Semanal (ref. semana 12–18/mai/2026), CEPEA/ESALQ-USP, Visão Agro, Brasil Postos, Abicom, Credited.com.br, Agência Brasil/Petrobras, Movimentoeconômico.com.br, Veronoticias (ValeCard), Fenabrave, SpeedRacing/ABVE, QG do Automóvel",
   "indicadores_blocks": 7,
   "manchetes_count": 5,
-  "has_pending_data": true,
+  "has_pending_data": false,
   "usage": {
     "input_tokens": 859,
-    "cache_creation_input_tokens": 136618,
+    "cache_creation_input_tokens": 118351,
     "cache_read_input_tokens": 7356,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 7356,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 10469,
+    "output_tokens": 9682,
     "service_tier": "standard",
     "inference_geo": "global",
     "server_tool_use": {
-      "web_search_requests": 18,
+      "web_search_requests": 15,
       "web_fetch_requests": 0
     }
   }
