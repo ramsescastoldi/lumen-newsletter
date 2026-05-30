@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>Posto em Dia | Edição 23 — Lumen Posto Club</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; background: #f5f0e3; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #111;
+    background: #f5f0e3;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .paper {
+    max-width: 660px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #e1d7b8;
+    padding-bottom: 24px;
+  }
+
+  /* ============ MASTHEAD ============ */
+  .masthead {
+    border-bottom: 3px double #003459;
+    padding: 22px 20px 14px;
+    text-align: center;
+    background: #ffffff;
+  }
+  .masthead .top-rule {
+    border-top: 6px solid #003459;
+    margin: -22px -20px 16px;
+  }
+  .masthead h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #111;
+  }
+  .masthead .subtitle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #555;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+  .masthead .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #d0d0d0;
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .masthead .meta .edicao { color: #003459; font-weight: 800; }
+
+  /* ============ SECTION HEADER ============ */
+  .section-header {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #003459;
+    padding: 0 20px;
+    margin: 28px 0 14px;
+    border-top: 2px solid #003459;
+    padding-top: 10px;
+  }
+  .section-header::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #d0d0d0;
+    margin: 8px -20px 0;
+  }
+
+  /* ============ INDICADORES FINANCEIROS (TABLOIDE DE COTAÇÕES) ============ */
+  .indic-wrap { padding: 0 20px; }
+  .indic-block {
+    margin-bottom: 14px;
+    border: 1px solid #d8d8d8;
+    background: #fbfbf7;
+  }
+  .indic-block-title {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #003459;
+    padding: 6px 10px;
+    font-weight: 700;
+  }
+  .indic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .indic {
+    padding: 9px 12px;
+    border-bottom: 1px solid #ecece4;
+    border-right: 1px solid #ecece4;
+  }
+  .indic:nth-child(2n) { border-right: none; }
+  .indic-full {
+    grid-column: span 2;
+    border-right: none;
+  }
+  .indic-name {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #555;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+  .indic-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .indic-value {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #111;
+  }
+  .indic-var {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .indic-var.up { color: #c0392b; }
+  .indic-var.up::before { content: "▲ "; color: #c0392b; }
+  .indic-var.down { color: #1e8449; }
+  .indic-var.down::before { content: "▼ "; color: #1e8449; }
+  .indic-var.neutral { font-style: italic; color: #777; }
+  .indic-var.pending { font-style: italic; color: #777; }
+  .indic-source {
+    font-size: 9px;
+    color: #888;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* ============ MANCHETES (5) ============ */
+  .manchetes-wrap { padding: 0 20px; }
+  .manchete {
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .manchete:first-child { border-top: none; padding-top: 6px; }
+  .manchete-num {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #003459;
+    line-height: 0.85;
+    min-width: 46px;
+    text-align: center;
+    margin-top: -2px;
+  }
+  .manchete-body { flex: 1; }
+  .manchete-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.22;
+    margin-bottom: 8px;
+  }
+  .manchete-summary {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #333;
+  }
+
+  /* ============ ARTIGOS LONGOS ============ */
+  .article {
+    padding: 0 20px;
+    margin-bottom: 6px;
+  }
+  .article-headline {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .article-deck {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .article-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+  .article-body p:first-of-type::first-letter {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    font-weight: 900;
+    float: left;
+    line-height: 0.9;
+    padding: 4px 8px 0 0;
+    color: #003459;
+  }
+  .article-body strong { color: #003459; }
+
+  /* ============ VERIMO (RODAPÉ) ============ */
+  .verimo {
+    margin: 32px 20px 0;
+    border: 2px solid #003459;
+    padding: 22px;
+    background: #fbfbf7;
+  }
+  .verimo-kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #003459;
+    margin-bottom: 8px;
+    font-weight: 800;
+  }
+  .verimo-title {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .verimo p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .verimo p strong { color: #003459; }
+  .verimo .ramos {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .verimo .savings {
+    display: block;
+    margin: 14px 0 6px;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #003459;
+  }
+  .verimo .cta {
+    display: block;
+    background: #003459;
+    color: #fff !important;
+    text-align: center;
+    padding: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+
+  /* ============ COLOFON ============ */
+  .colofon {
+    text-align: center;
+    padding: 30px 20px 12px;
+    border-top: 2px solid #003459;
+    margin-top: 30px;
+  }
+  .colofon .brand {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .colofon .tagline {
+    font-style: italic;
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+    font-family: Georgia, serif;
+  }
+  .colofon .fontes {
+    font-size: 11px;
+    color: #666;
+    margin-top: 14px;
+    line-height: 1.5;
+    padding-top: 12px;
+    border-top: 1px solid #d0d0d0;
+  }
+  .colofon .fontes strong {
+    color: #003459;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ============ PDF PAGE BREAKS (evitar quebra no meio de blocos) ============ */
+  /* Truque-chave: overflow:hidden cria novo block-formatting-context, forçando o */
+  /* Chromium a respeitar break-inside (sem isso, ele ignora quando há grid/flex). */
+
+  .indic-block {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+  .indic-grid  { break-inside: avoid; page-break-inside: avoid; }
+  .indic       { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Section header não fica órfão no fim de página */
+  .section-header { break-after: avoid; page-break-after: avoid; break-inside: avoid; page-break-inside: avoid; }
+
+  /* Cada manchete (1-5) fica unida */
+  .manchete {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Cada matéria longa começa em página própria (são >400mm, não cabem juntas) */
+  .article {
+    page-break-before: always; break-before: page;
+    break-inside: auto; /* parágrafos quebram dentro, mas headline+deck protegidos abaixo */
+  }
+  .article:first-of-type { page-break-before: auto; break-before: auto; }
+
+  /* Headline + deck precisam ficar juntos com o início do corpo */
+  .article-headline {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-deck {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-body p {
+    break-inside: avoid; page-break-inside: avoid;
+    orphans: 3; widows: 3;
+  }
+
+  /* Bloco Verimo (rodapé editorial) em página própria */
+  .verimo {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Colofon (lista de fontes) em página própria */
+  .colofon {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<div class="paper">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="top-rule"></div>
+    <h1>Posto em Dia</h1>
+    <div class="subtitle">O Semanário do Revendedor de Combustíveis</div>
+    <div class="meta">
+      <span class="edicao">Edição 23</span>
+      <span>31/Mai a 6/Jun / 2026</span>
+    </div>
+  </div>
+
+  <!-- INDICADORES FINANCEIROS -->
+  <div class="section-header">Indicadores Financeiros</div>
+  <div class="indic-wrap">
+    <div class="indic-block">
+      <div class="indic-block-title">Petróleo &amp; Energia</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Brent (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 91,20</div>
+            <div class="indic-var down">-2,0% na sem.</div>
+          </div>
+          <div class="indic-source">ICE / TradingEconomics — ref. 29/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">WTI (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 87,20</div>
+            <div class="indic-var down">-2,0% na sem.</div>
+          </div>
+          <div class="indic-source">NYMEX / TradingEconomics — ref. 29/mai/2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Moedas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">USD/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 5,042</div>
+            <div class="indic-var up">+0,21% (sex.)</div>
+          </div>
+          <div class="indic-source">BCB PTAX / Investing.com — 29/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">EUR/BRL</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Dado não apurado no fechamento</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">DXY (Dollar Index)</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">ICE — dado não apurado no fechamento</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Bitcoin (USD)</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Coinbase — dado não apurado no fechamento</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Bolsas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Ibovespa</div>
+          <div class="indic-row">
+            <div class="indic-value">173.787 pts</div>
+            <div class="indic-var up">-0,73% (sex. 29/mai)</div>
+          </div>
+          <div class="indic-source">B3 / InfoMoney — fechamento 29/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">S&amp;P 500</div>
+          <div class="indic-row">
+            <div class="indic-value">7.580,06</div>
+            <div class="indic-var down">+0,22% (sex. 29/mai)</div>
+          </div>
+          <div class="indic-source">NYSE / CNBC — fechamento 29/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Nasdaq</div>
+          <div class="indic-row">
+            <div class="indic-value">26.972,62</div>
+            <div class="indic-var down">+0,20% (sex. 29/mai)</div>
+          </div>
+          <div class="indic-source">Nasdaq / CNBC — fechamento 29/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Dow Jones</div>
+          <div class="indic-row">
+            <div class="indic-value">51.032,46</div>
+            <div class="indic-var down">+0,72% (sex. 29/mai)</div>
+          </div>
+          <div class="indic-source">NYSE / CNBC — fechamento 29/mai/2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Juros &amp; Inflação</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Selic (a.a.)</div>
+          <div class="indic-row">
+            <div class="indic-value">14,50%</div>
+            <div class="indic-var down">-0,25 p.p. (Copom abr/2026)</div>
+          </div>
+          <div class="indic-source">Banco Central do Brasil — Copom 29/abr/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Fed Funds (a.a.)</div>
+          <div class="indic-row">
+            <div class="indic-value">3,50%–3,75%</div>
+            <div class="indic-var neutral">mantida (FOMC)</div>
+          </div>
+          <div class="indic-source">Federal Reserve — decisão jan/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">IPCA-15 (acum. 12m)</div>
+          <div class="indic-row">
+            <div class="indic-value">4,37%</div>
+            <div class="indic-var up">+0,89% (abr/2026)</div>
+          </div>
+          <div class="indic-source">IBGE — abr/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Focus IPCA 2026</div>
+          <div class="indic-row">
+            <div class="indic-value">5,04%</div>
+            <div class="indic-var up">+0,12 p.p. na sem.</div>
+          </div>
+          <div class="indic-source">BCB Boletim Focus — 25/mai/2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Preço na Bomba (ANP)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Gasolina C (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,29</div>
+            <div class="indic-var neutral">estável</div>
+          </div>
+          <div class="indic-source">ANP Síntese Semanal — ref. semana 18–24/jan/2026 (dado disponível Ed. 04/2026)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">ANP — síntese semana corrente não publicada até fechamento desta edição</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel S-10 (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,30</div>
+            <div class="indic-var neutral">estável</div>
+          </div>
+          <div class="indic-source">ValeCard/ANP — ref. dez/2025; semana corrente ANP pendente</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel Comum (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">ANP — síntese semana corrente não publicada até fechamento desta edição</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">GLP P-13 (R$/botijão)</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">ANP — síntese semana corrente não publicada até fechamento desta edição</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Usina (CEPEA/ESALQ)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado SP (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 2,78</div>
+            <div class="indic-var up">chuvas interrompem queda (sem. 26/mai)</div>
+          </div>
+          <div class="indic-source">CEPEA/ESALQ — média safra 25/26; nota diária 26/mai/2026</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Anidro SP (R$/L)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 3,13</div>
+            <div class="indic-var up">+6,21% vs. safra ant.</div>
+          </div>
+          <div class="indic-source">CEPEA/ESALQ — média safra 25/26; nota 7/abr/2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Defasagem Petrobras (Abicom)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Diesel (defasagem)</div>
+          <div class="indic-row">
+            <div class="indic-value">31%</div>
+            <div class="indic-var up">R$ 1,12/L abaixo do PPI</div>
+          </div>
+          <div class="indic-source">Abicom — ref. fechamento 17/mai/2026 (Brent US$ 90/bbl)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Gasolina (defasagem)</div>
+          <div class="indic-row">
+            <div class="indic-value">41%</div>
+            <div class="indic-var up">R$ 1,03/L abaixo do PPI</div>
+          </div>
+          <div class="indic-source">Abicom — ref. fechamento 17/mai/2026 (Brent US$ 90/bbl)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 MANCHETES -->
+  <div class="section-header">As 5 Manchetes da Semana</div>
+  <div class="manchetes-wrap">
+    <div class="manchete">
+      <div class="manchete-num">1</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Brent despenca 17% em maio com cessar-fogo EUA-Irã: alívio no petróleo não chega à bomba</div>
+        <div class="manchete-summary">O barril do Brent encerrou maio a US$ 91,20 — queda de 17% no mês, a maior desde 2020 — após relatos de acordo preliminar entre Washington e Teerã para estender o cessar-fogo e reabrir o Estreito de Ormuz. A deflação internacional ainda não se traduz em reajuste de Petrobras: a defasagem segue em 31% no diesel e 41% na gasolina, segundo a Abicom, o que mantém a janela de importação fechada há mais de 90 dias. Dono de posto deve monitorar repasses da distribuidora com atenção.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">2</div>
+      <div class="manchete-body">
+        <div class="manchete-title">MP de subsídios ao diesel e gasolina entra em vigor: R$ 1,20/L para importação e interdição de postos com preço abusivo</div>
+        <div class="manchete-summary">O pacote emergencial do governo Lula — MP, projeto de lei e decretos assinados em 6/abr — criou subvenção de até R$ 1,20/L para importação de diesel (custo compartilhado com estados, até R$ 4 bilhões) e R$ 0,44/L de isenção de PIS/Cofins/Cide na gasolina. A MP também autoriza interdição de postos que aumentarem preços de forma abusiva e obriga o Cade a ser comunicado de suspeitas de infração. Revendedores precisam garantir que o desconto chegue ao consumidor para evitar autuação.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">3</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Focus eleva IPCA 2026 a 5,04% — 11ª alta consecutiva — e mercado projeta Selic a 13,25% no fim do ano</div>
+        <div class="manchete-summary">O Boletim Focus de 25/mai/2026 registrou nova deterioração das expectativas: o IPCA projetado para 2026 chegou a 5,04%, superando o teto da meta de 4,5% pela 11ª semana seguida, com combustíveis e alimentos como principais vetores. A mediana da Selic ao fim de 2026 ficou em 13,25% — ciclo de corte lento que mantém custo de capital de giro elevado para postos. Próxima reunião do Copom nos dias 16–17/jun.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">4</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Elétricos e híbridos chegam a 15% do mercado automotivo brasileiro em 2026: BYD Dolphin Mini entra no Top 10</div>
+        <div class="manchete-summary">O 1º trimestre de 2026 encerrou com 94.700 veículos eletrificados vendidos — alta de 89% sobre o mesmo período de 2025, segundo dados da Fenabrave. O BYD Dolphin Mini, a R$ 119.990, atingiu o Top 10 geral e se tornou o seminovo de giro mais rápido em abril. O crescimento acelerado começa a pressionar a curva de demanda de gasolina no segmento urbano de renda média, sinalizando necessidade de adaptação do mix de serviços nos postos.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">5</div>
+      <div class="manchete-body">
+        <div class="manchete-title">ANP prorroga flexibilização de estoque mínimo de diesel e gasolina até 30/jun e PIB do 1T26 sobe 1,1% no trimestre</div>
+        <div class="manchete-summary">A ANP estendeu até 30 de junho a dispensa de manutenção de estoques mínimos de gasolina e diesel para produtores e distribuidores — medida originalmente adotada em 19/mar para garantir o abastecimento durante a crise do Oriente Médio. Na mesma semana, o IBGE confirmou crescimento do PIB de 1,1% no 1T26 ante o trimestre anterior e 1,8% em 12 meses, acima da projeção de 1,0% — sinal positivo para o consumo de combustíveis no semestre.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MERCADO DE COMBUSTÍVEIS -->
+  <div class="section-header">Mercado de Combustíveis</div>
+    <div class="article">
+    <div class="article-headline">Petrobras mantém defasagem recorde enquanto Brent despenca: setor aguarda gatilho para reajuste</div>
+    <div class="article-deck">Com diesel 31% abaixo da paridade e gasolina 41% defasada, a estatal segura preços em meio à guerra fiscal de subsídios — mas a queda do petróleo cria janela técnica para corte nas refinarias</div>
+    <div class="article-body">
+      <p>O barril do <strong>Brent fechou maio a US$ 91,20</strong> — queda de <strong>17% no mês</strong>, a maior desde 2020 — pressionado por relatórios de acordo preliminar entre <strong>Estados Unidos e Irã</strong> para estender o cessar-fogo 60 dias e reabrir o Estreito de Ormuz, rota de <strong>20% do petróleo e GNL global</strong>. O cenário reverteu parcialmente o choque geopolítico de fevereiro, quando o conflito empurrou o Brent de US$ 70 para mais de US$ 120. Analistas do <strong>UBS</strong> alertam, porém, que qualquer recuperação do fluxo pelo Ormuz será lenta: minas precisam ser removidas, infraestrutura reparada e a produção reiniciada gradualmente.</p>
+      <p>No mercado doméstico, a <strong>Abicom</strong> calcula que, com o petróleo a US$ 90/barril, o diesel da <strong>Petrobras</strong> segue <strong>31% abaixo da paridade de importação (PPI)</strong> — diferença de <strong>R$ 1,12/litro</strong> — e a gasolina, <strong>41% defasada</strong> (<strong>R$ 1,03/L</strong>). O mercado está há <strong>mais de 97 dias sem importação de diesel competitiva</strong>. Para compensar, o governo federal ativou a <strong>MP de subsídios de até R$ 4 bilhões</strong> (subvenção de R$ 1,20/L para diesel importado), além de isenção de PIS/Cofins/Cide de <strong>R$ 0,44/L na gasolina</strong>. A <strong>Acelen (Refinaria de Mataripe)</strong>, que opera pelo PPI, reduziu o diesel S-10 em <strong>R$ 0,21/L</strong> e a gasolina em <strong>R$ 0,18/L</strong> na semana de 27/mai, ampliando o diferencial em relação à Petrobras.</p>
+      <p>Para o revendedor, o cenário é de compressão de margem por dois lados: a distribuidora ainda não repassa integralmente a queda do petróleo, e a MP impõe obrigatoriedade de transferência do subsídio ao consumidor — sob risco de <strong>interdição do posto</strong> e comunicação compulsória ao <strong>Cade</strong>. <strong>Ação operacional imediata</strong>: documente os preços de compra e repasse das distribuidoras com notas fiscais datadas. Se o subsídio de R$ 0,44/L na gasolina ainda não apareceu no seu custo de aquisição, acione o canal de compliance da sua distribuidora por escrito — o MME e a ANP estão monitorando.</p>
+    </div>
+  </div>
+
+  <!-- POLÍTICA (notícia quente) -->
+  <div class="section-header">Política &middot; Quente</div>
+    <div class="article">
+    <div class="article-headline">MP dos subsídios vira campo minado: governo ameaça interditar postos e Cade entra em campo com poderes ampliados</div>
+    <div class="article-deck">Ao criar a maior intervenção nos preços de combustíveis desde 2022, o governo Lula também armou um instrumento de punição sem precedentes — e o setor de revenda está na linha de fogo</div>
+    <div class="article-body">
+      <p>O pacote emergencial lançado pelo governo federal em <strong>6 de abril de 2026</strong> — batizado internamente de 'MP dos combustíveis' — combinou renúncia fiscal de PIS/Cofins/Cide (<strong>R$ 0,44/L na gasolina</strong>), subvenção de <strong>R$ 1,20/L para diesel importado</strong> (custo dividido entre União e estados) e criação de gatilho legal para interditação de postos. <strong>Antes da MP, o único instrumento punitivo era a multa</strong>. Agora, o ministro <strong>Alexandre Silveira (MME)</strong> confirmou que postos que repassarem preços acima do benefício poderão ter as operações encerradas pelo regulador — medida que o setor classifica como desproporcional diante da assimetria de informação na formação de preços.</p>
+      <p>A inclusão do <strong>Cade</strong> como destinatário obrigatório de denúncias de violação da ordem econômica eleva o risco jurídico para revendedores. O projeto de lei enviado em regime de urgência ao Congresso prevê <strong>pena de 2 a 5 anos de prisão</strong> para sócios de postos que infringirem a Lei da Economia Popular. O setor, representado pela <strong>Fecombustíveis</strong>, reagiu alertando que o problema central não está na revenda, mas na cadeia upstream: a defasagem da Petrobras (<strong>41% na gasolina</strong>) cria assimetria estrutural que nenhuma fiscalização no varejo resolve. A <strong>Acelen/Mataripe</strong>, com 14% do mercado, segue o PPI e reajustou quatro vezes em maio, enquanto a Petrobras manteve os preços congelados.</p>
+      <p>O nó político se complica com a pressão eleitoral de 2026 — <strong>Lula disputa a reeleição</strong> e qualquer alta de preço na bomba tem efeito direto nas pesquisas. O governo sinaliza que os subsídios podem ser renovados após os dois meses iniciais. Para o dono de posto: monitore semanalmente se a distribuidora está transferindo o subsídio no custo de aquisição. <strong>Guarde evidências de que você repassou ao consumidor</strong> — a fiscalização será intensificada no trimestre.</p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA BRASIL -->
+  <div class="section-header">Economia · Brasil</div>
+    <div class="article">
+    <div class="article-headline">PIB do 1T26 surpreende com alta de 1,1%; Copom corta Selic a 14,5%, mas Focus acende alerta: inflação já excede teto da meta</div>
+    <div class="article-deck">Economia cresce acima do esperado enquanto o mercado projeta IPCA 2026 em 5,04% — 11ª semana acima do teto — e a Selic deve encerrar o ano em 13,25%</div>
+    <div class="article-body">
+      <p>O <strong>PIB do primeiro trimestre de 2026</strong> cresceu <strong>1,1% ante o trimestre anterior</strong> e <strong>1,8% em 12 meses</strong>, superando a projeção de 1,0% do consenso Reuters — dado divulgado pela tarde de <strong>29 de maio</strong>. O número é o reflexo de uma demanda doméstica ainda resiliente, puxada pelo mercado de trabalho formal e pelo crédito às famílias. O Banco Central estimava crescimento de <strong>1,85% para o PIB em 2026</strong>, e o Focus de 25/mai elevou a projeção para <strong>1,89%</strong>. A <strong>dívida bruta</strong>, porém, chegou a <strong>80,4% do PIB em abril</strong>, patamar que limita o espaço fiscal para manutenção dos subsídios a combustíveis.</p>
+      <p>No campo monetário, o <strong>Copom</strong> cortou a Selic em <strong>0,25 ponto percentual em 29 de abril</strong>, para <strong>14,5% ao ano</strong>, segundo corte consecutivo apesar das pressões inflacionárias da guerra no Oriente Médio. O <strong>IPCA-15 de abril</strong> acelerou para <strong>0,89%</strong> e acumula <strong>4,37% em 12 meses</strong> — perto do teto de 4,5% da meta contínua. O <strong>Focus de 25/mai/2026</strong> elevou pela <strong>11ª semana seguida</strong> a projeção do IPCA 2026 para <strong>5,04%</strong>, acima do teto de forma consistente. O mercado agora projeta Selic a <strong>13,25% ao ano</strong> no fim de 2026, sinalizando cortes graduais e lentos.</p>
+      <p>Para o revendedor, a Selic em 14,5% ainda representa <strong>custo de capital de giro elevado</strong>: um limite de crédito rotativo para compra de combustíveis de R$ 1 milhão consome mais de R$ 12 mil/mês só em juros mensais. A próxima decisão do Copom ocorre nos dias <strong>16 e 17 de junho</strong>. Se o IPCA de maio (a ser divulgado) confirmar aceleração, o ciclo de cortes pode ser pausado — o que manteria o custo de financiamento de estoque elevado por mais tempo. <strong>Priorize contratos de fornecimento com prazos mais longos e tente renegociar limites de crédito agora, enquanto a Selic ainda cede.</strong></p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA INTERNACIONAL -->
+  <div class="section-header">Economia · Internacional</div>
+    <div class="article">
+    <div class="article-headline">EUA e Irã negociam cessar-fogo e reabertura de Ormuz: OPEP+ amplia produção em 188 mil bpd e Fed congela juros em 3,5%–3,75%</div>
+    <div class="article-deck">A combinação de acordo geopolítico em negociação e oferta crescente da OPEP+ derrubou o Brent 17% em maio — mas a volatilidade permanece alta enquanto Trump exige condições máximas do Irã</div>
+    <div class="article-body">
+      <p>A semana foi dominada pela narrativa de desescalada no <strong>Oriente Médio</strong>. Fontes citadas pela <strong>Reuters</strong> confirmaram que <strong>EUA e Irã chegaram a acordo preliminar</strong> para estender o cessar-fogo por <strong>60 dias</strong> e suspender restrições ao tráfego no <strong>Estreito de Ormuz</strong>, incluindo remoção de minas em 30 dias. O <strong>presidente Trump</strong>, porém, ainda não aprovou os termos, e a mídia estatal iraniana negou a finalização. O impasse mantém a volatilidade: na <strong>terça 26/mai</strong>, EUA realizou novos ataques preventivos no sul do Irã — e o Brent reagiu com alta de <strong>2,12%</strong> antes de recuar com notícia do acordo. Analistas do <strong>Citi</strong> alertam que os preços podem voltar a subir se o processo de paz travar. A <strong>OPEP+</strong> — agora com <strong>21 membros após saída dos Emirados Árabes Unidos</strong> — aprovou aumento de produção de <strong>188 mil barris/dia em junho</strong>, terceiro mês consecutivo de expansão, mas o volume extra permanece em grande parte virtual enquanto o Ormuz estiver comprometido.</p>
+      <p>Nos <strong>Estados Unidos</strong>, o <strong>Federal Reserve</strong> manteve os juros na faixa de <strong>3,5%–3,75%</strong>, interrompendo o ciclo de cortes após três reuniões consecutivas de redução. O presidente <strong>Kevin Warsh</strong>, empossado pelo próprio Trump em <strong>22 de maio</strong>, herdou um banco central sob pressão política intensa — o governo abriu investigação criminal contra <strong>Jerome Powell</strong> no início de maio. O PCE (inflação preferida do Fed) registrou alta mensal de <strong>0,4% em abril</strong>, acima das expectativas, mantendo a taxa anual em <strong>3,8%</strong>, bem acima da meta de 2%. O governador <strong>Waller</strong> sinalizou que prefere 'manter juros estáveis' por ora, aguardando dados do mercado de trabalho.</p>
+      <p>Para o posto brasileiro, o impacto direto vem pelo câmbio e pelo petróleo. O <strong>dólar fechou a sexta 29/mai a R$ 5,042</strong>, levemente pressionado pela aversão ao risco geopolítico. <strong>Se o acordo EUA-Irã for concluído e o Ormuz reabrir plenamente</strong>, analistas do <strong>UBS</strong> preveem Brent entre US$ 75 e US$ 85/barril até o fim de 2026 — o que criaria pressão para a Petrobras reduzir preços nas refinarias. Monitore a agenda do FOMC e do Copom de junho: dois bancos centrais decidindo em sequência determinarão o câmbio do 3T26.</p>
+    </div>
+  </div>
+
+  <!-- VAREJO -->
+  <div class="section-header">Varejo</div>
+    <div class="article">
+    <div class="article-headline">Posto como hub de serviços: conveniência responde por até 40% da receita e 'experiência integrada' vira imperativo competitivo</div>
+    <div class="article-deck">Com consumo de combustíveis crescendo 1,9% ao ano e margens de revenda em expansão, o varejo no posto deixa de ser complementar e vira alavanca central de rentabilidade</div>
+    <div class="article-body">
+      <p>O varejo de combustíveis brasileiro passa por uma transformação estrutural: os <strong>mais de 40 mil postos</strong> em operação no país estão migrando do modelo puro de abastecimento para o de <strong>hub de energia e serviços de proximidade</strong>. Segundo projeções da <strong>Empresa de Pesquisa Energética (EPE)</strong>, o consumo de combustíveis líquidos deve crescer <strong>1,9% ao ano até 2026</strong>, adicionando cerca de <strong>3 bilhões de litros anuais</strong> ao mercado. A lojas de conveniência bem estruturadas já representam <strong>até 40% da receita total</strong> de um posto, segundo dados setoriais, com destaque para refeições rápidas, bebidas e produtos de alto giro.</p>
+      <p>O comportamento do consumidor reforça essa tendência. Pesquisas setoriais indicam que o cliente moderno valoriza a resolução de múltiplas necessidades em um único espaço: abastecimento, alimentação, pagamento digital e, crescentemente, recarga de veículo elétrico. Redes como <strong>Vibra (BR Mania)</strong> já apostam nesse modelo em <strong>25% de suas unidades</strong>, com fluxo unificado de pagamento e experiências sem atrito. Em <strong>2026</strong>, grandes associações do setor já falam em '<strong>checkouts rápidos com interfaces intuitivas</strong>' como diferencial competitivo, reduzindo abandono de compra e aumentando o ticket médio por cliente.</p>
+      <p>Para o revendedor independente, a virada é ao mesmo tempo oportunidade e ameaça: quem não estruturar a conveniência até 2027 perderá clientes para postos bandeirados com maior investimento em experiência. <strong>Ações imediatas</strong>: levante seu ticket médio atual na loja vs. no abastecimento; avalie parcerias com marcas de alimentação rápida ou café; instale pelo menos um ponto de recarga rápida (<strong>custo médio R$ 50 mil, ROI estimado em 2 anos</strong> com apps de EV). A <strong>ANP</strong> e o <strong>RenovaBio</strong> sinalizam que biocombustíveis e eletro-postos terão incentivos crescentes — posicione-se antes da obrigatoriedade regulatória.</p>
+    </div>
+  </div>
+
+  <!-- AUTOMOTIVO -->
+  <div class="section-header">Automotivo</div>
+    <div class="article">
+    <div class="article-headline">Eletrificados chegam a 15% do mercado e BYD Dolphin Mini entra no Top 10: o que isso muda para os postos agora</div>
+    <div class="article-deck">Com 94.700 veículos eletrificados vendidos no 1T26 e crescimento de 89% no segmento, o mercado automotivo manda um sinal claro — e o posto que não se preparar sentirá na demanda</div>
+    <div class="article-body">
+      <p>O <strong>1º trimestre de 2026</strong> consolidou um ponto de inflexão no mercado automotivo brasileiro: <strong>94.700 veículos eletrificados</strong> foram vendidos entre janeiro e março, alta de <strong>89,23% sobre o mesmo período de 2025</strong>, segundo dados da <strong>Fenabrave</strong>. Em <strong>abril</strong>, o segmento alcançou <strong>38.516 emplacamentos</strong>, crescimento de <strong>9% sobre março</strong>. O <strong>BYD Dolphin Mini</strong> (R$ 119.990) foi o protagonista absoluto: tornou-se o primeiro elétrico a integrar o Top 10 geral de vendas e o <strong>seminovo de giro mais rápido</strong> em abril — batendo HB20, Onix e Polo nas concessionárias. O acumulado do quadrimestre de 2026 aponta alta geral de <strong>16,30% nos emplacamentos totais</strong>, com EVs e híbridos puxando o crescimento.</p>
+      <p>A composição do mercado eletrificado no 1T26 revela que o brasileiro ainda prefere a 'ponte' dos híbridos: <strong>BEV (elétricos puros): 39,8%</strong>; <strong>PHEV (híbridos plug-in): 35%</strong>; <strong>HEV Flex (híbridos com etanol): 13,9%</strong>; <strong>HEV convencional: 11,3%</strong>. A fatia HEV Flex é especialmente relevante para o setor: carros que rodam com etanol e eletricidade combinados <strong>não eliminam a demanda por biocombustível</strong>, podendo inclusive ampliar a relevância do etanol hidratado nos postos. Volkswagen, GM e Fiat já anunciaram <strong>investimentos bilionários</strong> em modelos eletrificados no Brasil até 2027.</p>
+      <p>Para o dono de posto, o crescimento dos eletrificados é uma curva longa — <strong>elétricos puro ainda são apenas 2% da frota total</strong> de mais de 115 milhões de veículos — mas o ritmo de penetração exige planejamento agora. <strong>A meta do setor é ter 5 mil pontos de recarga pública até o fim de 2026</strong>. Postos que instalarem carregadores rápidos hoje se posicionam para capturar a receita de recarga e o fluxo adicional de clientes de alto poder aquisitivo. O <strong>custo de instalação de um carregador padrão</strong> está na faixa de R$ 50 mil, com retorno estimado em até 24 meses via credenciamento em aplicativos de EV. Considere também ampliar a oferta de etanol hidratado — a relação etanol/gasolina abaixo de 70% em SP mantém o biocombustível competitivo.</p>
+    </div>
+  </div>
+
+  <!-- VERIMO -->
+  <div class="verimo">
+    <div class="verimo-kicker">Benefício do Clube</div>
+    <div class="verimo-title">Seguros Verimo — Economia média de 25%</div>
+    <p>Acesso a <strong>todas as seguradoras</strong> via plataforma Verimo (Ramsés é franqueado). Cotação comparativa para qualquer apólice — pessoal, do posto, da família, dos funcionários.</p>
+    <p class="ramos">Auto · Patrimonial · Vida · Frota · RC Ambiental · RC Geral · Lucros Cessantes · Saúde &amp; Odonto · Vida em Grupo</p>
+    <span class="savings">25% de economia média</span>
+    <p>Apólice vencendo? Envie para análise:</p>
+    <a href="https://wa.me/5565992657008" class="cta">(65) 99265-7008</a>
+  </div>
+
+  <!-- COLOFON -->
+  <div class="colofon">
+    <div class="brand">Lumen Posto Club</div>
+    <div class="tagline">Inteligência semanal para o revendedor de combustíveis</div>
+    <div class="fontes">
+      <strong>Fontes consultadas nesta edição</strong>
+      TradingEconomics (Brent, WTI), CNBC (S&amp;P 500, Nasdaq, Dow Jones, geopolítica Oriente Médio), Investing.com BR (Ibovespa, USD/BRL), InfoMoney (Ibovespa, Copom), Agência Brasil/EBC (Copom, Selic, IPCA, pacote combustíveis, ANP estoque mínimo, OPEP+), BCB Boletim Focus 25/mai/2026, IBGE (IPCA-15, PIB 1T26), ANP Síntese Semanal Ed. 04/2026, CEPEA/ESALQ (etanol hidratado e anidro SP, notas 26/mai e 7/abr/2026), Abicom (defasagem Petrobras diesel e gasolina, ref. 17/mai/2026), Brasil Postos (Abicom, Acelen/Mataripe), Fenabrave (emplacamentos 1T26 e quadrimestre 2026), SpeedRacing/ABVE (mercado eletrificados 2026), Empresa de Pesquisa Energética — EPE (consumo combustíveis 2026), Fecombustíveis (ICMS, monofasia), Comsefaz/Confaz (alíquotas ICMS 2026), Reuters (geopolítica EUA-Irã, PIB 1T26)
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
