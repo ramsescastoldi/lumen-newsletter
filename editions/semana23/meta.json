@@ -2,24 +2,24 @@
   "edicao": 23,
   "periodo": "31/Mai a 6/Jun / 2026",
   "friday": "2026-06-05",
-  "generated_at": "2026-05-30T00:22:19.612Z",
-  "fontes": "TradingEconomics (Brent, WTI), CNBC (S&P 500, Nasdaq, Dow Jones, geopolítica Oriente Médio), Investing.com BR (Ibovespa, USD/BRL), InfoMoney (Ibovespa, Copom), Agência Brasil/EBC (Copom, Selic, IPCA, pacote combustíveis, ANP estoque mínimo, OPEP+), BCB Boletim Focus 25/mai/2026, IBGE (IPCA-15, PIB 1T26), ANP Síntese Semanal Ed. 04/2026, CEPEA/ESALQ (etanol hidratado e anidro SP, notas 26/mai e 7/abr/2026), Abicom (defasagem Petrobras diesel e gasolina, ref. 17/mai/2026), Brasil Postos (Abicom, Acelen/Mataripe), Fenabrave (emplacamentos 1T26 e quadrimestre 2026), SpeedRacing/ABVE (mercado eletrificados 2026), Empresa de Pesquisa Energética — EPE (consumo combustíveis 2026), Fecombustíveis (ICMS, monofasia), Comsefaz/Confaz (alíquotas ICMS 2026), Reuters (geopolítica EUA-Irã, PIB 1T26)",
+  "generated_at": "2026-06-06T23:27:37.945Z",
+  "fontes": "TradingEconomics (Brent, WTI, DXY), Investing.com (petróleo, câmbio, bolsas, Bitcoin), Yahoo Finance (DXY, S&P 500, Nasdaq, Dow Jones, Bitcoin), Fortune (Brent, Bitcoin preços 05/jun), CNBC (Nasdaq, S&P 500, Dow Jones, Fed, geopolítica), TheStreet (bolsas EUA 05/jun), Barchart (DXY), Notícias Agrícolas (PTAX USD/BRL), Infomoney (Ibovespa, Boletim Focus, Copom), ADVFN/Reuters (Ibovespa fechamentos), Diário do Grande ABC (fechamentos 03/jun), Agência Brasil/EBC (Copom Selic 14,50%, IPCA-15, subvenções combustíveis), Creditas/Exponencial (Selic histórico), BCB Focus boletim 01/jun/2026 (IPCA 5,09%, Selic 13,25%), CNN Brasil (IPCA-15 maio), Diário de Pernambuco (IPCA-15), Canal Rural (ANP adiamento publicação Corpus Christi), Saber Tecnologias (ANP tabela 2026), Petrobras precos.petrobras.com.br (diesel S-10 R$ 7,13 semana 24–30/mai), CEPEA/ESALQ (etanol hidratado R$ 2,2209/L e anidro R$ 2,5681/L sem 11–15/mai), NovaCana (CEPEA etanol queda), Tempoedinheirooficial/CEPEA (preços etanol mai/2026), Abicom/Brasil Postos (defasagem diesel 31%, gasolina), Seu Dinheiro (reajuste gasolina Petrobras R$ 0,48/L), Agência Gov EBC (MP subvenção diesel R$ 1,12/L prorrogada até 31/jul), Fecombustíveis (ICMS combustíveis 2026), Agência Brasil (pacote combustíveis abr/2026, STF/Messias), Federal Reserve FOMC (ata 29/abr, taxa 3,50–3,75%), Polymarket (Fed junho), EIA STEO mai/2026 (Brent US$ 106/b mai-jun, US$ 89/b 4T26), IEA Oil Market Report abr/2026, OPEC comunicado 03/mai/2026 (ajuste 188 kbd junho), Fenabrave (emplacamentos quadrimestre +16,30%), Autoentusiastas/AutoIndústria (vendas veículos leves mai/2026, Move Brasil R$ 30bi), Evdrops/Bright Consulting (BEVs 20.928 em mai, BYD Dolphin Mini recorde), Brasil Energia (demanda combustíveis 2026), BlockchainReporter (Bitcoin queda semana -14,3%), StealthEX (Bitcoin análise jun/2026)",
   "indicadores_blocks": 7,
   "manchetes_count": 5,
-  "has_pending_data": true,
+  "has_pending_data": false,
   "usage": {
-    "input_tokens": 859,
-    "cache_creation_input_tokens": 113431,
+    "input_tokens": 133283,
+    "cache_creation_input_tokens": 7356,
     "cache_read_input_tokens": 7356,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 7356,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 9356,
+    "output_tokens": 11167,
     "service_tier": "standard",
     "inference_geo": "global",
     "server_tool_use": {
-      "web_search_requests": 14,
+      "web_search_requests": 18,
       "web_fetch_requests": 0
     }
   }
