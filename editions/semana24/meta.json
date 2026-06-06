@@ -1,0 +1,26 @@
+{
+  "edicao": 24,
+  "periodo": "7 a 13 / Jun / 2026",
+  "friday": "2026-06-12",
+  "generated_at": "2026-06-06T07:41:26.870Z",
+  "fontes": "TradingEconomics (Brent, WTI, Ibovespa, DXY), Investing.com (WTI histórico, USD/BRL), BCB / PTAX (USD/BRL), Money Times (Ibovespa fechamento 05/jun), CNBC (S&P 500, Nasdaq, Dow Jones, Fed), Yahoo Finance (DXY, Bitcoin), CoinDesk (Bitcoin), Diário do Grande ABC (Ibovespa 05/jun, CEPEA etanol), Agência Brasil (Copom, Selic), Economic News Brasil (Focus IPCA, elétricos), InfoMoney (Focus 01/jun, Ibovespa), Gaia Group (Copom jun análise), IBGE (IPCA-15 calendário), CEPEA/ESALQ (Etanol hidratado e anidro SP semana 02-06/jun), NovaCana (CEPEA etanol mai), Brasil Postos / Abicom (defasagem Petrobras), Agência Gov / EBC (MP 1.363/2026, subvenção diesel e GLP), O Tempo (MP 1.363 prorrogação), Folha de Alagoas (PLC 114/2026), Fecombustíveis (ICMS combustíveis 2026), ANP / Gov.br (síntese semanal levantamento jun, comunicado publicação 09/jun), Fenabrave (emplacamentos 2026), Economic News Brasil / Encontracarros / QG do Automóvel (elétricos e híbridos 2026), OilPrice.com (geopolítica Hormuz), LiteFinance (contexto Brent), TheStreet / Bloomberg (mercados EUA)",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "usage": {
+    "input_tokens": 859,
+    "cache_creation_input_tokens": 128158,
+    "cache_read_input_tokens": 7356,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 7356,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 10960,
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "server_tool_use": {
+      "web_search_requests": 15,
+      "web_fetch_requests": 0
+    }
+  }
+}
