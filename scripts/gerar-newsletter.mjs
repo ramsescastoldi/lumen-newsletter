@@ -35,10 +35,26 @@ const MONTHS_PT = [
 ];
 
 function computeEdition(today = new Date()) {
+  // Estratégia: se hoje é sexta-feira, usa hoje.
+  // Se hoje é sábado/domingo, usa a sexta-feira que ACABOU de passar (semana corrente do conteúdo).
+  // Se hoje é seg-qui, usa a próxima sexta (semana corrente que ainda está em curso).
+  // Override por env DATE (YYYY-MM-DD) pra forçar geração de uma edição específica.
+  if (process.env.OVERRIDE_FRIDAY) {
+    today = new Date(process.env.OVERRIDE_FRIDAY + "T12:00:00Z");
+  }
   const friday = new Date(today);
-  const dow = friday.getDay();
-  if (dow !== 5) {
-    friday.setDate(friday.getDate() + (dow <= 5 ? 5 - dow : 12 - dow));
+  const dow = friday.getDay(); // 0=Dom 1=Seg ... 5=Sex 6=Sáb
+  if (dow === 5) {
+    // já é sexta — não muda
+  } else if (dow === 6) {
+    // sábado → sexta passada (ontem)
+    friday.setDate(friday.getDate() - 1);
+  } else if (dow === 0) {
+    // domingo → sexta passada (2 dias atrás)
+    friday.setDate(friday.getDate() - 2);
+  } else {
+    // seg-qui → próxima sexta dessa semana
+    friday.setDate(friday.getDate() + (5 - dow));
   }
   const t = new Date(Date.UTC(friday.getFullYear(), friday.getMonth(), friday.getDate()));
   const dayNum = t.getUTCDay() || 7;
