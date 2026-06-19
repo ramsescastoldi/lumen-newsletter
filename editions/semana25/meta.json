@@ -1,0 +1,26 @@
+{
+  "edicao": 25,
+  "periodo": "14 a 20 / Jun / 2026",
+  "friday": "2026-06-19",
+  "generated_at": "2026-06-19T20:34:46.730Z",
+  "fontes": "TradingEconomics (Brent, WTI, DXY, Ibovespa — 19/jun/2026), ICE/Investing.com (Brent), OilPrice.com (WTI), Kiplinger (WTI fechamento 18/jun), MSN/Investing.com BR (USD/BRL), Investidor10 (USD/BRL 19/jun), TheStreet (S&P 500, Nasdaq, Dow Jones — 18/jun/2026), CNBC (Fed Funds, DXY, FOMC), Federal Reserve / federalreserve.gov (FOMC statement 17/jun/2026), Polymarket / StreetStats (dot plot Fed, projeções Fed Funds), Bloomberg Reporter / Yahoo Finance (Bitcoin 19/jun/2026), Reuters / Investing.com (Ibovespa, Copom), RemessaOnline / Gaia Group (Copom Selic 17/jun/2026), Agência Brasil (Copom abril/2026, pacote antiabuso combustíveis), InfoMoney (Ibovespa, Focus, Copom), Banco Central do Brasil — Boletim Focus 05/jun/2026 (IPCA 2026: 5,11%), Investidor10 (IPCA 12m: 4,72%), IBGE — Calendário Jun/2026 (IPCA-15 previsto 25/jun), DEBIT.com.br (IPCA mai/2026: 0,58%), ANP — Síntese Semanal 04/2026 (preços na bomba semana 18–24/jan/2026), UDOP / CEPEA-ESALQ (etanol hidratado R$ 2,2166/L e anidro R$ 2,5108/L — semana 01–05/jun/2026), Abicom / Brasil Postos / CNN Brasil / Tribuna do Sertão (defasagem diesel 15%, gasolina 14% — jun/2026), Agência Brasil / Acelen / FUP (reajuste diesel mar/2026), CNN Brasil / Magda Chambriard (sinalização reajuste gasolina mai/2026), OPEC.org (reunião OPEP+ 03/mai/2026 — aumento 188 kb/d), Energyconnects.com (OPEP+ jul/2026), Bloomberg Línea BR (Ibovespa, geopolítica), Fenabrave (emplacamentos eletrificados 1T/2026 — 94.700 unidades; ranking jun/2026), SMABC/QG do Automóvel (89% crescimento EVs), Fecombustíveis (outlook 2026, MOVE BRASIL, BYD Dolphin Mini — mar/2026), ClubPetro (Lei Combustível do Futuro, B15, E30, monofasia 2026), Jornal Cruzeiro / IBGE PMC (varejo abr/2026: -1,5%; combustíveis -6,2%), PeçaMentor (PMC jun/2026), ASA Investimentos (Focus jun/2026 — IPCA 5,11%), Carroeletrico.net (tarifas BEV jul/2026), CNBC stock market today jun/2026",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "usage": {
+    "input_tokens": 859,
+    "cache_creation_input_tokens": 129084,
+    "cache_read_input_tokens": 7356,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 129084,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 10696,
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "server_tool_use": {
+      "web_search_requests": 18,
+      "web_fetch_requests": 0
+    }
+  }
+}
