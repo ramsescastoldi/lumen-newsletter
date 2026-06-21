@@ -230,68 +230,11 @@
   }
   .article-body strong { color: #003459; }
 
-  /* ============ VERIMO (RODAPÉ) ============ */
-  .verimo {
-    margin: 32px 20px 0;
-    border: 2px solid #003459;
-    padding: 22px;
-    background: #fbfbf7;
-  }
-  .verimo-kicker {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #003459;
-    margin-bottom: 8px;
-    font-weight: 800;
-  }
-  .verimo-title {
-    font-family: Georgia, serif;
-    font-size: 22px;
-    font-weight: 800;
-    color: #111;
-    margin-bottom: 12px;
-    line-height: 1.2;
-  }
-  .verimo p {
-    font-size: 14px;
-    line-height: 1.55;
-    color: #333;
-    margin-bottom: 8px;
-  }
-  .verimo p strong { color: #003459; }
-  .verimo .ramos {
-    font-size: 13px;
-    color: #555;
-    line-height: 1.6;
-  }
-  .verimo .savings {
-    display: block;
-    margin: 14px 0 6px;
-    font-family: Georgia, serif;
-    font-size: 22px;
-    font-weight: 800;
-    color: #003459;
-  }
-  .verimo .cta {
-    display: block;
-    background: #003459;
-    color: #fff !important;
-    text-align: center;
-    padding: 14px;
-    font-weight: 800;
-    text-decoration: none;
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-top: 14px;
-  }
-
-  /* ============ CTA DO CLUBE ============ */
+  /* ============ BLOCO LUMEN POSTO CLUB ============ */
   .cta-club {
-    margin: 24px 20px 0;
+    margin: 32px 20px 0;
     background: #003459;
-    padding: 26px 22px;
+    padding: 30px 24px;
     color: #fff;
     text-align: center;
   }
@@ -300,40 +243,49 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #C9A84C;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: 800;
   }
   .cta-club .title {
     font-family: Georgia, serif;
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.22;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   .cta-club .sub {
     font-size: 14px;
-    line-height: 1.55;
+    line-height: 1.6;
     color: #cfd6dd;
-    margin-bottom: 16px;
+    margin-bottom: 22px;
   }
-  .cta-club .btn {
-    display: inline-block;
-    background: #C9A84C;
-    color: #003459 !important;
-    text-decoration: none;
-    padding: 14px 22px;
-    font-weight: 800;
+  .cta-club .links {
+    border-top: 1px solid #1d4467;
+    padding-top: 18px;
+  }
+  .cta-club .link-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     font-size: 15px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    color: #fff;
+    margin: 8px 0;
+    line-height: 1.4;
   }
-  .cta-club .url {
-    display: block;
-    font-size: 12px;
+  .cta-club .link-row .lbl {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     color: #C9A84C;
-    margin-top: 12px;
-    letter-spacing: 1px;
+    font-weight: 800;
+  }
+  .cta-club .link-row .val {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
   }
 
   /* ============ COLOFON ============ */
@@ -483,24 +435,21 @@
   <div class="section-header">Automotivo</div>
   {{AUTOMOTIVO}}
 
-  <!-- VERIMO -->
-  <div class="verimo">
-    <div class="verimo-kicker">Benefício do Clube</div>
-    <div class="verimo-title">Seguros Verimo — Economia média de 25%</div>
-    <p>Acesso a <strong>todas as seguradoras</strong> via plataforma Verimo (Ramsés é franqueado). Cotação comparativa para qualquer apólice — pessoal, do posto, da família, dos funcionários.</p>
-    <p class="ramos">Auto · Patrimonial · Vida · Frota · RC Ambiental · RC Geral · Lucros Cessantes · Saúde &amp; Odonto · Vida em Grupo</p>
-    <span class="savings">25% de economia média</span>
-    <p>Apólice vencendo? Envie para análise:</p>
-    <a href="https://wa.me/5565992657008" class="cta">(65) 99265-7008</a>
-  </div>
-
-  <!-- CTA CLUBE -->
+  <!-- LUMEN POSTO CLUB -->
   <div class="cta-club">
     <div class="kicker">Lumen Posto Club</div>
-    <div class="title">Acompanhe o setor em tempo real</div>
-    <div class="sub">Newsletter semanal, painel diário de cotações, comunidade de revendedores e análises do Ramsés sobre o mercado de combustíveis.</div>
-    <a href="https://vendas.lumenclubpainel.com.br" class="btn">Conhecer o clube →</a>
-    <span class="url">vendas.lumenclubpainel.com.br</span>
+    <div class="title">Inteligência semanal pro revendedor de combustíveis</div>
+    <div class="sub">Newsletter semanal, painel diário de cotações, comunidade de revendedores e as análises do Ramsés sobre o mercado de combustíveis no Brasil.</div>
+    <div class="links">
+      <div class="link-row">
+        <span class="lbl">Site</span>
+        <a href="https://lumenpostoclub.com.br" class="val">lumenpostoclub.com.br</a>
+      </div>
+      <div class="link-row">
+        <span class="lbl">Instagram</span>
+        <a href="https://instagram.com/eusouramses" class="val">@eusouramses</a>
+      </div>
+    </div>
   </div>
 
   <!-- COLOFON -->
