@@ -2,24 +2,24 @@
   "edicao": 26,
   "periodo": "21 a 27 / Jun / 2026",
   "friday": "2026-06-26",
-  "generated_at": "2026-06-26T20:34:19.982Z",
-  "fontes": "TradingEconomics (Brent, WTI — 26/jun/2026), CNBC (WTI futures CLN26, Barchart), Notícias Agrícolas / PTAX BCB (USD/BRL — 26/jun/2026), Investing.com BR (EUR/BRL histórico), InfoMoney (Ibovespa, mini-índice WINQ26, BITM26 — 25–26/jun/2026), TradingEconomics Brasil (Ibovespa intraday), Banco Central do Brasil / bcb.gov.br (Copom 276ª reunião 17/jun, Boletim Focus 23/jun/2026), Agência Brasil EBC (Copom Selic 14,25%, IPCA-15 jun/2026, Focus IPCA 5,33%), Federal Reserve / federalreserve.gov (FOMC statement 17/jun/2026), CNBC (Fed Warsh press conference 17/jun), Fox Business (dot plot junho 2026), IBGE (IPCA-15 junho: +0,41%), XP Investimentos (Focus 01/jun/2026), ASA (Focus 08/jun/2026), Seu Dinheiro (ata Copom 23/jun/2026), Times Brasil / CNBC (IPTL Edenred Ticket Log — combustíveis semana 14–20/jun/2026), Jornal de Brasília (IPTL — combustíveis pós-acordo), Casa Civil / agenciagov.ebc.com.br (MP prorrogação subvenção diesel até 31/jul, 29/mai/2026), Agência Brasil EBC (pacote combustíveis abril 2026 — MP, decretos, interdição postos), CEPEA/ESALQ (Indicador Semanal Etanol Hidratado e Anidro SP, 1–5/jun/2026), UDOP (etanol CEPEA semana 1–5/jun/2026), Brasil Postos / Abicom (defasagem Petrobras contexto 2026), Minaspetro / Abicom (defasagem diesel 85% — mar/2026 pico), Fecombustíveis (Carta Aberta ao País — mar/2026; alta ICMS jan/2026; varejo 2025), ClubPetro / blog (mercado combustíveis 2026, E30, B15, reforma tributária), Fenabrave (emplacamentos mais vendidos junho 2026, ranking maio — 2º melhor desde 2011, MOVE Brasil), Fenabrave / QG do Automóvel (eletrificados 1T26: 94.700 unidades +89%), ABVE (PHEV 55% participação 1T26), Mundo do Automóvel para PCD (BYD Song líder eletrificados 1T26), SMABC / Fenabrave (39.621 eletrificados março 2026), oilprice.com (Petrobras Búzios record 1,1 M bpd — 25/jun/2026), Seudinheiro.com.br (ata Copom — Warren análise jun/2026), Bloomberg Línea BR (Ibovespa contexto semanal), ANP / gov.br (página Síntese Semanal e Levantamento de Preços — referência estrutural), CNPE (aprovação E30 — 25/jun/2026)",
+  "generated_at": "2026-06-26T21:50:38.463Z",
+  "fontes": "TradingEconomics, Investing.com, ICE, NYMEX, CNBC, TheStreet, BCB (Banco Central do Brasil), IBGE, Agência Brasil/EBC, InfoMoney, Safra Especialista, Agência Senado, Casa Civil/Gov.br, ANP (combustiveis-anp.com.br, BiodieselBR), CEPEA/ESALQ-USP, UDOP, Abicom, Brasil Postos, Fecombustíveis, Minaspetro, Fenabrave, ABVE, QG do Automóvel, SMABC, ClubPetro, Federal Reserve/FOMC, Goldman Sachs, EIA (US Energy Information Administration), Al Jazeera, OPEC, S&P Global, XP Investimentos, Reuters",
   "indicadores_blocks": 7,
   "manchetes_count": 5,
   "has_pending_data": true,
   "usage": {
-    "input_tokens": 859,
-    "cache_creation_input_tokens": 107861,
-    "cache_read_input_tokens": 7356,
+    "input_tokens": 860,
+    "cache_creation_input_tokens": 140805,
+    "cache_read_input_tokens": 134481,
     "cache_creation": {
-      "ephemeral_5m_input_tokens": 107861,
+      "ephemeral_5m_input_tokens": 140805,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 11054,
+    "output_tokens": 9967,
     "service_tier": "standard",
     "inference_geo": "global",
     "server_tool_use": {
-      "web_search_requests": 13,
+      "web_search_requests": 17,
       "web_fetch_requests": 0
     }
   }
