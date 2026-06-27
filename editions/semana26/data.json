@@ -1,0 +1,17 @@
+{
+  "manchetes": [
+    { "numero": 1, "headline": "Brent despenca para US$ 74 na semana e acumula queda de 19% em 30 dias com reabertura do Estreito de Ormuz", "resumo": "" },
+    { "numero": 2, "headline": "Copom corta Selic para 14,25% em 17/jun mas sinaliza ritmo 'gradual e dependente de dados' — Focus eleva IPCA 2026 para 5,33%", "resumo": "" },
+    { "numero": 3, "headline": "IPCA-15 de junho desacelera para 0,41% e surpreende positivamente o mercado, abaixo da projeção de 0,44%", "resumo": "" },
+    { "numero": 4, "headline": "MP 1.358/2026 autoriza subsídio federal a combustíveis equivalente ao PIS/Cofins — Congresso tem 120 dias para converter em lei", "resumo": "" },
+    { "numero": 5, "headline": "Veículos eletrificados crescem 89% no 1T26 e BYD Dolphin Mini foi o mais vendido em fevereiro — postos precisam planejar a transição", "resumo": "" }
+  ],
+  "mercado": { "headline": "Brent a US$ 74 e etanol em queda abrem a melhor janela de compra do semestre para o revendedor", "carryover": false, "opiniao": null },
+  "politica": { "headline": "MP do subsídio a combustíveis vence em setembro e Congresso divide entre converter em lei ou deixar caducar — postos na linha de fogo", "carryover": false, "opiniao": null },
+  "economiaBrasil": { "headline": "BC eleva PIB 2026 para 2,0% mas admite que Selic terá ciclo 'com pausas' — inflação acumulada em 12 meses fecha junho abaixo de 5%", "carryover": false, "opiniao": null },
+  "economiaInternacional": { "headline": "Fed de Warsh mantém juros em 3,5%–3,75% mas dot plot sinaliza alta em outubro — Hormuz reabre, OPEP+ eleva cota e Goldman revisa Brent para baixo", "carryover": false, "opiniao": null },
+  "varejo": { "headline": "Fecombustíveis denuncia que postos são 'bode expiatório' da crise e IBGE aponta queda no varejo de combustíveis puxou retração de 1,5% em abril", "carryover": false, "opiniao": null },
+  "automotivo": { "headline": "Híbridos plug-in lideram eletrificados com 55% das vendas no 1T26 e MOVE BRASIL promete mais 250 mil veículos adicionais no ano", "carryover": false, "opiniao": null },
+  "_bootstrap": true,
+  "_note": "data.json gerado retroativamente a partir do source.html da edição 26 para inicializar o filtro de novidade"
+}

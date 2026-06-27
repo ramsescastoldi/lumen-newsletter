@@ -85,6 +85,44 @@ function loadRef(name) {
   return fs.readFileSync(path.join("references", name), "utf8");
 }
 
+function loadPreviousEdition(edicao) {
+  const dataPath = path.join("editions", `semana${edicao - 1}`, "data.json");
+  if (!fs.existsSync(dataPath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(dataPath, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+function buildPreviousContext(prevData, prevEdicao, currentPeriodo) {
+  if (!prevData) return "";
+  const manchetes = (prevData.manchetes || [])
+    .map(m => `  ${m.numero}. ${m.headline}`)
+    .join("\n");
+  const artigos = ["mercado", "politica", "economiaBrasil", "economiaInternacional", "varejo", "automotivo"]
+    .filter(k => prevData[k]?.headline)
+    .map(k => `  - ${k}: "${prevData[k].headline}"`)
+    .join("\n");
+  return `
+
+EDIÇÃO ANTERIOR (semana ${prevEdicao}) — REFERÊNCIA OBRIGATÓRIA PARA FILTRO DE NOVIDADE:
+Manchetes da semana passada:
+${manchetes}
+
+Temas das matérias da semana passada:
+${artigos}
+
+CRITÉRIO DE SELEÇÃO DE NOTÍCIAS (em ordem de prioridade):
+1. PRIORIDADE: notícia desta semana (${currentPeriodo}) com impacto direto no setor de combustíveis, ou macro com efeito nos postos em até 60 dias → use com carryover: false, opiniao: null
+2. FALLBACK — se não houver notícia diferente das da semana anterior para um tema:
+   a. Busque se o fato da semana passada foi resolvido, atualizado ou piorou
+   b. Escreva o body com o update (mesmo que seja "situação persiste sem resolução")
+   c. Preencha "opiniao" com 1-2 frases incisivas da perspectiva editorial do Ramsés (OBRIGATÓRIO no fallback)
+   d. Marque carryover: true
+3. INDICADORES: se ANP/Abicom/CEPEA não publicaram esta semana, use dado da semana anterior + marque source com "(semana anterior — confirmar)"`;
+}
+
 function buildSystemPrompt() {
   const principles = loadRef("editorial_principles.md");
   const sources = loadRef("data_sources.md");
@@ -147,14 +185,16 @@ Retorne EXCLUSIVAMENTE um JSON válido conforme o schema abaixo. NÃO escreva te
       "Parágrafo 1 (3-5 linhas, com dados, fontes, datas)",
       "Parágrafo 2",
       "Parágrafo 3 com ação operacional"
-    ]
+    ],
+    "carryover": false,   // true se é continuação/update de matéria da semana anterior
+    "opiniao": null       // string 1-2 frases: perspectiva editorial do Ramsés. OBRIGATÓRIO quando carryover=true
   },
 
-  "politica": { headline, deck, body },        // notícia QUENTE sobre política que impacta o setor
-  "economiaBrasil": { headline, deck, body },  // economia BR (juros, inflação, câmbio, atividade)
-  "economiaInternacional": { headline, deck, body }, // economia global (Fed, China, geopolítica, commodities)
-  "varejo": { headline, deck, body },          // varejo brasileiro / convenience / hábitos de consumo
-  "automotivo": { headline, deck, body },      // carros, EVs, híbridos, infraestrutura, caminhões
+  "politica": { headline, deck, body, carryover, opiniao },        // notícia QUENTE sobre política que impacta o setor
+  "economiaBrasil": { headline, deck, body, carryover, opiniao },  // economia BR (juros, inflação, câmbio, atividade)
+  "economiaInternacional": { headline, deck, body, carryover, opiniao }, // economia global (Fed, China, geopolítica, commodities)
+  "varejo": { headline, deck, body, carryover, opiniao },          // varejo brasileiro / convenience / hábitos de consumo
+  "automotivo": { headline, deck, body, carryover, opiniao },      // carros, EVs, híbridos, infraestrutura, caminhões
 
   "fontes": "Lista de fontes consultadas, separadas por vírgula"
 }
@@ -265,12 +305,18 @@ function renderManchetes(arr) {
 function renderArticle(art) {
   if (!art) return "";
   const body = (art.body || []).map((p) => `      <p>${escapeHtmlKeepBasic(p)}</p>`).join("\n");
+  const carryoverHtml = art.carryover
+    ? `    <div class="carryover-badge">Continuação · Semana anterior</div>\n`
+    : "";
+  const opiniaoHtml = art.opiniao
+    ? `\n    <div class="article-opiniao"><span class="opiniao-label">Análise do editor</span><p>${escapeHtmlKeepBasic(art.opiniao)}</p></div>`
+    : "";
   return `  <div class="article">
-    <div class="article-headline">${escapeHtmlKeepBasic(art.headline)}</div>
+${carryoverHtml}    <div class="article-headline">${escapeHtmlKeepBasic(art.headline)}</div>
     <div class="article-deck">${escapeHtmlKeepBasic(art.deck)}</div>
     <div class="article-body">
 ${body}
-    </div>
+    </div>${opiniaoHtml}
   </div>`;
 }
 
@@ -312,6 +358,14 @@ async function gerar() {
   const { edicao, periodo, fridayISO } = computeEdition();
   console.log(`→ Edição ${edicao} — período: ${periodo} — sexta: ${fridayISO}`);
 
+  const prevData = loadPreviousEdition(edicao);
+  if (prevData) {
+    console.log(`→ Edição anterior carregada: semana${edicao - 1}`);
+  } else {
+    console.log(`→ Sem edição anterior (semana${edicao - 1}/data.json não encontrado)`);
+  }
+  const previousContext = buildPreviousContext(prevData, edicao - 1, periodo);
+
   const client = new Anthropic({ apiKey: ANTHROPIC_API_KEY });
 
   const systemPrompt = buildSystemPrompt();
@@ -336,10 +390,13 @@ NOTÍCIAS DA SEMANA (busque 10-15 manchetes recentes):
 - Varejo BR (Fecombustíveis, redes, conveniência, hábitos)
 - Automotivo (Fenabrave, EVs, híbridos, infraestrutura)
 
+${previousContext}
+
 DEPOIS produza o JSON conforme o schema:
 - 7 blocos de indicadores
 - 5 manchetes da semana (mix temático com filtro "afeta o dono de posto")
 - 6 matérias longas (mercado, política QUENTE, economia BR, economia internacional, varejo, automotivo)
+  → Cada matéria: preencha carryover e opiniao conforme o critério de seleção acima
 - fontes
 
 RETORNE APENAS O JSON.`;
@@ -421,6 +478,8 @@ RETORNE APENAS O JSON.`;
   const htmlPath = path.join(editionDir, "source.html");
   fs.writeFileSync(htmlPath, html);
   console.log(`✓ HTML salvo: ${htmlPath}`);
+  fs.writeFileSync(path.join(editionDir, "data.json"), JSON.stringify(data, null, 2));
+  console.log(`✓ data.json salvo (referência para próxima edição)`);
 
   // Renderiza PDFs
   console.log("→ Renderizando PDFs com Playwright...");

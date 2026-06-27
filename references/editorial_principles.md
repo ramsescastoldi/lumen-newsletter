@@ -93,3 +93,22 @@ Exemplos de bons temas: ADIs no STF, vetos presidenciais, MP que pode caducar, p
 ## 9. Comprimento total
 
 Newsletter completa: ~10.000-13.000 caracteres no HTML útil (sem CSS). Cada matéria longa: ~1.500-2.000 caracteres.
+
+## 10. Critério de seleção de notícias (prioridade decrescente)
+
+### Prioridade 1 — Notícia desta semana
+Qualquer notícia publicada dentro do período da edição (domingo a sexta) que tenha impacto direto no setor de combustíveis, ou macro com efeito nos postos em até 60 dias. Marque `carryover: false`, `opiniao: null`.
+
+### Prioridade 2 — Fallback: semana anterior com update
+Se não houver notícia diferente da semana anterior para um tema:
+1. Busque se o fato anterior foi resolvido, atualizado ou piorou
+2. Escreva o body com o que há de novo (mesmo que seja "situação persiste")
+3. Preencha `opiniao` com 1-2 frases incisivas da perspectiva do Ramsés — **OBRIGATÓRIO no fallback**
+4. Marque `carryover: true`
+
+### Indicadores (ANP / Abicom / CEPEA)
+Se não publicaram esta semana, use dado da semana anterior e marque `source` com `"(semana anterior — confirmar)"`.
+
+### O que NÃO usar mesmo como fallback
+- Notícia sem nenhuma relação com combustíveis, macro ou varejo de posto
+- Fato totalmente resolvido sem desdobramento relevante
