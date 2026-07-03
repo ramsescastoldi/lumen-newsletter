@@ -2,24 +2,24 @@
   "edicao": 27,
   "periodo": "28/Jun a 4/Jul / 2026",
   "friday": "2026-07-03",
-  "generated_at": "2026-07-03T20:33:48.637Z",
-  "fontes": "TradingEconomics (Brent, WTI, DXY, Ibovespa — 02–03/jul/2026), Investing.com BR (USD/BRL, cotações), ICE/NYMEX (petróleo), CNBC / TheStreet (Dow Jones, S&P 500, Nasdaq — 02/jul/2026), Yahoo Finance / SundayGuardianLive (Bitcoin — 03/jul/2026), Banco Central do Brasil / brasilindicadores.com.br (Selic 14,25% — Copom 17/jun/2026), IBGE / InfoMoney / CNN Brasil (IPCA-15 jun/2026 — 25/jun/2026), BCB Boletim Focus (IPCA 5,33% / Selic 14,0% fim 2026 — jun/2026), ANP / Fecombustíveis (preços bomba — semana 14–20/jun/2026), CEPEA/ESALQ-USP (etanol hidratado e anidro SP — jun/2026), Abicom (defasagem Petrobras — referência mai/2026), Poder360 / Agência Gov (Durigan e subsídio gasolina — 01/jul/2026), Senado Federal (MPV 1.358/2026 — prazo 11/jul), oblumenauense.com.br (Petrobras corta QAV 14,5% — 01/jul/2026), Fenabrave / Correio Braziliense / Metaverso / Economic News Brasil (emplacamentos eletrificados 1S26 — 02/jul/2026), Suno.com.br / InfoMoney (Ibovespa — fechamento 30/jun e 02/jul/2026), Seu Dinheiro (OPEP+ 188 mil b/d jul/2026), EliteTrader / Forbes Advisor (NFP 57 mil vagas jun/2026 — 03/jul/2026)",
+  "generated_at": "2026-07-03T21:42:52.756Z",
+  "fontes": "TradingEconomics (Brent/WTI/DXY/Ibovespa), ICE Futures, Investing.com BR (USD/BRL, Brent), Forbes Advisor (Brent 02/jul/2026), CNBC Markets (S&P 500, Dow Jones, Nasdaq — fechamento 02/jul/2026), Exame (NYSE/Nasdaq fechadas em 03/jul — feriado), Suno.com.br (Ibovespa 02/jul), Banco Central do Brasil — BCB (Selic meta 14,25% — Copom 17/jun/2026, PTAX), Brasilindicadores.com.br (Selic histórico), Agência Brasil EBC (Copom, Focus boletins mai/jun/2026), Infomoney (Focus 01/jun e 08/jun/2026), CNN Brasil Economia (Focus IPCA 5,30% — 16/jun/2026), Yahoo Finance / Sunday Guardian (Bitcoin US$ 61.854 — 03/jul/2026), Coinbase (Bitcoin), Polymarket (BTC price July 3 resolved), ANP — gov.br (síntese semanal combustíveis, último dado disponível ref. jun/2026), Fecombustíveis (preços bomba semana 14–20/jun/2026, carta aberta ao país, reunião CBCC 30/jun/2026), CEPEA/ESALQ-USP (etanol hidratado e anidro SP, queda 7% jun/2026), Abicom (defasagem Petrobras histórico 2026), Poder360 (Durigan MP subsídio 01/jul/2026), Agência Gov / Casa Civil (subvenções combustíveis prorrogação até 31/jul/2026, decreto 29/mai/2026), Senado Federal (MPV 1.358/2026 prazo 11/jul), O Oblumenauense / Petrobras (corte QAV 14,5% em 01/jul/2026), PROCON-TL Três Lagoas (preços bomba jul/2026), Federação BRASILCOM (CBCC reunião jun/2026), UDOP (Abicom defasagem diesel histórico), Minaspetro / BrasilPostos (defasagem histórico), Fenabrave / Vanguarda do Norte / Expressão Rondônia (emplacamentos 1S26 elétricos e híbridos — 02/jul/2026), Metaverso.app.br (emplacamentos elétricos 1S26), Reuters (oil prices steady Jul 3 / USD/BRL movements), Bloomberg Línea BR (Ibovespa 1S26 alta 6,76%)",
   "indicadores_blocks": 7,
   "manchetes_count": 5,
   "has_pending_data": true,
   "usage": {
     "input_tokens": 1790,
-    "cache_creation_input_tokens": 162477,
+    "cache_creation_input_tokens": 153696,
     "cache_read_input_tokens": 7810,
     "cache_creation": {
-      "ephemeral_5m_input_tokens": 162477,
+      "ephemeral_5m_input_tokens": 153696,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 8866,
+    "output_tokens": 9873,
     "service_tier": "standard",
     "inference_geo": "global",
     "server_tool_use": {
-      "web_search_requests": 18,
+      "web_search_requests": 17,
       "web_fetch_requests": 0
     }
   }
