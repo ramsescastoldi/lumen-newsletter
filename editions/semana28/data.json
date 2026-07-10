@@ -1,0 +1,294 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 76,19",
+          "variation": "+5,87% (semana)",
+          "direction": "up",
+          "source": "ICE / Investing.com — 10/jul/2026"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 73,50",
+          "variation": "+5,50% (semana)",
+          "direction": "up",
+          "source": "NYMEX / TradingEconomics — 09/jul/2026"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,12",
+          "variation": "-0,67%",
+          "direction": "down",
+          "source": "BCB / Investing.com — 10/jul/2026"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 5,63",
+          "variation": "-0,50%",
+          "direction": "down",
+          "source": "Investing.com — 10/jul/2026 (estimado)"
+        },
+        {
+          "name": "DXY (Índice Dólar)",
+          "value": "100,20",
+          "variation": "-0,60%",
+          "direction": "down",
+          "source": "ICE / Investing.com — 10/jul/2026 (estimado)"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "US$ 103.200",
+          "variation": "+1,80%",
+          "direction": "neutral",
+          "source": "Coinbase / Investing.com — 10/jul/2026 (estimado)"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa (B3)",
+          "value": "176.000 pts",
+          "variation": "+2,00%",
+          "direction": "down",
+          "source": "B3 / InfoMoney — 10/jul/2026"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.543,64",
+          "variation": "+0,81%",
+          "direction": "down",
+          "source": "NYSE / CNBC — 09/jul/2026"
+        },
+        {
+          "name": "Nasdaq Composite",
+          "value": "26.206,89",
+          "variation": "+1,30%",
+          "direction": "down",
+          "source": "Nasdaq / CNBC — 09/jul/2026"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "52.487,41",
+          "variation": "+0,27%",
+          "direction": "down",
+          "source": "NYSE / CNBC — 09/jul/2026"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic (% a.a.)",
+          "value": "14,25%",
+          "variation": "-0,25 pp (jun/26)",
+          "direction": "down",
+          "source": "BCB / Copom — 17/jun/2026"
+        },
+        {
+          "name": "Fed Funds (% a.a.)",
+          "value": "3,50%–3,75%",
+          "variation": "Inalterado",
+          "direction": "neutral",
+          "source": "Federal Reserve / FOMC — 17/jun/2026"
+        },
+        {
+          "name": "IPCA (jun/26, IBGE)",
+          "value": "+0,16%",
+          "variation": "Acum. 12m: 4,64%",
+          "direction": "down",
+          "source": "IBGE — 10/jul/2026"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "5,30%",
+          "variation": "-0,03 pp vs. semana ant.",
+          "direction": "down",
+          "source": "BCB Boletim Focus — 07/jul/2026"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C (R$/L)",
+          "value": "R$ 6,00",
+          "variation": "-0,30% vs. sem. ant.",
+          "direction": "down",
+          "source": "ANP Síntese Semanal — ref. sem. 22–28/jun/2026 (semana anterior — confirmar)"
+        },
+        {
+          "name": "Etanol Hidratado (R$/L)",
+          "value": "R$ 4,11",
+          "variation": "-2,00% vs. sem. ant.",
+          "direction": "down",
+          "source": "ANP Síntese Semanal — ref. sem. 22–28/jun/2026 (semana anterior — confirmar)"
+        },
+        {
+          "name": "Diesel S-10 (R$/L)",
+          "value": "R$ 6,25",
+          "variation": "-1,40% vs. sem. ant.",
+          "direction": "down",
+          "source": "ANP Síntese Semanal — ref. sem. 22–28/jun/2026 (semana anterior — confirmar)"
+        },
+        {
+          "name": "Diesel Comum (R$/L)",
+          "value": "R$ 6,14",
+          "variation": "-2,00% vs. sem. ant.",
+          "direction": "down",
+          "source": "ANP Síntese Semanal — ref. sem. 22–28/jun/2026 (semana anterior — confirmar)"
+        },
+        {
+          "name": "GLP P-13 (R$/botijão)",
+          "value": "R$ 106,50",
+          "variation": "Estável",
+          "direction": "neutral",
+          "source": "ANP Síntese Semanal — ref. sem. 22–28/jun/2026 (semana anterior — confirmar)"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP (R$/L)",
+          "value": "R$ 2,55",
+          "variation": "-8,76% (mai–jun/26)",
+          "direction": "down",
+          "source": "CEPEA/ESALQ — semana de 29/jun–05/jul/2026 (semana anterior — confirmar)"
+        },
+        {
+          "name": "Etanol Anidro SP (R$/L)",
+          "value": "R$ 2,90",
+          "variation": "-4,30% vs. mês ant.",
+          "direction": "down",
+          "source": "CEPEA/ESALQ — semana de 29/jun–05/jul/2026 (semana anterior — confirmar)"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel (defasagem %)",
+          "value": "~3%",
+          "variation": "Janela fechada",
+          "direction": "down",
+          "source": "Abicom / Eixos — ref. mai–jun/2026 (semana anterior — confirmar)"
+        },
+        {
+          "name": "Gasolina (defasagem %)",
+          "value": "~3%",
+          "variation": "Janela fechada",
+          "direction": "down",
+          "source": "Abicom / Eixos — ref. mai–jun/2026 (semana anterior — confirmar)"
+        }
+      ]
+    }
+  ],
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "MP 1.358/2026 de subsídios a combustíveis ganha 60 dias extras — novo prazo é 23 de setembro e mercado aguarda desmontagem gradual dos R$ 0,44/L da gasolina",
+      "resumo": "O Congresso prorrogou em 06/07 a MP 1.358/2026 por mais 60 dias, levando o prazo final a 23 de setembro de 2026. A medida sequer teve comissão instalada. Ao mesmo tempo, o ministro Dario Durigan anunciou que a retirada do subsídio de R$ 0,44 por litro da gasolina será reavaliada semana a semana, diante da nova escalada de tensões no Estreito de Hormuz. Para o posto, a sinalização é clara: o regime de preços subsidiados ainda não tem data de encerramento, e qualquer movimento de Brent acima de US$ 80 pode reabrir a janela de repasse na bomba."
+    },
+    {
+      "numero": 2,
+      "headline": "Brent dispara +6% na semana com ataques EUA-Irã retomados e tráfego pelo Estreito de Hormuz cai a menos de 30% do volume pré-guerra",
+      "resumo": "Após dois dias consecutivos de ataques norte-americanos ao Irã e retaliações de Teerã a bases dos EUA na região, o Brent fechou a semana perto de US$ 76/barril — acumulando quase +6% em apenas cinco sessões. A IEA alertou que um prolongamento do conflito pode inviabilizar a recomposição dos estoques globais de petróleo no 2S26. Dado que cerca de 20% do abastecimento mundial passa pelo Hormuz, qualquer novo pico pode reverter a deflação que chegou ao posto nos últimos 30 dias."
+    },
+    {
+      "numero": 3,
+      "headline": "IPCA de junho surpreende para baixo a +0,16% e abre espaço para novo corte da Selic em agosto — mercado revisa projeção de juros para 14,00% no fim de 2026",
+      "resumo": "O IBGE divulgou nesta sexta-feira o IPCA de junho com alta de apenas 0,16% — bem abaixo dos 0,31% projetados pela Reuters. O acumulado em 12 meses caiu de 4,72% para 4,64%. O Ibovespa reagiu com disparada superior a 2%, enquanto juros futuros despencaram mais de 20 pontos-base. O Boletim Focus de 06/07 projeta Selic em 14,00% no fim de 2026. Para o revendedor, crédito mais barato pode antecipar investimentos em tanques, equipamentos e renovação de frota antes do segundo semestre mais incerto."
+    },
+    {
+      "numero": 4,
+      "headline": "Confaz publica nova tabela PMPF em 10/07 — base de ICMS do etanol sobe para até R$ 5,98/L em alguns estados a partir de 16 de julho",
+      "resumo": "O Confaz publicou hoje no Diário Oficial a nova tabela de Preço Médio Ponderado ao Consumidor Final (PMPF) que passará a viger a partir de 16 de julho como base de cálculo do ICMS sobre etanol hidratado, GNV, querosene e óleo combustível. O maior valor de referência do etanol ficou no Amapá (R$ 5,98/L) e o menor em São Paulo (R$ 3,85/L). O reajuste da base de ICMS não altera diretamente o preço ao consumidor, mas pode pressionar a margem tributária em estados com tabela mais apertada — atenção a possíveis recomposições regionais a partir da terceira semana de julho."
+    },
+    {
+      "numero": 5,
+      "headline": "USTR anuncia decisão iminente sobre tarifas ao Brasil antes de 15 de julho — representante americano Greer cita 'grande distância' nas negociações",
+      "resumo": "O representante de Comércio dos EUA, Jamieson Greer, afirmou em 09/07 que uma decisão final sobre possíveis tarifas de 25% sobre produtos brasileiros será divulgada 'muito em breve', com prazo legal vencendo em 15 de julho. Greer sinalizou que os dois países ainda estão em 'grande desacordo' sobre práticas comerciais. Para o setor de combustíveis, um choque tarifário que enfraqueça o real pode elevar o custo de importação de derivados e reabrir a defasagem na Petrobras, pressionando distribuidoras e, na sequência, as margens no posto."
+    }
+  ],
+  "mercado": {
+    "headline": "Hormuz volta a fechar o cenário: Brent dispara, subsídio prorroga e o posto fica na travessia",
+    "deck": "Com o petróleo acumulando +6% na semana e a MP de subsídios estendida até setembro, o revendedor entra no 2S26 entre a deflação recente das bombas e o risco renovado de repasse",
+    "body": [
+      "A semana de 5 a 11 de julho devolveu ao mercado de combustíveis o mesmo roteiro que dominou abril e maio: ataques EUA-Irã, Hormuz travado e Brent em recuperação acelerada. O barril do tipo Brent chegou a US$ 77,13 na máxima da semana e fechou perto de US$ 76,19 na sexta, acumulando quase <strong>+6% em cinco sessões</strong> — o maior ganho semanal desde o pico da crise de março. O tráfego pelo Estreito de Hormuz, que havia superado 10 milhões de b/d na semana passada, recuou novamente com os novos ataques, e a IEA alertou que a normalização dos estoques globais pode ser comprometida se o conflito persistir. No Brasil, esse movimento chega em um momento delicado: a Petrobras acaba de absorver o fim do subsídio de <strong>R$ 1,12/L no diesel</strong> (em vigor desde junho) e aguarda a palavra final do governo sobre a retirada do subsídio de <strong>R$ 0,44/L na gasolina</strong>.",
+      "A prorrogação da <strong>MP 1.358/2026</strong> pelo Congresso — novo prazo em 23 de setembro — alivia o risco imediato de vácuo jurídico, mas não resolve o problema estrutural: o governo ainda precisa decidir o calendário de desmontagem das subvenções em um contexto de petróleo voltando a pressionar. O ministro Durigan sinalizou que a retirada do subsídio da gasolina, que estava prevista para esta semana, foi adiada diante da nova escalada de Hormuz. Enquanto isso, o <strong>IPCA de junho saiu em +0,16%</strong> — bem abaixo das expectativas — e abriu espaço para o Copom cortar a Selic para <strong>14,00% a.a. em agosto</strong>, o que melhora o custo de capital de giro para o revendedor. No lado do etanol, os preços ao produtor CEPEA continuam em queda sazonal da safra 25/26, com hidratado SP estimado abaixo de R$ 2,60/L, mantendo a relação etanol/gasolina atrativa para o flex em boa parte do País.",
+      "Para o dono de posto, o cenário desta semana exige dois movimentos simultâneos: <strong>monitorar diariamente a cotação do Brent</strong> e o noticiário sobre Hormuz — porque qualquer recuperação sustentada acima de US$ 80 reacende a pressão de repasse — e <strong>aproveitar a janela de preços em queda para gerir estoques com cuidado</strong>, evitando tanto subcomprar (risco de alta em breve) quanto superestocar (custo financeiro com Selic ainda em 14,25%). A tabela PMPF do Confaz publicada hoje, com efeito a partir de 16/07, também deve ser checada para a UF de cada posto, pois pode gerar realinhamento tributário regional que impacte margens do etanol."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "politica": {
+    "headline": "MP 1.358 ganha sobrevida de 60 dias, mas desmontagem dos subsídios entra em compasso de espera com Hormuz no radar",
+    "deck": "Congresso prorroga automaticamente a medida provisória dos combustíveis enquanto governo adia retirada do subsídio da gasolina diante de nova escalada militar no Oriente Médio",
+    "body": [
+      "A <strong>Medida Provisória 1.358/2026</strong>, que autoriza a concessão de subvenção econômica aos produtores e importadores de gasolina e diesel — com impacto fiscal de até <strong>R$ 3 bilhões por mês</strong> —, passou automaticamente para seu prazo prorrogado de 60 dias após atingir os primeiros 60 dias sem votação no Congresso. A prorrogação foi assinada pelo presidente do Congresso, <strong>Davi Alcolumbre (União/AP)</strong>, e publicada no DOU de 06/07, estendendo a vigência até <strong>23 de setembro de 2026</strong>. A MP, publicada em 13 de maio para conter os efeitos da guerra no Oriente Médio, sequer teve comissão especial instalada para análise — reflexo do semipresencialismo legislativo que domina Brasília às vésperas do recesso parlamentar e das convenções partidárias de julho.",
+      "Enquanto isso, o ministro da Fazenda <strong>Dario Durigan</strong> confirmou em 01/07 que o governo havia iniciado a retirada gradual dos incentivos ao encerrar o subsídio de <strong>R$ 0,35/L ao diesel</strong>, que vigeu de junho a julho. Durigan sinalizou também que a subvenção de <strong>R$ 0,44/L da gasolina</strong> seria retirada nesta semana — mas a nova escalada de ataques EUA-Irã e a reação do Brent forçaram o governo a recalibrar. Segundo o ministro, a decisão foi adiada para a semana de 13/07, quando haverá uma nova avaliação do cenário de preços internacionais. O STF, por sua vez, entrou em recesso desde 02/07, com retorno previsto para 03/08, o que deixa o Judiciário fora do jogo enquanto a MP tramita. O próximo nó legislativo é a instalação da comissão mista de análise, que ainda não ocorreu.",
+      "Para o revendedor, o que importa é que enquanto a MP não caducar ou for votada, o regime de subvenção permanece vigente e protege o consumidor da volatilidade mais aguda. O risco é que uma retirada abrupta dos subsídios — em um cenário de Brent acima de US$ 80 — possa forçar a Petrobras a reajustar gasolina e diesel de forma concentrada, gerando pico de preço nas bombas. <strong>Monitore o noticiário sobre Hormuz e o calendário do Copom (04–05/ago) em paralelo</strong>: são as duas variáveis que vão determinar se o governo acelera ou desacelera a saída dos subsídios."
+    ],
+    "carryover": true,
+    "opiniao": "A MP sobreviveu ao prazo inicial sem votos — e isso já diz tudo sobre a prioridade do Congresso para o setor. O governo usou bem a janela de Brent baixo para iniciar a desmontagem, mas a volta das tensões no Hormuz joga tudo para o ar novamente. Quem administra posto precisa entender que estamos num regime de preços gerenciados por decreto — e decretos mudam rápido."
+  },
+  "economiaBrasil": {
+    "headline": "IPCA de junho surpreende em 0,16% e derruba juros futuros 20 pontos-base — porta do corte em agosto se abre mais",
+    "deck": "Inflação bem abaixo do consenso devolve ao Copom o poder de mover a Selic para 14,00% em agosto, enquanto o dólar cai ao menor nível em três semanas",
+    "body": [
+      "O <strong>IPCA de junho de 2026 saiu a +0,16%</strong> nesta sexta-feira — versus expectativa de +0,31% na pesquisa Reuters —, colocando o acumulado em 12 meses em <strong>4,64%</strong>. É o menor resultado mensal desde fevereiro e o dado que mais rapidamente mudam a conversa sobre o Copom de <strong>4–5 de agosto</strong>. O Ibovespa reagiu com alta superior a 2%, superando os 176 mil pontos pela primeira vez desde maio, enquanto as taxas dos DIs de curto prazo despencaram mais de 20 pontos-base. O real também se apreciou, com o dólar à vista caindo a <strong>R$ 5,12</strong> — o menor fechamento em três semanas, com a moeda acumulando queda de <strong>6,65% no ano</strong>. O desempenho reforça a leitura de que o ciclo de afrouxamento monetário brasileiro tem espaço para continuar, ainda que em ritmo cauteloso dada a desancoragem das expectativas.",
+      "O <strong>Boletim Focus de 06/07</strong> havia antecipado parte desse ajuste: a projeção mediana do IPCA 2026 recuou de 5,33% para <strong>5,30%</strong>, enquanto a Selic esperada para o fim do ano permaneceu em <strong>14,00% a.a.</strong> — implicando ao menos mais um corte de 0,25 p.p. na reunião de agosto. A projeção do PIB de 2026 ficou estável em <strong>1,99%</strong>. No mercado de trabalho, os pedidos iniciais de seguro-desemprego nos EUA caíram a 215 mil na semana encerrada em 04/07, sinalizando resiliência que mantém o Fed em pausa — o que, via canal de câmbio, reduz a pressão importada de inflação no Brasil. O câmbio projetado pelo Focus para o fim de 2026 permanece em <strong>R$ 5,20/USD</strong>, acima do nível corrente de R$ 5,12, o que sugere algum espaço adicional de apreciação no curto prazo se o risco geopolítico arrefecer.",
+      "Para o revendedor, o dado do IPCA abaixo do esperado tem dois reflexos operacionais imediatos. Primeiro, o custo do crédito deve recuar gradualmente — capital de giro para estoque e investimentos em modernização ficará mais barato ao longo do 2S26. Segundo, um real mais forte amortece parte da pressão de Brent no mercado interno, adiando repasses de preço pela Petrobras. <strong>Renegocie linhas de crédito rotativo agora, enquanto o DI cai, e trave prazos maiores com distribuidoras antes que o cenário de Brent mude</strong>. O próximo dado de inflação relevante será o IPCA-15 de julho, previsto para <strong>16/07</strong>, que já captará os primeiros efeitos da retirada parcial dos subsídios."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "economiaInternacional": {
+    "headline": "EUA reiniciam ataques ao Irã, Hormuz fica abaixo de 30% do fluxo pré-guerra e OPEP+ vota +188 mil b/d para agosto — mercado oscila entre dois cenários opostos",
+    "deck": "Semana de alta volatilidade: chipmakers puxam bolsas para cima enquanto petróleo sobe +6% com novo surto de tensão no Estreito de Hormuz",
+    "body": [
+      "A semana começou com os EUA executando ataques aéreos sobre o Irã pelo segundo dia consecutivo — episódio que o presidente <strong>Donald Trump</strong> descreveu como uma sinalização de que o acordo de cessar-fogo de 17 de junho 'está acabado'. O Irã respondeu com ataques a bases americanas na região, intensificando a tensão que já havia afastado navios-tanque do Estreito de Hormuz. Dados de rastreamento indicaram apenas <strong>38 trânsitos no dia 02/07</strong>, frente a cerca de 130 diários antes da guerra — evidência de que a rota que carrega <strong>~20% do abastecimento global de petróleo e GNL</strong> segue parcialmente bloqueada. O Brent reagiu subindo de US$ 71 para US$ 77/barril em poucos dias, enquanto a IEA alertou que o conflito prolongado pode comprometer os planos de reconstrução dos estoques globais no 2S26. A EIA, em seu relatório STEO de julho, projetou preço médio do Brent em <strong>US$ 74/barril no 3T26</strong>.",
+      "Na outra ponta, a <strong>OPEP+</strong> decidiu em reunião virtual de 06/07 elevar a produção em <strong>188 mil b/d a partir de agosto</strong> — o quinto aumento consecutivo e parte da normalização pós-guerra do grupo. Analistas como Neil Crosby (Sparta Commodities) classificaram os aumentos de cotas como 'essencialmente simbólicos' enquanto o Hormuz não normalizar. Já o <strong>Fed</strong>, sob o novo chair <strong>Kevin Warsh</strong>, manteve os juros em <strong>3,50%–3,75%</strong> pela quarta reunião consecutiva em junho, com 9 entre 18 diretores com projeção de ao menos uma alta em 2026. As minutas de junho mostraram divisão interna: inflação acima de 2%, mercado de trabalho resiliente e IA como potencial fator inflacionário de curto prazo. O mercado precifica apenas <strong>25–30% de probabilidade de alta em julho</strong>.",
+      "As bolsas americanas tiveram semana bipolar: o Nasdaq caiu -1,16% na terça com a escalada do petróleo, mas se recuperou +1,30% na quinta após a listagem explosiva da <strong>SK Hynix</strong> no Nasdaq — IPO de US$ 26 bilhões, subscrito mais de 7 vezes, que reacendeu o entusiasmo por semicondutores de IA. Para o posto brasileiro, a lição da semana internacional é objetiva: qualquer escalada que reduza o tráfego pelo Hormuz abaixo de 20 transitos/dia pressionará o Brent acima de US$ 80, tornando insustentável o regime de subsídios do governo Lula. <strong>Acompanhe o negociador qatarense em Teerã e as datas de retomada das conversas EUA-Irã</strong> — elas serão o termômetro do preço do diesel nas próximas semanas."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "varejo": {
+    "headline": "Confaz reajusta base de ICMS do etanol a partir de 16/07 e novo PMPF pode pressionar margens em estados do Norte e Nordeste",
+    "deck": "Atualização das tabelas estaduais de referência para cálculo do imposto sobre etanol hidratado afeta precificação em postos de alta dependência do biocombustível",
+    "body": [
+      "O <strong>Confaz publicou hoje, 10/07</strong>, a nova tabela do Preço Médio Ponderado ao Consumidor Final (PMPF) que passará a viger a partir de <strong>16 de julho de 2026</strong> como base de cálculo do ICMS sobre etanol hidratado, querosene de aviação, GNV, GNI e óleo combustível nos estados e no Distrito Federal. A tabela não representa preços ao consumidor — é apenas a referência para a cobrança do imposto no regime monofásico —, mas serve de indicador de tendência. O maior valor de referência do etanol hidratado ficou no <strong>Amapá (R$ 5,98/L)</strong>, enquanto <strong>São Paulo</strong> registrou um dos menores patamares (<strong>R$ 3,85/L</strong>). Estados como Rondônia (R$ 5,35/L), Piauí e Maranhão apresentam valores intermediários que podem gerar revisões de preço nas bombas a partir da terceira semana de julho.",
+      "No varejo amplo, a deflação do etanol nos últimos meses — o ValeCard registrou queda de <strong>8,76% em maio e junho</strong> — manteve o biocombustível competitivo frente à gasolina em <strong>10 estados do país</strong>. Essa janela favorável ao flex é um fator de pressão de volume nos postos com forte base de carros flex — que representam mais de 85% da frota nacional de leves. A <strong>ANP publicou em 02/07 a Resolução 1.005</strong>, que estabelece novos critérios para caracterização de elevação abusiva de preços de combustíveis por revendedores varejistas, com mecanismos de fiscalização reforçados. A norma reacende o debate sobre o equilíbrio entre liberdade de preço e controle regulatório, especialmente em um momento de transição do regime de subsídios.",
+      "Para o dono de posto, o próximo mês tem três movimentos a monitorar no varejo de combustíveis. Primeiro, a entrada em vigor da nova tabela PMPF em 16/07 — cheque se a sua UF terá alteração relevante na base de ICMS do etanol e ajuste o preço de bomba com antecedência para evitar perda de margem. Segundo, a retirada do subsídio de R$ 0,44/L da gasolina prevista para a próxima semana — prepare o consumidor para a mudança gradual de preço. Terceiro, <strong>fique atento à Resolução ANP 1.005</strong>: o regulador vai intensificar fiscalização e o enquadramento por 'elevação abusiva' agora tem critérios mais objetivos — documente as variações de custo para justificar qualquer repasse."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "automotivo": {
+    "headline": "Caminhões decepcionam no 1S26 com queda de 9,4% enquanto elétricos quase triplicam e Fenabrave corta projeção de frotas para o ano",
+    "deck": "Setor automotivo vive cisão estrutural: veículos eletrificados batem 244 mil unidades no semestre, mas caminhões — motor do frete do posto — recuam com retração do agronegócio",
+    "body": [
+      "Os dados de emplacamentos do <strong>1S26 divulgados pela Fenabrave em 02/07</strong> revelam um mercado automotivo profundamente dividido. No segmento eletrificado, o desempenho foi histórico: <strong>244.942 unidades</strong> de híbridos e elétricos puros foram emplacadas no semestre, alta de <strong>214,86%</strong> na comparação anual. Os veículos elétricos puros (BEVs) lideraram o crescimento proporcional, com <strong>90.470 unidades (+196,3%)</strong> frente a apenas 30.534 no 1S25. Híbridos seguem como tecnologia dominante, com <strong>154.472 unidades (+85%)</strong> e representando 63% do total eletrificado. O mercado total de autos e leves cresceu <strong>+33,82%</strong> no semestre, com mais de 1 milhão de emplacamentos, e a Fenabrave projeta encerrar 2026 com alta de <strong>8,8%</strong> no segmento.",
+      "No polo oposto, o segmento de <strong>caminhões</strong> — o mais relevante para o volume de abastecimento nos postos de estrada — surpreendeu negativamente. Apesar do avanço de 14,87% frente ao 1S25, o resultado acumula queda de <strong>9,39%</strong> em relação a 2025 em termos de representação da meta anual, e a economista da Fenabrave, <strong>Tereza Fernandez</strong>, revisou a projeção para o ano inteiro para baixo: <strong>102.245 emplacamentos (-7,8%)</strong>. A principal causa é a retração do agronegócio — que comanda as vendas de pesados e extrapesados — combinada ao delay entre compra e emplacamento no programa <strong>Move Brasil 2</strong>. O programa segue em andamento, mas o efeito de volume só deve aparecer nas estatísticas a partir de agosto.",
+      "Para o dono de posto rodoviário ou com forte demanda de diesel S-10, a queda nos emplacamentos de caminhões é um sinal amarelo para o volume de abastecimento no 2S26: menos frota nova em circulação significa menos consumo de combustível premium por quilômetro rodado. Já para postos urbanos, a aceleração dos eletrificados começa a ser sentida na curva de longo prazo — mas com 244 mil unidades em um mercado de mais de 1 milhão de leves no semestre, o impacto no volume total de combustíveis ainda é marginal. <strong>O verdadeiro ponto de inflexão do posto virá quando híbridos plug-in com autonomia elétrica superior a 60 km representarem mais de 15% do mercado de leves</strong> — horizonte ainda de 3 a 4 anos."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "fontes": "TradingEconomics, Investing.com, Fortune/Forbes (preços do petróleo), InfoMoney (Ibovespa, IPCA, dólar), RioTimesOnline (Ibovespa 10/jul), CNBC (S&P 500, Nasdaq, Dow Jones, Federal Reserve), TheStreet (mercado americano), Banco Central do Brasil (Selic, BCB), BrasilIndicadores (Selic), RevistaEmpreende (Copom), Federal Reserve Board (FOMC), StreetStats (Fed Funds), TradingEconomics (Fed Funds), IBGE (IPCA junho 2026), Debit.com.br (IPCA), InfoMoney / Suno / Exame / XP (Boletim Focus 06/jul/2026), ANP Gov.br (síntese semanal de preços — referência semana anterior 22-28/jun), CEPEA/ESALQ USP (etanol anidro e hidratado), Abicom / Eixos / BrasilPostos (defasagem Petrobras), Congresso Nacional (MPV 1358/2026), Contabeis.com.br (prorrogação MP 1358), Eixos.com.br (prorrogação MP 1358), Poder360 (Durigan — subsídio gasolina), Agência Gov (medidas combustíveis maio/2026), Sindcomb (notícias setor 03/jul), Câmara dos Deputados (MP 1358), Investidor10 (Petrobras), Gazeta do Povo (Confaz PMPF 10/jul), VeroNotícias / Correio Braziliense (Fenabrave 1S26), Vanguarda do Norte / Fecombustíveis / MinasPetro (emplacamentos elétricos), Al Jazeera / Argus Media (OPEP+ agosto), EIA STEO julho 2026, BahiaNoticias (agenda semana política), Daycoval Macro julho 2026"
+}
