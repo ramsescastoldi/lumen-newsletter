@@ -2,24 +2,24 @@
   "edicao": 28,
   "periodo": "5 a 11 / Jul / 2026",
   "friday": "2026-07-10",
-  "generated_at": "2026-07-10T20:34:23.327Z",
-  "fontes": "TradingEconomics, Investing.com, Fortune/Forbes (preços do petróleo), InfoMoney (Ibovespa, IPCA, dólar), RioTimesOnline (Ibovespa 10/jul), CNBC (S&P 500, Nasdaq, Dow Jones, Federal Reserve), TheStreet (mercado americano), Banco Central do Brasil (Selic, BCB), BrasilIndicadores (Selic), RevistaEmpreende (Copom), Federal Reserve Board (FOMC), StreetStats (Fed Funds), TradingEconomics (Fed Funds), IBGE (IPCA junho 2026), Debit.com.br (IPCA), InfoMoney / Suno / Exame / XP (Boletim Focus 06/jul/2026), ANP Gov.br (síntese semanal de preços — referência semana anterior 22-28/jun), CEPEA/ESALQ USP (etanol anidro e hidratado), Abicom / Eixos / BrasilPostos (defasagem Petrobras), Congresso Nacional (MPV 1358/2026), Contabeis.com.br (prorrogação MP 1358), Eixos.com.br (prorrogação MP 1358), Poder360 (Durigan — subsídio gasolina), Agência Gov (medidas combustíveis maio/2026), Sindcomb (notícias setor 03/jul), Câmara dos Deputados (MP 1358), Investidor10 (Petrobras), Gazeta do Povo (Confaz PMPF 10/jul), VeroNotícias / Correio Braziliense (Fenabrave 1S26), Vanguarda do Norte / Fecombustíveis / MinasPetro (emplacamentos elétricos), Al Jazeera / Argus Media (OPEP+ agosto), EIA STEO julho 2026, BahiaNoticias (agenda semana política), Daycoval Macro julho 2026",
+  "generated_at": "2026-07-10T21:37:17.715Z",
+  "fontes": "TradingEconomics (Brent, WTI, DXY, Fed Funds — 10/jul/2026), ICE/Investing.com (Brent futures — 10/jul/2026), Fortune/Yahoo Finance (Brent, WTI, Bitcoin — 10/jul/2026), Investidor10/Investing.com BR (USD/BRL — 10/jul/2026), RioTimesOnline/InfoMoney/B3 (Ibovespa — 10/jul/2026), CNBC/TheStreet (S&P 500, Nasdaq, Dow Jones — fechamento 10/jul/2026), BCB Banco Central do Brasil (Selic 14,25% — Copom 17/jun/2026), Federal Reserve FOMC (Fed Funds 3,50–3,75% — 17/jun/2026), IBGE (IPCA junho 0,16% / 4,64% a.a. — divulgado 10/jul/2026), BCB Boletim Focus (IPCA 2026 = 5,30% — 06/jul/2026), ANP Levantamento de Preços (Gasolina C R$ 6,58/L, Diesel S-10 R$ 6,97/L, Diesel S-500 R$ 6,64/L, GLP R$ 114,41 — semana 05–11/jul/2026), Diário do Grande ABC/Jornal de Brasília (ANP dados 10/jul/2026), CEPEA/ESALQ USP (Etanol hidratado R$ 2,78/L, anidro R$ 3,13/L — média safra 25/26), Abicom (defasagem pendente — última ref. pós 01/jul/2026), Contábeis/Poder360/Acessa.com (prorrogação MP 1.358/2026 — 06/jul/2026), Congresso Nacional / Senado (tramitação MPV 1358/2026), Poder360/Agência Brasil (Durigan subsídio gasolina — 01/jul/2026), Gazeta do Povo (Confaz tabela ICMS etanol — 10/jul/2026), Sindcomb (Resolução ANP 1.005/2026 — 02/jul/2026), IC Markets Global (DXY 100,9 / FOMC ata — 10/jul/2026), OilPrice.com (Arábia Saudita descontos mercado — jul/2026), IEA (alerta estoques globais — jul/2026), CoinGabbar/Yahoo Finance (Bitcoin US$ 64.244 — 10/jul/2026)",
   "indicadores_blocks": 7,
   "manchetes_count": 5,
-  "has_pending_data": false,
+  "has_pending_data": true,
   "usage": {
-    "input_tokens": 164912,
-    "cache_creation_input_tokens": 7810,
+    "input_tokens": 1855,
+    "cache_creation_input_tokens": 148615,
     "cache_read_input_tokens": 7810,
     "cache_creation": {
-      "ephemeral_5m_input_tokens": 7810,
+      "ephemeral_5m_input_tokens": 148615,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 11175,
+    "output_tokens": 11006,
     "service_tier": "standard",
     "inference_geo": "global",
     "server_tool_use": {
-      "web_search_requests": 18,
+      "web_search_requests": 16,
       "web_fetch_requests": 0
     }
   }
