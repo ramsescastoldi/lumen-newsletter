@@ -1,0 +1,26 @@
+{
+  "edicao": 29,
+  "periodo": "12 a 18 / Jul / 2026",
+  "friday": "2026-07-17",
+  "generated_at": "2026-07-17T21:17:57.264Z",
+  "fontes": "CNBC (17/jul/2026 — Brent/WTI fechamento), TradingEconomics (Brent/WTI histórico semanal), Fortune (preço Brent 17/jul), OilPrice.com (escalada EUA-Irã), ICE/Investing.com (Brent futures), Investidor10 (USD/BRL 17/jul), Infomoney (Ibovespa/mercados 16–17/jul), Mercado Hoje/Safra Invest (fechamentos 17/jul), Rio Times Online (Ibovespa/BRL 17/jul), Banco Central do Brasil — brasilindicadores.com.br (Selic 14,25%; Copom 17/jun/2026; próxima reunião 5/ago/2026), Revista Empreende (histórico Copom 2026), Exame (Boletim Focus 13/jul/2026 — IPCA 5,16%), InfoMoney (Boletim Focus 6/jul/2026), BCB Focus PDF 3/jul/2026, Agência Brasil (Copom jun/2026; Selic 14,25%), Diário do Grande ABC (ANP levantamento semana 12–18/jul/2026 — Gasolina C R$6,58; Diesel S-10 R$6,94; GLP R$114,48), Notícias Agrícolas/Edenred Mobilidade (combustíveis 1ª quinzena jul/2026 — etanol R$4,29; diesel comum R$6,87), Forbes Brasil (preços jul/2026), CEPEA/ESALQ — cepea.esalq.usp.br (indicadores safra 25/26 hidratado/anidro), MínasPetro/Abicom (defasagem estimada jul/2026), Poder360 (Durigan subsídio gasolina 1/jul/2026), Agência Gov (prorrogação subvenções maio/2026), Sindcomb (destaques semana 3/jul/2026 e 16/jul/2026 — distribuidora condenada PR; etanol E32), ND Mais (Congresso recesso 13/jul/2026; PLP 114/2026), Federal Reserve / FedRateCalc (Fed Funds 3,50%–3,75%; FOMC 29/jul/2026), Wells Fargo Advisors (FOMC jun/2026 summary), CNBC (FedWatch 46,5% chance hike jul/2026), Al Jazeera / OPEC.org (OPEC+ +188k bpd agosto 2026), IEA Oil Market Report July 2026, Fenabrave / CNN Brasil / Correio Braziliense / MínasPetro / Fecombustíveis (eletrificados e híbridos 1º sem/2026 — 244.942 unidades), Fecombustíveis (Marcio Andrade / E32 / TV UOL), InfoMoney (IBC-Br maio +0,1%; IGP-10 julho −1,13%), InfoMoney (tarifas EUA 25% sobre Brasil; Vale; Petrobras; CNI exportações), Reuters via Infomoney (retaliação Brasil tarifas), Polymarket/CME FedWatch (probabilidades FOMC jul/2026)",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": false,
+  "usage": {
+    "input_tokens": 1771,
+    "cache_creation_input_tokens": 130822,
+    "cache_read_input_tokens": 7810,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 130822,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 11949,
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "server_tool_use": {
+      "web_search_requests": 15,
+      "web_fetch_requests": 0
+    }
+  }
+}
