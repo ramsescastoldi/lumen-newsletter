@@ -1,0 +1,26 @@
+{
+  "edicao": 30,
+  "periodo": "19 a 25 / Jul / 2026",
+  "friday": "2026-07-24",
+  "generated_at": "2026-07-24T20:34:08.719Z",
+  "fontes": "Fortune (24/jul/2026), TradingEconomics Brent e WTI (24/jul/2026), Investing.com WTI e DXY (24/jul/2026), OilPrice.com (23/jul/2026), Rio Times Online — Ibovespa e câmbio (24/jul/2026), InfoMoney — Ibovespa ao vivo (24/jul/2026), Mercado Hoje/Safra Invest (24/jul/2026), Yahoo Finance — S&P 500 e Bitcoin histórico (24/jul/2026), CNBC — bolsas EUA (23–24/jul/2026), Federal Reserve FOMC statement (17/jun/2026), Forbes Fed Meeting Tracker (jul/2026), StreetStats Fed Funds Forecast (jul/2026), BCB Boletim Focus (20/jul/2026), XP Investimentos — Focus análise (20/jul/2026), Exame — Focus (20/jul/2026), InfoMoney — Focus (20/jul/2026), Investidor10 — IPCA acumulado (jul/2026), Agência Brasil — Copom (jun/2026), IBGE, ANP Levantamento de Preços Semanal (semana 12–18/jul/2026), Diário do Grande ABC — ANP preços (17/jul/2026), Monitor Veloe/Fipe — preços combustíveis (21/jul/2026), AutoData — diesel S-10 (21/jul/2026), Forbes Agro — etanol diesel gasolina (17/jul/2026), Correio Braziliense — combustíveis julho (20/jul/2026), Rádio Sucesso FM — combustíveis julho (22/jul/2026), Abicom / Brasil Postos — defasagem Petrobras (jul/2026), Minaspetro — Abicom defasagem (jul/2026), CNN Brasil — Abicom diesel (9/mar/2026), CEPEA/ESALQ — indicadores etanol ciclo 25/26, Agência Brasil — subsídio gasolina prorrogado (23/jul/2026), Correio Braziliense — MP combustíveis (6/jul/2026), Eixos.com.br — MPs subsídio (jul/2026), Investidor10 — Petrobras gasolina reajuste (jul/2026), Agência Petrobras — ajuste gasolina (29/mai/2026), Seu Dinheiro — Petrobras reajuste (mai/2026), Sindcomb Notícias — destaques (jun–jul/2026), SINDCOMB — ANP Resolução 1.005/2026 (2/jul/2026), Tax Group — tarifas EUA Brasil 25% + 12,5% (24/jul/2026), Portal Itapipoca — tarifa EUA 25% (22/jul/2026), BlockTrends — tarifa câmbio (jul/2026), Seu Dinheiro — OPEP+ 188 mil bpd (jun/2026), EIA Short-Term Energy Outlook (7/jul/2026), Fenabrave — emplacamentos 1º semestre 2026 (2/jul/2026), Correio Braziliense — elétricos e híbridos (2/jul/2026), CNN Brasil — Fenabrave elétricos (jul/2026), Minaspetro — elétricos 2026 (jul/2026), Fecombustíveis — elétricos 2026 (jul/2026), Kpler — navios Ormuz (22–24/jul/2026), Bloomberg — bolsas petróleo (24/jul/2026)",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "usage": {
+    "input_tokens": 123290,
+    "cache_creation_input_tokens": 7810,
+    "cache_read_input_tokens": 7810,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 7810,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 10658,
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "server_tool_use": {
+      "web_search_requests": 18,
+      "web_fetch_requests": 0
+    }
+  }
+}

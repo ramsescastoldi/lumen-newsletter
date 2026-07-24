@@ -1,0 +1,294 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 97,04",
+          "variation": "-1,46%",
+          "direction": "down",
+          "source": "Fortune / ICE — 24/jul/2026 (abertura)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 89,28",
+          "variation": "+2,82%",
+          "direction": "up",
+          "source": "Investing.com / NYMEX — 24/jul/2026"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,0841",
+          "variation": "+0,58%",
+          "direction": "up",
+          "source": "BCB PTAX / Investing.com — 24/jul/2026"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "a confirmar",
+          "variation": "—",
+          "direction": "pending",
+          "source": "Investing.com — fechamento não disponível"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": "101,30",
+          "variation": "+0,16%",
+          "direction": "up",
+          "source": "ICE / TradingEconomics — 24/jul/2026"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "US$ 65.032",
+          "variation": "-1,17%",
+          "direction": "neutral",
+          "source": "Yahoo Finance — 24/jul/2026"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "176.724 pts",
+          "variation": "-0,46%",
+          "direction": "up",
+          "source": "B3 — fechamento 23/jul/2026"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.408,30",
+          "variation": "-1,21%",
+          "direction": "up",
+          "source": "NYSE — fechamento 23/jul/2026"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "25.137,69",
+          "variation": "-2,15%",
+          "direction": "up",
+          "source": "Nasdaq — fechamento 23/jul/2026"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "51.711,65",
+          "variation": "-0,97%",
+          "direction": "up",
+          "source": "NYSE — fechamento 23/jul/2026"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic (a.a.)",
+          "value": "14,50%",
+          "variation": "estável",
+          "direction": "neutral",
+          "source": "BCB / Copom — reunião jun/2026"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,50%–3,75%",
+          "variation": "estável",
+          "direction": "neutral",
+          "source": "Federal Reserve — FOMC jun/2026; próxima reunião 28–29/jul"
+        },
+        {
+          "name": "IPCA-15 (últ. leitura)",
+          "value": "acum. 4,64% (12m)",
+          "variation": "arrefecendo",
+          "direction": "down",
+          "source": "IBGE / Investidor10 — referência jun/2026"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "5,15%",
+          "variation": "-0,01 p.p.",
+          "direction": "down",
+          "source": "BCB Boletim Focus — 20/jul/2026 (3ª queda consecutiva)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C (R$/L)",
+          "value": "R$ 6,58",
+          "variation": "estável",
+          "direction": "neutral",
+          "source": "ANP Levantamento Semanal — ref. semana 12–18/jul/2026"
+        },
+        {
+          "name": "Etanol Hidratado (R$/L)",
+          "value": "R$ 4,17",
+          "variation": "-0,95%",
+          "direction": "down",
+          "source": "ANP / Monitor Veloe-Fipe — ref. semana 12–18/jul/2026"
+        },
+        {
+          "name": "Diesel S-10 (R$/L)",
+          "value": "R$ 6,94",
+          "variation": "-0,43%",
+          "direction": "down",
+          "source": "ANP Levantamento Semanal — ref. semana 12–18/jul/2026"
+        },
+        {
+          "name": "Diesel Comum (R$/L)",
+          "value": "R$ 6,95",
+          "variation": "-1,35%",
+          "direction": "down",
+          "source": "Monitor Veloe-Fipe / AutoData — ref. semana 2ª quinz. jul/2026"
+        },
+        {
+          "name": "GLP P-13 (R$/botijão)",
+          "value": "R$ 114,48",
+          "variation": "+0,06%",
+          "direction": "neutral",
+          "source": "ANP Levantamento Semanal — ref. semana 12–18/jul/2026"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP (R$/L)",
+          "value": "R$ 3,20",
+          "variation": "a confirmar",
+          "direction": "pending",
+          "source": "CEPEA/ESALQ — indicador semanal SP; valor estimado ref. ciclo 25/26; confirmar publicação jul/2026"
+        },
+        {
+          "name": "Etanol Anidro SP (R$/L)",
+          "value": "R$ 3,51",
+          "variation": "a confirmar",
+          "direction": "pending",
+          "source": "CEPEA/ESALQ — indicador semanal SP; valor estimado ref. ciclo 25/26; confirmar publicação jul/2026"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel — defasagem",
+          "value": "~31% / R$ 2,74/L",
+          "variation": "elevada",
+          "direction": "up",
+          "source": "Abicom / Minaspetro — ref. Brent acima de US$ 90 (semana 19–24/jul/2026)"
+        },
+        {
+          "name": "Gasolina — defasagem",
+          "value": "~41% / R$ 1,22/L",
+          "variation": "elevada",
+          "direction": "up",
+          "source": "Abicom / Brasil Postos — ref. Brent acima de US$ 90 (semana 19–24/jul/2026)"
+        }
+      ]
+    }
+  ],
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "Governo prorroga por 30 dias subsídio de R$ 0,44/L da gasolina — Fazenda assina portaria na quinta-feira (23) com Brent voltando a US$ 100",
+      "resumo": "Com o Brent rompendo US$ 100 na quinta-feira (23/jul) e a MP 1.363 expirando no sábado (25), o ministro Dario Durigan assinou às pressas a extensão do subsídio de R$ 0,44 por litro por mais 30 dias, a partir de 26 de julho. O subsídio de R$ 1,12/L do diesel também segue vigente. Para o posto, o cenário de preço na bomba controlado permanece — mas o risco de reajuste de Petrobras não desaparece com o conflito no Oriente Médio renovado."
+    },
+    {
+      "numero": 2,
+      "headline": "Tarifaço de 25% + 12,5% dos EUA sobre o Brasil entra em vigor — até US$ 11 bilhões em exportações afetadas e câmbio pressionado a R$ 5,08",
+      "resumo": "O governo Trump confirmou em 23/jul a sobretaxa adicional de 12,5% sobre produtos brasileiros investigados por 'trabalho forçado', somada à tarifa base de 25% já vigente desde 22/jul. Cerca de 2,3 mil produtos são atingidos, com impacto estimado de US$ 7,2 bilhões a US$ 11 bilhões em exportações, segundo a ApexBrasil. Para o posto, o canal de transmissão é câmbio: dólar pressionado acima de R$ 5,08 encarece importação de derivados e reforça pressão sobre a defasagem."
+    },
+    {
+      "numero": 3,
+      "headline": "ANP publica Resolução 1.005/2026 com critérios objetivos para caracterizar 'elevação abusiva' de preços — postos revendedores na mira",
+      "resumo": "Publicada em 2/jul no DOU, a Resolução ANP nº 1.005/2026 define, pela primeira vez, critérios quantitativos para identificar elevação abusiva de preços por revendedores varejistas de combustíveis líquidos e GLP. A norma cria risco regulatório direto para o posto: variações acima dos parâmetros fixados podem ensejar autuação administrativa. Advogados do setor recomendam revisão imediata da política de precificação e documentação dos custos de aquisição."
+    },
+    {
+      "numero": 4,
+      "headline": "CNPE eleva mistura de etanol na gasolina de E30 para E32 — mudança reformula custo da gasolina C e abre janela de compra de etanol hidratado",
+      "resumo": "O Conselho Nacional de Política Energética (CNPE) aprovou elevação do teor de etanol anidro na gasolina C de 30% para 32%. A medida, confirmada na semana, altera o custo de composição da gasolina C e amplia a demanda estrutural de etanol. Para postos flex, o etanol hidratado segue com relação abaixo dos 70% da gasolina (indicador Flex em 65,9% na semana de 12–18/jul), mantendo a vantagem competitiva do biocombustível nas bombas. Monitore a janela de compra para etanol hidratado."
+    },
+    {
+      "numero": 5,
+      "headline": "Brent sobe +7% em um dia (23/jul) com Houthis afundando tanqueiros sauditas no Mar Vermelho e passagens pelo Estreito de Ormuz caem a 3 navios/dia",
+      "resumo": "Militantes Houthis reivindicaram ataques a dois petroleiros sauditas no Mar Vermelho em 23/jul, derrubando o fluxo pelo Estreito de Ormuz para apenas 3 navios diários (vs. média histórica). O Brent chegou a US$ 100,65 na quinta-feira, alta de 7% em um pregão, antes de recuar levemente na sexta com rumores de mediação pela China. A defasagem Petrobras permanece nas máximas e o risco de reajuste de combustíveis no Brasil é real — acompanhe a posição de Magda Chambriard."
+    }
+  ],
+  "mercado": {
+    "headline": "Subsídio de R$ 0,44/L prorrogado às vésperas de vencer — mas Brent acima de US$ 100 e Abicom apontando 41% de defasagem na gasolina tornam agosto decisivo",
+    "deck": "Governo blindou o posto por mais 30 dias. A questão é quanto tempo essa blindagem aguenta com Brent renovando máximas e Ormuz operando abaixo de 20% da capacidade histórica.",
+    "body": [
+      "O ministro da Fazenda, <strong>Dario Durigan</strong>, assinou na quinta-feira (23/jul) a portaria que estende o subsídio de <strong>R$ 0,44 por litro</strong> da gasolina por mais 30 dias, a partir de 26 de julho. A ação foi precipitada pelo ressurgimento das tensões no Oriente Médio: na quarta-feira (22/jul), milícias Houthi apoiadas pelo Irã atacaram dois petroleiros sauditas no Mar Vermelho, e o <strong>Brent superou US$ 100 o barril</strong> pela primeira vez em quase dois meses. O fluxo pelo Estreito de Ormuz caiu a apenas 3 navios por dia segundo a Kpler, ante a média histórica superior a 20. O petróleo acumula alta superior a <strong>31% em relação aos níveis pré-conflito</strong> observados no início de julho, segundo o TradingEconomics.",
+      "Com o Brent nesse patamar, a <strong>Abicom</strong> calcula defasagem da gasolina Petrobras em <strong>41%</strong> e do diesel em <strong>31%</strong>, o que equivale a espaço de reajuste de <strong>R$ 1,22/L na gasolina A</strong> e <strong>R$ 2,74/L no diesel</strong> nas refinarias. A presidente da estatal, <strong>Magda Chambriard</strong>, afirmou publicamente que a companhia está 'tratando desse aumento', monitorando o etanol como competidor antes de qualquer decisão. Nos postos, os preços médios ainda refletem a janela de alívio de junho-julho: gasolina C em <strong>R$ 6,58/L</strong> e diesel S-10 em <strong>R$ 6,94/L</strong>, segundo ANP (semana 12–18/jul). O etanol hidratado atingiu o menor preço médio desde dezembro de 2024, a <strong>R$ 4,17/L</strong>, com o Indicador Flex em 65,9% — abaixo do gatilho de 70%, o biocombustível mantém vantagem clara para o flex.",
+      "O cenário operacional para o revendedor nesta semana é de falsa calmaria: o subsídio segura o preço final por mais 30 dias, mas a MP <strong>1.363</strong> foi apenas prorrogada — não convertida em lei — e o Congresso tem até setembro para se manifestar. Com eleições em outubro, o debate sobre a continuidade das subvenções vai se misturar com a campanha e pode não ter resolução limpa. <strong>Trave contratos de curto prazo de gasolina e diesel</strong> enquanto os preços de distribuição estão represados; use a janela de etanol hidratado barato (R$ 4,17/L na média nacional) para reforçar estoques e ampliar oferta flex. Qualquer anúncio de Petrobras entre agora e 25 de agosto deve ser tratado como evento de risco máximo."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "politica": {
+    "headline": "MP do subsídio aos combustíveis prorrogada por 60 dias pelo Congresso e por 30 dias pela Fazenda — mas comissões mistas ainda não foram instaladas e debate pode se arrastar até as vésperas das eleições",
+    "deck": "O governo segurou o preço do combustível na bomba com caneta, não com voto. E o relógio já está correndo para agosto.",
+    "body": [
+      "Em movimento duplo que revela o grau de dependência política do tema, o executivo e o legislativo atuaram em paralelo esta semana para evitar que o preço dos combustíveis explodisse antes das eleições de outubro. O presidente do Congresso, senador <strong>Davi Alcolumbre (União Brasil-AP)</strong>, publicou em 6/jul no DOU a prorrogação por 60 dias da <strong>MP 1.358/2026</strong>, que criou os subsídios para produtores e importadores de combustíveis — estendendo o prazo de análise legislativa até <strong>23 de setembro</strong>. Já a <strong>MP 1.363</strong>, que instituiu especificamente o subsídio de <strong>R$ 1,12/L no diesel</strong>, foi prorrogada pelo Congresso até o fim de setembro. E em 23/jul, o ministro Durigan assinou portaria estendendo o subsídio da gasolina por mais 30 dias — tudo isso sem que as comissões mistas responsáveis pela análise das MPs tenham sequer sido instaladas.",
+      "O padrão é claro: o governo improvisa prorrogações executivas enquanto o Congresso consome o tempo sem avançar. A <strong>Câmara Brasileira do Comércio de Combustíveis</strong> apresentou pleitos ao Senado na semana, pedindo revisão dos critérios de fiscalização e da dosimetria de penalidades previstas na Resolução ANP 1.005/2026 — que, recém-publicada, já criou tensão com o varejo ao estabelecer parâmetros objetivos de 'preço abusivo' sem diálogo prévio com o setor. A coincidência entre a vigência das MPs e o calendário eleitoral (primeiro turno em 4/out) é arithmetica: qualquer decisão de encerrar o subsídio terá de ser tomada em setembro, no pico da campanha.",
+      "Para o dono de posto, o risco político desta semana não é a extinção imediata do subsídio — é a incerteza sobre as regras de agosto em diante. As MPs garantem o desconto repassado pelas distribuidoras, mas a cadeia de repasse depende de portarias do Ministério da Fazenda renováveis mês a mês. <strong>Monitore a publicação do DOU entre 20 e 25 de agosto</strong>: se não houver nova portaria de Durigan até essa data, o posto não receberá a compensação do R$ 0,44/L na gasolina a partir de 26/ago. Documente cada nota de compra com o valor bruto e o desconto recebido — é essa documentação que sustenta contestações em caso de autuação pela ANP."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "economiaBrasil": {
+    "headline": "Focus mantém IPCA 2026 em 5,15% pela terceira semana consecutiva de queda — mas Brent a US$ 100 e tarifas americanas 37,5% sobre manufaturas testam a tese de desinflação antes do Copom de agosto",
+    "deck": "O mercado recalibrou para baixo a inflação esperada. O problema é que todas as premissas dessa recalibração estão sendo revisitadas ao mesmo tempo.",
+    "body": [
+      "O Boletim Focus de <strong>20 de julho</strong> trouxe a terceira redução consecutiva na projeção do <strong>IPCA 2026, agora em 5,15%</strong>, ante 5,33% há um mês. A <strong>Selic ao fim de 2026 permanece projetada em 14,00%</strong> pelo mercado, e o PIB em 1,99%. A queda na expectativa inflacionária ocorreu mesmo com o petróleo voltando a se aproximar de US$ 90 por barril durante a semana — o que levou a XP a observar que o movimento 'prosseguiu apesar da volta das tensões no Oriente Médio'. O Ibovespa fechou a semana pressionado, em <strong>176.724 pontos (-0,46%)</strong>, arrastado pela queda de 1,21% do S&P 500 na quinta (23/jul), que foi tomado pelo sell-off de big-techs após resultados decepcionantes de Alphabet (-7%) e Tesla (-14%).",
+      "No câmbio, o dólar oscilou ao longo da semana entre R$ 5,06 e R$ 5,12, fechando próximo de <strong>R$ 5,0841</strong> — nível controlado graças ao superávit comercial que ancora a moeda, mas sujeito a pressão caso as tarifas americanas de 25% + 12,5% (vigentes desde 22/jul) comecem a afetar o fluxo de exportações. O <strong>DXY permanece acima de 101</strong>, pressionado por dados americanos robustos: pedidos de seguro-desemprego caíram 22 mil na semana até 18/jul, para 187 mil — o menor nível em décadas. Esse quadro complica a trajetória de corte de juros pelo Fed e, por extensão, dá menos espaço ao Copom brasileiro para afrouxar.",
+      "O próximo Copom se reúne em <strong>agosto</strong> e o mercado precifica 79% de chance de manutenção da Selic em 14,5%. Para o posto, a equação de crédito segue cara: capital de giro tomado a CDI + spread acima de 14,5% a.a. corrói a margem em períodos de estoque forçado. Com os preços de distribuição represados pelos subsídios, o risco de descasamento entre o custo de aquisição do combustível e o preço de venda para o consumidor está temporariamente controlado — mas qualquer reajuste de Petrobras, sem atualização correspondente do subsídio, vai chegar direto na conta do revendedor. <strong>Renegocie linhas de crédito agora</strong>, antes da reunião de agosto do Copom."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "economiaInternacional": {
+    "headline": "Paz EUA-Irã que não veio: Trump descarta retomada das negociações, Houthis atacam tanqueiros sauditas e Brent volta a US$ 100 — OPEP+ mais 188 mil bpd não resolve o problema",
+    "deck": "A oferta adicional da OPEP+ foi anunciada para julho. Os tanqueiros que deviam carregar esse petróleo estão sendo afundados.",
+    "body": [
+      "O cenário de alívio geopolítico construído pelo MOU EUA-Irã de 18/junho ruiu em câmera lenta ao longo de julho. Na terça-feira (21/jul), o presidente <strong>Donald Trump</strong> declarou que o acordo havia fracassado e que não pretendia retomar negociações. Na quarta (22/jul), milícias <strong>Houthi</strong> reivindicaram ataques a dois petroleiros sauditas no <strong>Mar Vermelho</strong>, afirmando estar 'impondo bloqueio aos portos sauditas'. O Brent saltou <strong>+7% em um dia</strong>, alcançando US$ 100,65 — o maior nível desde 22 de maio — e o fluxo de navios pelo <strong>Estreito de Ormuz caiu a apenas 3 passagens diárias</strong> entre 22 e 24 de julho, segundo a Kpler. Para referência: a capacidade histórica é de cerca de 20 navios/dia. O petróleo <strong>acumula alta de mais de 30% acima dos níveis pré-conflito</strong> de início de julho.",
+      "Agravando o quadro de oferta, o <strong>Consórcio do Gasoduto Cáspico</strong> suspendeu carregamentos de petróleo no terminal do Mar Negro após ataques de drones, interrompendo aproximadamente <strong>80% das exportações do Cazaquistão</strong>. A decisão da <strong>OPEP+</strong> de adicionar 188 mil barris/dia a partir de julho — aprovada em reunião virtual de 7/jun com Arábia Saudita, Rússia, Iraque, Kuwait, Cazaquistão, Argélia e Omã — é estruturalmente insuficiente para compensar as disrupções de rotas. Os compradores asiáticos, liderados pela China e Índia, já avaliam rerotar carregamentos sauditas pelo Canal de Suez e ao redor da África, com encarecimento de frete estimado em 15%–25%.",
+      "Para o revendedor de combustíveis no Brasil, o canal de transmissão é preciso: Brent acima de US$ 90 torna a defasagem Petrobras estrutural, não conjuntural. A <strong>EIA</strong> projetava Brent médio de US$ 74/bbl no 3T26 em seu STEO de julho — antes das escaladas desta semana. Com os fundamentos atuais, essa previsão virou papel. O dono de posto que planeja abastecimento de agosto deve considerar dois cenários: (1) Petrobras reajusta antes de 25/ago, quando o subsídio pode não ser renovado pelo mesmo valor; (2) paz negociada pela China emerge, Brent recua e janela de compra se abre. <strong>Mantenha estoque mínimo operacional e evite compras especulativas</strong> de grandes volumes neste momento de volatilidade máxima."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "varejo": {
+    "headline": "Etanol hidratado na menor média desde dezembro de 2024 e relação flex abaixo de 66% — CNPE eleva anidro para E32 e remodela o custo da gasolina C nos postos",
+    "deck": "Julho trouxe boas notícias para quem vende etanol na bomba. Mas a elevação da mistura obrigatória muda o cálculo de custo da gasolina — e o setor precisa se adaptar rápido.",
+    "body": [
+      "O <strong>Monitor de Preços de Combustíveis da Veloe/Fipe</strong>, divulgado em 21/jul, confirmou que o etanol hidratado atingiu o menor preço médio nacional desde a primeira semana de dezembro de 2024, chegando a <strong>R$ 4,17/L</strong> na segunda semana de julho — queda de R$ 0,04 sobre a semana anterior. O <strong>Indicador Flex</strong> ficou em <strong>65,9%</strong>, bem abaixo do gatilho de 70%, o que significa que o etanol é mais vantajoso para o motorista flex em praticamente todo o território nacional. Estados como Minas Gerais, Goiás, Mato Grosso e São Paulo registram a maior competitividade. Para o posto, esse cenário é duplo: margens do etanol pressionadas pela queda de preço produtor, mas volume de vendas tende a crescer com o diferencial favorável.",
+      "A decisão do <strong>CNPE</strong> de elevar a mistura obrigatória de etanol anidro de <strong>E30 para E32</strong> na gasolina C representa uma mudança estrutural que vai além da questão ambiental. Cada litro de gasolina C vendido na bomba passará a ter mais etanol anidro e menos gasolina A — o que altera o custo de composição do produto e pode criar desajustes temporários de margem nos postos que compram gasolina C pronta das distribuidoras. A medida também aumenta a demanda estrutural por etanol anidro, pressionando o preço produtor para cima nos próximos meses — o que pode impactar a vantagem competitiva do hidratado na bomba.",
+      "Com o ciclo eleitoral de outubro no radar e o subsídio da gasolina travando o preço na bomba, o dono de posto tem uma janela de oportunidade para trabalhar a gôndola de conveniência e fidelização. Os dados da Fecombustíveis indicam que o varejo de combustíveis do ciclo Otto deve bater <strong>recorde de demanda em 2026</strong>, segundo projeção da Stonex. O etanol barato na bomba tende a ampliar o volume de abastecimento dos flexíveis — o que aumenta o tráfego no posto. <strong>Use esse fluxo para converter visitas em compras na conveniência</strong>: produtos de margem alta como bebidas, snacks e serviços automotivos compensam a compressão de margem no combustível."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "automotivo": {
+    "headline": "Elétricos batem 90 mil unidades no semestre com alta de 196% e híbridos chegam a 154 mil (+85%) — CNPE eleva E32 e levanta questão: o flex ainda é rei por quanto tempo?",
+    "deck": "Os números da Fenabrave para o 1º semestre de 2026 redefinem o mercado. A frota eletrificada cresce mais rápido do que qualquer posto precificou nos seus planos de negócio.",
+    "body": [
+      "Os dados do 1º semestre de 2026 divulgados pela <strong>Fenabrave</strong> em 2/jul redesenham o panorama automotivo brasileiro com velocidade que o setor de combustíveis ainda não absorveu completamente. <strong>Elétricos puros (BEVs)</strong> somaram <strong>90.470 unidades</strong> emplacadas entre janeiro e junho — alta de <strong>196,29%</strong> ante as 30.534 do mesmo período de 2025. Os <strong>híbridos</strong> chegaram a <strong>154.472 unidades</strong>, com avanço de <strong>85%</strong>. Juntos, os eletrificados totalizaram <strong>244.942 unidades no semestre</strong>, crescimento de 214,86%. O presidente da Fenabrave, <strong>Arcelio Junior</strong>, atribuiu o impulso a programas federais como o <strong>Move Brasil</strong>, que oferece incentivos para veículos eletrificados até R$ 150 mil.",
+      "Apesar dos números impressionantes, os híbridos ainda representam <strong>63% dos eletrificados</strong> vendidos — e a maioria deles são híbridos convencionais (HEVs) e plug-in híbridos (PHEVs) que continuam demandando combustível. Isso significa que o posto ainda tem a frota a seu favor por mais alguns anos. O dado que preocupa é o ritmo de adoção: se o primeiro semestre de 2025 tinha 30,5 mil elétricos, e o de 2026 chegou a 90,5 mil, a curva de crescimento aponta para 200 mil a 250 mil BEVs puros em 2027 — volume que começa a criar bairros e rotas onde a demanda de gasolina recua de forma mensurável. O setor de caminhões, por outro lado, ainda demanda diesel: emplacamentos de pesados avançaram 14,87% no semestre, segundo a Fenabrave.",
+      "A elevação do anidro para E32, aprovada pelo CNPE esta semana, conecta-se diretamente ao debate sobre a longevidade do flex. Com mais etanol na gasolina, o custo de operação do carro flex fica ainda mais dependente da relação de preços hidratado/gasolina — e torna o etanol hidratado uma variável ainda mais crítica para o posto. Para o revendedor, a equação de longo prazo exige ação agora: <strong>avalie o potencial de instalar carregadores elétricos no posto</strong> — não como substituição, mas como atração de tráfego de consumidores com maior poder aquisitivo. O público que compra BEV ainda abastece PHEVs ou outros veículos na família, e frequenta postos com conveniência de qualidade."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "fontes": "Fortune (24/jul/2026), TradingEconomics Brent e WTI (24/jul/2026), Investing.com WTI e DXY (24/jul/2026), OilPrice.com (23/jul/2026), Rio Times Online — Ibovespa e câmbio (24/jul/2026), InfoMoney — Ibovespa ao vivo (24/jul/2026), Mercado Hoje/Safra Invest (24/jul/2026), Yahoo Finance — S&P 500 e Bitcoin histórico (24/jul/2026), CNBC — bolsas EUA (23–24/jul/2026), Federal Reserve FOMC statement (17/jun/2026), Forbes Fed Meeting Tracker (jul/2026), StreetStats Fed Funds Forecast (jul/2026), BCB Boletim Focus (20/jul/2026), XP Investimentos — Focus análise (20/jul/2026), Exame — Focus (20/jul/2026), InfoMoney — Focus (20/jul/2026), Investidor10 — IPCA acumulado (jul/2026), Agência Brasil — Copom (jun/2026), IBGE, ANP Levantamento de Preços Semanal (semana 12–18/jul/2026), Diário do Grande ABC — ANP preços (17/jul/2026), Monitor Veloe/Fipe — preços combustíveis (21/jul/2026), AutoData — diesel S-10 (21/jul/2026), Forbes Agro — etanol diesel gasolina (17/jul/2026), Correio Braziliense — combustíveis julho (20/jul/2026), Rádio Sucesso FM — combustíveis julho (22/jul/2026), Abicom / Brasil Postos — defasagem Petrobras (jul/2026), Minaspetro — Abicom defasagem (jul/2026), CNN Brasil — Abicom diesel (9/mar/2026), CEPEA/ESALQ — indicadores etanol ciclo 25/26, Agência Brasil — subsídio gasolina prorrogado (23/jul/2026), Correio Braziliense — MP combustíveis (6/jul/2026), Eixos.com.br — MPs subsídio (jul/2026), Investidor10 — Petrobras gasolina reajuste (jul/2026), Agência Petrobras — ajuste gasolina (29/mai/2026), Seu Dinheiro — Petrobras reajuste (mai/2026), Sindcomb Notícias — destaques (jun–jul/2026), SINDCOMB — ANP Resolução 1.005/2026 (2/jul/2026), Tax Group — tarifas EUA Brasil 25% + 12,5% (24/jul/2026), Portal Itapipoca — tarifa EUA 25% (22/jul/2026), BlockTrends — tarifa câmbio (jul/2026), Seu Dinheiro — OPEP+ 188 mil bpd (jun/2026), EIA Short-Term Energy Outlook (7/jul/2026), Fenabrave — emplacamentos 1º semestre 2026 (2/jul/2026), Correio Braziliense — elétricos e híbridos (2/jul/2026), CNN Brasil — Fenabrave elétricos (jul/2026), Minaspetro — elétricos 2026 (jul/2026), Fecombustíveis — elétricos 2026 (jul/2026), Kpler — navios Ormuz (22–24/jul/2026), Bloomberg — bolsas petróleo (24/jul/2026)"
+}
