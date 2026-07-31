@@ -2,11 +2,6 @@ name: Gerar Newsletter Posto em Dia
 
 on:
   workflow_dispatch: {}
-  schedule:
-    # Backup: Sexta 20:30 UTC = 17:30 BRT.
-    # Cron primário é o n8n (workflow "Newsletter — Agendador 17:30 sexta")
-    # que dispara via workflow_dispatch da GitHub API.
-    - cron: "30 20 * * 5"
 
 permissions:
   contents: write

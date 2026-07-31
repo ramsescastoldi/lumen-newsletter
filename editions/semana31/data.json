@@ -1,0 +1,302 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 89,00",
+          "variation": "-8,28%",
+          "direction": "down",
+          "source": "OilPrice.com / TradingEconomics — 31/jul/2026 (recuo do pico de US$100,65 em 23/jul, após desescalada no Mar Vermelho)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 83,87",
+          "variation": "-5,23%",
+          "direction": "down",
+          "source": "TradingEconomics / NYMEX — fechamento 30/jul/2026"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,06",
+          "variation": "-0,16%",
+          "direction": "down",
+          "source": "Investing.com / Remessa Online — fechamento 31/jul/2026 (última sessão do mês)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 5,84",
+          "variation": "+0,07%",
+          "direction": "up",
+          "source": "Investing.com / Clube FII — 30/jul/2026, 16h29"
+        },
+        {
+          "name": "DXY (Índice Dólar)",
+          "value": "101,43",
+          "variation": "-0,10%",
+          "direction": "down",
+          "source": "TradingEconomics / ICE — 28/jul/2026 (mais recente disponível)"
+        },
+        {
+          "name": "Bitcoin (BRL)",
+          "value": "R$ 328.120",
+          "variation": "-2,05%",
+          "direction": "neutral",
+          "source": "Investing.com — fechamento 30/jul/2026 (US$ 64.846; alta de 7,6% no mês)"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "177.158 pts",
+          "variation": "+1,88%",
+          "direction": "down",
+          "source": "B3 — fechamento 30/jul/2026 (recorde de 9,95% no ano)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.437 pts",
+          "variation": "+1,7%",
+          "direction": "down",
+          "source": "NYSE — fechamento 30/jul/2026"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "25.122 pts",
+          "variation": "+2,8%",
+          "direction": "down",
+          "source": "Nasdaq — fechamento 30/jul/2026"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "52.208 pts",
+          "variation": "+1,2%",
+          "direction": "down",
+          "source": "NYSE — fechamento 30/jul/2026"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "14,25% a.a.",
+          "variation": "-0,25 p.p.",
+          "direction": "down",
+          "source": "BCB / Copom — decisão de 18/jun/2026; próxima reunião 4–5/ago/2026"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,50%–3,75%",
+          "variation": "mantido (5ª reunião seguida)",
+          "direction": "neutral",
+          "source": "Federal Reserve / FOMC — decisão 29/jul/2026, voto 9-3 com 3 dissidências hawkish"
+        },
+        {
+          "name": "IPCA-15 (jul/2026)",
+          "value": "+0,06% no mês",
+          "variation": "acum. 12m 4,52%",
+          "direction": "down",
+          "source": "IBGE — divulgado 28/jul/2026 (bem abaixo dos 0,41% de junho)"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "5,15%",
+          "variation": "3ª queda semanal seguida",
+          "direction": "down",
+          "source": "BCB Boletim Focus — ref. 20/jul/2026 (mais recente disponível)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": "R$ 6,82/L",
+          "variation": "-0,44%",
+          "direction": "down",
+          "source": "ValeCard (via O Tempo) — média jul/2026, 1-26/jul; ANP síntese oficial: R$ 6,58/L ref. semana 12–18/jul"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": "R$ 4,37/L",
+          "variation": "-1,93%",
+          "direction": "down",
+          "source": "ValeCard (via O Tempo) — média jul/2026, 1-26/jul"
+        },
+        {
+          "name": "Diesel S-10",
+          "value": "R$ 7,20/L",
+          "variation": "-1,40%",
+          "direction": "down",
+          "source": "ValeCard (via O Tempo) — média jul/2026, 1-26/jul"
+        },
+        {
+          "name": "Diesel Comum",
+          "value": "a confirmar",
+          "variation": "—",
+          "direction": "pending",
+          "source": "Não localizado nesta coleta — ref. ANP semana 12–18/jul/2026: R$ 6,70/L"
+        },
+        {
+          "name": "GLP P-13",
+          "value": "R$ 114,48/botijão",
+          "variation": "estável",
+          "direction": "neutral",
+          "source": "ANP Síntese Semanal — ref. semana 12–18/jul/2026 (última publicação oficial disponível)"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": "R$ 2,08/L",
+          "variation": "-2,68%",
+          "direction": "down",
+          "source": "CEPEA/ESALQ-USP — indicador semanal SP, sem impostos, semana 20–24/jul/2026 (mínima nominal da safra 26/27)"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": "a confirmar",
+          "variation": "—",
+          "direction": "pending",
+          "source": "Não localizado nesta coleta — CEPEA/ESALQ-USP, indicador semanal SP"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "+58%",
+          "variation": "recorde",
+          "direction": "up",
+          "source": "Abicom — fechamento 24/jul/2026 (Suape a 72%; média nas refinarias Petrobras 69% abaixo do PPI)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "+45%",
+          "variation": "elevada",
+          "direction": "up",
+          "source": "Abicom — fechamento 24/jul/2026"
+        }
+      ]
+    }
+  ],
+
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "Defasagem do diesel bate recorde de 58% mesmo com Brent recuando a US$ 89 — Abicom aponta 72% de defasagem em Suape e alerta para represamento de reajuste",
+      "resumo": "O levantamento da Abicom fechado em 24 de julho mostrou defasagem média de 58% no diesel e 45% na gasolina nas refinarias da Petrobras, mesmo com o petróleo internacional recuando quase 9% na semana. O descolamento mostra que o alívio do Brent ainda não chegou ao preço de revenda — e que a estatal segue acumulando represamento que tende a ser corrigido de forma abrupta, um risco direto de estoque para o revendedor."
+    },
+    {
+      "numero": 2,
+      "headline": "E32 deveria começar neste sábado (1º/ago), mas MPF pede à Justiça suspensão da mistura e cobra R$ 500 milhões de indenização por falta de estudos técnicos",
+      "resumo": "Às vésperas da entrada em vigor da gasolina com 32% de etanol, o Ministério Público Federal formalizou pedido de liminar em 22 de julho alegando ausência de comprovação técnica sobre durabilidade de motores e emissões. O desfecho jurídico, ainda pendente no fim de julho, decide se o posto vende E30 ou E32 já na segunda-feira — com risco de troca de especificação em cima da hora."
+    },
+    {
+      "numero": 3,
+      "headline": "Fed mantém juros em 3,50%–3,75% pela 5ª vez seguida, mas vota rachado 9-3 e mercado passa a precificar duas altas em 2026 — dólar cai mesmo assim para R$ 5,06",
+      "resumo": "A decisão do FOMC de 29 de julho, com três dissidências hawkish (Hammack, Kashkari e Logan), sinaliza que o ciclo de juros americano pode voltar a subir ainda este ano por causa da inflação persistente acima da meta. Apesar do tom mais duro, o dólar fechou a última sessão de julho em queda — mas o cenário exige atenção redobrada do posto que depende de crédito e de combustível importado."
+    },
+    {
+      "numero": 4,
+      "headline": "IPCA-15 surpreende com alta de apenas 0,06% em julho, a menor do ano — Selic em 14,25% deve ficar parada no Copom de 4 e 5 de agosto",
+      "resumo": "O resultado divulgado pelo IBGE em 28 de julho ficou bem abaixo dos 0,41% de junho e dos 0,18% esperados pelo mercado, com alívio puxado por alimentação. Ainda assim, o Boletim Focus mantém a Selic em 14% para o fim do ano — o que, somado ao Fed mais duro, reduz a margem para novos cortes agressivos que baratearem o capital de giro do posto no curto prazo."
+    },
+    {
+      "numero": 5,
+      "headline": "Bolsas em euforia global: Ibovespa sobe 1,88% a 177 mil pontos, Nasdaq dispara 2,8% e SANB11 salta 13% com oferta de troca por ações da Santander Espanha",
+      "resumo": "O rali de 30 de julho, puxado por bancos e tecnologia após o Fed manter os juros, elevou o Ibovespa a 9,95% de alta no ano. Destaque isolado foi o Santander Brasil (SANB11), que subiu 13% após a matriz espanhola oferecer prêmio de 15% para trocar as units por papéis da controladora — movimento que reduz ainda mais a liquidez do papel na B3."
+    }
+  ],
+
+  "mercado": {
+    "headline": "Defasagem do diesel bate recorde de 58% com Brent recuando a US$ 89 — o represamento que a Petrobras ainda não corrigiu vira o maior risco de estoque do mês",
+    "deck": "Abicom fecha a semana de 20 a 26 de julho com defasagem média de 58% no diesel e 45% na gasolina nas refinarias da estatal — mesmo com o petróleo cedendo quase 9% após o pico do ataque Houthi no Mar Vermelho",
+    "body": [
+      "O levantamento da <strong>Abicom</strong> fechado na sexta-feira <strong>24 de julho de 2026</strong> apontou defasagem recorde de <strong>58% no diesel</strong> e <strong>45% na gasolina</strong> nas refinarias da <strong>Petrobras</strong> frente à paridade de importação — com destaque para o polo de <strong>Suape (PE)</strong>, onde a diferença chegou a <strong>72%</strong>, equivalente a <strong>R$ 2,27 por litro</strong> abaixo do preço praticado pela estatal. Em contraste, a <strong>Acelen</strong>, dona da Refinaria de Mataripe (BA), operava apenas <strong>1% abaixo</strong> do preço internacional no diesel e <strong>2%</strong> na gasolina — evidência de que o represamento é uma escolha deliberada de política de preços da estatal, e não um efeito de mercado.",
+      "O paradoxo da semana é que o <strong>Brent recuou quase 9%</strong>, de <strong>US$ 97,04 para cerca de US$ 89,00</strong>, à medida que o mercado digeriu sinais de desescalada da tensão no <strong>Mar Vermelho</strong> e a manutenção de juros pelo <strong>Fed em 29 de julho</strong>. Ainda assim, a defasagem subiu — de <strong>41% para 58%</strong> no diesel e de <strong>31% para 45%</strong> na gasolina — porque o cálculo da Abicom compara o preço doméstico com a cotação de referência de semanas anteriores, quando o barril ainda rodava próximo de <strong>US$ 100</strong>. Na prática, isso significa que o desconto que a Petrobras já deveria estar praticando é maior do que o mercado imagina, e que qualquer reversão do Brent para cima recoloca a estatal em situação ainda mais defasada.",
+      "Para o revendedor, o recado é de cautela redobrada com giro de estoque: um represamento dessa magnitude tende a ser corrigido de uma só vez, e não de forma gradual — como já ocorreu em ciclos anteriores de defasagem acima de 50%. <strong>Evite comprar volumes acima do giro de 3 a 4 dias</strong>, monitore diariamente o Brent e a cotação da Abicom, e negocie com a distribuidora cláusulas de proteção para o caso de reajuste anunciado de surpresa — o intervalo entre a decisão e a vigência nas bombas costuma ser de horas, não de dias."
+    ],
+    "carryover": true,
+    "opiniao": "Defasagem de 58% não é mais um sinal de alerta — é uma bomba-relógio com pavio queimando. A Petrobras pode até escolher o momento do estouro, mas quem carrega estoque no posto não escolhe nada: só absorve o susto. Trave giro curto até o reajuste vir."
+  },
+
+  "politica": {
+    "headline": "E32 deveria estrear neste sábado, mas Justiça ainda não decidiu: MPF pede suspensão e R$ 500 milhões de indenização por falta de estudos sobre a nova mistura",
+    "deck": "Com o prazo de vigência batendo à porta em 1º de agosto, o impasse jurídico sobre o etanol a 32% na gasolina deixa o posto sem saber que produto vai vender na próxima semana",
+    "body": [
+      "O <strong>Ministério Público Federal</strong> protocolou, em <strong>22 de julho de 2026</strong>, pedido de liminar para suspender a resolução do <strong>Conselho Nacional de Política Energética (CNPE)</strong> que eleva o teor de etanol anidro na gasolina de <strong>30% para 32%</strong>, com entrada em vigor prevista para <strong>1º de agosto</strong> e vigência inicial de <strong>180 dias, prorrogável uma vez</strong>. O argumento central é que o governo validou o <strong>E32</strong> com base em estudos conduzidos originalmente para o <strong>E30</strong>, sem comprovação específica sobre durabilidade de componentes, emissões, autonomia e compatibilidade com a frota nacional — que ainda tem <strong>69,7%</strong> de veículos flex, segundo a Fenabrave. O MPF pede ainda que a União seja condenada a pagar <strong>R$ 500 milhões</strong> em indenização por danos coletivos.",
+      "O <strong>Ministério de Minas e Energia</strong> rebate afirmando que os testes técnicos comprovam a viabilidade da mistura e que o E32 reduz a dependência de importação de gasolina, além de estimular a cadeia sucroenergética — setor que pressionou pela medida durante todo o primeiro semestre. Até o fechamento desta edição, a Justiça Federal não havia julgado o pedido de liminar, o que deixa a rede de distribuição em compasso de espera: se a decisão sair a tempo e for favorável ao MPF, a gasolina que chega ao posto na segunda-feira <strong>continua sendo E30</strong>; se não houver decisão ou ela for desfavorável, o produto muda de especificação já no início de agosto.",
+      "Na prática operacional, isso significa que o dono de posto pode ter que lidar com <strong>troca de especificação em cima da hora</strong>, ajuste de nota fiscal e risco de receber, na mesma semana, lotes com composições diferentes de fornecedores distintos. <strong>Exija da distribuidora confirmação por escrito da especificação de cada carga recebida a partir de sábado</strong> e mantenha registro separado de estoque por lote — a responsabilidade por não conformidade na composição do combustível vendido recai sobre o posto de revenda, não sobre quem decidiu a política energética."
+    ],
+    "carryover": true,
+    "opiniao": "Aprovar uma mudança de especificação nacional com o relógio correndo e a Justiça ainda deliberando é o tipo de insegurança jurídica que ninguém no varejo pediu. Se o STF ou a Justiça Federal não decidir até sexta à noite, quem vai explicar ao consumidor por que a gasolina mudou de um dia para o outro é o frentista — não o CNPE."
+  },
+
+  "economiaBrasil": {
+    "headline": "IPCA-15 surpreende com alta de só 0,06% em julho, a menor do ano, mas Selic a 14,25% deve seguir parada no Copom de 4 e 5 de agosto",
+    "deck": "Alívio na inflação corrente convive com um Fed mais duro e um Focus que já não enxerga espaço para cortes agressivos — o crédito caro segue sendo o principal obstáculo de caixa do posto",
+    "body": [
+      "O <strong>IPCA-15</strong> de julho, divulgado pelo <strong>IBGE em 28 de julho de 2026</strong>, avançou apenas <strong>0,06%</strong> — muito abaixo dos <strong>0,41%</strong> de junho e dos <strong>0,18%</strong> esperados pelo mercado, também inferior aos <strong>0,33%</strong> de julho de 2025. O grupo <strong>Alimentação e bebidas</strong> puxou o alívio, com recuo de <strong>0,66%</strong>, enquanto <strong>Habitação</strong> foi na direção oposta, subindo <strong>0,97%</strong> — com energia elétrica residencial avançando <strong>3,03%</strong> e liderando a pressão altista do mês. No acumulado, o índice chega a <strong>3,51% em 2026</strong> e a <strong>4,52% em 12 meses</strong>.",
+      "O bom resultado corrente, porém, não muda o cálculo do <strong>Copom</strong>, que se reúne em <strong>4 e 5 de agosto</strong> com a <strong>Selic em 14,25% a.a.</strong> — nível definido no corte de <strong>0,25 ponto</strong> decidido em <strong>18 de junho</strong>. O <strong>Boletim Focus</strong>, na leitura mais recente de <strong>20 de julho</strong>, já projetava o <strong>IPCA de 2026 em 5,15%</strong> — terceira queda semanal seguida — mas manteve a expectativa de <strong>Selic em 14%</strong> só no fim do ano, ou seja, apenas mais um corte de <strong>0,25 ponto</strong> nas quatro reuniões restantes do calendário. A confluência com a decisão do <strong>Fed em 29 de julho</strong>, que manteve os juros americanos mas sinalizou viés de alta para o resto de 2026, tende a reforçar a cautela do Banco Central antes de acelerar novos cortes.",
+      "Para o gestor de posto, a leitura prática é que o <strong>custo do capital de giro não deve cair de forma relevante antes de outubro</strong>, mesmo com a inflação corrente comportada. Revisar linhas de crédito com a distribuidora e negociar prazos mais longos de pagamento continua sendo mais eficaz do que esperar por um corte de Selic que, na melhor hipótese, ainda está a pelo menos duas reuniões de distância. <strong>Acompanhe a ata do Copom de 5 de agosto</strong> para calibrar expectativa de custo financeiro até o fim do ano."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaInternacional": {
+    "headline": "Fed mantém juros em 3,50%–3,75% pela 5ª vez, mas vota rachado 9-3 e mercado passa a precificar altas em 2026 — Brent recua a US$ 89 com desescalada no Mar Vermelho",
+    "deck": "A dissidência hawkish de três dirigentes regionais do Fed reabre o debate sobre juros americanos mais altos, justo quando o petróleo perde força após o susto do ataque Houthi da semana anterior",
+    "body": [
+      "O <strong>Federal Reserve</strong> decidiu, em <strong>29 de julho de 2026</strong>, manter a taxa de juros na faixa entre <strong>3,50% e 3,75%</strong> pela <strong>quinta reunião consecutiva</strong>, mas o placar de <strong>9 a 3</strong> escondeu uma rachadura relevante: as presidentes regionais <strong>Beth Hammack (Cleveland)</strong>, <strong>Neel Kashkari (Minneapolis)</strong> e <strong>Lorie Logan (Dallas)</strong> votaram pela ata dissidente, alegando que a inflação americana segue acima da meta de <strong>2%</strong> há mais de cinco anos. O comunicado do FOMC reconheceu atividade econômica sólida e mercado de trabalho estável, mas o mercado futuro já precifica <strong>duas altas de 0,25 ponto</strong> ao longo de 2026 — um giro de 180 graus em relação ao ciclo de cortes que dominou a narrativa até o início do ano.",
+      "O barril de <strong>Brent</strong> encerrou a semana em queda de quase <strong>9%</strong>, de <strong>US$ 97,04 para cerca de US$ 89,00</strong>, recuando do pico de <strong>US$ 100,65</strong> atingido em <strong>23 de julho</strong> após o ataque de milícias Houthi a petroleiros sauditas no <strong>Mar Vermelho</strong>. O alívio veio de relatos de conversas indiretas entre <strong>Washington e Teerã</strong> mediadas por países do Golfo e da percepção de que o fluxo pelo <strong>Estreito de Ormuz</strong> segue operacional apesar da tensão. O <strong>WTI</strong> seguiu o movimento, fechando em <strong>US$ 83,87</strong> na quinta-feira, queda de <strong>0,70%</strong> no dia.",
+      "A combinação de <strong>Fed mais hawkish</strong> e <strong>petróleo em recuo</strong> cria um cenário ambíguo para o posto brasileiro: juros americanos mais altos tendem a fortalecer o dólar globalmente e encarecer a importação de combustíveis, mas o recuo do Brent trabalha na direção contrária, aliviando o custo de reposição no curto prazo. <strong>O efeito líquido dependerá de qual força se impõe primeiro</strong> — e a resposta provavelmente vem na próxima leitura da defasagem Abicom, que ainda reflete o pico do petróleo da semana anterior. <strong>Não trave grandes volumes de compra hoje apostando que o alívio do Brent é permanente.</strong>"
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "varejo": {
+    "headline": "ANP eleva de 10% para 70% o filtro de margem que caracteriza preço abusivo em crise, enquanto Fecombustíveis pede ao Senado dosimetria de multa proporcional ao posto pequeno",
+    "deck": "Duas frentes regulatórias avançam em Brasília: novas regras da ANP para abuso de preço em crises e um projeto de lei que pode equiparar pequenas revendas a grandes distribuidoras nas sanções",
+    "body": [
+      "A diretoria da <strong>ANP</strong> aprovou, em <strong>30 de junho de 2026</strong>, duas resoluções que definem critérios objetivos para caracterizar <strong>elevação abusiva de preços</strong> de combustíveis em situações excepcionais — crises de abastecimento, conflitos geopolíticos ou eventos que provoquem aumentos expressivos. O parâmetro central passa a ser a evolução da <strong>margem bruta</strong> do agente econômico, com o filtro inicial de aumento elevado de <strong>10% para 70%</strong> nesses cenários de exceção, publicado no Diário Oficial em <strong>2 de julho</strong>. A mudança dá mais segurança jurídica ao revendedor: um reajuste pontual em resposta a um choque internacional — como a alta do Brent a US$ 100 na semana passada — passa a ter parâmetro mais claro para não ser automaticamente enquadrado como abuso.",
+      "Em paralelo, a <strong>Câmara Brasileira do Comércio de Combustíveis (CBCC)</strong>, sob coordenação do presidente da <strong>Fecombustíveis, James Thorp Neto</strong>, levou ao <strong>Senado</strong> uma série de pleitos do setor, com destaque para o <strong>PL 1.625/2026</strong>. O texto, hoje em discussão, pode equiparar penalidades entre pequenos postos e grandes distribuidoras — o setor pede ajuste na <strong>dosimetria das multas</strong> para evitar que uma revenda de bairro seja punida com a mesma régua de uma distribuidora nacional, além de separar com clareza as esferas criminal e administrativa e preservar a competência técnica do <strong>Cade</strong> nesses casos.",
+      "Para o dono de posto, as duas frentes convergem para o mesmo ponto: mais previsibilidade regulatória em um ano de volatilidade extrema de custo. A recomendação prática é <strong>documentar formalmente qualquer reajuste feito em resposta a choque de custo</strong> — cotação do Brent, defasagem Abicom, nota fiscal da distribuidora — para sustentar a legitimidade do repasse caso a ANP abra fiscalização. E acompanhar a tramitação do <strong>PL 1.625/2026</strong> no Senado nas próximas semanas: o texto pode reduzir de forma relevante o risco de multa desproporcional para revendas de pequeno porte."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "automotivo": {
+    "headline": "Anfavea e Fenabrave revisam para cima as projeções de vendas de 2026 puxadas por híbridos e elétricos, no mesmo mês em que o futuro do E32 ainda depende da Justiça",
+    "deck": "Com 244,9 mil eletrificados emplacados no semestre e alta revisão de projeção para o ano, a transição da frota avança mais rápido que a certeza regulatória sobre a composição da própria gasolina",
+    "body": [
+      "As entidades <strong>Anfavea</strong> e <strong>Fenabrave</strong> revisaram para cima, em julho de 2026, suas projeções de vendas de veículos para o ano, citando o desempenho acima do esperado do mercado de eletrificados. Os dados do primeiro semestre, divulgados em <strong>2 de julho</strong>, mostram <strong>244.942 unidades</strong> de híbridos e elétricos emplacadas — alta de <strong>214,86%</strong> sobre o mesmo período de 2025. Os híbridos somaram <strong>154.472 unidades</strong> (+85,07%) e respondem por <strong>63%</strong> do total eletrificado, enquanto os elétricos puros (BEVs) somaram <strong>90.470 unidades</strong>, avanço de <strong>196,29%</strong>, beneficiados pelo programa <strong>Move Brasil Táxi e Aplicativos</strong>, que subsidia a compra de eletrificados até R$ 150 mil.",
+      "O crescimento acelerado da frota eletrificada ocorre no mesmo momento em que a política de combustíveis líquidos vive sua maior indefinição do ano: o <strong>E32</strong> deveria entrar em vigor em <strong>1º de agosto</strong>, mas segue sob risco de suspensão judicial por ação do <strong>MPF</strong>. A frota <strong>flex</strong> — ainda <strong>69,7%</strong> dos emplacamentos de autos e comerciais leves segundo a Fenabrave — é quem mais sente o vaivém regulatório, já que depende diretamente da proporção de etanol na gasolina para calibrar consumo e autonomia. Enquanto isso, o etanol hidratado no posto opera perto da mínima da safra 2026/27, com o indicador CEPEA a <strong>R$ 2,08/L</strong> na usina, reforçando a competitividade do combustível em estados de forte produção como SP, GO e MT.",
+      "Para o revendedor, a lição estrutural da semana é que a <strong>transição energética da frota não espera a Justiça decidir sobre o E32</strong>: o volume de gasolina por veículo tende a cair ano a ano à medida que híbridos e elétricos ganham espaço, independentemente da mistura de etanol. <strong>Reavalie a composição de bicos e capacidade de armazenagem de etanol hidratado na sua praça</strong> — especialmente em municípios com adoção crescente de eletrificados —, e mantenha plano de contingência para os dois cenários possíveis do E32 a partir de sábado."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "fontes": "OilPrice.com (31/jul/2026), TradingEconomics (28-31/jul/2026), Forbes Advisor — Crude Oil Price Today (30/jul/2026), Investing.com (30-31/jul/2026), Remessa Online — Dólar (31/jul/2026), Clube FII — EUR/BRL (30/jul/2026), Diário do Grande ABC — Fechamento do mercado (30/jul/2026), Suno Notícias — Ibovespa (30/jul/2026), Rio Times Online — Brazil Markets (30/jul/2026), InfoMoney — Ibovespa ao vivo (30-31/jul/2026), Washington Post — Wall Street indexes (30/jul/2026), CNBC — Fed meeting recap (29/jul/2026), Federal Reserve — FOMC Statement (29/jul/2026), Fox Business — Fed rate decision (29/jul/2026), DCI — Copom agosto (jul/2026), CNN Brasil — Copom/Focus (jul/2026), Seu Dinheiro — Copom/Focus (jul/2026), Sou Brasília — Copom agosto (jul/2026), InfoMoney — Boletim Focus (20/jul/2026), Forbes Brasil — Boletim Focus (jul/2026), PortalR3 — IPCA-15 (28/jul/2026), Suno — IPCA-15 (28/jul/2026), InfoMoney — IPCA-15 (28/jul/2026), CNN Brasil — IPCA-15 (28/jul/2026), IBGE — IPCA-15 (28/jul/2026), O Tempo / ValeCard — preços de combustíveis (31/jul/2026), Jornal de Brasília — Etanol Veloe (jul/2026), combustiveis-anp.com.br (jul/2026), ANP — Síntese Semanal de Preços (ref. semana 12–18/jul/2026), Diário do Grande ABC — ANP síntese (17/jul/2026), Forbes Agro BR — CEPEA etanol (28/jul/2026), CEPEA/ESALQ-USP (jul/2026), Diário do Grande ABC — Abicom defasagem (27/jul/2026), Brasil Postos — Abicom (jul/2026), Jornal de Brasília — Abicom (27/jul/2026), Folha PE — Abicom (27/jul/2026), Fecombustíveis — Abicom/defasagem (27/jul/2026), Poder360 — MPF x E32 (jul/2026), MT Econômico — MPF x E32 (jul/2026), Autopapo — MPF x E32 (22/jul/2026), MPF — nota oficial E32 (jul/2026), FlatOut — MPF x E32 (jul/2026), Despachante DOK — E32 (jul/2026), Imirante.com — MP combustíveis 31/jul (31/jul/2026), BPMoney — fim subsídio diesel (jul/2026), Diário do Transporte — MP 1344/26 (9/jul/2026), Agência Brasil — subsídio diesel (jul/2026), Senado Notícias — prorrogação MP diesel (17/jul/2026), Poder360 — prorrogação MP diesel (jul/2026), Correio Braziliense — Fenabrave eletrificados (2/jul/2026), Minaspetro — Fenabrave/EVs (jul/2026), Fecombustíveis — Fenabrave EVs (jul/2026), Alpha Autos — Anfavea/Fenabrave revisão (jul/2026), Autossegredos — Anfavea/Fenabrave (jul/2026), Money Times — SANB11 (jul/2026), Poder360 — ANP preço abusivo (30/jun/2026), Diário do Grande ABC — ANP preço abusivo (30/jun/2026), Brasil Postos — ANP critérios (jul/2026), Terra — ANP preço abusivo (jul/2026), ANP — nota oficial critérios abuso (2/jul/2026), Portal do Comércio — CBCC no Senado (jul/2026), Federação Brasilcom — CBCC Senado (6/jul/2026), Brasilcom — CBCC Senado (jul/2026)"
+}
