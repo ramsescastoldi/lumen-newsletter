@@ -1,0 +1,144 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        { "name": "Brent (USD/barril)", "value": "US$ 79,62", "variation": "-10,54%", "direction": "down", "source": "Investing.com / MundoPetróleo — fechamento 6/ago/2026 (tombo forte vs. US$ 89,00 em 31/jul, após acordo Irã-Omã para nova rota no Estreito de Ormuz)" },
+        { "name": "WTI (USD/barril)", "value": "US$ 77,29", "variation": "-7,85%", "direction": "down", "source": "Investing.com / NYMEX — fechamento 5/ago/2026 (vs. US$ 83,87 em 30/jul)" }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        { "name": "USD/BRL", "value": "R$ 5,08", "variation": "+0,40%", "direction": "up", "source": "Investing.com / Bloomberg Línea — cotação 7/ago/2026 (vs. R$5,06 em 31/jul)" },
+        { "name": "EUR/BRL", "value": "R$ 5,89", "variation": "+0,90%", "direction": "up", "source": "Investing.com — 7/ago/2026 (vs. R$5,84 em 30/jul)" },
+        { "name": "DXY (Índice Dólar)", "value": "99,69", "variation": "-1,72%", "direction": "down", "source": "ICE / Investing.com — 7/ago/2026 (pior semana em 3 meses; vs. 101,43 em 28/jul)" },
+        { "name": "Bitcoin (BRL)", "value": "R$ 327.200", "variation": "-0,15% (24h)", "direction": "neutral", "source": "Investidor10 / Coinbase — 7/ago/2026, cotação intradiária (US$ 64.410; fontes divergem em BRL)" }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        { "name": "Ibovespa", "value": "175.546 pts", "variation": "-1,23%", "direction": "up", "source": "B3 / InfoMoney — fechamento 6/ago/2026 (vs. 177.158 pts em 30/jul; ano ainda a +8,95%)" },
+        { "name": "S&P 500", "value": "7.709,96 pts", "variation": "-0,18%", "direction": "up", "source": "CNBC / NYSE — fechamento 5/ago/2026" },
+        { "name": "Nasdaq", "value": "26.348,35 pts", "variation": "-0,06%", "direction": "up", "source": "CNBC / Nasdaq — fechamento 5/ago/2026" },
+        { "name": "Dow Jones", "value": "53.885 pts", "variation": "-0,85%", "direction": "up", "source": "CNBC / TheStreet — fechamento 5/ago/2026 (recuou do recorde de 54.349 pts em 4/ago)" }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        { "name": "Selic", "value": "14,00% a.a.", "variation": "-0,25 p.p.", "direction": "down", "source": "BCB / Copom — decisão de 5/ago/2026; próxima reunião 15–16/set/2026" },
+        { "name": "Fed Funds", "value": "3,50%–3,75%", "variation": "mantido (5ª reunião seguida)", "direction": "neutral", "source": "Federal Reserve / FOMC — decisão 29/jul/2026, voto 9-3 com 3 dissidências hawkish" },
+        { "name": "IPCA-15 (jul/2026)", "value": "+0,06% no mês", "variation": "acum. 12m 4,52%", "direction": "down", "source": "IBGE — divulgado 28/jul/2026 (bem abaixo dos 0,41% de junho)" },
+        { "name": "Focus IPCA 2026", "value": "5,03%", "variation": "5ª queda semanal seguida", "direction": "down", "source": "BCB Boletim Focus — ref. 3/ago/2026 (Selic fim de 2026 revisada de 14% para 13,75%)" }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        { "name": "Gasolina C", "value": "R$ 6,69/L", "variation": "subiu na última semana de jul.", "direction": "up", "source": "ANP — média mensal de julho/2026; síntese da 1ª semana de agosto ainda não publicada" },
+        { "name": "Etanol Hidratado", "value": "R$ 4,16/L", "variation": "média jul/2026", "direction": "neutral", "source": "ANP — média mensal de julho/2026" },
+        { "name": "Diesel S-10", "value": "R$ 6,98/L", "variation": "estável na última semana de jul.", "direction": "neutral", "source": "ANP — média mensal de julho/2026" },
+        { "name": "Diesel Comum", "value": "R$ 6,83/L", "variation": "média jul/2026", "direction": "neutral", "source": "ANP — média mensal de julho/2026" },
+        { "name": "GLP P-13", "value": "R$ 114,48/botijão", "variation": "caiu na última semana de jul.", "direction": "down", "source": "ANP Síntese Semanal — ref. semana 12–18/jul/2026 (última publicação com valor exato)" }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        { "name": "Etanol Hidratado SP", "value": "R$ 2,08/L", "variation": "-2,68%", "direction": "down", "source": "CEPEA/ESALQ-USP — indicador semanal SP, sem impostos, ref. semana 20–24/jul/2026 (mais recente publicada)" },
+        { "name": "Etanol Anidro SP", "value": "R$ 2,38/L", "variation": "-2,6%", "direction": "down", "source": "CEPEA/ESALQ-USP — indicador semanal SP, sem impostos, ref. semana 20–24/jul/2026" }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        { "name": "Diesel", "value": "47%", "variation": "recuou de 58%", "direction": "down", "source": "Abicom/StoneX (via eixos.com.br) — 5/ago/2026 (vs. 58% em 24/jul)" },
+        { "name": "Gasolina", "value": "23%", "variation": "recuou de 45%", "direction": "down", "source": "Abicom/StoneX (via eixos.com.br) — 5/ago/2026 (vs. 45% em 24/jul)" }
+      ]
+    }
+  ],
+
+  "manchetes": [
+    { "numero": 1, "headline": "Defasagem da Petrobras despenca de 58% para 47% no diesel e de 45% para 23% na gasolina, acompanhando tombo de 10,5% do Brent na semana", "resumo": "Dados da Abicom/StoneX divulgados em 5 de agosto mostram alívio expressivo na defasagem de preços da Petrobras frente à paridade internacional, movimento que acompanha a queda do Brent para perto de US$ 80 depois do acordo entre Irã e Omã sobre uma nova rota no Estreito de Ormuz. Ainda assim, a defasagem segue positiva e relevante — o represamento não acabou, só perdeu velocidade." },
+    { "numero": 2, "headline": "E32 entra em vigor em 1º de agosto sem liminar da Justiça — MPF perde a corrida contra o relógio, mas ação por R$ 500 milhões segue no mérito", "resumo": "A gasolina com 32% de etanol anidro passou a valer no sábado conforme a Resolução CNPE nº 9/2026, depois que a Justiça Federal não decidiu a tempo o pedido de liminar do Ministério Público Federal. O posto já recebe o novo produto desde o fim de semana — mas o litígio de fundo, incluindo o pedido de indenização coletiva, continua tramitando." },
+    { "numero": 3, "headline": "Copom corta Selic para 14,00% em decisão de 5 de agosto, e Focus já projeta 13,75% no fim do ano — quinta queda semanal seguida na expectativa de inflação", "resumo": "O Banco Central reduziu a taxa básica em 0,25 ponto percentual, respaldado por um IPCA-15 de julho surpreendentemente baixo. O Boletim Focus de 3 de agosto revisou para baixo tanto a inflação (5,03%) quanto a própria Selic esperada para o fim do ano — sinal de que o custo do crédito para o posto deve continuar cedendo nos próximos meses." },
+    { "numero": 4, "headline": "Irã fecha acordo com Omã por nova rota no Estreito de Ormuz e Brent tomba 10,5% na semana, mas Fed segue rachado sobre juros nos EUA", "resumo": "O anúncio de 6 de agosto reduz o risco de fechamento do principal corredor de petróleo do mundo e derruba o Brent para perto de US$ 80 — ainda que o acordo dependa da postura dos EUA, segundo reconheceu o vice-presidente JD Vance. Do outro lado do Atlântico, o Fed manteve os juros mas com dissidência hawkish, mantendo a incerteza sobre o dólar global." },
+    { "numero": 5, "headline": "Fenabrave fecha o melhor julho em anos: 504,6 mil veículos emplacados, alta de 10,17%, com caminhões disparando 18,89% — sinal de aquecimento na demanda por diesel", "resumo": "O terceiro melhor julho da história do mercado automotivo brasileiro, divulgado em 4 de agosto, teve destaque para o segmento de caminhões, que avançou quase 19% sobre junho — movimento que aponta para reaquecimento do frete rodoviário e, por consequência, do consumo de diesel nas praças do país." }
+  ],
+
+  "mercado": {
+    "headline": "Defasagem da Petrobras recua de 58% para 47% no diesel com o Brent em queda livre — mas a paridade ainda está longe de fechar",
+    "deck": "Abicom/StoneX registra alívio expressivo na defasagem de diesel e gasolina na primeira semana de agosto, acompanhando o tombo de 10,5% do petróleo após sinais de desescalada no Estreito de Ormuz — o represamento, porém, segue essencialmente ativo",
+    "body": [
+      "Depois do recorde de 58% de defasagem no diesel e 45% na gasolina fechado em 24 de julho, o levantamento mais recente da Abicom/StoneX, citado pelo boletim eixos.com.br em 5 de agosto, mostra recuo para 47% no diesel e 23% na gasolina — o primeiro alívio relevante em semanas. O movimento acompanha de perto o comportamento do Brent, que caiu de US$ 89,00 para US$ 79,62 entre 31 de julho e 6 de agosto, uma queda de 10,54% na semana, com o WTI seguindo o mesmo caminho a US$ 77,29.",
+      "A folga tem uma segunda origem, além do petróleo mais barato: a própria ANP projeta um balanço de oferta e demanda de diesel superavitário em agosto, de 391 milhões de litros — cerca de 10% da demanda mensal —, combinando produção doméstica de 2,75 bilhões de litros, importações de 1,13 bilhão e estoque de julho de 292 milhões. Isso reduz a pressão imediata por um reajuste abrupto que a defasagem de julho sinalizava, mas não elimina o desconto que a Petrobras ainda pratica frente à paridade de importação — 47% ainda é uma diferença grande o suficiente para justificar correção relevante caso o Brent volte a subir.",
+      "Para o revendedor, a leitura prática muda de tom em relação à semana passada, mas não de direção: o risco de reajuste abrupto diminuiu, mas não desapareceu, e o acordo Irã-Omã que derrubou o petróleo ainda depende da postura dos EUA para se sustentar. Mantenha giro de estoque moderado — a folga de oferta de diesel projetada pela ANP para agosto é uma janela favorável para negociar volumes com a distribuidora, mas sem alongar prazos de compra na aposta de que o Brent seguirá em queda."
+    ],
+    "carryover": true,
+    "opiniao": "A bomba-relógio não foi desarmada — só ganhou mais tempo no pavio. Defasagem de 47% ainda é munição de sobra para um reajuste de dois dígitos ao primeiro sinal de reversão do Brent. Aproveite o alívio para negociar, não para relaxar o controle de estoque."
+  },
+
+  "politica": {
+    "headline": "E32 entra em vigor sem liminar da Justiça — MPF perde a corrida contra o relógio, e Brasília abre nova frente: Lula x governadores no ICMS de combustíveis",
+    "deck": "A Resolução CNPE que eleva o etanol anidro na gasolina de 30% para 32% passou a valer no sábado sem decisão judicial que a suspendesse, enquanto o governo federal trava novo embate com os estados sobre o corte do imposto na bomba",
+    "body": [
+      "A Resolução CNPE nº 9/2026 entrou em vigor em 1º de agosto de 2026, elevando de 30% para 32% o teor de etanol anidro obrigatório na gasolina C comum e aditivada em todo o país, por 180 dias, prorrogáveis uma vez. A Justiça Federal não julgou a tempo o pedido de liminar protocolado pelo Ministério Público Federal em 22 de julho, que alegava falta de comprovação técnica específica para o E32 e pedia R$ 500 milhões em indenização por danos coletivos — o que significa que, na prática, o MPF perdeu a corrida contra o relógio e o produto já circula nos postos desde o fim de semana. A ação, porém, continua tramitando no mérito, o que mantém uma nuvem de insegurança jurídica sobre a especificação vigente.",
+      "Em paralelo, abriu-se uma nova frente de disputa: o governo Lula propôs aos governadores dividir ao meio o custo de um corte no ICMS dos combustíveis, mas o Comsefaz (Comitê Nacional de Secretários de Fazenda) recusou a proposta, alegando que mudanças legislativas no imposto já causaram choque acumulado de R$ 189 bilhões nas contas estaduais desde 2022 — recursos que os estados dizem depender para saúde, educação e infraestrutura. O deputado Guilherme Boulos acusou os governadores de \"omissão\" no episódio, escalando o tom do conflito federativo.",
+      "Para o dono de posto, o recado prático é duplo: primeiro, confirme por escrito com a distribuidora a especificação exata de cada carga recebida a partir de 1º de agosto, já que o litígio sobre o E32 segue aberto e uma eventual decisão de mérito desfavorável pode obrigar nova adequação; segundo, não conte com alívio de ICMS no curto prazo — o impasse entre União e estados tende a se arrastar, e qualquer mudança na tributação de combustíveis dificilmente sairá antes do fim do ano."
+    ],
+    "carryover": true,
+    "opiniao": "A Justiça não freou o E32, mas também não resolveu o problema de fundo: mudar a especificação nacional do combustível com uma ação de R$ 500 milhões ainda em aberto é jogar a insegurança jurídica para cima do balcão do posto. E a queda de braço do ICMS mostra, mais uma vez, que o preço na bomba segue sendo moeda de troca política antes de ser problema de cadeia produtiva."
+  },
+
+  "economiaBrasil": {
+    "headline": "Copom corta Selic para 14,00% em decisão de 5 de agosto, e Focus já projeta 13,75% no fim do ano — alívio de crédito começa a aparecer no radar do posto",
+    "deck": "Quinta queda seguida na expectativa de inflação do Boletim Focus reforça espaço para o Banco Central seguir cortando juros, mesmo com o mercado de trabalho ainda aquecido e o fiscal apertado",
+    "body": [
+      "O Copom reduziu a Selic em 0,25 ponto percentual, para 14,00% a.a., em decisão anunciada em 5 de agosto de 2026 — a próxima reunião está marcada para 15 e 16 de setembro. O corte foi respaldado pelo IPCA-15 de julho, divulgado pelo IBGE em 28 de julho, que avançou apenas 0,06% no mês, bem abaixo dos 0,41% de junho, levando o acumulado em 12 meses a 4,52%.",
+      "O Boletim Focus de 3 de agosto trouxe a quinta queda semanal seguida na projeção de inflação para 2026, agora em 5,03%, e revisou para baixo também a expectativa de Selic no fim do ano, de 14% para 13,75% — ou seja, o mercado já enxerga pelo menos mais um corte até dezembro. O quadro de atividade segue firme: o Caged de junho, divulgado em 30-31 de julho, mostrou saldo de 145.161 empregos formais, com destaque para transporte e armazenagem (+16.217 vagas) — um indicador direto de aquecimento da logística que move diesel pelo país.",
+      "Para o gestor de posto, a combinação de juros em trajetória de queda com atividade econômica resiliente é o cenário mais favorável do ano para revisar linhas de crédito de capital de giro junto à distribuidora — mas o quadro fiscal, com déficit primário estimado em R$ 52 bilhões somando precatórios, ainda limita o ritmo dos cortes. Negocie prazos agora, aproveitando a queda já precificada pelo Focus, em vez de esperar o corte seguinte se concretizar."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaInternacional": {
+    "headline": "Irã fecha acordo com Omã por nova rota no Estreito de Ormuz e Brent tomba 10,5% na semana, mas Fed segue rachado sobre juros nos EUA",
+    "deck": "Sinais de desescalada no principal corredor do petróleo mundial derrubam o barril para perto de US$ 80, mesmo com o mercado de trabalho americano resiliente e o FOMC dividido sobre o rumo dos juros",
+    "body": [
+      "O Irã fechou, em 6 de agosto de 2026, um acordo com Omã para viabilizar uma nova rota de navegação no Estreito de Ormuz, corredor por onde passa cerca de 20% do comércio mundial de petróleo e gás e que vinha sob tensão desde o início de julho, com relatos de explosões e ataques a petroleiros monitorados pela UKMTO. O vice-presidente americano JD Vance reconheceu que as negociações são \"desiguais\" e complexas, e a reabertura efetiva segue condicionada à postura dos EUA — ou seja, o alívio é real, mas ainda frágil.",
+      "O resultado imediato foi o Brent recuar 10,54% na semana, de US$ 89,00 para US$ 79,62, com o WTI caindo para US$ 77,29. A queda também reflete a decisão da OPEP+ de elevar a produção em 188 mil barris/dia a partir de agosto — o quarto aumento consecutivo desde os cortes voluntários de 2023 — e dados da EIA mostrando queda de 7,2 milhões de barris nos estoques americanos, com refino a 97,2% de utilização. Do lado dos juros, o Federal Reserve manteve a taxa em 3,50%–3,75% em 29 de julho, mas com três dissidências hawkish — Hammack, Kashkari e Logan — que já fazem o mercado futuro precificar novas altas ainda em 2026.",
+      "Para o posto brasileiro, a combinação é favorável no curto prazo: petróleo mais barato já se refletiu na queda da defasagem Abicom desta semana, e qualquer novo avanço no acordo Irã-Omã tende a reforçar essa direção. O risco é a fragilidade do acordo — uma escalada de última hora no Oriente Médio pode reverter o movimento do Brent tão rápido quanto ele apareceu. Não trate a queda do petróleo como permanente ao planejar compras de médio prazo."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "varejo": {
+    "headline": "Apenas 19% dos postos brasileiros têm loja de conveniência, ante 80% nos EUA — gap que pode render até 50% mais lucro, aponta o setor",
+    "deck": "Enquanto o subsídio ao diesel da MP 1.363/2026 já consumiu R$ 7 bilhões dos R$ 10 bilhões previstos, o varejo de proximidade desponta como a alavanca de margem que o posto brasileiro ainda não explorou",
+    "body": [
+      "Levantamentos do setor — Brasil Postos e ClubPetro — mostram que apenas 19% dos postos brasileiros operam com loja de conveniência, contra 80% nos Estados Unidos, 90% no Reino Unido e 95% na Austrália. A distância é uma oportunidade de margem represada: postos que investem em conveniência relatam aumento de 30% a 50% no lucro, com a loja respondendo por até 40% da receita total e margens de 30% a 50% em categorias como snacks e bebidas — muito acima da margem de combustível.",
+      "O contexto fiscal reforça a urgência de diversificar receita: o subsídio de R$ 1,12/litro ao diesel rodoviário, criado pela MP 1.363/2026 e prorrogado por 60 dias em 17 de julho, já consumiu R$ 7 bilhões dos R$ 10 bilhões orçados, segundo o boletim eixos.com.br de 5 de agosto. O Congresso analisa a MP 1.380/2026, que abriria crédito extraordinário de R$ 3,33 bilhões — R$ 2,1 bilhões destinados ao diesel — para reforçar o caixa do programa, mas a aprovação ainda não tem data certa.",
+      "Na prática, o revendedor não deve estruturar a margem do negócio em torno de um subsídio que pode se esgotar antes do fim do ano. Avalie o espaço físico disponível para uma loja de conveniência, mesmo que pequena — o retorno documentado pelo setor é maior e mais estável do que a variação de margem no litro de diesel, especialmente num cenário em que o próprio subsídio federal já mostra sinais de escassez orçamentária."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "automotivo": {
+    "headline": "Fenabrave fecha o melhor julho em anos: 504,6 mil veículos emplacados, alta de 10,17%, com caminhões disparando 18,89% — sinal de aquecimento na demanda por diesel",
+    "deck": "Terceiro melhor julho da história do mercado automotivo brasileiro reforça a recuperação do frete rodoviário, enquanto elétricos e híbridos seguem batendo recorde de participação",
+    "body": [
+      "A Fenabrave divulgou em 4 de agosto de 2026 o total de 504.574 veículos emplacados em julho, alta de 10,17% sobre julho de 2025 e 3,31% sobre junho — o terceiro melhor julho da história do setor. Automóveis e comerciais leves somaram 265.695 unidades (+15,54%), impulsionados pelo programa Carro Sustentável, que já eleva as vendas em 29,4% acima do período anterior ao benefício. O destaque, porém, foi o segmento de caminhões, que avançou 18,89% sobre junho e 7,16% no ano — sinal direto de reaquecimento do frete rodoviário. A entidade projeta crescimento de 8,6% no total de 2026, o equivalente a 5,3 milhões de unidades.",
+      "Do lado da eletrificação, a Anfavea projeta entre 420 e 450 mil veículos eletrificados vendidos em 2026, após um primeiro trimestre com alta de 88% na soma de híbridos e elétricos — os BEVs puros cresceram 174% no período, atingindo participação recorde de 18,3% do mercado total em abril. Já 40% dos eletrificados vendidos em 2026 são fabricados no Brasil, ante 25,7% em 2025, um movimento que deve se acentuar com a recomposição do Imposto de Importação sobre elétricos prevista para o ano. A infraestrutura de recarga soma 25.455 pontos públicos e semipúblicos até maio, alta de 20,9% no trimestre, presente em 1.788 municípios.",
+      "Para o revendedor, a leitura da semana é de dupla velocidade: o salto dos caminhões é uma boa notícia imediata para o volume de diesel, alinhada com a folga de oferta que a própria ANP projeta para agosto — mas a eletrificação avança em ritmo estrutural que não espera nenhuma decisão regulatória pontual, com 1 carregador para cada 19,6 veículos elétricos hoje no país. Acompanhe o crescimento de pontos de recarga na sua própria praça — é o indicador mais direto de quando vale a pena diversificar o mix de serviços do seu posto."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "fontes": "Investing.com — Brent/WTI/DXY/câmbio (6-7/ago/2026), MundoPetróleo (6/ago/2026), NYMEX/TradingEconomics (5/ago/2026), Bloomberg Línea — dólar (6/ago/2026), InfoMoney — Ibovespa (6/ago/2026), CNBC — Wall Street (4-6/ago/2026), TheStreet — Wall Street (5/ago/2026), BCB/Copom — decisão Selic (5/ago/2026), O Tempo — Copom (5/ago/2026), Federal Reserve/FOMC — decisão de juros (29/jul/2026), CNBC — Fed (29/jul/2026), IBGE — IPCA-15 (28/jul/2026), InfoMoney — IPCA-15 (28/jul/2026), CNN Brasil — IPCA-15 (28/jul/2026), Agência Brasil — IPCA-15 (28/jul/2026), Suno Notícias — Boletim Focus (3/ago/2026), InfoMoney — Boletim Focus (3/ago/2026), combustiveis-anp.com.br — preços médios julho/2026, Acessa.com — ANP síntese semanal 12-18/jul (jul/2026), Jornal do Comércio — ANP última semana de julho (jul/2026), Brasil Postos — ANP (jul/2026), CEPEA/ESALQ-USP — indicador semanal etanol (jul/2026), Forbes Agro BR — etanol CEPEA (jul/2026), CNN Brasil — etanol CEPEA (jul/2026), eixos.com.br — Abicom/StoneX defasagem e balanço diesel ANP (5/ago/2026), Diário do Grande ABC — Abicom (27/jul/2026), Jornal de Brasília — Abicom (27/jul/2026), Canal Rural — Abicom (27/jul/2026), Times Brasil/CNBC — Abicom (jul/2026), Exame — CNPE E32 (jul/2026), SCA Brasil — E32 (jul/2026), Fecombustiveis.org.br — E32 (jul/2026), ANP — nota oficial E32 (1/ago/2026), Portal Itapipoca — E32/MPF (1/ago/2026), Autopapo — MPF x E32 (jul/2026), Despachante DOK — E32 (jul/2026), Poder360 — subsídio diesel MP 1.363 (17/jul/2026), Brasil em Folhas — MP diesel (17/jul/2026), Câmara dos Deputados — MP 1.380/2026 (ago/2026), Midiamax — MP 1.380 (ago/2026), O Tempo — Rússia veto exportação diesel (30/jul/2026), CNN Brasil — Rússia diesel (30/jul/2026), InfoMoney — Rússia diesel (30/jul/2026), Poder360 — ICMS Lula x governadores (2026), CNN Brasil — ICMS combustíveis (2026), TNH1 — Comsefaz/ICMS (2026), O Tempo — acordo Irã-Omã/Ormuz (6/ago/2026), Vatican News — Estreito de Ormuz (6/ago/2026), CNN Brasil — OPEP+ produção (jul/2026), Forbes Brasil — OPEP+ (jul/2026), EIA via ADVFN — estoques de petróleo EUA (jul/2026), Ministério do Trabalho e Emprego / Agência Gov — Caged junho (30-31/jul/2026), Agência Brasil — fiscal/déficit primário (jul/2026), Brasil Postos / ClubPetro — conveniência em postos (2026), Agência Brasil / Fenabrave — emplacamentos julho (4/ago/2026), Anfavea / eletricos.app — eletrificados e infraestrutura de recarga (2026)."
+}
