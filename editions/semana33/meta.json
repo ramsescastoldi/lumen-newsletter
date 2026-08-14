@@ -1,0 +1,11 @@
+{
+  "edicao": 33,
+  "periodo": "9 a 15 / Ago / 2026",
+  "friday": "2026-08-14",
+  "generated_at": "2026-08-14T20:30:00.000Z",
+  "fontes": "Forbes Advisor — Brent (14/ago/2026), TradingEconomics — Brent/WTI (14/ago/2026), Fortune — petróleo (14/ago/2026), Investing.com — USD/BRL, EUR/BRL (14/ago/2026), InfoMoney — Ibovespa/dólar (13-14/ago/2026), CNN Brasil — Ibovespa (ago/2026), TheStreet — Wall Street (14/ago/2026), CNBC — S&P 500/Nasdaq/Dow Jones (12-13/ago/2026), STL News/Washington Post — fechamento Wall Street (13/ago/2026), O Tempo — Copom Selic (5/ago/2026), Remessa Online — Copom agosto 2026, BCB — Selic/Copom, CNBC — Fed FOMC (29/jul/2026), IBGE — IPCA e IPCA-15 (jul/2026), Canal Rural — Boletim Focus IPCA 2026, InfoMoney — Boletim Focus Selic 2026, Brasil Postos — etanol ANP (2-8/ago/2026), Jornal de Brasília — etanol ANP (ago/2026), Jornal Cruzeiro — etanol SP (ago/2026), eixos.com.br — Abicom/StoneX defasagem diesel e gasolina (início ago/2026), Diário do Grande ABC — Abicom defasagem diesel 58% (27/jul/2026), Canal Rural — defasagem diesel (jul/2026), Times Brasil/CNBC — Petrobras diesel defasagem (jul/2026), Agência Brasil — pacote de subsídio a combustíveis (abr/2026), Câmara dos Deputados — MP 1.380/2026, Imirante — MP 1.380/2026 (31/jul/2026), Brasil Postos — novo subsídio a combustíveis, CEPEA/ESALQ — etanol hidratado e anidro SP (ago/2026), Brasil247 — Estreito de Ormuz e petróleo (ago/2026), Money Times — petróleo e Ormuz (12/ago/2026), ECO — Brent a US$ 90 e Ormuz (11/ago/2026), Investing.com/Reuters — OPEP+ produção (ago/2026), O Tempo — OPEP+ e Ormuz (2/ago/2026), InfoMoney — petróleo, fechamento Irã-EUA (13/ago/2026), Poder360 — OPEP+ produção estável, CoinDesk/Yahoo Finance/Fortune — Bitcoin (14/ago/2026), Jornal O Sul — Fenabrave emplacamentos recorde (2026), CNN Brasil — Fenabrave elétricos (2026), Fecombustíveis — ExpoPostos & Conveniência 2026, Fecombustíveis — safra de etanol 2026/27, blog.precodogas.com.br / ANP — GLP P-13 (2026).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}

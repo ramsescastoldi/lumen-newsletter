@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>Posto em Dia | Edição 33 — Lumen Posto Club</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; background: #f5f0e3; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #111;
+    background: #f5f0e3;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .paper {
+    max-width: 660px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #e1d7b8;
+    padding-bottom: 24px;
+  }
+
+  /* ============ MASTHEAD ============ */
+  .masthead {
+    border-bottom: 3px double #003459;
+    padding: 22px 20px 14px;
+    text-align: center;
+    background: #ffffff;
+  }
+  .masthead .top-rule {
+    border-top: 6px solid #003459;
+    margin: -22px -20px 16px;
+  }
+  .masthead h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #111;
+  }
+  .masthead .subtitle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #555;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+  .masthead .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #d0d0d0;
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .masthead .meta .edicao { color: #003459; font-weight: 800; }
+
+  /* ============ SECTION HEADER ============ */
+  .section-header {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #003459;
+    padding: 0 20px;
+    margin: 28px 0 14px;
+    border-top: 2px solid #003459;
+    padding-top: 10px;
+  }
+  .section-header::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #d0d0d0;
+    margin: 8px -20px 0;
+  }
+
+  /* ============ INDICADORES FINANCEIROS (TABLOIDE DE COTAÇÕES) ============ */
+  .indic-wrap { padding: 0 20px; }
+  .indic-block {
+    margin-bottom: 14px;
+    border: 1px solid #d8d8d8;
+    background: #fbfbf7;
+  }
+  .indic-block-title {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #003459;
+    padding: 6px 10px;
+    font-weight: 700;
+  }
+  .indic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .indic {
+    padding: 9px 12px;
+    border-bottom: 1px solid #ecece4;
+    border-right: 1px solid #ecece4;
+  }
+  .indic:nth-child(2n) { border-right: none; }
+  .indic-full {
+    grid-column: span 2;
+    border-right: none;
+  }
+  .indic-name {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #555;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+  .indic-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .indic-value {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #111;
+  }
+  .indic-var {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .indic-var.up { color: #c0392b; }
+  .indic-var.up::before { content: "▲ "; color: #c0392b; }
+  .indic-var.down { color: #1e8449; }
+  .indic-var.down::before { content: "▼ "; color: #1e8449; }
+  .indic-var.neutral { font-style: italic; color: #777; }
+  .indic-var.pending { font-style: italic; color: #777; }
+  .indic-source {
+    font-size: 9px;
+    color: #888;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* ============ MANCHETES (5) ============ */
+  .manchetes-wrap { padding: 0 20px; }
+  .manchete {
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .manchete:first-child { border-top: none; padding-top: 6px; }
+  .manchete-num {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #003459;
+    line-height: 0.85;
+    min-width: 46px;
+    text-align: center;
+    margin-top: -2px;
+  }
+  .manchete-body { flex: 1; }
+  .manchete-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.22;
+    margin-bottom: 8px;
+  }
+  .manchete-summary {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #333;
+  }
+
+  /* ============ ARTIGOS LONGOS ============ */
+  .article {
+    padding: 0 20px;
+    margin-bottom: 6px;
+  }
+  .article-headline {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .article-deck {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .article-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+  .article-body p:first-of-type::first-letter {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    font-weight: 900;
+    float: left;
+    line-height: 0.9;
+    padding: 4px 8px 0 0;
+    color: #003459;
+  }
+  .article-body strong { color: #003459; }
+
+  /* ============ BLOCO LUMEN POSTO CLUB ============ */
+  .cta-club {
+    margin: 32px 20px 0;
+    background: #003459;
+    padding: 30px 24px;
+    color: #fff;
+    text-align: center;
+  }
+  .cta-club .kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #C9A84C;
+    margin-bottom: 12px;
+    font-weight: 800;
+  }
+  .cta-club .title {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.22;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .cta-club .sub {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cfd6dd;
+    margin-bottom: 22px;
+  }
+  .cta-club .links {
+    border-top: 1px solid #1d4467;
+    padding-top: 18px;
+  }
+  .cta-club .link-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #fff;
+    margin: 8px 0;
+    line-height: 1.4;
+  }
+  .cta-club .link-row .lbl {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #C9A84C;
+    font-weight: 800;
+  }
+  .cta-club .link-row .val {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* ============ COLOFON ============ */
+  .colofon {
+    text-align: center;
+    padding: 30px 20px 12px;
+    border-top: 2px solid #003459;
+    margin-top: 30px;
+  }
+  .colofon .brand {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .colofon .tagline {
+    font-style: italic;
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+    font-family: Georgia, serif;
+  }
+  .colofon .fontes {
+    font-size: 11px;
+    color: #666;
+    margin-top: 14px;
+    line-height: 1.5;
+    padding-top: 12px;
+    border-top: 1px solid #d0d0d0;
+  }
+  .colofon .fontes strong {
+    color: #003459;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ============ CARRYOVER BADGE + ANÁLISE DO EDITOR ============ */
+  .carryover-badge {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    border-left: 3px solid #C9A84C;
+    padding-left: 8px;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .article-opiniao {
+    margin-top: 20px;
+    padding: 14px 16px;
+    background: #f5f0e3;
+    border-left: 4px solid #003459;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .opiniao-label {
+    font-family: Georgia, serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #003459;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .article-opiniao p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+  }
+
+  /* ============ PDF PAGE BREAKS (evitar quebra no meio de blocos) ============ */
+  /* Truque-chave: overflow:hidden cria novo block-formatting-context, forçando o */
+  /* Chromium a respeitar break-inside (sem isso, ele ignora quando há grid/flex). */
+
+  .indic-block {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+  .indic-grid  { break-inside: avoid; page-break-inside: avoid; }
+  .indic       { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Section header não fica órfão no fim de página */
+  .section-header { break-after: avoid; page-break-after: avoid; break-inside: avoid; page-break-inside: avoid; }
+
+  /* Cada manchete (1-5) fica unida */
+  .manchete {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Cada matéria longa começa em página própria (são >400mm, não cabem juntas) */
+  .article {
+    page-break-before: always; break-before: page;
+    break-inside: auto; /* parágrafos quebram dentro, mas headline+deck protegidos abaixo */
+  }
+  .article:first-of-type { page-break-before: auto; break-before: auto; }
+
+  /* Headline + deck precisam ficar juntos com o início do corpo */
+  .article-headline {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-deck {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-body p {
+    break-inside: avoid; page-break-inside: avoid;
+    orphans: 3; widows: 3;
+  }
+
+  /* Bloco Verimo (rodapé editorial) em página própria */
+  .verimo {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Colofon (lista de fontes) em página própria */
+  .colofon {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<div class="paper">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="top-rule"></div>
+    <h1>Posto em Dia</h1>
+    <div class="subtitle">O Semanário do Revendedor de Combustíveis</div>
+    <div class="meta">
+      <span class="edicao">Edição 33</span>
+      <span>9 a 15 / Ago / 2026</span>
+    </div>
+  </div>
+
+  <!-- INDICADORES FINANCEIROS -->
+  <div class="section-header">Indicadores Financeiros</div>
+  <div class="indic-wrap">
+    <div class="indic-block">
+      <div class="indic-block-title">Petróleo &amp; Energia</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Brent (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 88,38</div>
+            <div class="indic-var up">+1,51%</div>
+          </div>
+          <div class="indic-source">TradingEconomics (14/ago)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">WTI (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 81,27</div>
+            <div class="indic-var neutral">+0,02%</div>
+          </div>
+          <div class="indic-source">TradingEconomics (14/ago)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Moedas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">USD/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 5,193</div>
+            <div class="indic-var up">+0,25%</div>
+          </div>
+          <div class="indic-source">InfoMoney (14/ago)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">EUR/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 5,9963</div>
+            
+          </div>
+          <div class="indic-source">Investing.com (14/ago)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">DXY (Dollar Index)</div>
+          <div class="indic-row">
+            <div class="indic-value">99,97 pts</div>
+            <div class="indic-var neutral">-0,04%</div>
+          </div>
+          <div class="indic-source">ICE (13/ago)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Bitcoin (USD)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 62.768</div>
+            <div class="indic-var neutral">-1,16%</div>
+          </div>
+          <div class="indic-source">CoinDesk (14/ago)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Bolsas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Ibovespa</div>
+          <div class="indic-row">
+            <div class="indic-value">167.101 pts</div>
+            <div class="indic-var up">-0,23%</div>
+          </div>
+          <div class="indic-source">B3/InfoMoney (14/ago)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">S&amp;P 500</div>
+          <div class="indic-row">
+            <div class="indic-value">7.782 pts</div>
+            <div class="indic-var down">+0,43%</div>
+          </div>
+          <div class="indic-source">CNBC (13/ago)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Nasdaq</div>
+          <div class="indic-row">
+            <div class="indic-value">26.742 pts</div>
+            <div class="indic-var down">+0,58%</div>
+          </div>
+          <div class="indic-source">CNBC (13/ago)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Dow Jones</div>
+          <div class="indic-row">
+            <div class="indic-value">53.674 pts</div>
+            <div class="indic-var up">-0,18%</div>
+          </div>
+          <div class="indic-source">CNBC (13/ago)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Juros &amp; Inflação</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Selic</div>
+          <div class="indic-row">
+            <div class="indic-value">14,00% a.a.</div>
+            <div class="indic-var down">-0,25 p.p.</div>
+          </div>
+          <div class="indic-source">BCB/Copom (5/ago)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Fed Funds</div>
+          <div class="indic-row">
+            <div class="indic-value">3,50% – 3,75%</div>
+            <div class="indic-var neutral">estável</div>
+          </div>
+          <div class="indic-source">Federal Reserve/FOMC (29/jul)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">IPCA-15 (jul)</div>
+          <div class="indic-row">
+            <div class="indic-value">0,06%</div>
+            <div class="indic-var neutral">12m: 4,52%</div>
+          </div>
+          <div class="indic-source">IBGE (28/jul) — ref. jul/26, próxima leitura 26/ago</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Focus IPCA 2026</div>
+          <div class="indic-row">
+            <div class="indic-value">5,33%</div>
+            <div class="indic-var neutral">estável (15ª sem.)</div>
+          </div>
+          <div class="indic-source">BCB Focus (ago/26)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Preço na Bomba (ANP)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Gasolina C</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,55</div>
+            <div class="indic-var neutral">estável</div>
+          </div>
+          <div class="indic-source">ANP (2-8/ago) — via paridade etanol/gasolina 60,15%</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 3,94</div>
+            <div class="indic-var down">-1,50%</div>
+          </div>
+          <div class="indic-source">ANP síntese semanal (2-8/ago)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel S-10</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,94</div>
+            <div class="indic-var neutral">estável</div>
+          </div>
+          <div class="indic-source">ANP (ref. semana 13-19/jul — confirmar)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel comum</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">ANP — síntese ainda não publicada para este item</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">GLP P-13 (botijão)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 115,00</div>
+            <div class="indic-var neutral">estável</div>
+          </div>
+          <div class="indic-source">ANP — média nacional, faixa R$ 112-118 (ago/26)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Usina (CEPEA/ESALQ)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado SP</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 2,1524/L</div>
+            <div class="indic-var down">-0,26%</div>
+          </div>
+          <div class="indic-source">CEPEA/ESALQ (ago/26 vs jul/26)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Anidro SP</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 2,7036/L</div>
+            <div class="indic-var down">-9,37%</div>
+          </div>
+          <div class="indic-source">CEPEA/ESALQ (ago/26 vs jul/26)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Defasagem Petrobras (Abicom)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Diesel</div>
+          <div class="indic-row">
+            <div class="indic-value">47%</div>
+            <div class="indic-var down">ante 58% (jul)</div>
+          </div>
+          <div class="indic-source">Abicom/StoneX (início ago/26)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Gasolina</div>
+          <div class="indic-row">
+            <div class="indic-value">23%</div>
+            <div class="indic-var down">recuo</div>
+          </div>
+          <div class="indic-source">Abicom/StoneX (início ago/26)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 MANCHETES -->
+  <div class="section-header">As 5 Manchetes da Semana</div>
+  <div class="manchetes-wrap">
+    <div class="manchete">
+      <div class="manchete-num">1</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Defasagem de combustíveis recua, mas segue elevada: diesel em 47% e gasolina em 23%, aponta Abicom</div>
+        <div class="manchete-summary">Com o Brent perto de US$ 90 por causa da crise no Estreito de Ormuz, a Abicom/StoneX mede defasagem de 47% no diesel e 23% na gasolina nas refinarias — recuo ante os 58% de julho, mas ainda distante da paridade. Para o posto, o risco de repasse represado segue alto se o conflito no Oriente Médio persistir.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">2</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Governo prorroga subsídio a diesel e gasolina até setembro com MP 1.380/2026, mas verba está quase esgotada</div>
+        <div class="manchete-summary">A Medida Provisória libera R$ 3,33 bilhões em crédito extraordinário — R$ 2,1 bi para diesel rodoviário e R$ 1,23 bi a produtores/importadores. Dos R$ 10 bi reservados ao diesel desde março, quase tudo já foi consumido, o que acende alerta sobre o que acontece se o subsídio não for renovado.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">3</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Copom corta Selic pela quarta vez seguida, a 14% ao ano, com crédito mais barato para o posto</div>
+        <div class="manchete-summary">Decisão unânime em 5/ago reduziu a taxa básica em 0,25 p.p., no quarto corte consecutivo do ciclo iniciado em março. Juro mais baixo tende a aliviar financiamento de capital de giro e equipamentos para revendedores, mas o Banco Central manteve tom cauteloso por causa das tarifas dos EUA.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">4</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Etanol cai em 22 estados e chega a 60% de paridade com a gasolina — competitivo em dez estados, incluindo SP</div>
+        <div class="manchete-summary">Segundo a ANP, o litro do hidratado recuou 1,5% na média nacional na semana de 2 a 8/ago, para R$ 3,94. Com a safra 2026/27 em ritmo pleno e projeção de recorde de produção, a tendência é de etanol ainda mais barato nas próximas semanas — oportunidade de reposicionar a bomba.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">5</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Emplacamentos batem recorde em julho e eletrificados já são 23% das vendas de veículos novos, diz Fenabrave</div>
+        <div class="manchete-summary">Foram 279,6 mil veículos emplacados em julho, alta de 15% sobre 2025, com 1,7 milhão de unidades no acumulado do ano (+17,9%). Híbridos e elétricos somam quase um quarto do mercado, puxados pela BYD — sinal de médio prazo que o posto precisa monitorar na composição da demanda.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MERCADO DE COMBUSTÍVEIS -->
+  <div class="section-header">Mercado de Combustíveis</div>
+    <div class="article">
+    <div class="article-headline">Defasagem recua para 47% no diesel e 23% na gasolina, mas folga de agosto não elimina risco de repasse</div>
+    <div class="article-deck">Abicom vê recuo ante os 58% de julho, só que o mercado internacional segue tensionado pela crise em Ormuz — e a distância da paridade continua grande.</div>
+    <div class="article-body">
+      <p>A defasagem entre os preços da Petrobras e a paridade de importação recuou para <strong>47% no diesel</strong> e <strong>23% na gasolina</strong> no início de agosto, segundo o mais recente balanço da Abicom/StoneX — uma melhora ante o pico de <strong>58% no diesel</strong> registrado em 27/jul, mas ainda distante da paridade plena. O alívio veio da folga projetada pela ANP para o mercado interno em agosto: balanço positivo de <strong>391 milhões de litros</strong> de diesel S-10, equivalente a cerca de 10% da demanda mensal estimada em 3,79 bilhões de litros.</p>
+      <p>O que segura o preço na bomba mesmo com o Brent perto de <strong>US$ 90 o barril</strong> — por causa do imbróglio entre EUA e Irã sobre o Estreito de Ormuz — é a combinação de refinarias operando defasadas da paridade internacional com o subsídio federal de R$ 0,44/litro na gasolina e R$ 1,12/litro no diesel, via MP 1.380/2026. O trânsito de navios por Ormuz caiu para <strong>oito embarcações</strong> na terça-feira, ante uma média de 125 a 140 antes do conflito — sinal de que a tensão geopolítica não deu trégua.</p>
+      <p>Para o revendedor, o cenário pede cautela: a defasagem recuando é bom sinal de curto prazo, mas qualquer escalada em Ormuz ou o esgotamento da verba de subsídio (que já consumiu R$ 7 bi de R$ 10 bi reservados ao diesel) pode forçar um reajuste represado e brusco da Petrobras — como ocorreu em agosto de 2023, quando diesel e gasolina subiram 25% e 16% de uma vez. <strong>Monitore o Estreito de Ormuz e o saldo do subsídio</strong> nas próximas semanas antes de travar compras grandes de estoque.</p>
+    </div>
+  </div>
+
+  <!-- POLÍTICA (notícia quente) -->
+  <div class="section-header">Política &middot; Quente</div>
+    <div class="article">
+    <div class="article-headline">Verba do subsídio a combustíveis está quase esgotada — e o governo aposta tudo na prorrogação até setembro</div>
+    <div class="article-deck">MP 1.380/2026 libera mais R$ 3,33 bilhões para segurar gasolina e diesel, mas o relógio da conta pública corre contra o preço na bomba.</div>
+    <div class="article-body">
+      <p>O governo federal editou a <strong>MP 1.380/2026</strong>, abrindo crédito extraordinário de <strong>R$ 3,33 bilhões</strong> para manter os subsídios a combustíveis — R$ 2,1 bilhões destinados ao diesel rodoviário e R$ 1,23 bilhão a produtores e importadores. A medida estende até <strong>setembro</strong> os descontos de R$ 0,44/litro na gasolina e R$ 1,12/litro no diesel, criados em março para conter o repasse da alta internacional do petróleo.</p>
+      <p>O problema é o caixa: do total de <strong>R$ 10 bilhões</strong> reservados desde março para bancar o diesel, a primeira leva está praticamente esgotada, e todas as subvenções já consumiram <strong>R$ 7 bilhões</strong> do Orçamento. Isso deixa o governo em posição delicada — precisa liberar mais dinheiro a cada MP para não deixar o preço na bomba disparar, num ambiente político em que qualquer aumento de combustível vira munição de oposição.</p>
+      <p>A conta chega ao posto de um jeito indireto, mas direto no bolso: se o Congresso ou o Planalto hesitarem em renovar o crédito além de setembro, a defasagem represada (hoje em 47% no diesel) pode virar reajuste de uma vez — o histórico de 2023 mostra que isso já aconteceu. <strong>Acompanhe a tramitação da MP 1.380/2026</strong> e o saldo do fundo de subsídio: é o melhor termômetro de quando um reajuste brusco pode chegar à bomba.</p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA BRASIL -->
+  <div class="section-header">Economia · Brasil</div>
+    <div class="article">
+    <div class="article-headline">Copom corta Selic para 14% pela quarta vez seguida e mantém porta aberta para mais alívio</div>
+    <div class="article-deck">Juro mais baixo favorece financiamento do posto, mas Banco Central segue de olho nas tarifas dos EUA e na inflação represada dos combustíveis.</div>
+    <div class="article-body">
+      <p>O Comitê de Política Monetária decidiu, por unanimidade, cortar a <strong>Selic em 0,25 ponto percentual, para 14,00% ao ano</strong>, em reunião de 5 de agosto — o quarto corte consecutivo do ciclo iniciado em março. A inflação sob controle, com o <strong>IPCA de julho em 0,07%</strong> e o acumulado em 12 meses em <strong>4,44%</strong>, deu espaço para o Banco Central seguir afrouxando, mesmo em meio às incertezas do cenário externo.</p>
+      <p>O boletim <strong>Focus</strong> manteve a projeção de IPCA para 2026 estável em <strong>5,33%</strong> pela 15ª semana seguida, sinal de que o mercado não vê risco relevante de descontrole da inflação no curto prazo — apesar da pressão represada nos combustíveis e do risco de reajuste da Petrobras se a defasagem não ceder. O IPCA-15 de agosto só sai em 26/ago, mas a leitura de julho (0,06%) reforça a trajetória de desaceleração.</p>
+      <p>Para o revendedor, Selic mais baixa significa <strong>crédito mais barato para capital de giro, renovação de bombas e frota</strong> — uma folga bem-vinda depois de um ciclo de juro elevado. Mas o alívio tem limite: se o subsídio a combustíveis esgotar e forçar reajuste da Petrobras, a pressão inflacionária pode interromper o ciclo de cortes do Copom antes do esperado. <strong>Aproveite a janela de juro em queda</strong> para renegociar linhas de crédito agora.</p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA INTERNACIONAL -->
+  <div class="section-header">Economia · Internacional</div>
+    <div class="article">
+    <div class="article-headline">Fed segura juro em 3,50%-3,75% enquanto Brent flerta com US$ 90 por causa do impasse em Ormuz</div>
+    <div class="article-deck">OPEP+ aumenta oferta e EIA reporta maior estoque de petróleo desde junho, mas geopolítica no Oriente Médio segue ditando o preço.</div>
+    <div class="article-body">
+      <p>O Federal Reserve manteve a taxa básica de juros dos EUA entre <strong>3,50% e 3,75%</strong> na reunião de 29 de julho, em decisão dividida (9 a 3), com três dirigentes regionais defendendo corte diante de uma inflação que já está acima da meta de 2% há mais de cinco anos. A próxima decisão sai em <strong>16 de setembro</strong>, e o mercado vai monitorar de perto qualquer sinal de mudança de tom.</p>
+      <p>No front do petróleo, o <strong>Brent tocou perto de US$ 90 o barril</strong> nesta semana, no sexto dia seguido de alta, com o Irã condicionando a reabertura do Estreito de Ormuz a mudanças na postura americana. Do outro lado, a <strong>OPEP+ aprovou novo aumento de 188 mil barris/dia</strong> para setembro, e a EIA reportou salto de <strong>17,4 milhões de barris nos estoques americanos</strong>, para 424,4 milhões — o maior nível desde junho, o que ajuda a conter uma alta ainda maior.</p>
+      <p>A combinação de mais oferta da OPEP+ e estoques recordes nos EUA é a única coisa segurando o Brent de disparar de vez com a crise em Ormuz — mas qualquer novo incidente naval na região (como os ataques da terça-feira que derrubaram o tráfego no estreito para apenas oito navios) pode reverter isso rapidamente. <strong>Para o posto, isso significa custo de reposição instável</strong>: vale negociar prazos mais curtos com distribuidoras enquanto o quadro geopolítico não se estabiliza.</p>
+    </div>
+  </div>
+
+  <!-- VAREJO -->
+  <div class="section-header">Varejo</div>
+    <div class="article">
+    <div class="article-headline">Safra recorde de cana empurra etanol para baixo e amplia competitividade em dez estados, incluindo São Paulo</div>
+    <div class="article-deck">Com hidratado a R$ 3,94 e paridade de 60% frente à gasolina, o biocombustível vira ferramenta de margem para o revendedor na virada da safra 2026/27.</div>
+    <div class="article-body">
+      <p>O litro do etanol hidratado recuou <strong>1,5% na semana de 2 a 8 de agosto</strong>, caindo de R$ 4,00 para <strong>R$ 3,94</strong> na média nacional, segundo a ANP — queda em 22 estados e no Distrito Federal, com aumento apenas no Mato Grosso do Sul. A relação de paridade com a gasolina chegou a <strong>60,15%</strong>, tornando o biocombustível competitivo em dez estados e no DF, com destaque para Mato Grosso (55,13%) e São Paulo (57,17%).</p>
+      <p>O pano de fundo é o início do processamento da <strong>safra 2026/27</strong>, que deve bater recorde de produção de etanol — o CEPEA/ESALQ já registra queda de <strong>9,37% no indicador do anidro</strong> em agosto ante julho, para R$ 2,7036/litro, e o hidratado praticamente estável em R$ 2,1524/litro. A perspectiva é de preços do etanol seguirem cedendo nas próximas semanas, o que amplia a margem de manobra do posto para reprecificar a bomba.</p>
+      <p>Para o varejo, a janela de compra está aberta: com o produtor entregando etanol mais barato e a paridade favorável na maior parte do país, é hora de <strong>revisar a comunicação de preço na bomba</strong> e reforçar o etanol como opção de economia pro consumidor — especialmente nos dez estados onde a vantagem já é clara. A ExpoPostos &amp; Conveniência, de 8 a 10 de setembro em São Paulo, deve pautar justamente essa disputa de margem entre gasolina e etanol na próxima safra.</p>
+    </div>
+  </div>
+
+  <!-- AUTOMOTIVO -->
+  <div class="section-header">Automotivo</div>
+    <div class="article">
+    <div class="article-headline">Emplacamentos batem recorde em julho e eletrificados já respondem por 23% das vendas de veículos novos</div>
+    <div class="article-deck">Fenabrave registra 279,6 mil unidades no mês, com híbridos e elétricos crescendo puxados pela BYD — tendência que muda a composição de demanda na bomba.</div>
+    <div class="article-body">
+      <p>O mercado automotivo emplacou <strong>279,6 mil veículos em julho</strong>, alta de 15% sobre o mesmo mês de 2025 e de 2,6% ante junho, segundo a Fenabrave. No acumulado do ano, já são <strong>1,7 milhão de unidades</strong> vendidas, crescimento de 17,9% — o melhor ritmo em anos para a distribuição de veículos no país.</p>
+      <p>A eletrificação segue como a tendência mais relevante para o setor: híbridos e elétricos somam <strong>23% das vendas</strong>, com a chinesa <strong>BYD</strong> dominando o segmento. No primeiro semestre, os elétricos puros saltaram de 30,5 mil emplacamentos (2025) para <strong>90,5 mil (2026)</strong>, e os híbridos foram de 83,5 mil para <strong>154,5 mil</strong> — alta de 85% na comparação anual.</p>
+      <p>Para o posto de combustível, o recorde de vendas de carros a combustão ainda garante volume de curto prazo, mas a curva de eletrificação acelerando é o sinal de médio prazo que não dá para ignorar: quase 1 em cada 4 carros novos vendidos hoje já não depende só de gasolina ou etanol. <strong>Avalie a instalação de pontos de recarga</strong> como diversificação de receita — a demanda por infraestrutura deve crescer no mesmo ritmo dos emplacamentos elétricos.</p>
+    </div>
+  </div>
+
+  <!-- LUMEN POSTO CLUB -->
+  <div class="cta-club">
+    <div class="kicker">Lumen Posto Club</div>
+    <div class="title">Inteligência semanal pro revendedor de combustíveis</div>
+    <div class="sub">Newsletter semanal, painel diário de cotações, comunidade de revendedores e as análises do Ramsés sobre o mercado de combustíveis no Brasil.</div>
+    <div class="links">
+      <div class="link-row">
+        <span class="lbl">Site</span>
+        <a href="https://lumenpostoclub.com.br" class="val">lumenpostoclub.com.br</a>
+      </div>
+      <div class="link-row">
+        <span class="lbl">Instagram</span>
+        <a href="https://instagram.com/eusouramses" class="val">@eusouramses</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLOFON -->
+  <div class="colofon">
+    <div class="brand">Lumen Posto Club</div>
+    <div class="tagline">Inteligência semanal para o revendedor de combustíveis</div>
+    <div class="fontes">
+      <strong>Fontes consultadas nesta edição</strong>
+      Forbes Advisor — Brent (14/ago/2026), TradingEconomics — Brent/WTI (14/ago/2026), Fortune — petróleo (14/ago/2026), Investing.com — USD/BRL, EUR/BRL (14/ago/2026), InfoMoney — Ibovespa/dólar (13-14/ago/2026), CNN Brasil — Ibovespa (ago/2026), TheStreet — Wall Street (14/ago/2026), CNBC — S&amp;P 500/Nasdaq/Dow Jones (12-13/ago/2026), STL News/Washington Post — fechamento Wall Street (13/ago/2026), O Tempo — Copom Selic (5/ago/2026), Remessa Online — Copom agosto 2026, BCB — Selic/Copom, CNBC — Fed FOMC (29/jul/2026), IBGE — IPCA e IPCA-15 (jul/2026), Canal Rural — Boletim Focus IPCA 2026, InfoMoney — Boletim Focus Selic 2026, Brasil Postos — etanol ANP (2-8/ago/2026), Jornal de Brasília — etanol ANP (ago/2026), Jornal Cruzeiro — etanol SP (ago/2026), eixos.com.br — Abicom/StoneX defasagem diesel e gasolina (início ago/2026), Diário do Grande ABC — Abicom defasagem diesel 58% (27/jul/2026), Canal Rural — defasagem diesel (jul/2026), Times Brasil/CNBC — Petrobras diesel defasagem (jul/2026), Agência Brasil — pacote de subsídio a combustíveis (abr/2026), Câmara dos Deputados — MP 1.380/2026, Imirante — MP 1.380/2026 (31/jul/2026), Brasil Postos — novo subsídio a combustíveis, CEPEA/ESALQ — etanol hidratado e anidro SP (ago/2026), Brasil247 — Estreito de Ormuz e petróleo (ago/2026), Money Times — petróleo e Ormuz (12/ago/2026), ECO — Brent a US$ 90 e Ormuz (11/ago/2026), Investing.com/Reuters — OPEP+ produção (ago/2026), O Tempo — OPEP+ e Ormuz (2/ago/2026), InfoMoney — petróleo, fechamento Irã-EUA (13/ago/2026), Poder360 — OPEP+ produção estável, CoinDesk/Yahoo Finance/Fortune — Bitcoin (14/ago/2026), Jornal O Sul — Fenabrave emplacamentos recorde (2026), CNN Brasil — Fenabrave elétricos (2026), Fecombustíveis — ExpoPostos &amp; Conveniência 2026, Fecombustíveis — safra de etanol 2026/27, blog.precodogas.com.br / ANP — GLP P-13 (2026).
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
