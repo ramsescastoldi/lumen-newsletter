@@ -1,0 +1,302 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 93,78",
+          "variation": "+2,36%",
+          "direction": "up",
+          "source": "Nova Futura/TradingEconomics (21/ago)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 86,51",
+          "variation": "-0,37%",
+          "direction": "neutral",
+          "source": "Fortune (21/ago)"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,1895",
+          "variation": "+0,28%",
+          "direction": "up",
+          "source": "Investing.com (21/ago)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 6,0532",
+          "variation": "-0,36%",
+          "direction": "down",
+          "source": "Investing.com (21/ago)"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": "98,60 pts",
+          "variation": "-3% (mês)",
+          "direction": "neutral",
+          "source": "ICE/Investing (ago/26)"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "US$ 71.726",
+          "variation": "+11,7% (24h)",
+          "direction": "neutral",
+          "source": "TradingKey (20/ago)"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "167.927 pts",
+          "variation": "+0,06%",
+          "direction": "down",
+          "source": "B3/Suno (20/ago)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.641 pts",
+          "variation": "-0,87%",
+          "direction": "up",
+          "source": "CNBC (20/ago)"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "26.067 pts",
+          "variation": "-1,00%",
+          "direction": "up",
+          "source": "CNBC (20/ago)"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "52.759 pts",
+          "variation": "-1,32%",
+          "direction": "up",
+          "source": "CNBC (20/ago)"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "14,00% a.a.",
+          "variation": "estável (sem reunião)",
+          "direction": "neutral",
+          "source": "BCB/Copom (5/ago)"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,50% – 3,75%",
+          "variation": "estável",
+          "direction": "neutral",
+          "source": "Federal Reserve/FOMC (29/jul)"
+        },
+        {
+          "name": "IPCA-15 (jul)",
+          "value": "0,06%",
+          "variation": "12m: 4,52%",
+          "direction": "neutral",
+          "source": "IBGE (28/jul) — próxima leitura 26/ago"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "5,02%",
+          "variation": "-0,31 p.p. vs. semana anterior",
+          "direction": "down",
+          "source": "BCB Focus (17/ago)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": "R$ 6,53",
+          "variation": "-0,3%",
+          "direction": "down",
+          "source": "ANP síntese semanal, ref. 02–08/ago (via MT Fatos, 20/ago)"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": "R$ 3,91",
+          "variation": "-0,76%",
+          "direction": "down",
+          "source": "ANP/Brasil Postos, ref. 09–15/ago (17/ago)"
+        },
+        {
+          "name": "Diesel S-10",
+          "value": "R$ 6,91",
+          "variation": "-0,4%",
+          "direction": "down",
+          "source": "ANP síntese semanal, ref. 02–08/ago (via MT Fatos, 20/ago)"
+        },
+        {
+          "name": "Diesel comum",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "ANP — não segregado nesta síntese; rede majoritariamente em S-10"
+        },
+        {
+          "name": "GLP P-13",
+          "value": "R$ 114,66",
+          "variation": "alta (5ª semana seguida)",
+          "direction": "up",
+          "source": "ANP/CNN Brasil (ref. semana anterior — confirmar)"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": "R$ 2,1939",
+          "variation": "+7,24%",
+          "direction": "up",
+          "source": "CEPEA/ESALQ (15/ago)"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": "R$ 2,4319",
+          "variation": "+5,32%",
+          "direction": "up",
+          "source": "CEPEA/ESALQ (15/ago)"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "58%",
+          "variation": "elevada, com risco de alta",
+          "direction": "up",
+          "source": "Abicom/Canal Rural, Jornal de Brasília (ago/26)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "45%",
+          "variation": "elevada, com risco de alta",
+          "direction": "up",
+          "source": "Abicom/Brasil Postos (ago/26)"
+        }
+      ]
+    }
+  ],
+
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "Petróleo dispara quase 6% na semana e Brent fecha a US$ 93,78 com Estreito de Ormuz sob tensão",
+      "resumo": "O Brent subiu 2,36% só na sexta (21/ago), acumulando alta de quase 6% na semana, depois de o Irã declarar que manterá o Estreito de Ormuz fechado até os EUA cumprirem o acordo assinado em junho. Para o revendedor, a escalada reacende o risco de repasse: a defasagem da Petrobras já soma 58% no diesel e 45% na gasolina, segundo a Abicom, e petróleo mais caro tende a alargar ainda mais essa distância."
+    },
+    {
+      "numero": 2,
+      "headline": "Congresso aprova PLP 114/2026 com subvenção a combustíveis e pacote de jabutis fiscais",
+      "resumo": "Câmara (318 a 113) e Senado (61 a 2) aprovaram em 12/ago o projeto que autoriza a União a usar o excesso de arrecadação com petróleo para compensar cortes temporários de tributos sobre diesel, gasolina, etanol e querosene. A relatora ampliou o texto original com benefícios para minerais críticos, fertilizantes e até isenções para a Copa do Mundo Feminina — turbinando a polêmica sobre o uso do projeto como veículo de pauta paralela."
+    },
+    {
+      "numero": 3,
+      "headline": "Etanol cai em 22 estados e amplia vantagem sobre a gasolina na bomba",
+      "resumo": "Com a safra de cana em pico, o etanol hidratado recuou 0,76% na semana de 9 a 15/ago, para R$ 3,91 em média no país, segundo a ANP — a quarta queda seguida. Em 22 dos 27 estados o combustível ficou mais competitivo frente à gasolina, ampliando a janela pro revendedor reforçar a oferta e capturar margem no biocombustível."
+    },
+    {
+      "numero": 4,
+      "headline": "Ibovespa resiste, mas Wall Street desaba com aversão a risco geopolítico",
+      "resumo": "Enquanto o Ibovespa fechou em leve alta de 0,06% nesta quinta (167.927 pontos), os índices americanos tiveram sessão de forte queda: Dow Jones -1,32%, S&P 500 -0,87% e Nasdaq -1,00%, pressionados pela tensão no Oriente Médio e por uma ata do Fed que mostrou o board dividido entre conter inflação e ceder à pressão de Trump por cortes de juros."
+    },
+    {
+      "numero": 5,
+      "headline": "Fenabrave: elétricos disparam 196% no semestre; híbridos sobem 85%",
+      "resumo": "Os emplacamentos de veículos 100% elétricos saltaram de 30,5 mil para 90,4 mil unidades no primeiro semestre de 2026, enquanto híbridos avançaram 85%, para 154,5 mil unidades — puxados por programas federais de incentivo. A Fenabrave revisou a alta do mercado total de veículos pra 8% em 2026, sinalizando eletrificação acelerada da frota que abastece no posto."
+    }
+  ],
+
+  "mercado": {
+    "headline": "Ormuz fechado reacende risco de repasse e pressiona defasagem da Petrobras",
+    "deck": "Brent sobe quase 6% na semana e reabre a discussão sobre quando — e quanto — a estatal vai repassar aos combustíveis",
+    "body": [
+      "O Brent fechou a sexta (21/ago) em <strong>US$ 93,78</strong>, alta de <strong>2,36%</strong> no dia e de quase <strong>6% na semana</strong>, segundo TradingEconomics e Nova Futura. O movimento tem origem no impasse entre Irã e Estados Unidos: o negociador iraniano Mohammad Bagher Ghalibaf afirmou nesta terça (18/ago) que o <strong>Estreito de Ormuz</strong> — corredor por onde passa parcela relevante do petróleo mundial — só reabrirá quando Washington suspender o bloqueio naval, descongelar ativos iranianos e encerrar o embargo ao petróleo do país.",
+      "A escalada acontece num momento em que a defasagem da Petrobras ante o mercado internacional já é considerada elevada: segundo a Abicom, o diesel opera com <strong>58% de defasagem</strong> e a gasolina com <strong>45%</strong> nas refinarias da estatal — mesmo com o petróleo tendo recuado brevemente para a casa dos US$ 90 no início de agosto. Com o barril voltando a subir, o espaço para um reajuste que aproxime os preços domésticos da paridade de importação (PPI) volta a crescer, e com ele o risco de repasse via Petrobras nas próximas semanas.",
+      "Para o revendedor, o cenário pede cautela na composição de estoque: qualquer sinalização de reajuste tende a vir de forma abrupta, como já ocorreu em ciclos anteriores de defasagem acima de 50%. <strong>Monitore diariamente</strong> o Brent e os comunicados da Petrobras — e evite operar com estoque baixo de diesel S-10 enquanto o conflito no Golfo Pérsico seguir sem sinalização de trégua."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "politica": {
+    "headline": "Congresso aprova PLP dos combustíveis — e embute pacote de jabutis fiscais no meio do caminho",
+    "deck": "Câmara e Senado turbinam projeto que nasceu pra proteger o bolso do motorista da guerra no Oriente Médio",
+    "body": [
+      "Câmara dos Deputados e Senado aprovaram, em <strong>12/ago</strong>, o Projeto de Lei Complementar <strong>114/2026</strong> — placar de <strong>318 a 113</strong> na Câmara e <strong>61 a 2</strong> no Senado. Proposto originalmente pelo deputado Paulo Pimenta (PT-RS) para viabilizar a subvenção à gasolina diante do choque no petróleo provocado pela guerra no Oriente Médio, o texto autoriza a União a usar o excesso de arrecadação obtido com o petróleo pra compensar, temporariamente, a redução de tributos federais sobre diesel, biodiesel, gasolina, etanol e querosene de aviação.",
+      "O problema, do ponto de vista do revendedor que acompanha a tramitação, é o que foi anexado no caminho. A relatora, deputada Marussa Boldrin (Republicanos-GO), ampliou o projeto original para incluir benefícios a minerais críticos, um novo Programa de Desenvolvimento da Indústria de Fertilizantes (Profert) e até isenções ligadas à Copa do Mundo Feminina — um pacote de <strong>\"jabutis\" fiscais</strong> que nada tem a ver com o objetivo inicial da subvenção aos combustíveis.",
+      "Na prática, o mecanismo de subvenção segue de pé e deve continuar sustentando o preço na bomba enquanto durar o choque externo — mas o histórico de MPs prorrogadas (a MP 1.358/2026 já foi estendida até 23/set) mostra que o instrumento é usado como remendo temporário, não solução estrutural. <strong>Acompanhe o texto final sancionado</strong>: mudanças na base de cálculo da subvenção afetam diretamente a margem líquida na revenda."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaBrasil": {
+    "headline": "Boletim Focus trava expectativa: IPCA em 5,02% e Selic parada em 13,75% até o fim do ano",
+    "deck": "Mercado financeiro não vê motivo para mexer nas projeções, mesmo com o petróleo em alta",
+    "body": [
+      "O Boletim Focus divulgado pelo Banco Central na segunda-feira (<strong>17/ago</strong>) manteve a projeção de inflação para 2026 em <strong>5,02%</strong> — 0,52 ponto percentual acima do teto da meta de 4,50% — e a Selic no fim do ano em <strong>13,75%</strong>. Para 2027, os economistas consultados elevaram ligeiramente a expectativa de inflação, de 4,22% para <strong>4,24%</strong>, e passaram a projetar Selic de <strong>12% a.a.</strong>, crescimento de 1,50% do PIB e dólar a R$ 5,29.",
+      "A estabilidade das projeções contrasta com a decisão mais recente do Copom, que cortou a Selic em <strong>0,25 p.p.</strong> na reunião de 4 e 5/ago, para <strong>14,00% a.a.</strong> — o quarto corte consecutivo em 2026. O mercado sinaliza, portanto, que espera o ciclo de afrouxamento continuar de forma gradual, sem susto, mesmo com o petróleo em alta pressionando o índice de preços via combustíveis e transporte.",
+      "Para o dono de posto, a leitura prática é dupla: crédito segue caro no curto prazo (Selic ainda em dois dígitos), mas a trajetória de queda gradual da taxa básica tende a aliviar o custo de capital de giro ao longo do segundo semestre. <strong>Reavalie linhas de crédito atreladas à Selic</strong> — o custo relativo deve cair mês a mês até dezembro."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaInternacional": {
+    "headline": "Fed dividido, China em retração e OPEP+ abrindo a torneira: o petróleo no meio do fogo cruzado",
+    "deck": "Sinais opostos de oferta e demanda global se somam à tensão em Ormuz pra fazer o barril andar de um lado pro outro",
+    "body": [
+      "A ata da última reunião do Federal Reserve, divulgada nesta semana, revelou um board dividido: parte dos dirigentes defende manter juros altos pra conter uma inflação que resiste, enquanto o presidente Donald Trump pressiona publicamente por cortes. A taxa segue na faixa de <strong>3,50%–3,75% a.a.</strong>, sem sinalização clara de novo movimento na próxima reunião — o mercado deve reagir ao tom da ata sobre \"riscos inflacionários\" nas próximas semanas.",
+      "Do lado da demanda, a China — segunda maior consumidora de petróleo do mundo — deve reduzir seu consumo em <strong>4,9% em 2026</strong>, para 753 milhões de toneladas, contribuindo para uma contração de <strong>1,5 milhão de barris/dia</strong> na demanda global projetada pro ano. Já do lado da oferta, a OPEP+ confirmou mais um aumento de <strong>188 mil barris/dia</strong> a partir de agosto, somando-se às altas de junho e julho — parte da estratégia do cartel de reverter cortes anteriores.",
+      "O resultado é um mercado puxado em direções opostas: fundamentos de oferta e demanda pressionam o preço pra baixo, enquanto o risco geopolítico em Ormuz pressiona pra cima — e por ora, o segundo fator está vencendo, com o Brent subindo quase 6% na semana. Pro revendedor, isso significa <strong>volatilidade maior que o normal</strong> nas próximas semanas: o custo de reposição pode mudar de um dia pro outro sem relação direta com os fundamentos de mercado."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "varejo": {
+    "headline": "Etanol mais barato em 22 estados reabre janela de margem — e conveniência segue puxando o lucro do posto",
+    "deck": "Safra recorde derruba preço do biocombustível, enquanto lojas de conveniência já rendem mais que o combustível em muitos pontos",
+    "body": [
+      "A pesquisa semanal da ANP referente a 9–15/ago mostrou o etanol hidratado caindo em <strong>22 dos 27 estados</strong>, com estabilidade em Roraima e alta em apenas dois — puxado pelo pico da safra de cana-de-açúcar 2026/27. Na média nacional, o preço na bomba recuou <strong>0,76%</strong>, para <strong>R$ 3,91</strong> o litro, ampliando a competitividade do etanol frente à gasolina em boa parte do país.",
+      "O movimento reforça um ciclo que já vinha de julho: o preço médio do etanol foi de <strong>R$ 4,29</strong> em julho pra <strong>R$ 4,14</strong> na primeira quinzena de agosto — trajetória de queda consistente. Pro revendedor, isso significa espaço pra reforçar a oferta do biocombustível sem sacrificar margem, especialmente em regiões onde a relação etanol/gasolina já cruzou o patamar dos 70% que torna o álcool mais vantajoso pro consumidor final.",
+      "Enquanto isso, o segmento de conveniência segue crescendo como fonte de receita paralela: lojas bem estruturadas dentro de postos já operam com margens de <strong>30% a 50%</strong>, superando em muitos casos o resultado da venda de combustível. O padrão de consumo caminha pra experiências sem atrito — abastecer e comprar na loja num fluxo único, com pagamento unificado — o que reforça a tese de que o posto de 2026 é, cada vez mais, um ponto de varejo completo."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "automotivo": {
+    "headline": "Elétricos disparam 196% e híbridos sobem 85% no semestre — Fenabrave revisa mercado total pra +8%",
+    "deck": "Eletrificação da frota acelera, mas ainda é fração pequena da base total que abastece no posto",
+    "body": [
+      "Os emplacamentos de veículos 100% elétricos (BEVs) saltaram de <strong>30,5 mil para 90,4 mil unidades</strong> no primeiro semestre de 2026 na comparação anual — alta de <strong>196,3%</strong>, segundo a Fenabrave. Os híbridos também avançaram forte, com <strong>154,5 mil unidades</strong> emplacadas no período, alta de <strong>85%</strong> frente às 83,5 mil do primeiro semestre de 2025 — crescimento puxado por programas federais de incentivo à transição energética.",
+      "Com o desempenho do segmento eletrificado, a Fenabrave revisou pra cima a projeção de crescimento do mercado total de veículos em 2026, pra <strong>8%</strong> no ano. Ainda assim, em termos absolutos, elétricos e híbridos somados continuam representando uma fatia pequena da frota nacional — a imensa maioria dos veículos em circulação no Brasil segue 100% dependente de combustível fóssil ou flex.",
+      "Pro dono de posto, o recado é de médio prazo, não de urgência imediata: a eletrificação avança rápido em termos percentuais, mas a base ainda é pequena o suficiente pra não comprometer o volume de vendas na bomba nos próximos anos. O ponto de atenção real é o segmento híbrido flex, que combina eletrificação com consumo de etanol e gasolina — um caminho que pode, inclusive, sustentar demanda por biocombustível na revenda."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "fontes": "TradingEconomics — Brent (21/ago/2026), Nova Futura/divulgardinheiro — Brent fechamento (21/ago/2026), Fortune — petróleo/WTI (21/ago/2026), O Tempo — Irã e Estreito de Ormuz (18/ago/2026), Investing.com — USD/BRL, EUR/BRL (21/ago/2026), Investindo.com/ICE — DXY (ago/2026), TradingKey — Bitcoin (20/ago/2026), Suno — Ibovespa fechamento (20/ago/2026), CNBC/STL News — S&P 500, Nasdaq, Dow Jones (20/ago/2026), Credited — Copom Selic 14% (15/ago/2026), Suno/BM&C News/Mercado & Consumo — Boletim Focus IPCA 5,02% e Selic 13,75% (17/ago/2026), InfoMoney/CNN Brasil/Agência Brasil — IPCA-15 julho 0,06% (28/jul/2026), MT Fatos/Mix Vale — ANP gasolina e diesel S-10 (20/ago/2026), Brasil Postos/Band/Jornal de Brasília — ANP etanol hidratado 22 estados (17/ago/2026), CNN Brasil — GLP P-13 alta 5ª semana (ago/2026), Acessa.com — CEPEA/ESALQ etanol hidratado e anidro SP (15/ago/2026), Brasil Postos/UDOP/InfoMoney — Abicom defasagem diesel 58% e gasolina 45% (ago/2026), Poder360/Bahia Notícias/Senado Federal — PLP 114/2026 aprovado (12/ago/2026), eixos.com.br — folga no abastecimento de diesel (ago/2026), Raion Consultoria — consumo de petróleo da China -4,9% (2026), Seu Dinheiro/Acessa — OPEP+ produção +188 mil bpd (ago/2026), InfoMoney — ata do FOMC e divisão do Fed (ago/2026), CNN Brasil — Fenabrave elétricos +196% e híbridos +85% (2026), AutoData — Fenabrave revisão mercado total +8% (28/jul/2026), ClubPetro/ExpoPostos — conveniência margem 30-50% (2026)."
+}

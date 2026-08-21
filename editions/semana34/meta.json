@@ -1,0 +1,11 @@
+{
+  "edicao": 34,
+  "periodo": "16 a 22 / Ago / 2026",
+  "friday": "2026-08-21",
+  "generated_at": "2026-08-21T20:30:00.000Z",
+  "fontes": "TradingEconomics — Brent (21/ago/2026), Nova Futura/divulgardinheiro — Brent fechamento (21/ago/2026), Fortune — petróleo/WTI (21/ago/2026), O Tempo — Irã e Estreito de Ormuz (18/ago/2026), Investing.com — USD/BRL, EUR/BRL (21/ago/2026), Investindo.com/ICE — DXY (ago/2026), TradingKey — Bitcoin (20/ago/2026), Suno — Ibovespa fechamento (20/ago/2026), CNBC/STL News — S&P 500, Nasdaq, Dow Jones (20/ago/2026), Credited — Copom Selic 14% (15/ago/2026), Suno/BM&C News/Mercado & Consumo — Boletim Focus IPCA 5,02% e Selic 13,75% (17/ago/2026), InfoMoney/CNN Brasil/Agência Brasil — IPCA-15 julho 0,06% (28/jul/2026), MT Fatos/Mix Vale — ANP gasolina e diesel S-10 (20/ago/2026), Brasil Postos/Band/Jornal de Brasília — ANP etanol hidratado 22 estados (17/ago/2026), CNN Brasil — GLP P-13 alta 5ª semana (ago/2026), Acessa.com — CEPEA/ESALQ etanol hidratado e anidro SP (15/ago/2026), Brasil Postos/UDOP/InfoMoney — Abicom defasagem diesel 58% e gasolina 45% (ago/2026), Poder360/Bahia Notícias/Senado Federal — PLP 114/2026 aprovado (12/ago/2026), eixos.com.br — folga no abastecimento de diesel (ago/2026), Raion Consultoria — consumo de petróleo da China -4,9% (2026), Seu Dinheiro/Acessa — OPEP+ produção +188 mil bpd (ago/2026), InfoMoney — ata do FOMC e divisão do Fed (ago/2026), CNN Brasil — Fenabrave elétricos +196% e híbridos +85% (2026), AutoData — Fenabrave revisão mercado total +8% (28/jul/2026), ClubPetro/ExpoPostos — conveniência margem 30-50% (2026).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}
