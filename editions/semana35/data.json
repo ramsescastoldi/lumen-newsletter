@@ -1,0 +1,302 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 88,22",
+          "variation": "-0,34% (dia); -5,9% (semana)",
+          "direction": "down",
+          "source": "TradingEconomics/Fortune (28/ago)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 82,90",
+          "variation": "-4,2% (semana)",
+          "direction": "down",
+          "source": "Eastern Herald/CNBC (27/ago)"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,209",
+          "variation": "+0,90%",
+          "direction": "up",
+          "source": "InfoMoney (28/ago)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 6,0241",
+          "variation": "-0,48%",
+          "direction": "down",
+          "source": "Investing.com (28/ago)"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": "99,00 pts",
+          "variation": "+0,4% (semana)",
+          "direction": "neutral",
+          "source": "TradingView (28/ago)"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "US$ 79.701",
+          "variation": "+11,1% (semana)",
+          "direction": "neutral",
+          "source": "TradingKey (28/ago)"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "174.586 pts",
+          "variation": "+0,01% (6ª alta seguida)",
+          "direction": "down",
+          "source": "InfoMoney (27/ago)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.730,99 pts",
+          "variation": "+0,72%",
+          "direction": "down",
+          "source": "CNBC (27/ago)"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "26.541,35 pts",
+          "variation": "+1,57%",
+          "direction": "down",
+          "source": "CNBC (27/ago)"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "53.569,44 pts",
+          "variation": "+0,20%",
+          "direction": "down",
+          "source": "CNBC (27/ago)"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "14,00% a.a.",
+          "variation": "estável (próx. reunião 16/set)",
+          "direction": "neutral",
+          "source": "BCB/Copom (5/ago)"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,50% – 3,75%",
+          "variation": "estável, mas risco de alta sinalizado",
+          "direction": "neutral",
+          "source": "Fed/Jackson Hole (28/ago)"
+        },
+        {
+          "name": "IPCA-15 (ago)",
+          "value": "-0,40%",
+          "variation": "12m: 4,24% (ante 4,52%)",
+          "direction": "down",
+          "source": "IBGE (26/ago)"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "5,02%",
+          "variation": "estável (3ª semana seguida)",
+          "direction": "neutral",
+          "source": "BCB Focus (24/ago)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": "R$ 6,52",
+          "variation": "-0,2%",
+          "direction": "down",
+          "source": "ANP, ref. 16–22/ago (via Combustíveis ANP/AE-Taxas, 24/ago)"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": "R$ 3,91",
+          "variation": "estável (14 estados em queda, 4 em alta, 7 estáveis)",
+          "direction": "neutral",
+          "source": "ANP/Band, ref. 16–22/ago (24/ago)"
+        },
+        {
+          "name": "Diesel S-10",
+          "value": "R$ 6,91",
+          "variation": "sem atualização confirmada",
+          "direction": "neutral",
+          "source": "ANP síntese semanal (ref. semana anterior — confirmar)"
+        },
+        {
+          "name": "Diesel comum",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "ANP — não segregado nesta síntese; rede majoritariamente em S-10"
+        },
+        {
+          "name": "GLP P-13",
+          "value": "R$ 114,66",
+          "variation": "alta (5ª semana seguida)",
+          "direction": "up",
+          "source": "ANP/CNN Brasil (ref. semana anterior — confirmar)"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": "R$ 2,1939",
+          "variation": "+7,24%",
+          "direction": "up",
+          "source": "CEPEA/ESALQ (ref. semana anterior — confirmar)"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": "R$ 2,4319",
+          "variation": "+5,32%",
+          "direction": "up",
+          "source": "CEPEA/ESALQ (ref. semana anterior — confirmar)"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "58%",
+          "variation": "elevada; tendência de alívio com Brent em queda",
+          "direction": "up",
+          "source": "Abicom (ref. 21/ago — confirmar)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "45%",
+          "variation": "elevada; tendência de alívio com Brent em queda",
+          "direction": "up",
+          "source": "Abicom (ref. 21/ago — confirmar)"
+        }
+      ]
+    }
+  ],
+
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "Petróleo recua quase 6% na semana com trégua em Ormuz e nova alta da OPEP+",
+      "resumo": "O Brent fechou a sexta (28/ago) a US$ 88,22, revertendo a escalada da semana passada depois de Irã e Omã anunciarem um acordo temporário para administrar o tráfego pelo Estreito de Ormuz. A OPEP+ aproveitou o sinal de normalização para confirmar mais um aumento de produção. Para o posto, custo de reposição mais barato — mas a defasagem da Petrobras (58% diesel, 45% gasolina) ainda não foi repassada."
+    },
+    {
+      "numero": 2,
+      "headline": "Lula sanciona integralmente a Lei dos Combustíveis, jabutis incluídos",
+      "resumo": "O presidente sancionou nesta sexta (28/ago), sem vetos, a Lei Complementar 235/2026 — origem no PLP 114 aprovado em 12/ago —, que autoriza redução de tributos federais sobre diesel, gasolina e etanol usando o excesso de arrecadação do petróleo. Ficaram de pé todos os benefícios paralelos negociados no Congresso, de fertilizantes a minerais críticos."
+    },
+    {
+      "numero": 3,
+      "headline": "IPCA-15 surpreende com deflação de 0,40% em agosto, a maior do ano",
+      "resumo": "A prévia da inflação veio bem abaixo do esperado pelo mercado (-0,30%), puxada por quedas em habitação, transporte e alimentos. Em 12 meses, a taxa recuou para 4,24%, a menor desde setembro de 2020, segundo o IBGE. Menos pressão inflacionária reduz o risco de o Copom reverter o ciclo de cortes da Selic."
+    },
+    {
+      "numero": 4,
+      "headline": "Novo presidente do Fed sinaliza possível alta de juros em estreia em Jackson Hole",
+      "resumo": "Kevin Warsh endureceu o discurso sobre inflação persistente e afastou a hipótese de corte de juros nos EUA, derrubando o real: o dólar fechou a sexta a R$ 5,209, alta de 0,90% no dia. Juros americanos mais altos por mais tempo tendem a encarecer a importação de derivados em reais."
+    },
+    {
+      "numero": 5,
+      "headline": "Fenabrave: emplacamentos batem recorde para um mês de julho, com caminhões acelerando 19%",
+      "resumo": "Foram 504.574 veículos emplacados em julho, alta de 10,17% sobre 2025 — o terceiro melhor julho da história do setor. O salto nos caminhões (+18,89% sobre junho) indica aquecimento na atividade industrial e no agronegócio, com reflexo direto na demanda por diesel nos postos."
+    }
+  ],
+
+  "mercado": {
+    "headline": "Trégua em Ormuz e nova alta da OPEP+ derrubam o Brent quase 6% na semana",
+    "deck": "Acordo temporário entre Irã e Omã reduz o risco no estreito e o petróleo recua para a casa dos US$ 88 — mas a defasagem da Petrobras segue sem repasse",
+    "body": [
+      "O Brent fechou a semana cotado a <strong>US$ 88,22</strong> (28/ago), recuo de quase <strong>6%</strong> frente aos US$ 93,78 da sexta anterior, segundo TradingEconomics e Fortune. O WTI acompanhou o movimento, fechando a <strong>US$ 82,90</strong> (27/ago), queda de <strong>4,2% na semana</strong>. O gatilho foi o anúncio, na quarta (26/ago), de um acordo entre Irã e Omã para administrar o tráfego pelo <strong>Estreito de Ormuz</strong> — um corredor temporário de 11,3 km com entrada e saída por águas territoriais iranianas, ainda pendente de aval americano segundo a Guarda Revolucionária do Irã.",
+      "A trégua diplomática coincide com o quarto aumento seguido de cotas da <strong>OPEP+</strong>, que confirmou mais um incremento de produção citando justamente a recuperação gradual das exportações pelo estreito. Ainda assim, o tráfego de petroleiros segue baixo — média de 6 a 7 milhões de barris/dia na semana, com apenas dois navios cruzando o canal na segunda-feira (24/ago), o menor número diário desde maio —, sinal de que a normalização é frágil e reversível.",
+      "Para o revendedor, o recuo do Brent é uma boa notícia direta no custo de reposição, mas não resolve a distorção estrutural: a defasagem da Petrobras seguia em <strong>58% no diesel e 45% na gasolina</strong> na última leitura da Abicom (21/ago), sem atualização nesta semana. Enquanto o barril mais barato não é repassado à bomba, o espaço de margem melhora — mas <strong>monitore o acordo Irã-Omã diariamente</strong>: qualquer retrocesso pode reverter o movimento tão rápido quanto ele veio."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "politica": {
+    "headline": "Lula sanciona integralmente a Lei dos Combustíveis, jabutis incluídos",
+    "deck": "Presidente não veta nenhum trecho da Lei Complementar 235 — nem os benefícios a fertilizantes, minerais críticos e à Copa do Mundo Feminina de 2027",
+    "body": [
+      "O presidente Luiz Inácio Lula da Silva sancionou nesta sexta (<strong>28/ago</strong>) sem vetos a <strong>Lei Complementar 235/2026</strong> — a chamada \"Lei dos Combustíveis\", originada do PLP 114/2026 aprovado pelo Congresso em 12/ago (318 a 113 na Câmara, 61 a 2 no Senado). O texto, publicado no Diário Oficial da União, autoriza o governo a reduzir ou zerar tributos federais sobre diesel, biodiesel, gasolina, etanol e querosene de aviação, usando como contrapartida o excesso de arrecadação da União com a alta do petróleo.",
+      "A sanção integral surpreendeu parte do mercado: o texto chegou ao Planalto carregado de <strong>\"jabutis\"</strong> — trechos sem relação direta com combustíveis, como um novo programa de incentivo a fertilizantes, benefícios para minerais críticos e terras raras, e isenções ligadas à Copa do Mundo Feminina de 2027. Ao manter tudo, Lula evitou desgaste político com a base aliada que negociou os itens no Congresso, mas também validou o uso do projeto como veículo de pauta paralela — prática recorrente nesta legislatura.",
+      "Para o revendedor, o ponto prático é o mecanismo do etanol: pela lei, se a tributação federal sobre a gasolina cair <strong>30% ou mais</strong>, as alíquotas sobre o etanol devem ser zeradas automaticamente — o que pode ampliar ainda mais a vantagem competitiva do biocombustível na bomba. <strong>Acompanhe os decretos regulamentadores</strong>: é ali que a redução efetiva de tributos vai ganhar prazo e forma concreta."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaBrasil": {
+    "headline": "IPCA-15 surpreende com deflação de 0,40% em agosto, a maior do ano",
+    "deck": "Recuo mais forte que o esperado em habitação, transporte e alimentos empurra a inflação em 12 meses para 4,24%",
+    "body": [
+      "O IPCA-15, prévia da inflação oficial, recuou <strong>0,40%</strong> em agosto — resultado bem acima da expectativa do mercado, que projetava queda de 0,30%, segundo pesquisa Reuters. É a maior deflação mensal do índice em 2026, revertendo a alta de 0,06% registrada em julho, conforme o IBGE divulgou nesta quarta (<strong>26/ago</strong>). No acumulado de 12 meses, a taxa recuou para <strong>4,24%</strong>, ante 4,52% no período imediatamente anterior — a menor leitura desde setembro de 2020.",
+      "Os principais responsáveis pela queda foram Habitação (-1,41%, impacto de -0,22 p.p.), Transportes (-1,00%, impacto de -0,20 p.p.) e Alimentação e bebidas (-0,57%, impacto de -0,12 p.p.) — justamente os grupos que mais pesam no orçamento do consumidor e no custo operacional do posto (energia, logística, insumos de conveniência). O resultado veio mesmo com o Brent tendo fechado a semana anterior em alta.",
+      "O Boletim Focus, divulgado dois dias antes (24/ago), já sinalizava essa acomodação: manteve o IPCA de 2026 em <strong>5,02%</strong> pela terceira semana seguida e a Selic esperada em <strong>13,75%</strong> no fim do ano — mas reduziu a projeção de PIB de 1,98% para 1,95%. Para o revendedor, a leitura é positiva: <strong>menos pressão inflacionária reduz o risco de o Copom reverter o ciclo de cortes</strong>, mantendo a trajetória de alívio no custo do crédito de giro no segundo semestre."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaInternacional": {
+    "headline": "Novo presidente do Fed sinaliza possível alta de juros em estreia em Jackson Hole",
+    "deck": "Kevin Warsh endurece o discurso sobre inflação persistente e derruba a expectativa de corte — dólar sobe a R$ 5,21 no Brasil",
+    "body": [
+      "Em sua primeira aparição como presidente do Federal Reserve no tradicional simpósio de <strong>Jackson Hole</strong> (27–29/ago, Wyoming), Kevin Warsh surpreendeu o mercado com um tom mais duro sobre inflação do que o adotado após a reunião de julho. Warsh reafirmou o compromisso do Fed com a meta de <strong>2% para o PCE</strong> e disse que, embora os dados de verão tenham vindo melhores que o esperado, isso \"não indica que as tendências subjacentes melhoraram de forma significativa\" — sinalizando que o banco central pode precisar <strong>subir os juros</strong> nos próximos meses, não cortar.",
+      "A leitura mais hawkish pegou o mercado de surpresa: os Fed Funds seguem na faixa de <strong>3,50%–3,75%</strong> desde a última reunião, e o consenso até então apostava em estabilidade ou corte até o fim do ano. A reação imediata veio no câmbio: o dólar fechou a sexta (28/ago) a <strong>R$ 5,209</strong> no Brasil, alta de 0,90% no dia, enquanto o euro cedeu para R$ 6,02 — o mercado global reprecificando a trajetória de juros americana em tempo real.",
+      "Para o revendedor, o recado é indireto mas relevante: juros americanos mais altos por mais tempo tendem a fortalecer o dólar globalmente, o que <strong>encarece a importação de derivados</strong> e pressiona o custo em reais do petróleo — mesmo com o Brent em queda nesta semana. É o tipo de vento contrário que pode neutralizar parte do alívio trazido pela trégua em Ormuz. Vale monitorar os próximos comunicados do Fed antes de travar preços de compra de longo prazo."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "varejo": {
+    "headline": "Combustíveis mantêm trajetória de queda em agosto, e conveniência segue sustentando margem",
+    "deck": "Gasolina, diesel S-10 e etanol chegam ao menor patamar em meses — enquanto lojas de posto já rendem até R$ 60 mil de lucro extra por mês",
+    "body": [
+      "O levantamento da <strong>Fecombustíveis</strong> mostrou que, na segunda semana de agosto, a gasolina comum e o diesel S-10 voltaram aos menores preços médios em cerca de cinco meses, enquanto o etanol operava no nível mais baixo em pouco mais de dois anos. Na comparação com a última semana de julho, a gasolina caiu de R$ 6,68 para <strong>R$ 6,65</strong> (-0,43%), o diesel S-10 de R$ 6,97 para <strong>R$ 6,92</strong> (-0,69%) e o etanol de R$ 4,11 para <strong>R$ 4,02</strong> (-2,03%) — entidade que representa cerca de 40 mil postos no país.",
+      "O CNPE também mexeu no tabuleiro regulatório: a <strong>Resolução nº 10</strong>, publicada em 14/ago, determina reforço da fiscalização da ANP contra fraude e adulteração de combustíveis, exigindo que os postos mantenham registro eletrônico certificado de estoque, preços, compras e vendas com atualização mensal mínima. Em 21/ago, a ANP aprovou ainda minuta de regulamento com maior rigor sobre o controle da mistura de biodiesel pelas distribuidoras — sinais de que o cerco contra concorrência desleal está se apertando.",
+      "Do lado da rentabilidade, a <strong>conveniência</strong> segue como motor de receita paralela: um posto urbano de porte médio, com loja bem operada, pode adicionar de <strong>R$ 15 mil a R$ 60 mil</strong> em margem líquida mensal só com a loja — itens de padaria e lanches rápidos já respondem por 40% dessa receita, com margens de 30% a 50%. Pro revendedor, o pacote da semana é claro: preço de compra mais baixo, fiscalização mais dura contra o concorrente informal, e a conveniência como alavanca de lucro que compensa a margem apertada do combustível."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "automotivo": {
+    "headline": "Emplacamentos batem recorde histórico para um mês de julho, alta de 10% no ano",
+    "deck": "Fenabrave contabiliza terceiro melhor julho da história, com caminhões acelerando quase 19% sobre junho",
+    "body": [
+      "A Fenabrave registrou <strong>504.574 emplacamentos</strong> em julho — alta de <strong>10,17%</strong> frente a julho de 2025 e de 3,31% sobre junho, o terceiro melhor julho da história do setor. Automóveis e comerciais leves somaram 265.695 unidades (+15,54% sobre julho de 2025), enquanto os <strong>caminhões dispararam 18,89%</strong> sobre junho e 7,16% sobre julho do ano passado — sinal de aquecimento também no segmento pesado, historicamente ligado à atividade industrial e ao agronegócio.",
+      "O resultado reforça a expectativa da Fenabrave de fechar 2026 com alta de <strong>8,6%</strong> nos emplacamentos totais, superando 5,3 milhões de unidades comercializadas no ano — a maior marca da série histórica. O desempenho acontece mesmo com a Selic ainda em 14% a.a., mostrando que o crédito para veículos vem resistindo ao aperto monetário, ajudado pela queda gradual dos juros ao longo do ano.",
+      "Pro dono de posto, mais caminhões e veículos leves circulando significa demanda direta sustentada por diesel e gasolina no curto e médio prazo — o crescimento do parque, mesmo com a eletrificação avançando em ritmo acelerado (196% em elétricos e 85% em híbridos no primeiro semestre), ainda representa, em volume absoluto, uma frota majoritariamente dependente de combustível fóssil. O alerta fica para o segmento de caminhões: <strong>crescimento de quase 19% em um mês</strong> pode sinalizar antecipação de compras antes de mudanças tributárias ou cambiais — vale monitorar o ritmo de reposição de diesel nos próximos meses."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "fontes": "TradingEconomics/Fortune — Brent (28/ago/2026), Eastern Herald/CNBC — WTI (27/ago/2026), O Tempo — acordo Irã-Omã no Estreito de Ormuz (26/ago/2026), Forbes Brasil — tráfego de navios em Ormuz (ago/2026), Terra/Investing.com — OPEP+ aumenta produção citando recuperação de Ormuz (ago/2026), InfoMoney — dólar hoje R$5,209 (28/ago/2026), Investing.com — EUR/BRL R$6,02 (28/ago/2026), TradingView — índice DXY (28/ago/2026), TradingKey — Bitcoin US$79.701 (28/ago/2026), InfoMoney — Ibovespa fechamento 174.586 pts, sexta alta seguida (27/ago/2026), CNBC/Bolsamania/El Financiero — S&P 500, Nasdaq, Dow Jones fechamento (27/ago/2026), Credited/Diário Carioca — Copom Selic 14% (5/ago/2026), CNBC/PBS/CNN/Washington Post — discurso de Kevin Warsh em Jackson Hole (28/ago/2026), Poder360/InfoMoney/Revista Construa — IPCA-15 deflação 0,40% (26/ago/2026), XP Investimentos/BM&C News/TrendsCE — Boletim Focus IPCA 5,02% e Selic 13,75% (24/ago/2026), Band/Diário do Grande ABC/BPMoney — ANP etanol hidratado estável R$3,91 (24/ago/2026), Combustíveis ANP/AE-Taxas — gasolina comum ref. 16–22/ago (ago/2026), Fecombustíveis — trajetória de queda gasolina, diesel S-10 e etanol (21/ago/2026), Redepetro/Attis — Resolução CNPE nº10 e regulação ANP sobre biodiesel (24/ago/2026), Brasil Postos — defasagem Abicom diesel 58% e gasolina 45% (ref. 21/ago — confirmar), Acessa.com — CEPEA/ESALQ etanol hidratado e anidro SP (ref. 15/ago — confirmar), Diário do Grande ABC/Terra — Lula sanciona Lei Complementar 235 sem vetos (28/ago/2026), Poder360/Gazeta do Povo/GP1 — tramitação do PLP 114/2026 (ago/2026), Agência Brasil/Diário do Grande ABC/Rondônia Dinâmica/SouBrasília — Fenabrave emplacamentos julho 2026 (4-5/ago/2026), ClubPetro/Baratão Combustíveis — margem de conveniência em postos (2026)."
+}

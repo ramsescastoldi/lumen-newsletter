@@ -1,0 +1,11 @@
+{
+  "edicao": 35,
+  "periodo": "23 a 29 / Ago / 2026",
+  "friday": "2026-08-28",
+  "generated_at": "2026-08-28T20:30:00.000Z",
+  "fontes": "TradingEconomics/Fortune — Brent (28/ago/2026), Eastern Herald/CNBC — WTI (27/ago/2026), O Tempo — acordo Irã-Omã no Estreito de Ormuz (26/ago/2026), Forbes Brasil — tráfego de navios em Ormuz (ago/2026), Terra/Investing.com — OPEP+ aumenta produção citando recuperação de Ormuz (ago/2026), InfoMoney — dólar hoje R$5,209 (28/ago/2026), Investing.com — EUR/BRL R$6,02 (28/ago/2026), TradingView — índice DXY (28/ago/2026), TradingKey — Bitcoin US$79.701 (28/ago/2026), InfoMoney — Ibovespa fechamento 174.586 pts, sexta alta seguida (27/ago/2026), CNBC/Bolsamania/El Financiero — S&P 500, Nasdaq, Dow Jones fechamento (27/ago/2026), Credited/Diário Carioca — Copom Selic 14% (5/ago/2026), CNBC/PBS/CNN/Washington Post — discurso de Kevin Warsh em Jackson Hole (28/ago/2026), Poder360/InfoMoney/Revista Construa — IPCA-15 deflação 0,40% (26/ago/2026), XP Investimentos/BM&C News/TrendsCE — Boletim Focus IPCA 5,02% e Selic 13,75% (24/ago/2026), Band/Diário do Grande ABC/BPMoney — ANP etanol hidratado estável R$3,91 (24/ago/2026), Combustíveis ANP/AE-Taxas — gasolina comum ref. 16–22/ago (ago/2026), Fecombustíveis — trajetória de queda gasolina, diesel S-10 e etanol (21/ago/2026), Redepetro/Attis — Resolução CNPE nº10 e regulação ANP sobre biodiesel (24/ago/2026), Brasil Postos — defasagem Abicom diesel 58% e gasolina 45% (ref. 21/ago — confirmar), Acessa.com — CEPEA/ESALQ etanol hidratado e anidro SP (ref. 15/ago — confirmar), Diário do Grande ABC/Terra — Lula sanciona Lei Complementar 235 sem vetos (28/ago/2026), Poder360/Gazeta do Povo/GP1 — tramitação do PLP 114/2026 (ago/2026), Agência Brasil/Diário do Grande ABC/Rondônia Dinâmica/SouBrasília — Fenabrave emplacamentos julho 2026 (4-5/ago/2026), ClubPetro/Baratão Combustíveis — margem de conveniência em postos (2026).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}
