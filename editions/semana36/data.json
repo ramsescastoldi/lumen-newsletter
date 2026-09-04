@@ -1,0 +1,303 @@
+{
+  "periodo": "30/Ago a 05/Set / 2026",
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 95,23",
+          "variation": "+7,9% (semana); -0,31% (dia)",
+          "direction": "up",
+          "source": "TradingEconomics (04/set)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 91,07",
+          "variation": "+9% (semana, forte alta)",
+          "direction": "up",
+          "source": "Forbes Advisor/CNBC (04/set)"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,13",
+          "variation": "-1,5% (semana); +0,44% (dia, payroll dos EUA)",
+          "direction": "down",
+          "source": "InfoMoney/SpaceMoney (04/set, 9h32)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 5,9067",
+          "variation": "-1,9% (semana)",
+          "direction": "down",
+          "source": "Investing.com (04/set)"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": "98,99 pts",
+          "variation": "estável (~0,0% na semana)",
+          "direction": "neutral",
+          "source": "TradingEconomics/Statista (04/set)"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "US$ 81.088",
+          "variation": "+4,2% (24h); +1,7% (semana)",
+          "direction": "neutral",
+          "source": "Symplexia Labs (04/set)"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "183.618 pts",
+          "variation": "+5,2% (semana); -0,85% (dia, após payroll)",
+          "direction": "up",
+          "source": "Divulgar Dinheiro/InfoMoney (04/set)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.747,71 pts",
+          "variation": "+0,2% (semana); +1,1% (dia)",
+          "direction": "up",
+          "source": "Yahoo Finance/CNBC (04/set)"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "26.584,06 pts",
+          "variation": "+0,2% (semana); +1,4% (dia)",
+          "direction": "up",
+          "source": "Yahoo Finance/CNBC (04/set)"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "53.686,11 pts",
+          "variation": "+0,2% (semana); +1,2% (dia)",
+          "direction": "up",
+          "source": "Yahoo Finance/CNBC (04/set)"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "14,00% a.a.",
+          "variation": "estável; Copom decide em 15-16/set (mercado espera corte de 0,25 p.p.)",
+          "direction": "neutral",
+          "source": "BCB/Copom (ago/2026)"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,50% – 3,75%",
+          "variation": "mantido; payroll forte (162 mil vagas) reforça viés hawkish de Warsh",
+          "direction": "neutral",
+          "source": "Federal Reserve/Dept. do Trabalho dos EUA (04/set)"
+        },
+        {
+          "name": "IPCA-15 (ago)",
+          "value": "-0,40%",
+          "variation": "12m: 4,24%; sem nova prévia esta semana (próxima ~25/set)",
+          "direction": "down",
+          "source": "IBGE (26/ago — sem atualização nesta semana)"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "5,01%",
+          "variation": "leve queda ante 5,02% da semana anterior",
+          "direction": "down",
+          "source": "BCB Focus (31/ago)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": "R$ 6,654",
+          "variation": "-0,68% no mês (fechamento de agosto)",
+          "direction": "down",
+          "source": "Fecombustíveis — Monitor de Preços/Veloe-Fipe (dados de agosto, divulgado 01/set)"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": "R$ 4,275",
+          "variation": "-2,06% no mês; equivale a 65,6% do preço da gasolina (menor % da série histórica desde 2017)",
+          "direction": "down",
+          "source": "Fecombustíveis — Monitor de Preços/Veloe-Fipe (01/set)"
+        },
+        {
+          "name": "Diesel S-10",
+          "value": "R$ 6,949",
+          "variation": "-0,51% no mês",
+          "direction": "down",
+          "source": "Fecombustíveis — Monitor de Preços/Veloe-Fipe (01/set)"
+        },
+        {
+          "name": "Diesel comum",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Não segregado no Monitor consultado; rede nacional majoritariamente em S-10"
+        },
+        {
+          "name": "GLP P-13",
+          "value": "R$ 114,66",
+          "variation": "sem atualização confirmada esta semana",
+          "direction": "neutral",
+          "source": "ANP/CNN Brasil (ref. semana anterior — confirmar)"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": "R$ 2,1939",
+          "variation": "sem atualização confirmada esta semana",
+          "direction": "neutral",
+          "source": "CEPEA/ESALQ (ref. semana anterior — confirmar)"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": "R$ 2,4319",
+          "variation": "sem atualização confirmada esta semana",
+          "direction": "neutral",
+          "source": "CEPEA/ESALQ (ref. semana anterior — confirmar)"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "58%",
+          "variation": "sem leitura nova; tendência de alta com escalada EUA-Irã e Brent em alta",
+          "direction": "up",
+          "source": "Abicom (ref. 21/ago — confirmar)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "45%",
+          "variation": "sem leitura nova; tendência de alta com escalada EUA-Irã e Brent em alta",
+          "direction": "up",
+          "source": "Abicom (ref. 21/ago — confirmar)"
+        }
+      ]
+    }
+  ],
+
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "Petróleo dispara quase 8% na semana após EUA atacarem alvos iranianos perto de Ormuz",
+      "resumo": "O Brent fechou sexta (04/set) a US$ 95,23, alta de quase 8% ante os US$ 88,22 da semana anterior, depois que o Centcom lançou nova ofensiva (02/set) contra defesas iranianas perto do Estreito de Ormuz e o Irã revidou com mísseis contra Jordânia, Bahrein e Iraque. A trégua fechada há uma semana durou menos de sete dias. Para o posto, o custo de reposição volta a subir na mesma velocidade em que havia caído."
+    },
+    {
+      "numero": 2,
+      "headline": "Subvenção de R$ 0,44 na gasolina vence dia 9/set sem substituto definido",
+      "resumo": "A MP 1358/2026 perde validade na próxima quarta-feira e o Congresso ainda não a votou. O governo aposta em usar a recém-sancionada Lei Complementar 235 para manter o abatimento tributário, mas nenhum decreto regulamentador saiu até o fechamento desta edição. Se a subvenção cair sem substituto pronto, o repasse de até R$ 0,44/L pode ir direto para a bomba já na semana que vem — justamente quando o petróleo voltou a subir."
+    },
+    {
+      "numero": 3,
+      "headline": "Payroll dos EUA cria 162 mil vagas, quase 3x o esperado, e reforça juro alto por mais tempo",
+      "resumo": "O relatório de emprego de agosto veio muito acima da mediana de 56 mil vagas projetada pelo mercado, validando o discurso hawkish do novo presidente do Fed, Kevin Warsh, feito em Jackson Hole. Juros futuros e dólar subiram nos EUA e no Brasil (R$ 5,13, +0,44% no dia), embora as bolsas tenham fechado em alta. Dólar mais forte por mais tempo encarece a importação de derivados justamente com o Brent em alta."
+    },
+    {
+      "numero": 4,
+      "headline": "Focus reduz projeção de PIB e inflação para 2026; mercado aposta em novo corte da Selic dia 16/set",
+      "resumo": "O Boletim Focus de 31/ago trouxe IPCA em 5,01% (ante 5,02%) e PIB em 1,92% (ante 1,95%), nono corte seguido na estimativa de atividade. A Selic segue projetada em 13,75% no fim do ano, ante os 14,00% atuais, reforçando a aposta de corte de 0,25 p.p. na reunião do Copom de 15-16/set. Para o posto, sinal de crédito de giro mais barato à frente — mas ainda não confirmado."
+    },
+    {
+      "numero": 5,
+      "headline": "Emplacamentos sobem 16,87% em agosto; elétricos já são mais de 10% das vendas de leves",
+      "resumo": "A Fenabrave registrou 27.155 elétricos emplacados em agosto — recorde mensal de participação —, enquanto híbridos acumulam alta de 85% no ano. O mercado total de veículos cresce 15,3% em 2026, com a entidade projetando alta de 8% no ano fechado. Mais carros nas ruas ainda significa mais demanda por combustível fóssil no curto prazo, mas a curva de eletrificação urbana já não é mais promessa distante para o revendedor."
+    }
+  ],
+
+  "mercado": {
+    "headline": "Ataques dos EUA ao Irã reacendem risco em Ormuz, e o Brent dispara quase 8% na semana",
+    "deck": "Trégua da semana passada dura menos de sete dias: nova ofensiva do Centcom contra alvos militares iranianos e resposta com mísseis à Jordânia, Bahrein e Iraque interrompem a normalização do Estreito de Ormuz",
+    "body": [
+      "O Brent fechou a sexta (<strong>04/set</strong>) cotado a <strong>US$ 95,23</strong>, alta de quase <strong>8% na semana</strong> frente aos US$ 88,22 da sexta anterior, segundo TradingEconomics. O WTI acompanhou o movimento, negociado perto de <strong>US$ 91,07</strong> — alta em torno de 9% no acumulado semanal, segundo Forbes Advisor e CNBC. O gatilho foi uma nova onda de ataques do <strong>Centcom</strong> (02/set) contra sistemas de defesa aérea, radares, meios navais e capacidades de lançamento de minas do IRGC nas proximidades do Estreito de Ormuz — resposta, segundo o comando americano, a tentativas iranianas de atacar navios comerciais e forças dos EUA na região.",
+      "O Irã revidou lançando mísseis e drones contra instalações e interesses americanos na Jordânia, no Bahrein e no Iraque; as defesas jordanianas interceptaram 10 dos 13 mísseis balísticos que entraram em seu espaço aéreo, com os 3 restantes caindo em áreas desabitadas. Mais de <strong>50 mil militares americanos</strong> seguem mobilizados no Oriente Médio, segundo o Centcom. A trégua costurada há uma semana entre Irã e Omã — que havia derrubado o petróleo em quase 6% — durou menos de sete dias, evidenciando como o corredor de Ormuz segue sendo o principal fator de risco geopolítico do barril.",
+      "Para o revendedor, o movimento reverte, em uma única semana, boa parte do alívio que havia chegado ao custo de reposição. Quem travou compra na semana passada apostando na trégua hoje opera com margem apertada frente ao custo de reposição atual. <strong>Reavalie contratos de suprimento de curto prazo</strong> e monitore diariamente o noticiário do Centcom — o padrão desta semana (acordo → ataque → resposta) sugere que qualquer novo cessar-fogo pode ser tão frágil quanto o anterior."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "politica": {
+    "headline": "Subvenção de R$ 0,44 na gasolina vence dia 9 de setembro — e o governo ainda não sabe com o que vai substituí-la",
+    "deck": "MP 1358 caduca na próxima quarta; Fazenda aposta na Lei Complementar 235, recém-sancionada, mas os detalhes jurídicos da transição ainda não estão fechados",
+    "body": [
+      "A <strong>Medida Provisória 1358/2026</strong>, que garante subvenção de até <strong>R$ 0,44 por litro de gasolina</strong> (equivalente ao total de tributos federais sobre o combustível, com limite de R$ 0,89/L), perde a validade em <strong>9 de setembro</strong> — sem que o Congresso a tenha votado. O Ministério da Fazenda já prorrogou o benefício uma vez, via portaria publicada em edição extra do Diário Oficial (25/ago), justamente para evitar que o mercado ficasse sem cobertura legal enquanto se aguardava a sanção do PLP dos Combustíveis.",
+      "A aposta da equipe econômica agora é usar a <strong>Lei Complementar 235/2026</strong> — sancionada por Lula sem vetos na sexta passada (28/ago) — como base jurídica para manter os abatimentos tributários por mais tempo. O problema: os detalhes de como transportar o mecanismo de uma MP emergencial, criada em maio por conta da guerra no Oriente Médio, para uma lei complementar permanente ainda estão em análise dentro do próprio governo, e nenhum decreto regulamentador havia sido publicado até o fechamento desta edição.",
+      "Para o revendedor, o cenário é de incerteza regulatória com prazo curtíssimo: se a subvenção cair sem substituto pronto, o repasse de até <strong>R$ 0,44/L</strong> pode ir direto para a bomba já na próxima semana — justamente quando o Brent voltou a subir com a escalada Irã-EUA. <strong>Acompanhe o Diário Oficial diariamente até quarta-feira</strong> e monte um cenário de precificação alternativo caso o decreto regulamentador da LC 235 não saia a tempo."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaBrasil": {
+    "headline": "Focus reduz projeções de inflação e PIB para 2026, mas mantém Selic esperada em 13,75%",
+    "deck": "Boletim de 31/ago traz IPCA de 5,01% (ante 5,02%) e PIB de 1,92% (ante 1,95%); mercado agora espera Copom cortar mais 0,25 p.p. em 15-16/set",
+    "body": [
+      "O Boletim Focus divulgado pelo Banco Central na segunda-feira (<strong>31/ago</strong>) trouxe reduções marginais, mas consistentes: a projeção de IPCA para 2026 caiu de 5,02% para <strong>5,01%</strong>, enquanto a estimativa de crescimento do PIB recuou de 1,95% para <strong>1,92%</strong> — mais um corte seguido na projeção de atividade. A mediana de inflação para 2027 subiu ligeiramente, de 4,25% para 4,28%, sinal de que o mercado não trata a desinflação recente como definitiva.",
+      "No câmbio, a expectativa para o dólar no fim de 2026 seguiu travada em R$ 5,20 por semanas seguidas, mesmo com a moeda operando abaixo desse patamar nesta sexta (R$ 5,13). Já a <strong>Selic segue projetada em 13,75%</strong> ao final do ano — 25 pontos-base abaixo do patamar atual de 14,00% —, o que reforça a aposta de mais um corte de <strong>0,25 p.p.</strong> na reunião do Copom marcada para <strong>15 e 16 de setembro</strong>, a primeira desde que o comitê adotou tom mais cauteloso no comunicado de agosto.",
+      "Para o posto, o recado é de estabilidade com viés de alívio: menos pressão inflacionária e expectativa de Selic mais baixa favorecem o crédito de giro no médio prazo, mas o corte de 0,25 p.p. só será confirmado — ou não — na virada da terceira semana de setembro. <strong>Evite travar linhas de crédito de longo prazo antes da decisão do Copom</strong>: o tom mais cauteloso da última ata já indica que uma eventual pausa mudaria a conta."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaInternacional": {
+    "headline": "Payroll dos EUA vem quase três vezes acima do esperado e reforça aposta em juros mais altos por mais tempo",
+    "deck": "Economia americana criou 162 mil vagas em agosto, ante expectativa de 56 mil; dólar e juros futuros sobem, mas as bolsas fecham em alta ao longo do pregão",
+    "body": [
+      "O relatório de emprego dos EUA divulgado nesta sexta (<strong>04/set</strong>) pelo Departamento do Trabalho mostrou criação de <strong>162 mil vagas</strong> em agosto — quase três vezes a mediana de 56 mil projetada por economistas ouvidos pela Reuters. O número reforça a leitura hawkish que o presidente do Fed, <strong>Kevin Warsh</strong>, já havia sinalizado em Jackson Hole (28/ago): para ele, o mercado de trabalho segue \"consistente com pleno emprego\", o que reduz ainda mais o espaço para cortes de juros que a inflação persistente já limitava.",
+      "A reação imediata foi de aperto: Treasuries e dólar subiram, enquanto ações, ouro e bitcoin recuaram nas primeiras horas de pregão — mas boa parte do movimento se reverteu ao longo do dia, com Wall Street fechando em alta (S&P 500 +1,1%, Nasdaq +1,4%, Dow Jones +1,2%, segundo Yahoo Finance). No Brasil, o dólar chegou a operar em alta de 0,44% no início do dia, batendo <strong>R$ 5,13</strong>, refletindo a mesma leitura de juro americano mais alto por mais tempo.",
+      "Para o revendedor, o efeito prático é indireto, mas relevante: com o Fed sob Warsh sinalizando que pode até subir juros em vez de cortar, o dólar tende a se manter firme globalmente — o que <strong>encarece a importação de derivados em reais</strong> justamente na semana em que o Brent voltou a subir com a escalada em Ormuz. É uma dupla pressão de custo (petróleo mais caro + dólar mais forte) que vale monitorar antes de fechar compras de importação para o próximo trimestre."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "varejo": {
+    "headline": "Etanol bate recorde histórico de vantagem sobre a gasolina: 65,6% do preço, a menor relação da série",
+    "deck": "Monitor de Preços fecha agosto com etanol a R$ 4,275 (-2,06% no mês) e gasolina a R$ 6,654 (-0,68%); vantagem do biocombustível é a maior desde 2017",
+    "body": [
+      "O Monitor de Preços de Combustíveis fechou agosto com o litro do etanol hidratado custando, em média nacional, <strong>R$ 4,275</strong> — recuo de 2,06% no mês —, enquanto a gasolina comum encerrou o período a <strong>R$ 6,654</strong> (-0,68%) e o diesel S-10 a <strong>R$ 6,949</strong> (-0,51%), segundo dados de Veloe/Fipe divulgados em 01/set. Com isso, o etanol passou a representar apenas <strong>65,6%</strong> do preço da gasolina na média das unidades da federação — a menor proporção desde o início da série histórica do monitor, em janeiro de 2017.",
+      "O resultado consolida agosto como o terceiro mês seguido de recuo nos preços dos combustíveis no país, mesmo com o cenário internacional turbulento — o próprio etanol respondeu pelo maior peso na queda média do mês, à frente da gasolina e do diesel. No acumulado de 2026, porém, o quadro se inverte: o etanol ainda acumula queda de 9,5% no ano, contra alta de 6,0% na gasolina e de 12,4% no diesel S-10 — sinal de que a entressafra e a volatilidade do petróleo pesam mais no médio prazo do que no resultado de um único mês.",
+      "Para o posto, a clássica regra dos 70% de vantagem do etanol sobre a gasolina está mais folgada do que nunca: com a relação em 65,6%, o etanol compensa financeiramente na esmagadora maioria dos estados — inclusive para motores flex mais sensíveis a consumo. <strong>Reforce o abastecimento de etanol e ajuste a comunicação na bomba</strong>: a decisão do consumidor migra mais rápido quando a vantagem bate recorde histórico como o desta semana."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "automotivo": {
+    "headline": "Emplacamentos sobem 16,87% em agosto e elétricos já passam de 1 em cada 10 carros novos",
+    "deck": "Fenabrave contabiliza 27.155 elétricos emplacados no mês; híbridos avançam 85% no ano, ajudados por incentivo federal",
+    "body": [
+      "A Fenabrave registrou alta de <strong>16,87%</strong> nos emplacamentos de veículos em agosto de 2026 ante o mesmo mês do ano anterior, levando o acumulado do ano a um crescimento de <strong>15,3%</strong>. Os carros elétricos foram o destaque isolado: <strong>27.155 unidades</strong> emplacadas no mês, representando mais de <strong>10%</strong> de todos os automóveis e comerciais leves vendidos — a primeira vez que a categoria ultrapassa essa marca em uma base mensal.",
+      "No acumulado de janeiro a agosto, já são <strong>227.856 elétricos</strong> emplacados, cerca de 12% do total de leves no ano. Os híbridos também aceleraram, com alta de <strong>85%</strong> no acumulado, impulsionados por programas federais de incentivo — hoje, aproximadamente um em cada oito automóveis e comerciais leves vendidos no Brasil já pertence à categoria híbrida. A Fenabrave já havia revisado, no fim de julho, a projeção de crescimento do mercado total para 8% em 2026.",
+      "Para o dono de posto, o recado é de dois tempos: no curto prazo, mais carros nas ruas — elétricos, híbridos e a combustão juntos — ainda significa mais tráfego na bomba, já que a frota nacional segue majoritariamente fóssil. Mas a curva de eletrificação, que já passa de 10% das vendas mensais de leves, deixou de ser promessa distante: revendedores em praças urbanas de alta renda, onde a adoção de elétricos é mais concentrada, devem <strong>começar a testar diversificação de receita</strong> — recarga rápida, parcerias ou conveniência reforçada — antes que a migração comece a pesar no volume de gasolina vendido."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "fontes": "TradingEconomics — Brent US$95,23 (04/set/2026), Forbes Advisor/CNBC — WTI US$91,07 e alta semanal de ~9% (04/set/2026), Poder Naval — Centcom ataca alvos militares iranianos perto de Ormuz (02/set/2026), agências internacionais — resposta iraniana com mísseis à Jordânia/Bahrein/Iraque (02-03/set/2026), InfoMoney/SpaceMoney/Diário do Grande ABC — dólar R$5,13, payroll dos EUA e eleições no radar (04/set/2026), Investing.com — EUR/BRL R$5,9067 (04/set/2026), TradingEconomics/Statista — índice DXY 98,99 pts (04/set/2026), Symplexia Labs — Bitcoin US$81.088 (04/set/2026), Divulgar Dinheiro/InfoMoney/Money Times — Ibovespa 183.618 pts, payroll e eleições (04/set/2026), Yahoo Finance/CNBC — S&P 500, Nasdaq, Dow Jones fechamento (04/set/2026), XP/Toro Investimentos/JOTA — calendário Copom, reunião 15-16/set (2026), Federal Reserve — discurso de Kevin Warsh em Jackson Hole (28/ago/2026) e leitura do payroll (04/set/2026), Departamento do Trabalho dos EUA via Yahoo Finance — payroll 162 mil vagas ante 56 mil esperadas (04/set/2026), InfoMoney — Boletim Focus IPCA 5,01%, PIB 1,92%, Selic 13,75% (31/ago/2026), Diário do Grande ABC/O Tempo/Jovem Pan — prorrogação da subvenção da gasolina via MP 1358 até 9/set (25-26/ago/2026), Diário do Grande ABC — ANP abre consulta pública sobre capital social do setor (04/set/2026), Guru dos Carros/Portal Logweb/Fenatac — Monitor de Preços Fecombustíveis/Veloe-Fipe: gasolina R$6,654, etanol R$4,275, diesel S-10 R$6,949, vantagem do etanol em 65,6% (01/set/2026), Brasil Postos — defasagem Abicom diesel 58% e gasolina 45% (ref. 21/ago — confirmar), Acessa.com — CEPEA/ESALQ etanol hidratado e anidro SP (ref. semana anterior — confirmar), CNN Brasil/ANP — GLP P-13 R$114,66 (ref. semana anterior — confirmar), CNN Brasil/Agência Brasil/AutoData — Fenabrave emplacamentos agosto 2026, elétricos 27.155 unidades e híbridos +85% (01-04/set/2026)."
+}

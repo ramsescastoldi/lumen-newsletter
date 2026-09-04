@@ -1,0 +1,11 @@
+{
+  "edicao": 36,
+  "periodo": "30/Ago a 05/Set / 2026",
+  "friday": "2026-09-04",
+  "generated_at": "2026-09-04T19:58:48.613Z",
+  "fontes": "TradingEconomics — Brent US$95,23 (04/set/2026), Forbes Advisor/CNBC — WTI US$91,07 e alta semanal de ~9% (04/set/2026), Poder Naval — Centcom ataca alvos militares iranianos perto de Ormuz (02/set/2026), agências internacionais — resposta iraniana com mísseis à Jordânia/Bahrein/Iraque (02-03/set/2026), InfoMoney/SpaceMoney/Diário do Grande ABC — dólar R$5,13, payroll dos EUA e eleições no radar (04/set/2026), Investing.com — EUR/BRL R$5,9067 (04/set/2026), TradingEconomics/Statista — índice DXY 98,99 pts (04/set/2026), Symplexia Labs — Bitcoin US$81.088 (04/set/2026), Divulgar Dinheiro/InfoMoney/Money Times — Ibovespa 183.618 pts, payroll e eleições (04/set/2026), Yahoo Finance/CNBC — S&P 500, Nasdaq, Dow Jones fechamento (04/set/2026), XP/Toro Investimentos/JOTA — calendário Copom, reunião 15-16/set (2026), Federal Reserve — discurso de Kevin Warsh em Jackson Hole (28/ago/2026) e leitura do payroll (04/set/2026), Departamento do Trabalho dos EUA via Yahoo Finance — payroll 162 mil vagas ante 56 mil esperadas (04/set/2026), InfoMoney — Boletim Focus IPCA 5,01%, PIB 1,92%, Selic 13,75% (31/ago/2026), Diário do Grande ABC/O Tempo/Jovem Pan — prorrogação da subvenção da gasolina via MP 1358 até 9/set (25-26/ago/2026), Diário do Grande ABC — ANP abre consulta pública sobre capital social do setor (04/set/2026), Guru dos Carros/Portal Logweb/Fenatac — Monitor de Preços Fecombustíveis/Veloe-Fipe: gasolina R$6,654, etanol R$4,275, diesel S-10 R$6,949, vantagem do etanol em 65,6% (01/set/2026), Brasil Postos — defasagem Abicom diesel 58% e gasolina 45% (ref. 21/ago — confirmar), Acessa.com — CEPEA/ESALQ etanol hidratado e anidro SP (ref. semana anterior — confirmar), CNN Brasil/ANP — GLP P-13 R$114,66 (ref. semana anterior — confirmar), CNN Brasil/Agência Brasil/AutoData — Fenabrave emplacamentos agosto 2026, elétricos 27.155 unidades e híbridos +85% (01-04/set/2026).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}
