@@ -1,0 +1,11 @@
+{
+  "edicao": 37,
+  "periodo": "06 a 12 / Set / 2026",
+  "friday": "2026-09-11",
+  "generated_at": "2026-09-11T18:55:00.000Z",
+  "fontes": "CNBC — Brent US$105,15, WTI US$99,68 (11/set/2026), Convextrade — WTI +2,76% e alta semanal de 8,9% (10/set/2026), TradingEconomics — Brent histórico intradiário (11/set/2026), Daily Caller/Wikipedia (2026 Iranian strikes on Saudi Arabia) — ataques houthis à Aramco em Jizan (08/set/2026), Mercado Hoje — dólar R$5,118 (11/set/2026, 9h05), Investing.com — EUR/BRL R$5,9190 (11/set/2026), TradingView/DivulgarDinheiro — DXY 99,09 pts (11/set/2026), Forbes Advisor/Yahoo Finance — Bitcoin US$76.981 (11/set/2026), InfoMoney/Rio Times Online — Ibovespa 188.269 pts, melhor marca em 4 meses (11/set/2026), TheStreet/Vittarthi — S&P 500, Nasdaq, Dow Jones fechamento (11/set/2026), XP/JOTA — calendário Copom, reunião 15-16/set e ata 22/set (2026), Suno/InfoMoney — Boletim Focus IPCA 5,00%, PIB 1,93%, Selic 13,75% (08/set/2026), O Tempo/Jovem Pan — vencimento da MP 1358 em 9/set (26/ago-10/set/2026), Tribuna do Sertão/O Cafezinho/O Hoje/Portal Democrata — Petrobras sobe gasolina R$0,63 e governo zera PIS/Cofins e tributo do etanol, pacote de R$12,5 bi (10-11/set/2026), Brasil Postos — defasagem Abicom diesel 58% e gasolina 45% (ref. 21/ago — confirmar), Acessa.com — CEPEA/ESALQ etanol hidratado e anidro SP (ref. semana anterior — confirmar), ANP/CNN Brasil — GLP P-13 R$114,66 (ref. semana anterior — confirmar), gov.br/ANP — síntese semanal remarcada para 14/set por causa do feriado de 7/set (2026), Fecombustíveis/ExpoNews — ExpoPostos & Conveniência 2026, 250 expositores, 30 mil visitantes, 18 mil decisores, fórum com Amyr Klink e Mark Wohltmann (08-10/set/2026), CNN Brasil/Fenabrave/ABVE — emplacamentos agosto 2026, elétricos 27.155 unidades, híbridos PHEV 20.535 unidades (agosto/2026).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}
