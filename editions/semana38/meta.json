@@ -1,0 +1,11 @@
+{
+  "edicao": 38,
+  "periodo": "13 a 19 / Set / 2026",
+  "friday": "2026-09-18",
+  "generated_at": "2026-09-18T19:55:17.642Z",
+  "fontes": "CNBC — Brent US$103,83, WTI US$101,01 (18/set/2026), Trading Economics — histórico Brent/WTI (18/set/2026), Rio Times Online — Bitcoin US$80.812, EUR/BRL R$5,91 (18/set/2026), O Povo/Mercado Hoje — dólar R$5,140 (18/set/2026), TradingView — DXY 100,22 pts (18/set/2026), InfoMoney/BPMoney — Ibovespa 185.992 pts (18/set/2026), TheStreet/Yahoo Finance — S&P 500 7.642,67 pts, Dow Jones 51.698,40 pts, Nasdaq +0,2% (18/set/2026), CNBC/Federal Reserve — Fed Funds 3,75%-4,00%, 1ª alta desde 2023 (16/set/2026), JB/Melhor Investimento — Copom corta Selic a 13,75% (16/set/2026), BPMoney/Space Money — Boletim Focus IPCA 4,90%, PIB 1,89% (15/set/2026), IBGE/InfoMoney — IPCA-15 agosto -0,40% (26/ago/2026), O Povo/Jornal de Brasília — ANP gasolina R$6,53 e diesel S-10 R$6,97 (14/set/2026), Diário do Grande ABC/O Povo — ANP etanol hidratado R$4,04, +2,3% (14/set/2026), Tribuna do Norte/GPS Brasília — GLP P-13 R$115,95 (set/2026), Acessa.com/CEPEA-ESALQ — etanol hidratado R$2,4622 e anidro R$2,8475 SP (11/set/2026), Forbes Brasil/NC News/Mixvale — defasagem Abicom diesel R$3,89/L recorde (18/set/2026), Brasil Postos — defasagem Abicom gasolina acima de 40% (set/2026), Euronews/Wikipedia (2026 Aramco refinery attack) — ataque houthi ao oleoduto Leste-Oeste e à Aramco em Yanbu, MbS viaja ao Cairo (15-16/set/2026), Senado Notícias/O Tempo — MP 1.391/2026 substitui subvenção ao diesel por definição mensal da Fazenda (14/set/2026), Brasil247 — Assaí compra 18 postos de combustíveis da Millennium em SP (17-18/set/2026), CNN Brasil/Fenabrave — emplacamentos elétricos +7% em setembro, dobro do mercado total (set/2026), Agência FPA/SpaceMoney/Antihype — MME publica portaria de testes do E35 (18/set/2026).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}

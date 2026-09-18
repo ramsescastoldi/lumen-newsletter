@@ -1,0 +1,294 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 103,83",
+          "variation": "-1,26% (semana); -0,94% (dia)",
+          "direction": "down",
+          "source": "CNBC (18/set)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 101,01",
+          "variation": "+1,33% (semana); -0,88% (dia)",
+          "direction": "up",
+          "source": "CNBC (18/set)"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,140",
+          "variation": "+0,43% (semana); +0,25% (dia)",
+          "direction": "up",
+          "source": "Mercado Hoje/O Povo (18/set)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 5,910",
+          "variation": "-0,15% (semana); +0,12% (dia)",
+          "direction": "neutral",
+          "source": "Rio Times Online (18/set)"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": "100,22 pts",
+          "variation": "+1,1% (semana, ante 99,09 pts)",
+          "direction": "up",
+          "source": "TradingView (18/set)"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "US$ 80.812",
+          "variation": "+4,98% (semana)",
+          "direction": "neutral",
+          "source": "Rio Times Online (18/set)"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "185.992 pts",
+          "variation": "-1,21% (semana); +0,24% (dia) — dia de vencimento de opções",
+          "direction": "up",
+          "source": "InfoMoney/BPMoney (18/set)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.642,67 pts",
+          "variation": "-0,98% (semana); +0,06% (dia)",
+          "direction": "up",
+          "source": "TheStreet (18/set)"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "+0,2% (dia)",
+          "variation": "semana pressionada pela 1ª alta de juros do Fed desde 2023; fechamento em pontos não confirmado nas fontes consultadas",
+          "direction": "neutral",
+          "source": "TheStreet (18/set)"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "51.698,40 pts",
+          "variation": "-3,21% (semana); -0,15% (dia)",
+          "direction": "up",
+          "source": "TheStreet/Yahoo Finance (18/set)"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "13,75% a.a.",
+          "variation": "corte de 0,25 p.p. confirmado no Copom de 15-16/set (ante 14,00%)",
+          "direction": "down",
+          "source": "BCB/Copom (16/set)"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,75% – 4,00%",
+          "variation": "alta de 0,25 p.p. em 16/set — 1ª alta desde 2023",
+          "direction": "up",
+          "source": "CNBC/Federal Reserve (16/set)"
+        },
+        {
+          "name": "IPCA-15 (ago)",
+          "value": "-0,40%",
+          "variation": "12m: 4,24%; próxima prévia (set) só em 25/set",
+          "direction": "down",
+          "source": "IBGE (26/ago — sem nova prévia nesta semana)"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "4,90%",
+          "variation": "queda ante 5,00% da semana anterior; PIB revisado a 1,89%; Selic 2026 mantida em 13,75%",
+          "direction": "down",
+          "source": "BCB Focus (15/set)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": "R$ 6,53",
+          "variation": "estável (semana 6-12/set); de R$6,39 (Sul) a R$7,00 (Norte)",
+          "direction": "neutral",
+          "source": "ANP Levantamento de Preços (ref. 6-12/set — síntese da semana corrente ainda não publicada)"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": "R$ 4,04",
+          "variation": "+2,3% (semana 6-12/set, ante R$3,95)",
+          "direction": "up",
+          "source": "ANP Levantamento de Preços (ref. 6-12/set)"
+        },
+        {
+          "name": "Diesel S-10",
+          "value": "R$ 6,97",
+          "variation": "+1,3% (2ª semana de set, ante R$6,88)",
+          "direction": "up",
+          "source": "ANP Levantamento de Preços (ref. 8-14/set)"
+        },
+        {
+          "name": "Diesel comum",
+          "value": null,
+          "variation": null,
+          "direction": "pending",
+          "source": "Não segregado nos levantamentos consultados; rede nacional majoritariamente em S-10"
+        },
+        {
+          "name": "GLP P-13",
+          "value": "R$ 115,95",
+          "variation": "leve alta ante R$114,66 da semana anterior; distribuidoras sinalizam novo reajuste de R$4 a R$4,50",
+          "direction": "up",
+          "source": "ANP/Sindigás (2ª semana de set)"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": "R$ 2,4622",
+          "variation": "+2,63% (semana, 8-11/set)",
+          "direction": "up",
+          "source": "CEPEA/ESALQ (11/set)"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": "R$ 2,8475",
+          "variation": "+2,32% (semana)",
+          "direction": "up",
+          "source": "CEPEA/ESALQ (11/set)"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "R$ 3,89/L",
+          "variation": "defasagem recorde; puxada pela escalada do conflito no Oriente Médio e ataques ao oleoduto saudita",
+          "direction": "up",
+          "source": "Abicom/Forbes Brasil (18/set)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "acima de 40%",
+          "variation": "defasagem também em alta na esteira do diesel",
+          "direction": "up",
+          "source": "Abicom/Brasil Postos (set/2026)"
+        }
+      ]
+    }
+  ],
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "Houthis atingem oleoduto Leste-Oeste e refinaria da Aramco em Yanbu; Arábia Saudita cancela cargas de petróleo para a Europa",
+      "resumo": "Nova ofensiva houthi na semana atingiu o oleoduto que escoa 7 milhões de barris/dia e instalações da Aramco em Yanbu, provocando incêndios. Os sauditas cancelaram embarques à Europa e o príncipe herdeiro MbS viajou ao Cairo em busca de apoio. O Brent fechou a semana em queda (US$103,83), mas a defasagem do diesel da Petrobras bateu recorde de R$3,89/L."
+    },
+    {
+      "numero": 2,
+      "headline": "Fed sobe juros a 3,75%-4,00% pela 1ª vez desde 2023 no mesmo dia em que o Copom corta a Selic a 13,75%",
+      "resumo": "O banco central americano elevou os juros em 0,25 p.p. em 16/set citando inflação persistente, pressionando bolsas e fortalecendo o dólar globalmente (DXY +1,1% na semana). No mesmo dia, o Copom reduziu a Selic no Brasil para 13,75%. Sinais opostos que tendem a pressionar o câmbio brasileiro nas próximas semanas."
+    },
+    {
+      "numero": 3,
+      "headline": "Vencida a MP 1.363, Fazenda assume definição mensal da subvenção ao diesel em ciclos de 30 dias",
+      "resumo": "Com a MP que fixava R$1,12/L de subvenção perdendo validade em 26/set, o governo editou a MP 1.391/2026, que transfere ao ministro da Fazenda a definição do valor mês a mês. Troca-se previsibilidade por flexibilidade, justamente quando a escalada no Oriente Médio mais exige estabilidade de preço para o revendedor."
+    },
+    {
+      "numero": 4,
+      "headline": "Assaí compra 18 postos de combustíveis em São Paulo e mira mais de 100 unidades, atacarejo avança sobre o setor",
+      "resumo": "A rede atacadista anunciou a compra de 18 postos da Millennium Convenience Center em SP nesta semana, com plano de expansão para mais de 100 unidades. Movimento reforça a tese de consolidação do varejo de combustíveis por grandes grupos não tradicionais do setor, atraídos pela conveniência como porta de entrada."
+    },
+    {
+      "numero": 5,
+      "headline": "MME publica portaria com plano de testes do E35 nesta sexta, marco da Lei do Combustível do Futuro",
+      "resumo": "O Ministério de Minas e Energia publicou em 18/set a portaria com o protocolo de testes de durabilidade e uso do E35 (35% de etanol anidro na gasolina), após submissão ao comitê técnico do CNPE em 11/set. Etapa técnica que pode redesenhar a demanda por etanol e a logística de mistura nos próximos anos."
+    }
+  ],
+  "mercado": {
+    "headline": "Houthis atingem oleoduto Leste-Oeste e refinaria da Aramco em Yanbu; Arábia Saudita cancela cargas de petróleo para a Europa",
+    "deck": "Brent recua a US$103,83 na sexta com sinalização de diplomacia entre EUA e houthis, mas a defasagem do diesel da Petrobras bate recorde de R$3,89/L nesta semana",
+    "body": [
+      "A guerra no Oriente Médio ganhou um novo capítulo nesta semana: rebeldes houthis atacaram o <strong>oleoduto Leste-Oeste</strong> saudita — responsável por escoar cerca de <strong>7 milhões de barris/dia</strong> — e instalações da <strong>Aramco em Yanbu</strong>, no Mar Vermelho, provocando incêndios de grande proporção. A Arábia Saudita informou a clientes europeus que parte dos carregamentos previstos para este mês serão cancelados, e o príncipe herdeiro <strong>Mohammed bin Salman</strong> viajou ao Cairo na terça-feira para buscar apoio regional contra os houthis.",
+      "Apesar da gravidade do ataque, o Brent fechou a semana em queda: de <strong>US$105,15</strong> em 11/set para <strong>US$103,83</strong> nesta sexta (-1,26% na semana; -0,94% no dia), segundo a CNBC, puxado por sinais de que EUA e houthis discutem uma reunião direta. O WTI seguiu direção oposta, subindo <strong>1,33% na semana</strong>, a US$101,01. Do lado doméstico, a <strong>Abicom</strong> registrou defasagem recorde de <strong>R$3,89/L no diesel</strong> ante a paridade de importação — acima de 40% também na gasolina —, com refinarias brasileiras próximas do limite de capacidade e importadores adiando compras.",
+      "Para o revendedor, o padrão se repete: escalada, pico, recuo parcial, nova escalada — mas desta vez com um agravante concreto, o corte de exportações sauditas à Europa, que tende a apertar ainda mais o mercado global de diesel no curto prazo. <strong>Evite fechar contratos de suprimento de diesel a preço fixo por mais de 30 dias</strong> e monitore o desdobramento das conversas EUA-houthis — elas são o fator que pode definir se a defasagem recorde se traduz em reajuste da Petrobras nas próximas semanas."
+    ],
+    "carryover": true,
+    "opiniao": "Defasagem recorde de R$3,89/L com refinaria batendo no teto de capacidade não é mais notícia de risco — é sinal de que o próximo reajuste da Petrobras está atrasado, não cancelado. Quem não abriu margem para isso na precificação vai sentir o solavanco de uma vez só."
+  },
+  "politica": {
+    "headline": "Vencida a MP do diesel, Fazenda assume o controle mensal da subvenção — e troca previsibilidade por manobra de curto prazo",
+    "deck": "MP 1.391/2026 substitui o subsídio fixo de R$1,12/L por um valor definido mês a mês pelo ministro da Fazenda, em ciclos de 30 dias renováveis",
+    "body": [
+      "A <strong>MP 1.363/2026</strong>, que fixava a subvenção ao diesel em <strong>R$1,12 por litro</strong> desde maio, perde validade em <strong>26 de setembro</strong> após já ter sido prorrogada uma vez pelo presidente do Senado, Davi Alcolumbre. Em vez de repetir o mesmo mecanismo, o governo editou a <strong>MP 1.391/2026</strong>, publicada nesta semana: o valor da subvenção passa a ser definido por ato do ministro da Fazenda, com vigência de <strong>30 dias</strong>, prorrogáveis por igual período — uma mudança estrutural na engenharia do subsídio, não apenas uma renovação de prazo.",
+      "A justificativa oficial é dar ao governo mais flexibilidade para reagir à volatilidade do petróleo em meio à guerra no Oriente Médio, que já levou a Arábia Saudita a cancelar cargas para a Europa nesta semana. Na prática, porém, o revendedor perde o horizonte de dois meses que a MP anterior garantia e passa a depender de uma decisão mensal do Ministério da Fazenda — decisão que pode variar conforme o espaço fiscal disponível, não apenas conforme o preço internacional do barril.",
+      "Para o dono de posto, o recado é de atenção redobrada ao calendário: <strong>acompanhe o Diário Oficial a cada 30 dias</strong>, não mais a cada dois meses, para saber se a subvenção ao diesel será mantida no mesmo valor, reduzida ou até suspensa. Com a defasagem da Abicom já em R$3,89/L, qualquer hesitação na renovação mensal pode se traduzir rapidamente em pressão de repasse na bomba."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "economiaBrasil": {
+    "headline": "Copom corta Selic a 13,75% no mesmo dia em que o Fed sobe juros nos EUA — sinal trocado que expõe o Brasil a maior volatilidade cambial",
+    "deck": "Corte de 0,25 p.p. confirma o que o Focus vinha sinalizando há semanas; Boletim de 15/set reduz IPCA 2026 a 4,90% e PIB a 1,89%",
+    "body": [
+      "O <strong>Copom</strong> reduziu a Selic para <strong>13,75% ao ano</strong> na reunião de 15-16 de setembro, corte de <strong>0,25 ponto percentual</strong> que já era amplamente precificado pelo mercado desde o Boletim Focus da semana anterior. O comitê sinalizou cautela quanto aos próximos passos, sem se comprometer com o ritmo do ciclo de flexibilização — a próxima reunião só ocorre em novembro.",
+      "O <strong>Boletim Focus</strong> de 15/set, última pesquisa antes da decisão, trouxe o IPCA 2026 caindo pela terceira semana seguida, a <strong>4,90%</strong> (ante 5,00%), e o PIB revisado para baixo, a <strong>1,89%</strong>. A projeção de câmbio para 2026 seguiu estável em R$5,20. O detalhe que chama atenção desta semana é o <strong>timing</strong>: no mesmo dia em que o Brasil cortou juros, o Federal Reserve elevou os seus pela primeira vez desde 2023, para 3,75%-4,00% — um diferencial de juros que se estreita e tende a pressionar o real.",
+      "Para o revendedor, o corte confirma alívio gradual no custo do crédito de giro, mas o contexto externo trouxe um contraponto imediato: <strong>dólar mais caro por força do Fed pode neutralizar parte do ganho doméstico</strong> em capital de giro indexado a insumos importados. Monitore o USD/BRL nas próximas duas semanas — o diferencial de juros Brasil-EUA é hoje o principal vetor de risco cambial, mais do que o próprio ciclo doméstico de Selic."
+    ],
+    "carryover": true,
+    "opiniao": "Corte de Selic é bem-vindo, mas comemorar isolado é ler só metade do gráfico — o Fed subindo juros no mesmo dia é o tipo de sincronia que historicamente antecede pressão sobre o câmbio, e é o câmbio, não a Selic, que decide o preço da próxima carga de combustível importado."
+  },
+  "economiaInternacional": {
+    "headline": "Fed eleva juros a 3,75%-4,00% pela primeira vez em três anos, e Wall Street fecha a semana mista",
+    "deck": "Decisão unânime do FOMC cita inflação elevada; S&P 500 e Dow recuam na semana, Nasdaq sobe no dia com tecnologia em alta",
+    "body": [
+      "O <strong>Federal Reserve</strong> elevou o intervalo da taxa de juros em <strong>0,25 ponto percentual</strong>, para <strong>3,75%-4,00%</strong>, em decisão unânime (12-0) anunciada em 16/set — a primeira alta desde 2023. O comitê justificou o movimento pela necessidade de conter a inflação, que segue elevada, mesmo com a atividade econômica ainda se expandindo em ritmo sólido. Projeções de membros do Fed para o fim do ano ficaram entre 4,1% e 4,4%, e o mercado já precifica um novo aumento ainda em 2026.",
+      "A reação em Wall Street foi mista ao longo da semana: o <strong>S&amp;P 500</strong> fechou a sexta em <strong>7.642,67 pontos</strong> (-0,98% na semana), o <strong>Dow Jones</strong> recuou a <strong>51.698,40 pontos</strong> (-3,21% na semana) e o <strong>Nasdaq</strong> subiu 0,2% no pregão de sexta, puxado por ações de tecnologia, mesmo com o índice pressionado ao longo da semana pelo aperto monetário. Os rendimentos dos Treasuries de 10 anos chegaram a se aproximar de <strong>5%</strong>, refletindo temores de que o custo mais alto de energia — com o petróleo pressionado pelos ataques houthis — alimente novas rodadas de inflação.",
+      "Para o revendedor brasileiro, o Fed mais duro é o fator que mais deve pesar no câmbio nas próximas semanas: <strong>juro americano mais alto historicamente fortalece o dólar globalmente</strong>, encarecendo a importação de derivados justamente no momento em que a defasagem do diesel já está em nível recorde. <strong>Acompanhe o DXY</strong> — ele subiu 1,1% só nesta semana — como termômetro antecipado de pressão sobre o custo de reposição."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "varejo": {
+    "headline": "Assaí compra 18 postos de combustíveis em São Paulo e mira mais de 100 unidades, atacarejo avança sobre o setor",
+    "deck": "Aquisição da Millennium Convenience Center marca entrada mais agressiva de um grande grupo varejista no negócio de combustíveis no país",
+    "body": [
+      "O <strong>Assaí</strong> anunciou nesta semana a compra de <strong>18 postos de combustíveis</strong> da rede <strong>Millennium Convenience Center</strong> em São Paulo, unidades que já operam em terrenos vizinhos às lojas do atacarejo. O grupo sinalizou plano de expansão para <strong>mais de 100 unidades</strong> nos próximos anos, movimento que confirma uma tendência observada ao longo de 2026: grandes redes de varejo não tradicionalmente ligadas a combustíveis vendo no posto — e sobretudo na loja de conveniência anexa — uma frente de crescimento de receita e tráfego.",
+      "O Brasil tem hoje mais de <strong>45.000 postos</strong> em operação e cerca de <strong>8.500 lojas de conveniência</strong> associadas a eles, cobrindo apenas cerca de <strong>20% da rede nacional</strong> — um espaço de expansão que grupos como o Assaí, com escala de compra e logística já consolidadas, enxergam como vantagem competitiva direta sobre o revendedor independente. A movimentação ocorre num momento em que a margem de combustível segue espremida pela defasagem recorde da Abicom, tornando a receita não-combustível ainda mais central para a rentabilidade do negócio.",
+      "Para o dono de posto independente, o recado é direto: a concorrência por escala chegou também para o segmento de conveniência, historicamente o mais rentável e menos disputado da operação. <strong>Revise o mix de conveniência e serviços do seu posto</strong> — especialmente em praças onde redes de atacarejo e grandes varejistas já estão de olho em terrenos com potencial dual (loja + posto), a exemplo do movimento do Assaí em São Paulo."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "automotivo": {
+    "headline": "Elétricos crescem no dobro do ritmo do mercado em setembro, e E35 ganha portaria oficial de testes",
+    "deck": "Fenabrave registra alta de 7% nos emplacamentos de elétricos no mês, o dobro do avanço da frota total; MME publica protocolo de testes do E35 nesta sexta",
+    "body": [
+      "A <strong>Fenabrave</strong> registrou em setembro alta de <strong>7% nos emplacamentos de veículos elétricos</strong> — o dobro do crescimento de <strong>3,65%</strong> observado no total do mercado de veículos leves no mês. No acumulado do primeiro semestre de 2026, os elétricos puros já somam <strong>90.470 unidades</strong>, salto de <strong>196%</strong> sobre igual período de 2025 (30.534 unidades), enquanto os híbridos avançaram <strong>85%</strong> na mesma comparação. A <strong>BYD</strong> segue líder isolada do segmento, com mais de 70% do mercado de elétricos puros no país.",
+      "No mesmo dia, o <strong>Ministério de Minas e Energia</strong> publicou a portaria com o <strong>plano de testes do E35</strong> — mistura de 35% de etanol anidro na gasolina —, após submissão ao comitê técnico do <strong>CNPE</strong> em 11/set. O documento detalha o protocolo de ensaios de durabilidade e uso de longo prazo em motores, marco técnico previsto pela Lei do Combustível do Futuro que pode alterar, nos próximos anos, tanto a demanda por etanol anidro quanto a logística de mistura nas distribuidoras.",
+      "Para o revendedor, os dois movimentos caminham em paralelo e ambos pressionam a mesma variável: a composição do mix de combustíveis vendido na bomba. <strong>Acompanhe o cronograma de testes do E35</strong> ao longo dos próximos meses — uma eventual aprovação da nova mistura tem potencial de alterar a logística de armazenamento e a margem por litro de gasolina, num momento em que a eletrificação já corre em ritmo dobrado nas praças urbanas de maior renda."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "fontes": "CNBC — Brent US$103,83, WTI US$101,01 (18/set/2026), Trading Economics — histórico Brent/WTI (18/set/2026), Rio Times Online — Bitcoin US$80.812, EUR/BRL R$5,91 (18/set/2026), O Povo/Mercado Hoje — dólar R$5,140 (18/set/2026), TradingView — DXY 100,22 pts (18/set/2026), InfoMoney/BPMoney — Ibovespa 185.992 pts (18/set/2026), TheStreet/Yahoo Finance — S&P 500 7.642,67 pts, Dow Jones 51.698,40 pts, Nasdaq +0,2% (18/set/2026), CNBC/Federal Reserve — Fed Funds 3,75%-4,00%, 1ª alta desde 2023 (16/set/2026), JB/Melhor Investimento — Copom corta Selic a 13,75% (16/set/2026), BPMoney/Space Money — Boletim Focus IPCA 4,90%, PIB 1,89% (15/set/2026), IBGE/InfoMoney — IPCA-15 agosto -0,40% (26/ago/2026), O Povo/Jornal de Brasília — ANP gasolina R$6,53 e diesel S-10 R$6,97 (14/set/2026), Diário do Grande ABC/O Povo — ANP etanol hidratado R$4,04, +2,3% (14/set/2026), Tribuna do Norte/GPS Brasília — GLP P-13 R$115,95 (set/2026), Acessa.com/CEPEA-ESALQ — etanol hidratado R$2,4622 e anidro R$2,8475 SP (11/set/2026), Forbes Brasil/NC News/Mixvale — defasagem Abicom diesel R$3,89/L recorde (18/set/2026), Brasil Postos — defasagem Abicom gasolina acima de 40% (set/2026), Euronews/Wikipedia (2026 Aramco refinery attack) — ataque houthi ao oleoduto Leste-Oeste e à Aramco em Yanbu, MbS viaja ao Cairo (15-16/set/2026), Senado Notícias/O Tempo — MP 1.391/2026 substitui subvenção ao diesel por definição mensal da Fazenda (14/set/2026), Brasil247 — Assaí compra 18 postos de combustíveis da Millennium em SP (17-18/set/2026), CNN Brasil/Fenabrave — emplacamentos elétricos +7% em setembro, dobro do mercado total (set/2026), Agência FPA/SpaceMoney/Antihype — MME publica portaria de testes do E35 (18/set/2026)."
+}
