@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>Posto em Dia | Edição 39 — Lumen Posto Club</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; background: #f5f0e3; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #111;
+    background: #f5f0e3;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .paper {
+    max-width: 660px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #e1d7b8;
+    padding-bottom: 24px;
+  }
+
+  /* ============ MASTHEAD ============ */
+  .masthead {
+    border-bottom: 3px double #003459;
+    padding: 22px 20px 14px;
+    text-align: center;
+    background: #ffffff;
+  }
+  .masthead .top-rule {
+    border-top: 6px solid #003459;
+    margin: -22px -20px 16px;
+  }
+  .masthead h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #111;
+  }
+  .masthead .subtitle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #555;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+  .masthead .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #d0d0d0;
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .masthead .meta .edicao { color: #003459; font-weight: 800; }
+
+  /* ============ SECTION HEADER ============ */
+  .section-header {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #003459;
+    padding: 0 20px;
+    margin: 28px 0 14px;
+    border-top: 2px solid #003459;
+    padding-top: 10px;
+  }
+  .section-header::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #d0d0d0;
+    margin: 8px -20px 0;
+  }
+
+  /* ============ INDICADORES FINANCEIROS (TABLOIDE DE COTAÇÕES) ============ */
+  .indic-wrap { padding: 0 20px; }
+  .indic-block {
+    margin-bottom: 14px;
+    border: 1px solid #d8d8d8;
+    background: #fbfbf7;
+  }
+  .indic-block-title {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #003459;
+    padding: 6px 10px;
+    font-weight: 700;
+  }
+  .indic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .indic {
+    padding: 9px 12px;
+    border-bottom: 1px solid #ecece4;
+    border-right: 1px solid #ecece4;
+  }
+  .indic:nth-child(2n) { border-right: none; }
+  .indic-full {
+    grid-column: span 2;
+    border-right: none;
+  }
+  .indic-name {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #555;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+  .indic-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .indic-value {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #111;
+  }
+  .indic-var {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .indic-var.up { color: #c0392b; }
+  .indic-var.up::before { content: "▲ "; color: #c0392b; }
+  .indic-var.down { color: #1e8449; }
+  .indic-var.down::before { content: "▼ "; color: #1e8449; }
+  .indic-var.neutral { font-style: italic; color: #777; }
+  .indic-var.pending { font-style: italic; color: #777; }
+  .indic-source {
+    font-size: 9px;
+    color: #888;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* ============ MANCHETES (5) ============ */
+  .manchetes-wrap { padding: 0 20px; }
+  .manchete {
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .manchete:first-child { border-top: none; padding-top: 6px; }
+  .manchete-num {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #003459;
+    line-height: 0.85;
+    min-width: 46px;
+    text-align: center;
+    margin-top: -2px;
+  }
+  .manchete-body { flex: 1; }
+  .manchete-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.22;
+    margin-bottom: 8px;
+  }
+  .manchete-summary {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #333;
+  }
+
+  /* ============ ARTIGOS LONGOS ============ */
+  .article {
+    padding: 0 20px;
+    margin-bottom: 6px;
+  }
+  .article-headline {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .article-deck {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .article-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+  .article-body p:first-of-type::first-letter {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    font-weight: 900;
+    float: left;
+    line-height: 0.9;
+    padding: 4px 8px 0 0;
+    color: #003459;
+  }
+  .article-body strong { color: #003459; }
+
+  /* ============ BLOCO LUMEN POSTO CLUB ============ */
+  .cta-club {
+    margin: 32px 20px 0;
+    background: #003459;
+    padding: 30px 24px;
+    color: #fff;
+    text-align: center;
+  }
+  .cta-club .kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #C9A84C;
+    margin-bottom: 12px;
+    font-weight: 800;
+  }
+  .cta-club .title {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.22;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .cta-club .sub {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cfd6dd;
+    margin-bottom: 22px;
+  }
+  .cta-club .links {
+    border-top: 1px solid #1d4467;
+    padding-top: 18px;
+  }
+  .cta-club .link-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #fff;
+    margin: 8px 0;
+    line-height: 1.4;
+  }
+  .cta-club .link-row .lbl {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #C9A84C;
+    font-weight: 800;
+  }
+  .cta-club .link-row .val {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* ============ COLOFON ============ */
+  .colofon {
+    text-align: center;
+    padding: 30px 20px 12px;
+    border-top: 2px solid #003459;
+    margin-top: 30px;
+  }
+  .colofon .brand {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .colofon .tagline {
+    font-style: italic;
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+    font-family: Georgia, serif;
+  }
+  .colofon .fontes {
+    font-size: 11px;
+    color: #666;
+    margin-top: 14px;
+    line-height: 1.5;
+    padding-top: 12px;
+    border-top: 1px solid #d0d0d0;
+  }
+  .colofon .fontes strong {
+    color: #003459;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ============ CARRYOVER BADGE + ANÁLISE DO EDITOR ============ */
+  .carryover-badge {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    border-left: 3px solid #C9A84C;
+    padding-left: 8px;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .article-opiniao {
+    margin-top: 20px;
+    padding: 14px 16px;
+    background: #f5f0e3;
+    border-left: 4px solid #003459;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .opiniao-label {
+    font-family: Georgia, serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #003459;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .article-opiniao p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+  }
+
+  /* ============ PDF PAGE BREAKS (evitar quebra no meio de blocos) ============ */
+  /* Truque-chave: overflow:hidden cria novo block-formatting-context, forçando o */
+  /* Chromium a respeitar break-inside (sem isso, ele ignora quando há grid/flex). */
+
+  .indic-block {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+  .indic-grid  { break-inside: avoid; page-break-inside: avoid; }
+  .indic       { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Section header não fica órfão no fim de página */
+  .section-header { break-after: avoid; page-break-after: avoid; break-inside: avoid; page-break-inside: avoid; }
+
+  /* Cada manchete (1-5) fica unida */
+  .manchete {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Cada matéria longa começa em página própria (são >400mm, não cabem juntas) */
+  .article {
+    page-break-before: always; break-before: page;
+    break-inside: auto; /* parágrafos quebram dentro, mas headline+deck protegidos abaixo */
+  }
+  .article:first-of-type { page-break-before: auto; break-before: auto; }
+
+  /* Headline + deck precisam ficar juntos com o início do corpo */
+  .article-headline {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-deck {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-body p {
+    break-inside: avoid; page-break-inside: avoid;
+    orphans: 3; widows: 3;
+  }
+
+  /* Bloco Verimo (rodapé editorial) em página própria */
+  .verimo {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Colofon (lista de fontes) em página própria */
+  .colofon {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<div class="paper">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="top-rule"></div>
+    <h1>Posto em Dia</h1>
+    <div class="subtitle">O Semanário do Revendedor de Combustíveis</div>
+    <div class="meta">
+      <span class="edicao">Edição 39</span>
+      <span>20 a 26 / Set / 2026</span>
+    </div>
+  </div>
+
+  <!-- INDICADORES FINANCEIROS -->
+  <div class="section-header">Indicadores Financeiros</div>
+  <div class="indic-wrap">
+    <div class="indic-block">
+      <div class="indic-block-title">Petróleo &amp; Energia</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Brent (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 103,90</div>
+            <div class="indic-var down">-2,5% (dia); pico de US$114,89 em 22/set após ataque houthi à Aramco, recuou com avanço em negociações EUA-Irã</div>
+          </div>
+          <div class="indic-source">Jornal Económico/XTB (25/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">WTI (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 92,23</div>
+            <div class="indic-var down">-2,52% (dia); -8,7% na semana (ante US$101,01)</div>
+          </div>
+          <div class="indic-source">XTB/TradingKey (25/set)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Moedas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">USD/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 5,18</div>
+            <div class="indic-var up">-0,23% (dia); +0,8% (semana, ante R$5,140)</div>
+          </div>
+          <div class="indic-source">InfoMoney/Mercado Hoje (25/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">EUR/BRL</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Rio Times Online (ref. 18/set — sem dado novo)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">DXY (Dollar Index)</div>
+          <div class="indic-row">
+            <div class="indic-value">101,06 pts</div>
+            <div class="indic-var up">+0,8% (semana, ante 100,22 pts); -0,23% (dia)</div>
+          </div>
+          <div class="indic-source">TradingEconomics (25/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Bitcoin (USD)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 81.306</div>
+            <div class="indic-var neutral">+0,6% (semana, ante US$80.812)</div>
+          </div>
+          <div class="indic-source">TradingEconomics (25/set)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Bolsas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Ibovespa</div>
+          <div class="indic-row">
+            <div class="indic-value">183.100 pts</div>
+            <div class="indic-var up">-1,56% (semana, ante 185.992); -0,47% (dia)</div>
+          </div>
+          <div class="indic-source">InfoMoney (25/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">S&amp;P 500</div>
+          <div class="indic-row">
+            <div class="indic-value">7.704,13 pts</div>
+            <div class="indic-var down">+0,80% (semana, ante 7.642,67); -0,02% (dia)</div>
+          </div>
+          <div class="indic-source">Vittarthi/TheStreet (25/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Nasdaq</div>
+          <div class="indic-row">
+            <div class="indic-value">26.939,37 pts</div>
+            <div class="indic-var down">próximo de recorde histórico; +0,01% (dia)</div>
+          </div>
+          <div class="indic-source">Vittarthi (25/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Dow Jones</div>
+          <div class="indic-row">
+            <div class="indic-value">51.350,00 pts</div>
+            <div class="indic-var up">-0,67% (semana, ante 51.698,40); -0,31% (dia)</div>
+          </div>
+          <div class="indic-source">Vittarthi (25/set)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Juros &amp; Inflação</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Selic</div>
+          <div class="indic-row">
+            <div class="indic-value">13,75% a.a.</div>
+            <div class="indic-var neutral">mantida desde o corte de 16/set (sem reunião do Copom esta semana); Focus revisou projeção de fim de 2026 para 13,50% em 21/set</div>
+          </div>
+          <div class="indic-source">BCB/Focus (21/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Fed Funds</div>
+          <div class="indic-row">
+            <div class="indic-value">3,75% – 4,00%</div>
+            <div class="indic-var neutral">mantido desde a alta de 16/set; comitê sinaliza nova alta ainda em 2026</div>
+          </div>
+          <div class="indic-source">Federal Reserve (16/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">IPCA-15 (set)</div>
+          <div class="indic-row">
+            <div class="indic-value">+0,70%</div>
+            <div class="indic-var up">acima do teto das estimativas (0,45% a 0,66%); 12 meses em 4,47% (ante 4,24%), puxado pela devolução do bônus de Itaipu na conta de luz (+7,42%)</div>
+          </div>
+          <div class="indic-source">IBGE (25/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Focus IPCA 2026</div>
+          <div class="indic-row">
+            <div class="indic-value">4,92%</div>
+            <div class="indic-var up">alta ante 4,90% da semana anterior; PIB 2026 revisado a 1,88%</div>
+          </div>
+          <div class="indic-source">BCB Focus (21/set)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Preço na Bomba (ANP)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Gasolina C</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,54</div>
+            <div class="indic-var up">+0,2% (semana 13-19/set, ante R$6,53)</div>
+          </div>
+          <div class="indic-source">ANP Levantamento de Preços (ref. 13-19/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 4,04</div>
+            <div class="indic-var neutral">sem atualização publicada na semana; mantida referência anterior</div>
+          </div>
+          <div class="indic-source">ANP Levantamento de Preços (ref. 6-12/set — mais recente publicada)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel S-10</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 7,13</div>
+            <div class="indic-var up">+2,3% (semana 13-19/set, ante R$6,97)</div>
+          </div>
+          <div class="indic-source">ANP Levantamento de Preços (ref. 13-19/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel comum</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Não segregado nos levantamentos consultados; rede nacional majoritariamente em S-10</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">GLP P-13</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 117,50</div>
+            <div class="indic-var up">+1,3% (ante R$115,95); reajustes regionais de até 7% por dissídio coletivo do setor (mão de obra, frete, distribuição)</div>
+          </div>
+          <div class="indic-source">Sindigás/imprensa regional (2ª-3ª semana de set)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Usina (CEPEA/ESALQ)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado SP</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 1,1743</div>
+            <div class="indic-var up">+2,7% (semana); ⚠️ nível não comparável a semanas anteriores — desde 10/set o indicador desconta apenas ICMS (Decreto 13.116/2026 zerou PIS/Cofins na base)</div>
+          </div>
+          <div class="indic-source">CEPEA/ESALQ (23-27/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Anidro SP</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 1,3043</div>
+            <div class="indic-var up">+2,2% (semana); mesma mudança metodológica de base de cálculo</div>
+          </div>
+          <div class="indic-source">CEPEA/ESALQ (23-27/set)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Defasagem Petrobras (Abicom)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Diesel</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 3,89/L</div>
+            <div class="indic-var up">situação persiste sem resolução desde a semana passada; Abicom alerta risco de restrição de oferta com importações em queda em setembro</div>
+          </div>
+          <div class="indic-source">Abicom/Forbes Agro (set/2026)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Gasolina</div>
+          <div class="indic-row">
+            <div class="indic-value">acima de 40%</div>
+            <div class="indic-var up">defasagem segue elevada, sem reajuste da Petrobras</div>
+          </div>
+          <div class="indic-source">Abicom/Brasil Postos (set/2026)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 MANCHETES -->
+  <div class="section-header">As 5 Manchetes da Semana</div>
+  <div class="manchetes-wrap">
+    <div class="manchete">
+      <div class="manchete-num">1</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Petróleo dispara a US$114,89 com ataque houthi à Aramco em Yanbu, depois recua 2,5% nesta sexta com trégua EUA-Irã no radar</div>
+        <div class="manchete-summary">Rebeldes houthis atingiram o oleoduto East-West saudita e instalações da Aramco em Yanbu no sábado (19/set). O Brent chegou a US$114,89 no pico da crise, mas fechou a semana em US$103,90 com exportações sauditas se recuperando e sinais de negociação direta entre Washington e Teerã.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">2</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Senacon abre 70 processos contra postos após 330 denúncias de preço abusivo na Operação Carga Pesada</div>
+        <div class="manchete-summary">Ação nacional deflagrada em 23/set mobilizou mais de 100 representantes de Procons estaduais e municipais. O foco não é o preço na bomba, mas a margem de lucro do revendedor — com o diesel S-10, que subiu 2,3% na semana, concentrando a atenção dos fiscais.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">3</div>
+      <div class="manchete-body">
+        <div class="manchete-title">IPCA-15 de setembro surpreende, sobe 0,70% e leva inflação em 12 meses a 4,47%</div>
+        <div class="manchete-summary">Resultado do IBGE veio acima de todo o intervalo de estimativas do mercado, puxado pela devolução do bônus de Itaipu na conta de luz (+7,42% em energia residencial). Focus já havia revisado o IPCA 2026 para 4,92% dois dias antes da divulgação.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">4</div>
+      <div class="manchete-body">
+        <div class="manchete-title">MP 1.391 troca subsídio fixo do diesel por ciclos mensais; Fazenda reduz valor a R$1,00/litro</div>
+        <div class="manchete-summary">A MP 1.363, que fixava R$1,12/L por até 60 dias, vence nesta sexta (26/set). No novo modelo, o ministro da Fazenda define o valor a cada 30 dias — e já usou o poder para cortar o subsídio a R$1,00/L pela Portaria MF 2.813.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">5</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Confaz atualiza PMPF do ICMS sobre combustíveis; novas regras valem a partir de 1º de outubro</div>
+        <div class="manchete-summary">Portaria publicada nesta sexta (25/set) altera o Preço Médio Ponderado ao Consumidor Final usado pelos estados para calcular o imposto. Com diesel e gasolina em alta na semana, tendência é de base tributária mais alta a partir de outubro.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MERCADO DE COMBUSTÍVEIS -->
+  <div class="section-header">Mercado de Combustíveis</div>
+    <div class="article">
+    <div class="article-headline">Senacon abre 70 processos contra postos após 330 denúncias de preço abusivo; diesel S-10 é o alvo principal</div>
+    <div class="article-deck">Operação Carga Pesada mobilizou mais de 100 representantes de Procons estaduais e municipais nesta terça (22/set); foco é margem de lucro, não o preço na bomba</div>
+    <div class="article-body">
+      <p>A Secretaria Nacional do Consumidor (<strong>Senacon</strong>) deflagrou em 23/set a <strong>Operação Carga Pesada</strong>, ação nacional de fiscalização de postos de combustíveis motivada por cerca de <strong>330 denúncias</strong> recebidas pela ANP sobre reajustes considerados abusivos. Com base em autos de fiscalização da própria ANP, a Senacon já abriu <strong>70 processos administrativos sancionadores</strong>, dando aos postos notificados 20 dias de prazo para apresentar defesa. Na véspera, terça (22/set), o governo reuniu mais de <strong>100 representantes de Procons</strong> estaduais e municipais para alinhar critérios de atuação em todo o país.</p>
+      <p>O foco declarado da operação não é o preço final cobrado na bomba, mas eventuais aumentos injustificados na margem de lucro do revendedor — prática que pode configurar infração ao Código de Defesa do Consumidor. Estados como Acre e Mato Grosso já deflagraram ações locais coordenadas com o esforço nacional. O <strong>diesel S-10</strong>, que subiu <strong>2,3%</strong> só na última semana pesquisada pela ANP (para R$7,13), concentra a atenção dos fiscais, segundo dados apresentados pela própria Senacon.</p>
+      <p>Para o revendedor, a recomendação é objetiva: <strong>documente com rigor a composição de custo de cada reajuste</strong> — CIF, frete, ICMS, PMPF e defasagem de fornecimento —, porque a fiscalização vai pedir essa memória de cálculo caso seu posto seja notificado. O mesmo canal (0800 970 0267 ou app ANP com Vc – Postos) recebe reclamações de consumidores em qualquer praça, então mantenha o quadro de preços e notas fiscais sempre auditáveis.</p>
+    </div>
+  </div>
+
+  <!-- POLÍTICA (notícia quente) -->
+  <div class="section-header">Política &middot; Quente</div>
+    <div class="article">
+    <div class="carryover-badge">Continuação · Semana anterior</div>
+    <div class="article-headline">MP 1.391 troca subsídio fixo do diesel por ciclos mensais; Fazenda define R$1,00/litro via Portaria 2.813</div>
+    <div class="article-deck">Regra da MP 1.363 — R$1,12/L por até 60 dias — vence nesta sexta (26/set) e dá lugar a um modelo mais flexível, e mais instável, de subvenção</div>
+    <div class="article-body">
+      <p>A <strong>MP 1.363/2026</strong>, que fixava a subvenção ao diesel rodoviário em <strong>R$1,12 por litro</strong> com vigência de até 60 dias, perde validade nesta sexta-feira, <strong>26 de setembro</strong>. Em seu lugar, o governo editou em 11/set a <strong>MP 1.391/2026</strong>, que transfere ao ministro da Fazenda a competência de definir o valor da subvenção por ato próprio, com ciclos de vigência de <strong>30 dias</strong>, prorrogáveis por igual período.</p>
+      <p>Na prática, a Fazenda já usou a nova competência: pela <strong>Portaria MF 2.813</strong>, fixou a subvenção em <strong>R$1,00 por litro</strong> — R$0,12 abaixo do valor anterior — para o ciclo que passa a valer com a nova MP. É a quinta medida provisória do ano destinada a baratear o diesel, dentro de um pacote que já soma <strong>R$27,4 bilhões</strong> autorizados em 2026 em subvenção econômica ao setor.</p>
+      <p>O revendedor perde o horizonte de dois meses da regra anterior e passa a depender de uma decisão que pode mudar a cada 30 dias, conforme o espaço fiscal do governo — não necessariamente conforme o preço internacional do diesel. Com a defasagem da Abicom ainda em <strong>R$3,89/L</strong>, <strong>acompanhe o Diário Oficial todo mês</strong>, não mais a cada dois: uma eventual redução ou não renovação do subsídio se traduz rapidamente em pressão de repasse na bomba.</p>
+    </div>
+    <div class="article-opiniao"><span class="opiniao-label">Análise do editor</span><p>Cortar o subsídio de R$1,12 para R$1,00 por litro logo na primeira rodada sob o novo modelo mensal já dá o tom: a flexibilidade criada pela MP 1.391 tende a ser usada para reduzir gasto fiscal, não para proteger o revendedor da volatilidade do diesel. Quem planejou a margem de outubro contando com o valor antigo já começa o mês no vermelho.</p></div>
+  </div>
+
+  <!-- ECONOMIA BRASIL -->
+  <div class="section-header">Economia · Brasil</div>
+    <div class="article">
+    <div class="article-headline">IPCA-15 de setembro sobe 0,70% e surpreende o mercado; inflação em 12 meses acelera a 4,47%</div>
+    <div class="article-deck">Resultado divulgado nesta sexta (25/set) pelo IBGE veio acima de todas as estimativas do mercado, puxado pela devolução do bônus de Itaipu na conta de luz</div>
+    <div class="article-body">
+      <p>O <strong>IPCA-15</strong>, prévia da inflação oficial, subiu <strong>0,70%</strong> em setembro, informou o <strong>IBGE</strong> nesta sexta-feira (25/set) — resultado acima de todo o intervalo de estimativas dos analistas consultados pelo Projeções Broadcast, que ia de 0,45% a 0,66% (mediana de 0,53%). No acumulado em 12 meses, o índice acelerou para <strong>4,47%</strong>, ante 4,24% no período imediatamente anterior, e no ano já soma alta de 3,82%.</p>
+      <p>O grupo <strong>Habitação</strong> foi o principal responsável pela surpresa altista, com a energia elétrica residencial subindo <strong>7,42%</strong> no mês — reflexo direto do fim do bônus da usina de Itaipu, que havia reduzido a conta de luz no mês anterior e agora devolve o efeito integral ao consumidor. O resultado chega dias depois de o Boletim Focus de 21/set já ter revisado a projeção de IPCA para o fim de 2026 para <strong>4,92%</strong> (ante 4,90%), reforçando o cenário de inflação mais resistente do que o mercado vinha precificando.</p>
+      <p>Para o revendedor, a leitura direta é sobre poder de compra e custo de energia: uma conta de luz mais cara pressiona o consumo do cliente final na loja de conveniência e eleva o custo operacional do próprio posto — iluminação, bombas, climatização. <strong>Revise o orçamento de energia do posto para outubro</strong> considerando esse repique, e monitore se o Copom, que cortou a Selic em 16/set, vai hesitar diante de uma inflação que já surpreende para cima logo na primeira leitura pós-corte.</p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA INTERNACIONAL -->
+  <div class="section-header">Economia · Internacional</div>
+    <div class="article">
+    <div class="carryover-badge">Continuação · Semana anterior</div>
+    <div class="article-headline">Petróleo dispara com ataque houthi à Aramco em Yanbu, depois recua a US$103,90 com avanço em negociações EUA-Irã</div>
+    <div class="article-deck">Brent chegou a US$114,89 no pico da crise em 22/set e caiu 2,5% só nesta sexta, com exportações sauditas em recuperação e otimismo sobre um acordo com Teerã</div>
+    <div class="article-body">
+      <p>No sábado (19/set), rebeldes houthis do Iêmen lançaram duas operações contra a Arábia Saudita com mísseis balísticos, mísseis de cruzeiro e drones, atingindo instalações da <strong>Saudi Aramco em Yanbu</strong> e danificando o <strong>oleoduto East-West</strong>, que escoa cerca de 7 milhões de barris/dia. A Aramco suspendeu carregamentos em Yanbu, cancelou entregas a clientes europeus e passou a oferecer petróleo por transferência entre navios perto de Sohar, em Omã, para reduzir o impacto logístico.</p>
+      <p>O choque inicial levou o <strong>Brent</strong> a bater <strong>US$114,89</strong> em 22/set, mas o mercado reverteu com a mesma velocidade: exportações sauditas pelo Estreito de Hormuz voltaram a uma média de <strong>2,9 milhões de barris/dia</strong> nos últimos seis dias monitorados — ante apenas 700 mil em agosto —, e sinais de avanço em negociações diretas entre Washington e Teerã derrubaram os preços. Nesta sexta (25/set), o Brent caiu <strong>2,5%</strong>, fechando abaixo de <strong>US$104</strong> (US$103,90), e o WTI recuou <strong>2,52%</strong>, a <strong>US$92,23</strong> — queda de quase 9% frente à semana anterior.</p>
+      <p>A montanha-russa do petróleo nesta semana é o retrato do que o revendedor vai enfrentar até o fim do ano: choques de oferta rápidos, seguidos de recuos igualmente rápidos por diplomacia. <strong>Evite reagir a manchetes de pico</strong> — o próprio Brent subiu e caiu mais de 10% na mesma semana — e baseie decisões de compra de estoque na média móvel de dias, não no valor do dia do choque.</p>
+    </div>
+    <div class="article-opiniao"><span class="opiniao-label">Análise do editor</span><p>Um oleoduto saudita atacado e o Brent volta ao mesmo patamar da semana anterior em cinco dias — isso não é sinal de que o risco geopolítico passou, é sinal de que o mercado aprendeu a precificar essa guerra em horas, não semanas. A próxima notícia de ataque vai mexer no preço de novo, e mais rápido.</p></div>
+  </div>
+
+  <!-- VAREJO -->
+  <div class="section-header">Varejo</div>
+    <div class="article">
+    <div class="article-headline">Confaz atualiza valores de referência do ICMS sobre combustíveis; novas regras valem a partir de 1º de outubro</div>
+    <div class="article-deck">Portaria publicada nesta sexta (25/set) no Diário Oficial altera o Preço Médio Ponderado ao Consumidor Final usado para calcular o imposto estadual</div>
+    <div class="article-body">
+      <p>O <strong>Conselho Nacional de Política Fazendária (Confaz)</strong> publicou nesta sexta-feira (25/set), no Diário Oficial da União, a atualização do <strong>Preço Médio Ponderado ao Consumidor Final (PMPF)</strong> — a base de cálculo usada pelos estados para cobrar o <strong>ICMS</strong> sobre combustíveis. A partir de <strong>1º de outubro</strong>, todos os estados e o Distrito Federal passam a usar os novos valores de referência.</p>
+      <p>O PMPF é atualizado periodicamente para acompanhar a variação de preços observada no mercado — e, com o diesel S-10 subindo <strong>2,3%</strong> só na última semana pesquisada pela ANP (a R$7,13) e a gasolina em leve alta (R$6,54), a tendência é que a nova tabela reflita valores de referência mais altos que os vigentes em setembro. Como o ICMS incide sobre o PMPF e não diretamente sobre o preço de venda, um PMPF mais alto pode elevar a carga tributária por litro mesmo sem mudança na política de preços do posto.</p>
+      <p><strong>Confira a tabela de PMPF do seu estado antes de fechar a precificação de outubro</strong> — o impacto varia por unidade federativa, já que cada estado aplica sua própria alíquota sobre a base nacional. Postos que já operam com margem espremida pela defasagem recorde da Abicom (R$3,89/L no diesel) podem sentir esse ajuste tributário como um segundo aperto simultâneo, não isolado.</p>
+    </div>
+  </div>
+
+  <!-- AUTOMOTIVO -->
+  <div class="section-header">Automotivo</div>
+    <div class="article">
+    <div class="article-headline">Elétricos crescem no dobro do mercado em setembro; emplacamentos batem 90 mil unidades no semestre</div>
+    <div class="article-deck">Fenabrave registra alta de 7% nos elétricos no mês, ante 3,65% do mercado total; primeiro semestre acumula alta de 196% na comparação anual</div>
+    <div class="article-body">
+      <p>A <strong>Fenabrave</strong> registrou em setembro alta de <strong>7%</strong> nos emplacamentos de veículos elétricos, o dobro do crescimento de <strong>3,65%</strong> observado no total do mercado de veículos leves no mês. O acumulado do primeiro semestre de 2026 já soma mais de <strong>1 milhão</strong> de emplacamentos de veículos eletrificados no total, com alta de <strong>33,82%</strong> sobre igual período do ano passado — puxada pelos elétricos puros, que sozinhos somam <strong>90.470 unidades</strong>, salto de <strong>196%</strong> ante as 30.534 unidades de 2025.</p>
+      <p>A <strong>BYD</strong> segue líder isolada do segmento, com mais de <strong>70% do mercado de elétricos puros</strong> no país, e seu modelo compacto Dolphin Mini permanece entre os cinco carros mais vendidos da categoria. O avanço é impulsionado por programas de incentivo como o Carro Sustentável e pela concorrência crescente entre montadoras chinesas e tradicionais, que ampliaram o portfólio de modelos elétricos e híbridos disponíveis no varejo brasileiro ao longo de 2026.</p>
+      <p>Para o revendedor, o crescimento de eletrificados no dobro do ritmo do mercado total é um alerta de médio prazo sobre a composição do mix de vendas na bomba, especialmente em capitais e regiões metropolitanas de maior renda, onde a adoção é mais concentrada. <strong>Avalie a instalação de pontos de recarga rápida</strong> como diferencial competitivo — postos que já oferecem o serviço reportam maior tempo de permanência do cliente e consequente aumento de vendas na loja de conveniência.</p>
+    </div>
+  </div>
+
+  <!-- LUMEN POSTO CLUB -->
+  <div class="cta-club">
+    <div class="kicker">Lumen Posto Club</div>
+    <div class="title">Inteligência semanal pro revendedor de combustíveis</div>
+    <div class="sub">Newsletter semanal, painel diário de cotações, comunidade de revendedores e as análises do Ramsés sobre o mercado de combustíveis no Brasil.</div>
+    <div class="links">
+      <div class="link-row">
+        <span class="lbl">Site</span>
+        <a href="https://lumenpostoclub.com.br" class="val">lumenpostoclub.com.br</a>
+      </div>
+      <div class="link-row">
+        <span class="lbl">Instagram</span>
+        <a href="https://instagram.com/eusouramses" class="val">@eusouramses</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLOFON -->
+  <div class="colofon">
+    <div class="brand">Lumen Posto Club</div>
+    <div class="tagline">Inteligência semanal para o revendedor de combustíveis</div>
+    <div class="fontes">
+      <strong>Fontes consultadas nesta edição</strong>
+      Jornal Económico/XTB — Brent US$103,90, WTI US$92,23 (25/set/2026), TradingKey/TradingEconomics — WTI, DXY 101,06 pts, Bitcoin US$81.306 (25/set/2026), InfoMoney/Mercado Hoje — dólar R$5,18 (25/set/2026), Vittarthi — Ibovespa 183.100 pts, S&amp;P 500 7.704,13, Nasdaq 26.939,37, Dow Jones 51.350,00 (25/set/2026), BCB/Focus — Selic 13,50% projeção 2026, IPCA 2026 4,92%, PIB 1,88% (21/set/2026), Federal Reserve/O Tempo — Fed Funds 3,75%-4,00% (16/set/2026), IBGE/InfoMoney/O Povo — IPCA-15 setembro +0,70%, 12m 4,47% (25/set/2026), O Povo — ANP gasolina R$6,54 e diesel S-10 R$7,13 (19/set/2026), Sindigás/imprensa regional — GLP P-13 reajustes de até 7% por dissídio (set/2026), CEPEA/ESALQ/Notícias Agrícolas — etanol hidratado R$1,1743 e anidro R$1,3043 SP, nova metodologia pós-Decreto 13.116/2026 (23-27/set/2026), Forbes Agro/Brasil Postos — defasagem Abicom diesel R$3,89/L recorde e gasolina acima de 40% (set/2026), Wikipedia/O Mundo Diplomático/Brasil247 — ataque houthi ao oleoduto East-West e à Aramco em Yanbu, recuperação de exportações sauditas via Hormuz (19-25/set/2026), CNN Brasil/Investing/Brasil247 — petróleo recua com otimismo sobre acordo EUA-Irã (21-25/set/2026), Poder360/TV Brasil/PIRANOT — Senacon deflagra Operação Carga Pesada, 70 processos contra postos (23/set/2026), Senado Notícias/Radar Finanças/O Tempo — MP 1.391/2026 e Portaria MF 2.813 fixam subvenção do diesel em R$1,00/L (11-16/set/2026), Agência Brasil/O Povo — Confaz atualiza PMPF do ICMS sobre combustíveis a partir de outubro (25/set/2026), CNN Brasil/evdrops — Fenabrave emplacamentos elétricos +7% em setembro, dobro do mercado total (set/2026).
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

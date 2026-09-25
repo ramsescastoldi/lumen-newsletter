@@ -1,0 +1,294 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 103,90",
+          "variation": "-2,5% (dia); pico de US$114,89 em 22/set após ataque houthi à Aramco, recuou com avanço em negociações EUA-Irã",
+          "direction": "down",
+          "source": "Jornal Económico/XTB (25/set)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 92,23",
+          "variation": "-2,52% (dia); -8,7% na semana (ante US$101,01)",
+          "direction": "down",
+          "source": "XTB/TradingKey (25/set)"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,18",
+          "variation": "-0,23% (dia); +0,8% (semana, ante R$5,140)",
+          "direction": "up",
+          "source": "InfoMoney/Mercado Hoje (25/set)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 5,91",
+          "variation": "sem atualização publicada nesta semana",
+          "direction": "pending",
+          "source": "Rio Times Online (ref. 18/set — sem dado novo)"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": "101,06 pts",
+          "variation": "+0,8% (semana, ante 100,22 pts); -0,23% (dia)",
+          "direction": "up",
+          "source": "TradingEconomics (25/set)"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "US$ 81.306",
+          "variation": "+0,6% (semana, ante US$80.812)",
+          "direction": "neutral",
+          "source": "TradingEconomics (25/set)"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "183.100 pts",
+          "variation": "-1,56% (semana, ante 185.992); -0,47% (dia)",
+          "direction": "up",
+          "source": "InfoMoney (25/set)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.704,13 pts",
+          "variation": "+0,80% (semana, ante 7.642,67); -0,02% (dia)",
+          "direction": "down",
+          "source": "Vittarthi/TheStreet (25/set)"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "26.939,37 pts",
+          "variation": "próximo de recorde histórico; +0,01% (dia)",
+          "direction": "down",
+          "source": "Vittarthi (25/set)"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "51.350,00 pts",
+          "variation": "-0,67% (semana, ante 51.698,40); -0,31% (dia)",
+          "direction": "up",
+          "source": "Vittarthi (25/set)"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "13,75% a.a.",
+          "variation": "mantida desde o corte de 16/set (sem reunião do Copom esta semana); Focus revisou projeção de fim de 2026 para 13,50% em 21/set",
+          "direction": "neutral",
+          "source": "BCB/Focus (21/set)"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,75% – 4,00%",
+          "variation": "mantido desde a alta de 16/set; comitê sinaliza nova alta ainda em 2026",
+          "direction": "neutral",
+          "source": "Federal Reserve (16/set)"
+        },
+        {
+          "name": "IPCA-15 (set)",
+          "value": "+0,70%",
+          "variation": "acima do teto das estimativas (0,45% a 0,66%); 12 meses em 4,47% (ante 4,24%), puxado pela devolução do bônus de Itaipu na conta de luz (+7,42%)",
+          "direction": "up",
+          "source": "IBGE (25/set)"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "4,92%",
+          "variation": "alta ante 4,90% da semana anterior; PIB 2026 revisado a 1,88%",
+          "direction": "up",
+          "source": "BCB Focus (21/set)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": "R$ 6,54",
+          "variation": "+0,2% (semana 13-19/set, ante R$6,53)",
+          "direction": "up",
+          "source": "ANP Levantamento de Preços (ref. 13-19/set)"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": "R$ 4,04",
+          "variation": "sem atualização publicada na semana; mantida referência anterior",
+          "direction": "neutral",
+          "source": "ANP Levantamento de Preços (ref. 6-12/set — mais recente publicada)"
+        },
+        {
+          "name": "Diesel S-10",
+          "value": "R$ 7,13",
+          "variation": "+2,3% (semana 13-19/set, ante R$6,97)",
+          "direction": "up",
+          "source": "ANP Levantamento de Preços (ref. 13-19/set)"
+        },
+        {
+          "name": "Diesel comum",
+          "value": null,
+          "variation": null,
+          "direction": "pending",
+          "source": "Não segregado nos levantamentos consultados; rede nacional majoritariamente em S-10"
+        },
+        {
+          "name": "GLP P-13",
+          "value": "R$ 117,50",
+          "variation": "+1,3% (ante R$115,95); reajustes regionais de até 7% por dissídio coletivo do setor (mão de obra, frete, distribuição)",
+          "direction": "up",
+          "source": "Sindigás/imprensa regional (2ª-3ª semana de set)"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": "R$ 1,1743",
+          "variation": "+2,7% (semana); ⚠️ nível não comparável a semanas anteriores — desde 10/set o indicador desconta apenas ICMS (Decreto 13.116/2026 zerou PIS/Cofins na base)",
+          "direction": "up",
+          "source": "CEPEA/ESALQ (23-27/set)"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": "R$ 1,3043",
+          "variation": "+2,2% (semana); mesma mudança metodológica de base de cálculo",
+          "direction": "up",
+          "source": "CEPEA/ESALQ (23-27/set)"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "R$ 3,89/L",
+          "variation": "situação persiste sem resolução desde a semana passada; Abicom alerta risco de restrição de oferta com importações em queda em setembro",
+          "direction": "up",
+          "source": "Abicom/Forbes Agro (set/2026)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "acima de 40%",
+          "variation": "defasagem segue elevada, sem reajuste da Petrobras",
+          "direction": "up",
+          "source": "Abicom/Brasil Postos (set/2026)"
+        }
+      ]
+    }
+  ],
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "Petróleo dispara a US$114,89 com ataque houthi à Aramco em Yanbu, depois recua 2,5% nesta sexta com trégua EUA-Irã no radar",
+      "resumo": "Rebeldes houthis atingiram o oleoduto East-West saudita e instalações da Aramco em Yanbu no sábado (19/set). O Brent chegou a US$114,89 no pico da crise, mas fechou a semana em US$103,90 com exportações sauditas se recuperando e sinais de negociação direta entre Washington e Teerã."
+    },
+    {
+      "numero": 2,
+      "headline": "Senacon abre 70 processos contra postos após 330 denúncias de preço abusivo na Operação Carga Pesada",
+      "resumo": "Ação nacional deflagrada em 23/set mobilizou mais de 100 representantes de Procons estaduais e municipais. O foco não é o preço na bomba, mas a margem de lucro do revendedor — com o diesel S-10, que subiu 2,3% na semana, concentrando a atenção dos fiscais."
+    },
+    {
+      "numero": 3,
+      "headline": "IPCA-15 de setembro surpreende, sobe 0,70% e leva inflação em 12 meses a 4,47%",
+      "resumo": "Resultado do IBGE veio acima de todo o intervalo de estimativas do mercado, puxado pela devolução do bônus de Itaipu na conta de luz (+7,42% em energia residencial). Focus já havia revisado o IPCA 2026 para 4,92% dois dias antes da divulgação."
+    },
+    {
+      "numero": 4,
+      "headline": "MP 1.391 troca subsídio fixo do diesel por ciclos mensais; Fazenda reduz valor a R$1,00/litro",
+      "resumo": "A MP 1.363, que fixava R$1,12/L por até 60 dias, vence nesta sexta (26/set). No novo modelo, o ministro da Fazenda define o valor a cada 30 dias — e já usou o poder para cortar o subsídio a R$1,00/L pela Portaria MF 2.813."
+    },
+    {
+      "numero": 5,
+      "headline": "Confaz atualiza PMPF do ICMS sobre combustíveis; novas regras valem a partir de 1º de outubro",
+      "resumo": "Portaria publicada nesta sexta (25/set) altera o Preço Médio Ponderado ao Consumidor Final usado pelos estados para calcular o imposto. Com diesel e gasolina em alta na semana, tendência é de base tributária mais alta a partir de outubro."
+    }
+  ],
+  "mercado": {
+    "headline": "Senacon abre 70 processos contra postos após 330 denúncias de preço abusivo; diesel S-10 é o alvo principal",
+    "deck": "Operação Carga Pesada mobilizou mais de 100 representantes de Procons estaduais e municipais nesta terça (22/set); foco é margem de lucro, não o preço na bomba",
+    "body": [
+      "A Secretaria Nacional do Consumidor (<strong>Senacon</strong>) deflagrou em 23/set a <strong>Operação Carga Pesada</strong>, ação nacional de fiscalização de postos de combustíveis motivada por cerca de <strong>330 denúncias</strong> recebidas pela ANP sobre reajustes considerados abusivos. Com base em autos de fiscalização da própria ANP, a Senacon já abriu <strong>70 processos administrativos sancionadores</strong>, dando aos postos notificados 20 dias de prazo para apresentar defesa. Na véspera, terça (22/set), o governo reuniu mais de <strong>100 representantes de Procons</strong> estaduais e municipais para alinhar critérios de atuação em todo o país.",
+      "O foco declarado da operação não é o preço final cobrado na bomba, mas eventuais aumentos injustificados na margem de lucro do revendedor — prática que pode configurar infração ao Código de Defesa do Consumidor. Estados como Acre e Mato Grosso já deflagraram ações locais coordenadas com o esforço nacional. O <strong>diesel S-10</strong>, que subiu <strong>2,3%</strong> só na última semana pesquisada pela ANP (para R$7,13), concentra a atenção dos fiscais, segundo dados apresentados pela própria Senacon.",
+      "Para o revendedor, a recomendação é objetiva: <strong>documente com rigor a composição de custo de cada reajuste</strong> — CIF, frete, ICMS, PMPF e defasagem de fornecimento —, porque a fiscalização vai pedir essa memória de cálculo caso seu posto seja notificado. O mesmo canal (0800 970 0267 ou app ANP com Vc – Postos) recebe reclamações de consumidores em qualquer praça, então mantenha o quadro de preços e notas fiscais sempre auditáveis."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "politica": {
+    "headline": "MP 1.391 troca subsídio fixo do diesel por ciclos mensais; Fazenda define R$1,00/litro via Portaria 2.813",
+    "deck": "Regra da MP 1.363 — R$1,12/L por até 60 dias — vence nesta sexta (26/set) e dá lugar a um modelo mais flexível, e mais instável, de subvenção",
+    "body": [
+      "A <strong>MP 1.363/2026</strong>, que fixava a subvenção ao diesel rodoviário em <strong>R$1,12 por litro</strong> com vigência de até 60 dias, perde validade nesta sexta-feira, <strong>26 de setembro</strong>. Em seu lugar, o governo editou em 11/set a <strong>MP 1.391/2026</strong>, que transfere ao ministro da Fazenda a competência de definir o valor da subvenção por ato próprio, com ciclos de vigência de <strong>30 dias</strong>, prorrogáveis por igual período.",
+      "Na prática, a Fazenda já usou a nova competência: pela <strong>Portaria MF 2.813</strong>, fixou a subvenção em <strong>R$1,00 por litro</strong> — R$0,12 abaixo do valor anterior — para o ciclo que passa a valer com a nova MP. É a quinta medida provisória do ano destinada a baratear o diesel, dentro de um pacote que já soma <strong>R$27,4 bilhões</strong> autorizados em 2026 em subvenção econômica ao setor.",
+      "O revendedor perde o horizonte de dois meses da regra anterior e passa a depender de uma decisão que pode mudar a cada 30 dias, conforme o espaço fiscal do governo — não necessariamente conforme o preço internacional do diesel. Com a defasagem da Abicom ainda em <strong>R$3,89/L</strong>, <strong>acompanhe o Diário Oficial todo mês</strong>, não mais a cada dois: uma eventual redução ou não renovação do subsídio se traduz rapidamente em pressão de repasse na bomba."
+    ],
+    "carryover": true,
+    "opiniao": "Cortar o subsídio de R$1,12 para R$1,00 por litro logo na primeira rodada sob o novo modelo mensal já dá o tom: a flexibilidade criada pela MP 1.391 tende a ser usada para reduzir gasto fiscal, não para proteger o revendedor da volatilidade do diesel. Quem planejou a margem de outubro contando com o valor antigo já começa o mês no vermelho."
+  },
+  "economiaBrasil": {
+    "headline": "IPCA-15 de setembro sobe 0,70% e surpreende o mercado; inflação em 12 meses acelera a 4,47%",
+    "deck": "Resultado divulgado nesta sexta (25/set) pelo IBGE veio acima de todas as estimativas do mercado, puxado pela devolução do bônus de Itaipu na conta de luz",
+    "body": [
+      "O <strong>IPCA-15</strong>, prévia da inflação oficial, subiu <strong>0,70%</strong> em setembro, informou o <strong>IBGE</strong> nesta sexta-feira (25/set) — resultado acima de todo o intervalo de estimativas dos analistas consultados pelo Projeções Broadcast, que ia de 0,45% a 0,66% (mediana de 0,53%). No acumulado em 12 meses, o índice acelerou para <strong>4,47%</strong>, ante 4,24% no período imediatamente anterior, e no ano já soma alta de 3,82%.",
+      "O grupo <strong>Habitação</strong> foi o principal responsável pela surpresa altista, com a energia elétrica residencial subindo <strong>7,42%</strong> no mês — reflexo direto do fim do bônus da usina de Itaipu, que havia reduzido a conta de luz no mês anterior e agora devolve o efeito integral ao consumidor. O resultado chega dias depois de o Boletim Focus de 21/set já ter revisado a projeção de IPCA para o fim de 2026 para <strong>4,92%</strong> (ante 4,90%), reforçando o cenário de inflação mais resistente do que o mercado vinha precificando.",
+      "Para o revendedor, a leitura direta é sobre poder de compra e custo de energia: uma conta de luz mais cara pressiona o consumo do cliente final na loja de conveniência e eleva o custo operacional do próprio posto — iluminação, bombas, climatização. <strong>Revise o orçamento de energia do posto para outubro</strong> considerando esse repique, e monitore se o Copom, que cortou a Selic em 16/set, vai hesitar diante de uma inflação que já surpreende para cima logo na primeira leitura pós-corte."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "economiaInternacional": {
+    "headline": "Petróleo dispara com ataque houthi à Aramco em Yanbu, depois recua a US$103,90 com avanço em negociações EUA-Irã",
+    "deck": "Brent chegou a US$114,89 no pico da crise em 22/set e caiu 2,5% só nesta sexta, com exportações sauditas em recuperação e otimismo sobre um acordo com Teerã",
+    "body": [
+      "No sábado (19/set), rebeldes houthis do Iêmen lançaram duas operações contra a Arábia Saudita com mísseis balísticos, mísseis de cruzeiro e drones, atingindo instalações da <strong>Saudi Aramco em Yanbu</strong> e danificando o <strong>oleoduto East-West</strong>, que escoa cerca de 7 milhões de barris/dia. A Aramco suspendeu carregamentos em Yanbu, cancelou entregas a clientes europeus e passou a oferecer petróleo por transferência entre navios perto de Sohar, em Omã, para reduzir o impacto logístico.",
+      "O choque inicial levou o <strong>Brent</strong> a bater <strong>US$114,89</strong> em 22/set, mas o mercado reverteu com a mesma velocidade: exportações sauditas pelo Estreito de Hormuz voltaram a uma média de <strong>2,9 milhões de barris/dia</strong> nos últimos seis dias monitorados — ante apenas 700 mil em agosto —, e sinais de avanço em negociações diretas entre Washington e Teerã derrubaram os preços. Nesta sexta (25/set), o Brent caiu <strong>2,5%</strong>, fechando abaixo de <strong>US$104</strong> (US$103,90), e o WTI recuou <strong>2,52%</strong>, a <strong>US$92,23</strong> — queda de quase 9% frente à semana anterior.",
+      "A montanha-russa do petróleo nesta semana é o retrato do que o revendedor vai enfrentar até o fim do ano: choques de oferta rápidos, seguidos de recuos igualmente rápidos por diplomacia. <strong>Evite reagir a manchetes de pico</strong> — o próprio Brent subiu e caiu mais de 10% na mesma semana — e baseie decisões de compra de estoque na média móvel de dias, não no valor do dia do choque."
+    ],
+    "carryover": true,
+    "opiniao": "Um oleoduto saudita atacado e o Brent volta ao mesmo patamar da semana anterior em cinco dias — isso não é sinal de que o risco geopolítico passou, é sinal de que o mercado aprendeu a precificar essa guerra em horas, não semanas. A próxima notícia de ataque vai mexer no preço de novo, e mais rápido."
+  },
+  "varejo": {
+    "headline": "Confaz atualiza valores de referência do ICMS sobre combustíveis; novas regras valem a partir de 1º de outubro",
+    "deck": "Portaria publicada nesta sexta (25/set) no Diário Oficial altera o Preço Médio Ponderado ao Consumidor Final usado para calcular o imposto estadual",
+    "body": [
+      "O <strong>Conselho Nacional de Política Fazendária (Confaz)</strong> publicou nesta sexta-feira (25/set), no Diário Oficial da União, a atualização do <strong>Preço Médio Ponderado ao Consumidor Final (PMPF)</strong> — a base de cálculo usada pelos estados para cobrar o <strong>ICMS</strong> sobre combustíveis. A partir de <strong>1º de outubro</strong>, todos os estados e o Distrito Federal passam a usar os novos valores de referência.",
+      "O PMPF é atualizado periodicamente para acompanhar a variação de preços observada no mercado — e, com o diesel S-10 subindo <strong>2,3%</strong> só na última semana pesquisada pela ANP (a R$7,13) e a gasolina em leve alta (R$6,54), a tendência é que a nova tabela reflita valores de referência mais altos que os vigentes em setembro. Como o ICMS incide sobre o PMPF e não diretamente sobre o preço de venda, um PMPF mais alto pode elevar a carga tributária por litro mesmo sem mudança na política de preços do posto.",
+      "<strong>Confira a tabela de PMPF do seu estado antes de fechar a precificação de outubro</strong> — o impacto varia por unidade federativa, já que cada estado aplica sua própria alíquota sobre a base nacional. Postos que já operam com margem espremida pela defasagem recorde da Abicom (R$3,89/L no diesel) podem sentir esse ajuste tributário como um segundo aperto simultâneo, não isolado."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "automotivo": {
+    "headline": "Elétricos crescem no dobro do mercado em setembro; emplacamentos batem 90 mil unidades no semestre",
+    "deck": "Fenabrave registra alta de 7% nos elétricos no mês, ante 3,65% do mercado total; primeiro semestre acumula alta de 196% na comparação anual",
+    "body": [
+      "A <strong>Fenabrave</strong> registrou em setembro alta de <strong>7%</strong> nos emplacamentos de veículos elétricos, o dobro do crescimento de <strong>3,65%</strong> observado no total do mercado de veículos leves no mês. O acumulado do primeiro semestre de 2026 já soma mais de <strong>1 milhão</strong> de emplacamentos de veículos eletrificados no total, com alta de <strong>33,82%</strong> sobre igual período do ano passado — puxada pelos elétricos puros, que sozinhos somam <strong>90.470 unidades</strong>, salto de <strong>196%</strong> ante as 30.534 unidades de 2025.",
+      "A <strong>BYD</strong> segue líder isolada do segmento, com mais de <strong>70% do mercado de elétricos puros</strong> no país, e seu modelo compacto Dolphin Mini permanece entre os cinco carros mais vendidos da categoria. O avanço é impulsionado por programas de incentivo como o Carro Sustentável e pela concorrência crescente entre montadoras chinesas e tradicionais, que ampliaram o portfólio de modelos elétricos e híbridos disponíveis no varejo brasileiro ao longo de 2026.",
+      "Para o revendedor, o crescimento de eletrificados no dobro do ritmo do mercado total é um alerta de médio prazo sobre a composição do mix de vendas na bomba, especialmente em capitais e regiões metropolitanas de maior renda, onde a adoção é mais concentrada. <strong>Avalie a instalação de pontos de recarga rápida</strong> como diferencial competitivo — postos que já oferecem o serviço reportam maior tempo de permanência do cliente e consequente aumento de vendas na loja de conveniência."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "fontes": "Jornal Económico/XTB — Brent US$103,90, WTI US$92,23 (25/set/2026), TradingKey/TradingEconomics — WTI, DXY 101,06 pts, Bitcoin US$81.306 (25/set/2026), InfoMoney/Mercado Hoje — dólar R$5,18 (25/set/2026), Vittarthi — Ibovespa 183.100 pts, S&P 500 7.704,13, Nasdaq 26.939,37, Dow Jones 51.350,00 (25/set/2026), BCB/Focus — Selic 13,50% projeção 2026, IPCA 2026 4,92%, PIB 1,88% (21/set/2026), Federal Reserve/O Tempo — Fed Funds 3,75%-4,00% (16/set/2026), IBGE/InfoMoney/O Povo — IPCA-15 setembro +0,70%, 12m 4,47% (25/set/2026), O Povo — ANP gasolina R$6,54 e diesel S-10 R$7,13 (19/set/2026), Sindigás/imprensa regional — GLP P-13 reajustes de até 7% por dissídio (set/2026), CEPEA/ESALQ/Notícias Agrícolas — etanol hidratado R$1,1743 e anidro R$1,3043 SP, nova metodologia pós-Decreto 13.116/2026 (23-27/set/2026), Forbes Agro/Brasil Postos — defasagem Abicom diesel R$3,89/L recorde e gasolina acima de 40% (set/2026), Wikipedia/O Mundo Diplomático/Brasil247 — ataque houthi ao oleoduto East-West e à Aramco em Yanbu, recuperação de exportações sauditas via Hormuz (19-25/set/2026), CNN Brasil/Investing/Brasil247 — petróleo recua com otimismo sobre acordo EUA-Irã (21-25/set/2026), Poder360/TV Brasil/PIRANOT — Senacon deflagra Operação Carga Pesada, 70 processos contra postos (23/set/2026), Senado Notícias/Radar Finanças/O Tempo — MP 1.391/2026 e Portaria MF 2.813 fixam subvenção do diesel em R$1,00/L (11-16/set/2026), Agência Brasil/O Povo — Confaz atualiza PMPF do ICMS sobre combustíveis a partir de outubro (25/set/2026), CNN Brasil/evdrops — Fenabrave emplacamentos elétricos +7% em setembro, dobro do mercado total (set/2026)."
+}

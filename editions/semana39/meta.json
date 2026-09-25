@@ -1,0 +1,11 @@
+{
+  "edicao": 39,
+  "periodo": "20 a 26 / Set / 2026",
+  "friday": "2026-09-25",
+  "generated_at": "2026-09-25T19:54:19.223Z",
+  "fontes": "Jornal Económico/XTB — Brent US$103,90, WTI US$92,23 (25/set/2026), TradingKey/TradingEconomics — WTI, DXY 101,06 pts, Bitcoin US$81.306 (25/set/2026), InfoMoney/Mercado Hoje — dólar R$5,18 (25/set/2026), Vittarthi — Ibovespa 183.100 pts, S&P 500 7.704,13, Nasdaq 26.939,37, Dow Jones 51.350,00 (25/set/2026), BCB/Focus — Selic 13,50% projeção 2026, IPCA 2026 4,92%, PIB 1,88% (21/set/2026), Federal Reserve/O Tempo — Fed Funds 3,75%-4,00% (16/set/2026), IBGE/InfoMoney/O Povo — IPCA-15 setembro +0,70%, 12m 4,47% (25/set/2026), O Povo — ANP gasolina R$6,54 e diesel S-10 R$7,13 (19/set/2026), Sindigás/imprensa regional — GLP P-13 reajustes de até 7% por dissídio (set/2026), CEPEA/ESALQ/Notícias Agrícolas — etanol hidratado R$1,1743 e anidro R$1,3043 SP, nova metodologia pós-Decreto 13.116/2026 (23-27/set/2026), Forbes Agro/Brasil Postos — defasagem Abicom diesel R$3,89/L recorde e gasolina acima de 40% (set/2026), Wikipedia/O Mundo Diplomático/Brasil247 — ataque houthi ao oleoduto East-West e à Aramco em Yanbu, recuperação de exportações sauditas via Hormuz (19-25/set/2026), CNN Brasil/Investing/Brasil247 — petróleo recua com otimismo sobre acordo EUA-Irã (21-25/set/2026), Poder360/TV Brasil/PIRANOT — Senacon deflagra Operação Carga Pesada, 70 processos contra postos (23/set/2026), Senado Notícias/Radar Finanças/O Tempo — MP 1.391/2026 e Portaria MF 2.813 fixam subvenção do diesel em R$1,00/L (11-16/set/2026), Agência Brasil/O Povo — Confaz atualiza PMPF do ICMS sobre combustíveis a partir de outubro (25/set/2026), CNN Brasil/evdrops — Fenabrave emplacamentos elétricos +7% em setembro, dobro do mercado total (set/2026).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}
