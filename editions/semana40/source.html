@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>Posto em Dia | Edição 40 — Lumen Posto Club</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; background: #f5f0e3; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #111;
+    background: #f5f0e3;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .paper {
+    max-width: 660px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #e1d7b8;
+    padding-bottom: 24px;
+  }
+
+  /* ============ MASTHEAD ============ */
+  .masthead {
+    border-bottom: 3px double #003459;
+    padding: 22px 20px 14px;
+    text-align: center;
+    background: #ffffff;
+  }
+  .masthead .top-rule {
+    border-top: 6px solid #003459;
+    margin: -22px -20px 16px;
+  }
+  .masthead h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #111;
+  }
+  .masthead .subtitle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #555;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+  .masthead .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #d0d0d0;
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .masthead .meta .edicao { color: #003459; font-weight: 800; }
+
+  /* ============ SECTION HEADER ============ */
+  .section-header {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #003459;
+    padding: 0 20px;
+    margin: 28px 0 14px;
+    border-top: 2px solid #003459;
+    padding-top: 10px;
+  }
+  .section-header::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #d0d0d0;
+    margin: 8px -20px 0;
+  }
+
+  /* ============ INDICADORES FINANCEIROS (TABLOIDE DE COTAÇÕES) ============ */
+  .indic-wrap { padding: 0 20px; }
+  .indic-block {
+    margin-bottom: 14px;
+    border: 1px solid #d8d8d8;
+    background: #fbfbf7;
+  }
+  .indic-block-title {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #003459;
+    padding: 6px 10px;
+    font-weight: 700;
+  }
+  .indic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .indic {
+    padding: 9px 12px;
+    border-bottom: 1px solid #ecece4;
+    border-right: 1px solid #ecece4;
+  }
+  .indic:nth-child(2n) { border-right: none; }
+  .indic-full {
+    grid-column: span 2;
+    border-right: none;
+  }
+  .indic-name {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #555;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+  .indic-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .indic-value {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #111;
+  }
+  .indic-var {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .indic-var.up { color: #c0392b; }
+  .indic-var.up::before { content: "▲ "; color: #c0392b; }
+  .indic-var.down { color: #1e8449; }
+  .indic-var.down::before { content: "▼ "; color: #1e8449; }
+  .indic-var.neutral { font-style: italic; color: #777; }
+  .indic-var.pending { font-style: italic; color: #777; }
+  .indic-source {
+    font-size: 9px;
+    color: #888;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* ============ MANCHETES (5) ============ */
+  .manchetes-wrap { padding: 0 20px; }
+  .manchete {
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .manchete:first-child { border-top: none; padding-top: 6px; }
+  .manchete-num {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #003459;
+    line-height: 0.85;
+    min-width: 46px;
+    text-align: center;
+    margin-top: -2px;
+  }
+  .manchete-body { flex: 1; }
+  .manchete-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.22;
+    margin-bottom: 8px;
+  }
+  .manchete-summary {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #333;
+  }
+
+  /* ============ ARTIGOS LONGOS ============ */
+  .article {
+    padding: 0 20px;
+    margin-bottom: 6px;
+  }
+  .article-headline {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .article-deck {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .article-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+  .article-body p:first-of-type::first-letter {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    font-weight: 900;
+    float: left;
+    line-height: 0.9;
+    padding: 4px 8px 0 0;
+    color: #003459;
+  }
+  .article-body strong { color: #003459; }
+
+  /* ============ BLOCO LUMEN POSTO CLUB ============ */
+  .cta-club {
+    margin: 32px 20px 0;
+    background: #003459;
+    padding: 30px 24px;
+    color: #fff;
+    text-align: center;
+  }
+  .cta-club .kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #C9A84C;
+    margin-bottom: 12px;
+    font-weight: 800;
+  }
+  .cta-club .title {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.22;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .cta-club .sub {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cfd6dd;
+    margin-bottom: 22px;
+  }
+  .cta-club .links {
+    border-top: 1px solid #1d4467;
+    padding-top: 18px;
+  }
+  .cta-club .link-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #fff;
+    margin: 8px 0;
+    line-height: 1.4;
+  }
+  .cta-club .link-row .lbl {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #C9A84C;
+    font-weight: 800;
+  }
+  .cta-club .link-row .val {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* ============ COLOFON ============ */
+  .colofon {
+    text-align: center;
+    padding: 30px 20px 12px;
+    border-top: 2px solid #003459;
+    margin-top: 30px;
+  }
+  .colofon .brand {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .colofon .tagline {
+    font-style: italic;
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+    font-family: Georgia, serif;
+  }
+  .colofon .fontes {
+    font-size: 11px;
+    color: #666;
+    margin-top: 14px;
+    line-height: 1.5;
+    padding-top: 12px;
+    border-top: 1px solid #d0d0d0;
+  }
+  .colofon .fontes strong {
+    color: #003459;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ============ CARRYOVER BADGE + ANÁLISE DO EDITOR ============ */
+  .carryover-badge {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    border-left: 3px solid #C9A84C;
+    padding-left: 8px;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .article-opiniao {
+    margin-top: 20px;
+    padding: 14px 16px;
+    background: #f5f0e3;
+    border-left: 4px solid #003459;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .opiniao-label {
+    font-family: Georgia, serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #003459;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .article-opiniao p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+  }
+
+  /* ============ PDF PAGE BREAKS (evitar quebra no meio de blocos) ============ */
+  /* Truque-chave: overflow:hidden cria novo block-formatting-context, forçando o */
+  /* Chromium a respeitar break-inside (sem isso, ele ignora quando há grid/flex). */
+
+  .indic-block {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+  .indic-grid  { break-inside: avoid; page-break-inside: avoid; }
+  .indic       { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Section header não fica órfão no fim de página */
+  .section-header { break-after: avoid; page-break-after: avoid; break-inside: avoid; page-break-inside: avoid; }
+
+  /* Cada manchete (1-5) fica unida */
+  .manchete {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Cada matéria longa começa em página própria (são >400mm, não cabem juntas) */
+  .article {
+    page-break-before: always; break-before: page;
+    break-inside: auto; /* parágrafos quebram dentro, mas headline+deck protegidos abaixo */
+  }
+  .article:first-of-type { page-break-before: auto; break-before: auto; }
+
+  /* Headline + deck precisam ficar juntos com o início do corpo */
+  .article-headline {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-deck {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-body p {
+    break-inside: avoid; page-break-inside: avoid;
+    orphans: 3; widows: 3;
+  }
+
+  /* Bloco Verimo (rodapé editorial) em página própria */
+  .verimo {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Colofon (lista de fontes) em página própria */
+  .colofon {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<div class="paper">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="top-rule"></div>
+    <h1>Posto em Dia</h1>
+    <div class="subtitle">O Semanário do Revendedor de Combustíveis</div>
+    <div class="meta">
+      <span class="edicao">Edição 40</span>
+      <span>27 Set a 03 Out / 2026</span>
+    </div>
+  </div>
+
+  <!-- INDICADORES FINANCEIROS -->
+  <div class="section-header">Indicadores Financeiros</div>
+  <div class="indic-wrap">
+    <div class="indic-block">
+      <div class="indic-block-title">Petróleo &amp; Energia</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Brent (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 99,68</div>
+            <div class="indic-var down">-4,06% (semana, ante US$103,90); -2,57% (dia); caiu abaixo de US$100 após G7 anunciar liberação de reservas de diesel e petróleo em 02/out</div>
+          </div>
+          <div class="indic-source">TradingEconomics/Fortune (02/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">WTI (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 91,24</div>
+            <div class="indic-var down">-1,07% (semana, ante US$92,23); -1,76% (dia)</div>
+          </div>
+          <div class="indic-source">TradingEconomics (02/out)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Moedas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">USD/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 5,24</div>
+            <div class="indic-var up">+1,14% (semana, ante R$5,18)</div>
+          </div>
+          <div class="indic-source">Investing/InfoMoney (02/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">EUR/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 5,89</div>
+            <div class="indic-var down">-0,34% (semana, ante R$5,91)</div>
+          </div>
+          <div class="indic-source">Investing (02-03/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">DXY (Dollar Index)</div>
+          <div class="indic-row">
+            <div class="indic-value">101,94 pts</div>
+            <div class="indic-var up">+0,87% (semana, ante 101,06 pts); maior patamar em 18 meses</div>
+          </div>
+          <div class="indic-source">TradingEconomics (02/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Bitcoin (USD)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 84.543</div>
+            <div class="indic-var neutral">+3,98% (semana, ante US$81.306)</div>
+          </div>
+          <div class="indic-source">TradingEconomics (02/out)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Bolsas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Ibovespa</div>
+          <div class="indic-row">
+            <div class="indic-value">192.114,55 pts</div>
+            <div class="indic-var down">+4,71% (semana, ante 183.100); maior patamar desde abril, pré-eleições</div>
+          </div>
+          <div class="indic-source">InfoMoney/ADVFN (02/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">S&amp;P 500</div>
+          <div class="indic-row">
+            <div class="indic-value">7.722,72 pts</div>
+            <div class="indic-var down">+0,24% (semana, ante 7.704,13); payroll fraco dos EUA reduz chance de alta de juros</div>
+          </div>
+          <div class="indic-source">TheStreet/Yahoo Finance (02/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Nasdaq</div>
+          <div class="indic-row">
+            <div class="indic-value">27.190,86 pts</div>
+            <div class="indic-var down">+0,93% (semana, ante 26.939,37); recorde histórico puxado por tech</div>
+          </div>
+          <div class="indic-source">MoneyTimes (02/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Dow Jones</div>
+          <div class="indic-row">
+            <div class="indic-value">51.176,96 pts</div>
+            <div class="indic-var up">-0,34% (semana, ante 51.350,00)</div>
+          </div>
+          <div class="indic-source">ADVFN (02/out)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Juros &amp; Inflação</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Selic</div>
+          <div class="indic-row">
+            <div class="indic-value">13,75% a.a.</div>
+            <div class="indic-var neutral">mantida; sem reunião do Copom nesta semana, próxima esperada para meados de novembro</div>
+          </div>
+          <div class="indic-source">BCB (30/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Fed Funds</div>
+          <div class="indic-row">
+            <div class="indic-value">3,75% – 4,00%</div>
+            <div class="indic-var neutral">mantido; payroll de setembro mais fraco que o esperado reduz probabilidade de alta ainda em 2026</div>
+          </div>
+          <div class="indic-source">Federal Reserve/TheStreet (02/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Focus IPCA 2026</div>
+          <div class="indic-row">
+            <div class="indic-value">4,99%</div>
+            <div class="indic-var up">alta ante 4,92% da semana anterior</div>
+          </div>
+          <div class="indic-source">BCB Focus (28/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Focus PIB 2026</div>
+          <div class="indic-row">
+            <div class="indic-value">1,86%</div>
+            <div class="indic-var up">queda ante 1,88%; 3ª semana seguida de revisão para baixo (ante 1,92% quatro semanas atrás)</div>
+          </div>
+          <div class="indic-source">BCB Focus (28/set)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Preço na Bomba (ANP)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Gasolina C</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,55</div>
+            <div class="indic-var neutral">estável (0,00% na semana)</div>
+          </div>
+          <div class="indic-source">ANP Síntese Semanal ed.40 (27/set-03/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 4,13</div>
+            <div class="indic-var up">+0,73% (semana, ante R$4,10)</div>
+          </div>
+          <div class="indic-source">ANP Síntese Semanal ed.40 (27/set-03/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel B S10</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 7,35</div>
+            <div class="indic-var up">+0,27% (semana); +21,29% em 12 meses</div>
+          </div>
+          <div class="indic-source">ANP Síntese Semanal ed.40 (27/set-03/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">GLP P-13</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 114,88</div>
+            <div class="indic-var up">+0,07% (semana, ante R$114,80)</div>
+          </div>
+          <div class="indic-source">ANP Síntese Semanal ed.40 (27/set-03/out)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Usina (CEPEA/ESALQ)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado SP</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">CEPEA não publicou indicador com data confirmável para 27/set-03/out até o fechamento desta edição</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Anidro SP</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">CEPEA não publicou indicador com data confirmável para 27/set-03/out até o fechamento desta edição</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Defasagem Petrobras (Abicom)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Diesel</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 3,34/L (102%)</div>
+            <div class="indic-var up">recuou ante R$3,89/L da semana passada, acompanhando a queda do Brent; segue em nível historicamente alto</div>
+          </div>
+          <div class="indic-source">Abicom/BM&amp;C News (28/set)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Gasolina</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 0,95/L (32%)</div>
+            <div class="indic-var up">recuou ante 'acima de 40%' da semana passada</div>
+          </div>
+          <div class="indic-source">Abicom/Minaspetro (28/set)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 MANCHETES -->
+  <div class="section-header">As 5 Manchetes da Semana</div>
+  <div class="manchetes-wrap">
+    <div class="manchete">
+      <div class="manchete-num">1</div>
+      <div class="manchete-body">
+        <div class="manchete-title">G7 libera até 100 milhões de barris de diesel e petróleo das reservas emergenciais; Brent cai abaixo de US$100 pela primeira vez em semanas</div>
+        <div class="manchete-summary">Decisão tomada em 02/out, sob pressão dos EUA, derrubou o prêmio do diesel sobre o petróleo bruto de US$76,77 para US$69/barril. Brent fechou a semana em US$99,68 (-4,06%) e WTI em US$91,24. Goldman Sachs estima que a medida cobre só metade da alta recente do diesel.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">2</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Crise de diesel atinge 170 municípios do Rio Grande do Sul; ANP nega desabastecimento mas libera 14 milhões de litros extras</div>
+        <div class="manchete-summary">Um terço das cidades gaúchas relata falta de diesel e quatro já decretaram emergência, segundo a Famurs. A Farsul acionou a ANP pela segunda vez em duas semanas; a agência atribui o problema à logística de distribuição, não à falta de produto, mas liberou volume extra de diesel S500 em 29/set.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">3</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Governo eleva multa por preço abusivo de combustível a R$500 milhões após Operação Carga Pesada flagrar lucro de até 1.300%</div>
+        <div class="manchete-summary">MP publicada em 25/set rompe o teto de ~R$3,2 milhões do Código de Defesa do Consumidor. Balanço de 28/set mostra mais de R$700 milhões já aplicados a distribuidoras, na esteira dos 70 processos abertos pela Senacon contra postos na semana anterior.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">4</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Novo PMPF do ICMS sobre combustíveis entra em vigor em todo o país nesta semana</div>
+        <div class="manchete-summary">A atualização do Confaz, anunciada na sexta passada, passou a valer em 1º/out em todos os estados. Com diesel a R$7,35 (+0,27%) e GLP a R$114,88 (+0,07%) na semana, a nova base tributária tende a pressionar a carga de ICMS por litro.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">5</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Focus revisa PIB 2026 para baixo pela 3ª semana seguida e eleva projeção de inflação a 4,99%; Ibovespa ignora piora e bate 192 mil pontos</div>
+        <div class="manchete-summary">Boletim de 28/set reforça cenário de atividade mais fraca com preços resistentes. Mesmo assim, o Ibovespa fechou a semana em 192.114 pontos, maior patamar desde abril, impulsionado por payroll fraco nos EUA que reduziu a expectativa de juros mais altos.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MERCADO DE COMBUSTÍVEIS -->
+  <div class="section-header">Mercado de Combustíveis</div>
+    <div class="article">
+    <div class="article-headline">Crise de diesel no RS atinge 170 municípios e leva 4 a decretar emergência; ANP libera 14 milhões de litros extras</div>
+    <div class="article-deck">Farsul aciona a ANP pela segunda vez em duas semanas; agência nega desabastecimento e aponta problema logístico, mas plantio da safra de verão já sofre atrasos no campo</div>
+    <div class="article-body">
+      <p>Um terço dos municípios do <strong>Rio Grande do Sul</strong> — 170 cidades, segundo a Federação das Associações de Municípios (Famurs) — enfrenta dificuldades no abastecimento de diesel, com <strong>quatro já em decreto de emergência</strong>. A Federação da Agricultura do RS (<strong>Farsul</strong>) encaminhou em 25/set o segundo ofício em duas semanas à <strong>ANP</strong>, reforçando denúncias de restrições e atrasos na entrega de diesel a produtores — alerta que já havia sido feito em 11/set.</p>
+      <p>A <strong>ANP</strong> nega existir falta de produto e atribui o problema à distribuição, não à disponibilidade — mas, na prática, liberou em 29/set um volume extra de <strong>14 milhões de litros de diesel S500</strong> para aliviar a pressão no estado. No campo, a escassez já interrompeu o plantio de arroz em municípios como Pedras Altas, no momento crítico da safra de verão 2026/27. A crise ocorre na mesma semana em que a defasagem da Abicom no diesel segue em <strong>R$3,34/litro (102%)</strong> — ainda alta, mesmo com recuo ante os R$3,89 da semana passada.</p>
+      <p>Se seu posto opera no RS ou em rota de fronteira com o estado, <strong>negocie agora com a distribuidora um volume mínimo garantido para outubro</strong> e documente por escrito qualquer atraso de entrega — esse registro é o que sustenta uma reivindicação coletiva junto à Farsul ou ao sindicato local. Fora do RS, monitore o Diário Oficial: a combinação de defasagem recorde com crise logística regional é o tipo de cenário que precede racionamento em outras praças.</p>
+    </div>
+  </div>
+
+  <!-- POLÍTICA (notícia quente) -->
+  <div class="section-header">Política &middot; Quente</div>
+    <div class="article">
+    <div class="carryover-badge">Continuação · Semana anterior</div>
+    <div class="article-headline">Governo eleva multa por preço abusivo de combustível a R$500 milhões após flagrar lucro de até 1.300%</div>
+    <div class="article-deck">Medida sai na esteira da Operação Carga Pesada da Senacon; balanço de 28/set já soma mais de R$700 milhões em multas aplicadas a distribuidoras</div>
+    <div class="article-body">
+      <p>Medida Provisória publicada em <strong>25/set</strong> elevou o teto da multa administrativa por 'abuso' no preço de combustíveis — aumentos sem justa causa — de cerca de <strong>R$3,2 milhões</strong> (limite do Código de Defesa do Consumidor) para até <strong>R$500 milhões</strong>. A mudança é resposta direta à <strong>Operação Carga Pesada</strong>, deflagrada pela Senacon em 23/set, que identificou casos de aumento de margem de lucro de até <strong>1.300%</strong> no setor.</p>
+      <p>No balanço apresentado em 28/set, o governo já soma <strong>mais de R$700 milhões</strong> em multas aplicadas a distribuidoras de combustíveis. A mudança de teto é relevante porque o limite anterior, baseado no CDC, funcionava como simples custo operacional para grandes distribuidoras — valor pequeno demais para alterar comportamento. O novo teto muda esse cálculo de risco, e vem somar-se aos <strong>70 processos administrativos</strong> já abertos pela Senacon contra postos na semana passada.</p>
+      <p>A recomendação permanece a mesma de duas semanas atrás, agora com apostas mais altas: <strong>documente com rigor a composição de custo de cada reajuste</strong> — CIF, frete, ICMS, PMPF e defasagem de fornecimento. Com multas que agora podem chegar a centenas de milhões, a diferença entre um reajuste justificável e um 'abuso' vai se decidir exatamente nessa memória de cálculo.</p>
+    </div>
+    <div class="article-opiniao"><span class="opiniao-label">Análise do editor</span><p>Trocar o teto de R$3,2 milhões do CDC por um teto de R$500 milhões não é só retórica: é a diferença entre multa que distribuidora grande absorve como custo do negócio e multa que de fato pesa no balanço. Mas o alvo da fiscalização continua sendo a margem, não o preço na bomba — quem não documenta reajuste já começa a semana em desvantagem.</p></div>
+  </div>
+
+  <!-- ECONOMIA BRASIL -->
+  <div class="section-header">Economia · Brasil</div>
+    <div class="article">
+    <div class="article-headline">Focus revisa PIB 2026 para baixo pela 3ª semana seguida e eleva projeção de inflação a 4,99%</div>
+    <div class="article-deck">Boletim de 28/set reforça cenário de atividade mais fraca com preços resistentes, enquanto Ibovespa ignora a piora e bate 192 mil pontos</div>
+    <div class="article-body">
+      <p>O <strong>Boletim Focus</strong> de 28/set revisou a projeção de crescimento do PIB em 2026 de <strong>1,88% para 1,86%</strong> — terceira semana seguida de queda, ante 1,92% havia quatro semanas. No mesmo relatório, a projeção de <strong>IPCA 2026</strong> subiu de 4,92% para <strong>4,99%</strong>, reforçando o que analistas vêm chamando de combinação ruim para a economia: atividade perdendo fôlego enquanto preços, sobretudo de serviços, seguem resistentes.</p>
+      <p>Na contramão desse diagnóstico, o <strong>Ibovespa</strong> fechou a semana em <strong>192.114,55 pontos</strong> (+4,71%), o maior patamar desde abril, véspera do período eleitoral. O movimento foi puxado por um payroll americano mais fraco que o esperado, que reduziu a expectativa de alta de juros nos EUA e turbinou o apetite por risco — não por uma melhora na atividade ou no consumo domésticos.</p>
+      <p>Para o revendedor, a leitura é clara: <strong>não confunda euforia de bolsa com poder de compra do seu cliente</strong>. O Ibovespa em alta reflete expectativa de juros internacionais, enquanto o Focus mostra um brasileiro com menos renda disponível e inflação mais resistente pela frente. Revise a projeção de vendas da loja de conveniência para o último trimestre considerando esse consumo mais fraco, não o rali da bolsa.</p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA INTERNACIONAL -->
+  <div class="section-header">Economia · Internacional</div>
+    <div class="article">
+    <div class="carryover-badge">Continuação · Semana anterior</div>
+    <div class="article-headline">G7 libera até 100 milhões de barris de diesel e petróleo para conter crise energética; Brent cai abaixo de US$100</div>
+    <div class="article-deck">Decisão de 02/out, tomada sob pressão dos EUA, derruba o prêmio do diesel sobre o petróleo bruto, mas Goldman Sachs vê alívio apenas parcial</div>
+    <div class="article-body">
+      <p>Os países do <strong>G7</strong> concordaram, em <strong>02/out</strong>, em liberar até <strong>100 milhões de barris</strong> de diesel e petróleo bruto das reservas estratégicas ao longo de quatro meses, com a maior parte do diesel sendo disponibilizada já nos primeiros 20 dias. A decisão veio depois que os <strong>EUA</strong> cogitaram proibir a exportação de diesel caso a Europa não liberasse mais estoques — ameaça que colocaria em risco uma fonte crucial de abastecimento para o continente.</p>
+      <p>O anúncio derrubou imediatamente o prêmio do diesel sobre o petróleo bruto, de <strong>US$76,77 para US$69/barril</strong>. O <strong>Brent</strong> fechou a semana em <strong>US$99,68</strong> (-4,06%, primeira vez abaixo de US$100 em semanas) e o <strong>WTI</strong> em <strong>US$91,24</strong> (-1,07%). Mas o banco <strong>Goldman Sachs</strong> já alertou que a liberação deve compensar apenas <strong>metade</strong> da alta recente do diesel — o alívio é parcial, não uma reversão da crise.</p>
+      <p>A mesma cautela da semana passada continua valendo: <strong>não trate a queda do Brent como fim da pressão no diesel</strong>. A defasagem da Abicom segue em R$3,34/litro, e a crise de abastecimento que atinge o Rio Grande do Sul nesta mesma semana mostra que o problema de oferta é local e logístico, não apenas de preço internacional — o anúncio de Washington não resolve isso sozinho.</p>
+    </div>
+    <div class="article-opiniao"><span class="opiniao-label">Análise do editor</span><p>G7 liberando 100 milhões de barris é notícia de alívio, mas o próprio Goldman Sachs já avisou: cobre metade do problema. Enquanto isso, o diesel no Brasil segue R$3,34 abaixo da paridade — a crise no Rio Grande do Sul desta semana é o primeiro sintoma de um problema que o anúncio de Washington não resolve sozinho.</p></div>
+  </div>
+
+  <!-- VAREJO -->
+  <div class="section-header">Varejo</div>
+    <div class="article">
+    <div class="carryover-badge">Continuação · Semana anterior</div>
+    <div class="article-headline">Novo PMPF do ICMS sobre combustíveis entra em vigor em todo o país nesta semana</div>
+    <div class="article-deck">Atualização do Confaz anunciada na sexta passada passou a valer em 1º de outubro, com diesel e GLP em alta pressionando a base de cálculo do imposto</div>
+    <div class="article-body">
+      <p>A atualização do <strong>Preço Médio Ponderado ao Consumidor Final (PMPF)</strong>, publicada pelo <strong>Confaz</strong> em 25/set, entrou em vigor em <strong>1º de outubro</strong> em todos os estados e no Distrito Federal. O PMPF é a base sobre a qual incide o <strong>ICMS monofásico</strong> dos combustíveis — e, com o diesel B S10 cotado a R$7,35 (+0,27% na semana) e o GLP P-13 a R$114,88 (+0,07%), segundo a síntese semanal da ANP, a tendência é de base tributária mais alta que a vigente em setembro.</p>
+      <p>A própria ANP detalha a composição do preço médio nacional: no diesel, o tributo estadual específico é de <strong>R$1,17/litro</strong> e o federal de <strong>R$0,32/litro</strong>, restando <strong>R$1,83/litro</strong> de margem estimada de distribuição e revenda sobre os R$7,35 cobrados. Na gasolina C, o tributo estadual é de <strong>R$1,57/litro</strong>. Como o ICMS incide sobre o PMPF e não diretamente sobre o preço praticado, um PMPF mais alto pode elevar a carga tributária por litro mesmo sem qualquer mudança na política de preço do posto.</p>
+      <p><strong>Confira a tabela de PMPF do seu estado no Confaz antes de fechar a precificação de outubro</strong> e cruze com a composição de preço da ANP para saber exatamente quanto sobra de margem líquida depois do novo imposto. Postos que já operam espremidos pela defasagem de R$3,34/litro no diesel podem sentir esse ajuste tributário como um segundo aperto simultâneo.</p>
+    </div>
+  </div>
+
+  <!-- AUTOMOTIVO -->
+  <div class="section-header">Automotivo</div>
+    <div class="article">
+    <div class="article-headline">Emplacamentos de veículos leves sobem 2% em setembro e avançam 16% no ano; pesados crescem 7,2%</div>
+    <div class="article-deck">Mercado soma 267 mil unidades no mês, segundo levantamento K.LUME/Fenabrave, com alta mais forte em caminhões — sinal de mais demanda por diesel rodoviário</div>
+    <div class="article-body">
+      <p>O mercado brasileiro de carros e comerciais leves fechou <strong>setembro de 2026</strong> com <strong>267.469 emplacamentos</strong>, segundo levantamento da consultoria K.LUME divulgado em 02/out — alta de <strong>2,0%</strong> sobre agosto e de <strong>16,0%</strong> sobre setembro de 2025. Do total, 216.452 foram carros de passeio e 51.017, comerciais leves. O segmento de <strong>veículos pesados</strong> teve resultado ainda mais forte: <strong>13.993 unidades</strong> emplacadas, avanço de <strong>7,2%</strong> sobre agosto.</p>
+      <p>O crescimento mais acentuado em pesados é um sinal direto de que a frota de transporte de carga está se expandindo justamente na semana em que o Rio Grande do Sul enfrenta restrição de diesel e a defasagem da Abicom segue em R$3,34/litro. Mais caminhões rodando significa mais pressão sobre um produto que já mostra sinais de estresse logístico em pelo menos uma região do país.</p>
+      <p>Se o seu posto fica em rota de transporte de carga ou próximo a polos de distribuição, <strong>negocie com a distribuidora um volume mínimo garantido de diesel S10 para outubro desde já</strong> — antes que o aumento da frota pressione ainda mais a logística de entrega em um cenário que, como mostra o caso gaúcho, já está no limite em alguns pontos do país.</p>
+    </div>
+  </div>
+
+  <!-- LUMEN POSTO CLUB -->
+  <div class="cta-club">
+    <div class="kicker">Lumen Posto Club</div>
+    <div class="title">Inteligência semanal pro revendedor de combustíveis</div>
+    <div class="sub">Newsletter semanal, painel diário de cotações, comunidade de revendedores e as análises do Ramsés sobre o mercado de combustíveis no Brasil.</div>
+    <div class="links">
+      <div class="link-row">
+        <span class="lbl">Site</span>
+        <a href="https://lumenpostoclub.com.br" class="val">lumenpostoclub.com.br</a>
+      </div>
+      <div class="link-row">
+        <span class="lbl">Instagram</span>
+        <a href="https://instagram.com/eusouramses" class="val">@eusouramses</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLOFON -->
+  <div class="colofon">
+    <div class="brand">Lumen Posto Club</div>
+    <div class="tagline">Inteligência semanal para o revendedor de combustíveis</div>
+    <div class="fontes">
+      <strong>Fontes consultadas nesta edição</strong>
+      TradingEconomics/Fortune — Brent US$99,68, WTI US$91,24 (02/out/2026), Investing/InfoMoney — dólar R$5,24, euro R$5,89 (02-03/out/2026), TradingEconomics — DXY 101,94 pts, Bitcoin US$84.543 (02/out/2026), InfoMoney/ADVFN/TheStreet/MoneyTimes — Ibovespa 192.114,55 pts, S&amp;P 500 7.722,72, Nasdaq 27.190,86, Dow Jones 51.176,96 (02/out/2026), BCB/Focus — Selic 13,75%, IPCA 2026 4,99%, PIB 2026 1,86% (28/set-30/set/2026), Federal Reserve/TheStreet — Fed Funds 3,75%-4,00%, payroll de setembro (02/out/2026), ANP — Síntese Semanal de Preços dos Combustíveis, Edição 40/2026, gasolina R$6,55, etanol hidratado R$4,13, diesel B S10 R$7,35, GLP P-13 R$114,88 (semana de 27/set a 03/out/2026), Abicom/BM&amp;C News/Minaspetro — defasagem Petrobras diesel R$3,34/L (102%) e gasolina R$0,95/L (32%) (28/set/2026), Farsul/Famurs/Agência Brasil/Grupo Ceres/Canal Rural — crise de diesel no Rio Grande do Sul, 170 municípios, 4 decretos de emergência, ANP libera 14 milhões de litros (25-29/set/2026), O Povo/NDMais/Times Brasil/CNN Brasil — multa por preço abusivo de combustível elevada a R$500 milhões, R$700 milhões já aplicados (25-28/set/2026), Agência Brasil/O Povo — PMPF do ICMS sobre combustíveis em vigor desde 1º/out/2026, Forbes/Brasil em Folhas/Discovery Alert — G7 libera 100 milhões de barris de diesel e petróleo, prêmio do diesel cai de US$76,77 a US$69/barril (02/out/2026), K.LUME/O Tempo/Reparação Automotiva — emplacamentos de veículos leves e pesados em setembro de 2026 (02/out/2026).
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

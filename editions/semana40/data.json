@@ -1,0 +1,287 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 99,68",
+          "variation": "-4,06% (semana, ante US$103,90); -2,57% (dia); caiu abaixo de US$100 após G7 anunciar liberação de reservas de diesel e petróleo em 02/out",
+          "direction": "down",
+          "source": "TradingEconomics/Fortune (02/out)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 91,24",
+          "variation": "-1,07% (semana, ante US$92,23); -1,76% (dia)",
+          "direction": "down",
+          "source": "TradingEconomics (02/out)"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,24",
+          "variation": "+1,14% (semana, ante R$5,18)",
+          "direction": "up",
+          "source": "Investing/InfoMoney (02/out)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 5,89",
+          "variation": "-0,34% (semana, ante R$5,91)",
+          "direction": "down",
+          "source": "Investing (02-03/out)"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": "101,94 pts",
+          "variation": "+0,87% (semana, ante 101,06 pts); maior patamar em 18 meses",
+          "direction": "up",
+          "source": "TradingEconomics (02/out)"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "US$ 84.543",
+          "variation": "+3,98% (semana, ante US$81.306)",
+          "direction": "neutral",
+          "source": "TradingEconomics (02/out)"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "192.114,55 pts",
+          "variation": "+4,71% (semana, ante 183.100); maior patamar desde abril, pré-eleições",
+          "direction": "down",
+          "source": "InfoMoney/ADVFN (02/out)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.722,72 pts",
+          "variation": "+0,24% (semana, ante 7.704,13); payroll fraco dos EUA reduz chance de alta de juros",
+          "direction": "down",
+          "source": "TheStreet/Yahoo Finance (02/out)"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "27.190,86 pts",
+          "variation": "+0,93% (semana, ante 26.939,37); recorde histórico puxado por tech",
+          "direction": "down",
+          "source": "MoneyTimes (02/out)"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "51.176,96 pts",
+          "variation": "-0,34% (semana, ante 51.350,00)",
+          "direction": "up",
+          "source": "ADVFN (02/out)"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "13,75% a.a.",
+          "variation": "mantida; sem reunião do Copom nesta semana, próxima esperada para meados de novembro",
+          "direction": "neutral",
+          "source": "BCB (30/set)"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,75% – 4,00%",
+          "variation": "mantido; payroll de setembro mais fraco que o esperado reduz probabilidade de alta ainda em 2026",
+          "direction": "neutral",
+          "source": "Federal Reserve/TheStreet (02/out)"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "4,99%",
+          "variation": "alta ante 4,92% da semana anterior",
+          "direction": "up",
+          "source": "BCB Focus (28/set)"
+        },
+        {
+          "name": "Focus PIB 2026",
+          "value": "1,86%",
+          "variation": "queda ante 1,88%; 3ª semana seguida de revisão para baixo (ante 1,92% quatro semanas atrás)",
+          "direction": "up",
+          "source": "BCB Focus (28/set)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": "R$ 6,55",
+          "variation": "estável (0,00% na semana)",
+          "direction": "neutral",
+          "source": "ANP Síntese Semanal ed.40 (27/set-03/out)"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": "R$ 4,13",
+          "variation": "+0,73% (semana, ante R$4,10)",
+          "direction": "up",
+          "source": "ANP Síntese Semanal ed.40 (27/set-03/out)"
+        },
+        {
+          "name": "Diesel B S10",
+          "value": "R$ 7,35",
+          "variation": "+0,27% (semana); +21,29% em 12 meses",
+          "direction": "up",
+          "source": "ANP Síntese Semanal ed.40 (27/set-03/out)"
+        },
+        {
+          "name": "GLP P-13",
+          "value": "R$ 114,88",
+          "variation": "+0,07% (semana, ante R$114,80)",
+          "direction": "up",
+          "source": "ANP Síntese Semanal ed.40 (27/set-03/out)"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": null,
+          "variation": null,
+          "direction": "pending",
+          "source": "CEPEA não publicou indicador com data confirmável para 27/set-03/out até o fechamento desta edição"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": null,
+          "variation": null,
+          "direction": "pending",
+          "source": "CEPEA não publicou indicador com data confirmável para 27/set-03/out até o fechamento desta edição"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "R$ 3,34/L (102%)",
+          "variation": "recuou ante R$3,89/L da semana passada, acompanhando a queda do Brent; segue em nível historicamente alto",
+          "direction": "up",
+          "source": "Abicom/BM&C News (28/set)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "R$ 0,95/L (32%)",
+          "variation": "recuou ante 'acima de 40%' da semana passada",
+          "direction": "up",
+          "source": "Abicom/Minaspetro (28/set)"
+        }
+      ]
+    }
+  ],
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "G7 libera até 100 milhões de barris de diesel e petróleo das reservas emergenciais; Brent cai abaixo de US$100 pela primeira vez em semanas",
+      "resumo": "Decisão tomada em 02/out, sob pressão dos EUA, derrubou o prêmio do diesel sobre o petróleo bruto de US$76,77 para US$69/barril. Brent fechou a semana em US$99,68 (-4,06%) e WTI em US$91,24. Goldman Sachs estima que a medida cobre só metade da alta recente do diesel."
+    },
+    {
+      "numero": 2,
+      "headline": "Crise de diesel atinge 170 municípios do Rio Grande do Sul; ANP nega desabastecimento mas libera 14 milhões de litros extras",
+      "resumo": "Um terço das cidades gaúchas relata falta de diesel e quatro já decretaram emergência, segundo a Famurs. A Farsul acionou a ANP pela segunda vez em duas semanas; a agência atribui o problema à logística de distribuição, não à falta de produto, mas liberou volume extra de diesel S500 em 29/set."
+    },
+    {
+      "numero": 3,
+      "headline": "Governo eleva multa por preço abusivo de combustível a R$500 milhões após Operação Carga Pesada flagrar lucro de até 1.300%",
+      "resumo": "MP publicada em 25/set rompe o teto de ~R$3,2 milhões do Código de Defesa do Consumidor. Balanço de 28/set mostra mais de R$700 milhões já aplicados a distribuidoras, na esteira dos 70 processos abertos pela Senacon contra postos na semana anterior."
+    },
+    {
+      "numero": 4,
+      "headline": "Novo PMPF do ICMS sobre combustíveis entra em vigor em todo o país nesta semana",
+      "resumo": "A atualização do Confaz, anunciada na sexta passada, passou a valer em 1º/out em todos os estados. Com diesel a R$7,35 (+0,27%) e GLP a R$114,88 (+0,07%) na semana, a nova base tributária tende a pressionar a carga de ICMS por litro."
+    },
+    {
+      "numero": 5,
+      "headline": "Focus revisa PIB 2026 para baixo pela 3ª semana seguida e eleva projeção de inflação a 4,99%; Ibovespa ignora piora e bate 192 mil pontos",
+      "resumo": "Boletim de 28/set reforça cenário de atividade mais fraca com preços resistentes. Mesmo assim, o Ibovespa fechou a semana em 192.114 pontos, maior patamar desde abril, impulsionado por payroll fraco nos EUA que reduziu a expectativa de juros mais altos."
+    }
+  ],
+  "mercado": {
+    "headline": "Crise de diesel no RS atinge 170 municípios e leva 4 a decretar emergência; ANP libera 14 milhões de litros extras",
+    "deck": "Farsul aciona a ANP pela segunda vez em duas semanas; agência nega desabastecimento e aponta problema logístico, mas plantio da safra de verão já sofre atrasos no campo",
+    "body": [
+      "Um terço dos municípios do <strong>Rio Grande do Sul</strong> — 170 cidades, segundo a Federação das Associações de Municípios (Famurs) — enfrenta dificuldades no abastecimento de diesel, com <strong>quatro já em decreto de emergência</strong>. A Federação da Agricultura do RS (<strong>Farsul</strong>) encaminhou em 25/set o segundo ofício em duas semanas à <strong>ANP</strong>, reforçando denúncias de restrições e atrasos na entrega de diesel a produtores — alerta que já havia sido feito em 11/set.",
+      "A <strong>ANP</strong> nega existir falta de produto e atribui o problema à distribuição, não à disponibilidade — mas, na prática, liberou em 29/set um volume extra de <strong>14 milhões de litros de diesel S500</strong> para aliviar a pressão no estado. No campo, a escassez já interrompeu o plantio de arroz em municípios como Pedras Altas, no momento crítico da safra de verão 2026/27. A crise ocorre na mesma semana em que a defasagem da Abicom no diesel segue em <strong>R$3,34/litro (102%)</strong> — ainda alta, mesmo com recuo ante os R$3,89 da semana passada.",
+      "Se seu posto opera no RS ou em rota de fronteira com o estado, <strong>negocie agora com a distribuidora um volume mínimo garantido para outubro</strong> e documente por escrito qualquer atraso de entrega — esse registro é o que sustenta uma reivindicação coletiva junto à Farsul ou ao sindicato local. Fora do RS, monitore o Diário Oficial: a combinação de defasagem recorde com crise logística regional é o tipo de cenário que precede racionamento em outras praças."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "politica": {
+    "headline": "Governo eleva multa por preço abusivo de combustível a R$500 milhões após flagrar lucro de até 1.300%",
+    "deck": "Medida sai na esteira da Operação Carga Pesada da Senacon; balanço de 28/set já soma mais de R$700 milhões em multas aplicadas a distribuidoras",
+    "body": [
+      "Medida Provisória publicada em <strong>25/set</strong> elevou o teto da multa administrativa por 'abuso' no preço de combustíveis — aumentos sem justa causa — de cerca de <strong>R$3,2 milhões</strong> (limite do Código de Defesa do Consumidor) para até <strong>R$500 milhões</strong>. A mudança é resposta direta à <strong>Operação Carga Pesada</strong>, deflagrada pela Senacon em 23/set, que identificou casos de aumento de margem de lucro de até <strong>1.300%</strong> no setor.",
+      "No balanço apresentado em 28/set, o governo já soma <strong>mais de R$700 milhões</strong> em multas aplicadas a distribuidoras de combustíveis. A mudança de teto é relevante porque o limite anterior, baseado no CDC, funcionava como simples custo operacional para grandes distribuidoras — valor pequeno demais para alterar comportamento. O novo teto muda esse cálculo de risco, e vem somar-se aos <strong>70 processos administrativos</strong> já abertos pela Senacon contra postos na semana passada.",
+      "A recomendação permanece a mesma de duas semanas atrás, agora com apostas mais altas: <strong>documente com rigor a composição de custo de cada reajuste</strong> — CIF, frete, ICMS, PMPF e defasagem de fornecimento. Com multas que agora podem chegar a centenas de milhões, a diferença entre um reajuste justificável e um 'abuso' vai se decidir exatamente nessa memória de cálculo."
+    ],
+    "carryover": true,
+    "opiniao": "Trocar o teto de R$3,2 milhões do CDC por um teto de R$500 milhões não é só retórica: é a diferença entre multa que distribuidora grande absorve como custo do negócio e multa que de fato pesa no balanço. Mas o alvo da fiscalização continua sendo a margem, não o preço na bomba — quem não documenta reajuste já começa a semana em desvantagem."
+  },
+  "economiaBrasil": {
+    "headline": "Focus revisa PIB 2026 para baixo pela 3ª semana seguida e eleva projeção de inflação a 4,99%",
+    "deck": "Boletim de 28/set reforça cenário de atividade mais fraca com preços resistentes, enquanto Ibovespa ignora a piora e bate 192 mil pontos",
+    "body": [
+      "O <strong>Boletim Focus</strong> de 28/set revisou a projeção de crescimento do PIB em 2026 de <strong>1,88% para 1,86%</strong> — terceira semana seguida de queda, ante 1,92% havia quatro semanas. No mesmo relatório, a projeção de <strong>IPCA 2026</strong> subiu de 4,92% para <strong>4,99%</strong>, reforçando o que analistas vêm chamando de combinação ruim para a economia: atividade perdendo fôlego enquanto preços, sobretudo de serviços, seguem resistentes.",
+      "Na contramão desse diagnóstico, o <strong>Ibovespa</strong> fechou a semana em <strong>192.114,55 pontos</strong> (+4,71%), o maior patamar desde abril, véspera do período eleitoral. O movimento foi puxado por um payroll americano mais fraco que o esperado, que reduziu a expectativa de alta de juros nos EUA e turbinou o apetite por risco — não por uma melhora na atividade ou no consumo domésticos.",
+      "Para o revendedor, a leitura é clara: <strong>não confunda euforia de bolsa com poder de compra do seu cliente</strong>. O Ibovespa em alta reflete expectativa de juros internacionais, enquanto o Focus mostra um brasileiro com menos renda disponível e inflação mais resistente pela frente. Revise a projeção de vendas da loja de conveniência para o último trimestre considerando esse consumo mais fraco, não o rali da bolsa."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "economiaInternacional": {
+    "headline": "G7 libera até 100 milhões de barris de diesel e petróleo para conter crise energética; Brent cai abaixo de US$100",
+    "deck": "Decisão de 02/out, tomada sob pressão dos EUA, derruba o prêmio do diesel sobre o petróleo bruto, mas Goldman Sachs vê alívio apenas parcial",
+    "body": [
+      "Os países do <strong>G7</strong> concordaram, em <strong>02/out</strong>, em liberar até <strong>100 milhões de barris</strong> de diesel e petróleo bruto das reservas estratégicas ao longo de quatro meses, com a maior parte do diesel sendo disponibilizada já nos primeiros 20 dias. A decisão veio depois que os <strong>EUA</strong> cogitaram proibir a exportação de diesel caso a Europa não liberasse mais estoques — ameaça que colocaria em risco uma fonte crucial de abastecimento para o continente.",
+      "O anúncio derrubou imediatamente o prêmio do diesel sobre o petróleo bruto, de <strong>US$76,77 para US$69/barril</strong>. O <strong>Brent</strong> fechou a semana em <strong>US$99,68</strong> (-4,06%, primeira vez abaixo de US$100 em semanas) e o <strong>WTI</strong> em <strong>US$91,24</strong> (-1,07%). Mas o banco <strong>Goldman Sachs</strong> já alertou que a liberação deve compensar apenas <strong>metade</strong> da alta recente do diesel — o alívio é parcial, não uma reversão da crise.",
+      "A mesma cautela da semana passada continua valendo: <strong>não trate a queda do Brent como fim da pressão no diesel</strong>. A defasagem da Abicom segue em R$3,34/litro, e a crise de abastecimento que atinge o Rio Grande do Sul nesta mesma semana mostra que o problema de oferta é local e logístico, não apenas de preço internacional — o anúncio de Washington não resolve isso sozinho."
+    ],
+    "carryover": true,
+    "opiniao": "G7 liberando 100 milhões de barris é notícia de alívio, mas o próprio Goldman Sachs já avisou: cobre metade do problema. Enquanto isso, o diesel no Brasil segue R$3,34 abaixo da paridade — a crise no Rio Grande do Sul desta semana é o primeiro sintoma de um problema que o anúncio de Washington não resolve sozinho."
+  },
+  "varejo": {
+    "headline": "Novo PMPF do ICMS sobre combustíveis entra em vigor em todo o país nesta semana",
+    "deck": "Atualização do Confaz anunciada na sexta passada passou a valer em 1º de outubro, com diesel e GLP em alta pressionando a base de cálculo do imposto",
+    "body": [
+      "A atualização do <strong>Preço Médio Ponderado ao Consumidor Final (PMPF)</strong>, publicada pelo <strong>Confaz</strong> em 25/set, entrou em vigor em <strong>1º de outubro</strong> em todos os estados e no Distrito Federal. O PMPF é a base sobre a qual incide o <strong>ICMS monofásico</strong> dos combustíveis — e, com o diesel B S10 cotado a R$7,35 (+0,27% na semana) e o GLP P-13 a R$114,88 (+0,07%), segundo a síntese semanal da ANP, a tendência é de base tributária mais alta que a vigente em setembro.",
+      "A própria ANP detalha a composição do preço médio nacional: no diesel, o tributo estadual específico é de <strong>R$1,17/litro</strong> e o federal de <strong>R$0,32/litro</strong>, restando <strong>R$1,83/litro</strong> de margem estimada de distribuição e revenda sobre os R$7,35 cobrados. Na gasolina C, o tributo estadual é de <strong>R$1,57/litro</strong>. Como o ICMS incide sobre o PMPF e não diretamente sobre o preço praticado, um PMPF mais alto pode elevar a carga tributária por litro mesmo sem qualquer mudança na política de preço do posto.",
+      "<strong>Confira a tabela de PMPF do seu estado no Confaz antes de fechar a precificação de outubro</strong> e cruze com a composição de preço da ANP para saber exatamente quanto sobra de margem líquida depois do novo imposto. Postos que já operam espremidos pela defasagem de R$3,34/litro no diesel podem sentir esse ajuste tributário como um segundo aperto simultâneo."
+    ],
+    "carryover": true,
+    "opiniao": null
+  },
+  "automotivo": {
+    "headline": "Emplacamentos de veículos leves sobem 2% em setembro e avançam 16% no ano; pesados crescem 7,2%",
+    "deck": "Mercado soma 267 mil unidades no mês, segundo levantamento K.LUME/Fenabrave, com alta mais forte em caminhões — sinal de mais demanda por diesel rodoviário",
+    "body": [
+      "O mercado brasileiro de carros e comerciais leves fechou <strong>setembro de 2026</strong> com <strong>267.469 emplacamentos</strong>, segundo levantamento da consultoria K.LUME divulgado em 02/out — alta de <strong>2,0%</strong> sobre agosto e de <strong>16,0%</strong> sobre setembro de 2025. Do total, 216.452 foram carros de passeio e 51.017, comerciais leves. O segmento de <strong>veículos pesados</strong> teve resultado ainda mais forte: <strong>13.993 unidades</strong> emplacadas, avanço de <strong>7,2%</strong> sobre agosto.",
+      "O crescimento mais acentuado em pesados é um sinal direto de que a frota de transporte de carga está se expandindo justamente na semana em que o Rio Grande do Sul enfrenta restrição de diesel e a defasagem da Abicom segue em R$3,34/litro. Mais caminhões rodando significa mais pressão sobre um produto que já mostra sinais de estresse logístico em pelo menos uma região do país.",
+      "Se o seu posto fica em rota de transporte de carga ou próximo a polos de distribuição, <strong>negocie com a distribuidora um volume mínimo garantido de diesel S10 para outubro desde já</strong> — antes que o aumento da frota pressione ainda mais a logística de entrega em um cenário que, como mostra o caso gaúcho, já está no limite em alguns pontos do país."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "fontes": "TradingEconomics/Fortune — Brent US$99,68, WTI US$91,24 (02/out/2026), Investing/InfoMoney — dólar R$5,24, euro R$5,89 (02-03/out/2026), TradingEconomics — DXY 101,94 pts, Bitcoin US$84.543 (02/out/2026), InfoMoney/ADVFN/TheStreet/MoneyTimes — Ibovespa 192.114,55 pts, S&P 500 7.722,72, Nasdaq 27.190,86, Dow Jones 51.176,96 (02/out/2026), BCB/Focus — Selic 13,75%, IPCA 2026 4,99%, PIB 2026 1,86% (28/set-30/set/2026), Federal Reserve/TheStreet — Fed Funds 3,75%-4,00%, payroll de setembro (02/out/2026), ANP — Síntese Semanal de Preços dos Combustíveis, Edição 40/2026, gasolina R$6,55, etanol hidratado R$4,13, diesel B S10 R$7,35, GLP P-13 R$114,88 (semana de 27/set a 03/out/2026), Abicom/BM&C News/Minaspetro — defasagem Petrobras diesel R$3,34/L (102%) e gasolina R$0,95/L (32%) (28/set/2026), Farsul/Famurs/Agência Brasil/Grupo Ceres/Canal Rural — crise de diesel no Rio Grande do Sul, 170 municípios, 4 decretos de emergência, ANP libera 14 milhões de litros (25-29/set/2026), O Povo/NDMais/Times Brasil/CNN Brasil — multa por preço abusivo de combustível elevada a R$500 milhões, R$700 milhões já aplicados (25-28/set/2026), Agência Brasil/O Povo — PMPF do ICMS sobre combustíveis em vigor desde 1º/out/2026, Forbes/Brasil em Folhas/Discovery Alert — G7 libera 100 milhões de barris de diesel e petróleo, prêmio do diesel cai de US$76,77 a US$69/barril (02/out/2026), K.LUME/O Tempo/Reparação Automotiva — emplacamentos de veículos leves e pesados em setembro de 2026 (02/out/2026)."
+}
