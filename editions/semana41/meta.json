@@ -1,0 +1,11 @@
+{
+  "edicao": 41,
+  "periodo": "04 a 10 Out / 2026",
+  "friday": "2026-10-09",
+  "generated_at": "2026-10-09T19:53:24.393Z",
+  "fontes": "TradingEconomics/Vantage Markets/HDFC Sky — Brent US$102,58, WTI US$90,41 (09/out/2026), BCB PTAX/CNN Brasil — dólar R$4,99 (09/out/2026), Bloomberg/ClubeFII — euro R$5,58 (09/out/2026), TradingEconomics — DXY 102,30 pts, Nexo — Bitcoin US$83.000 (09/out/2026), InfoMoney/CNN Brasil/Yahoo Finance — Ibovespa 209.113,05 pts, S&P 500 7.813,89, Nasdaq 27.362,38, Dow Jones 51.732,30 (09/out/2026), BCB/Focus — Selic 13,75%, IPCA 2026 5,01%, PIB 2026 1,85% (02-06/out/2026), Federal Reserve (09/out/2026), ANP — Síntese Semanal de Preços dos Combustíveis, Edição 40/2026, gasolina R$6,55, etanol hidratado R$4,13, diesel B S10 R$7,35, GLP P-13 R$114,88 (ref. semana 27/set-03/out/2026, sem edição 41 publicada até o fechamento), CEPEA/ESALQ — etanol anidro SP R$3,0579 (02/out/2026), Abicom — defasagem diesel R$3,34/L (102%) e gasolina R$0,95/L (32%) (ref. 28/set/2026, sem atualização nova), Eixos Energia/Jornal do Comércio/Farsul — Brasil com 80% da importação de diesel de outubro dependente dos EUA, crise persistente no Rio Grande do Sul (06-09/out/2026), Poder360/BiodieselBR/TheAgriBiz — CNPE posterga B16 para 2027 (06-08/out/2026), Congresso em Foco/Agência Gov — fiscalização em tempo real de 120 mil postos, acordo de compartilhamento de notas fiscais com 21 estados (2026), Discovery Alert/ClimaInfo/Forbes — G7 libera reservas de diesel e petróleo, tensão Irã-EUA, trégua de Trump (02-09/out/2026), Fenabrave/Forbes — emplacamentos recordes em setembro e frota eletrificada supera 1 milhão de veículos (02-07/out/2026).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}
