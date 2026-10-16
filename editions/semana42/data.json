@@ -1,0 +1,287 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 105,92",
+          "variation": "+3,26% (semana, ante US$102,58); chegou a tocar US$110 no intradia de sexta (16/out) com a escalada no Estreito de Hormuz, antes de recuar no fechamento",
+          "direction": "up",
+          "source": "TradingEconomics/Fortune/Vantage Markets (15-16/out)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 97,68",
+          "variation": "+8,04% (semana, ante US$90,41); oscilou entre US$95 e quase US$99 na semana",
+          "direction": "up",
+          "source": "TradingEconomics/ConvexTrade (16/out)"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,0826",
+          "variation": "+1,87% (semana, ante R$4,99); PTAX fechou em alta nesta sexta (16/out)",
+          "direction": "up",
+          "source": "BCB PTAX/Piranot (16/out)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 5,71",
+          "variation": "+2,33% (semana, ante R$5,58)",
+          "direction": "up",
+          "source": "Wise/MyFin (16/out)"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": "102,00 pts",
+          "variation": "-0,29% (semana, ante 102,30 pts); recuou de máxima de 18 meses após dado de inflação ao produtor dos EUA",
+          "direction": "down",
+          "source": "TradingEconomics (16/out)"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "US$ 82.700",
+          "variation": "-0,36% (semana, ante US$83.000); recuperou de mínima abaixo de US$80.000 na quinta (15/out)",
+          "direction": "neutral",
+          "source": "Nexo/CoinDesk (16/out)"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "204.324,26 pts",
+          "variation": "-2,29% (semana, ante 209.113,05); recuo de 1,06% só na quinta, com realização de lucro às vésperas do 2º turno",
+          "direction": "up",
+          "source": "InfoMoney/Divulga Dinheiro (15/out)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.744,06 pts",
+          "variation": "-0,89% (semana, ante 7.813,89)",
+          "direction": "up",
+          "source": "Yahoo Finance (15/out)"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "26.713,03 pts",
+          "variation": "-2,37% (semana, ante 27.362,38)",
+          "direction": "up",
+          "source": "Yahoo Finance (15/out)"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "52.177,69 pts",
+          "variation": "+0,86% (semana, ante 51.732,30); salto de 556 pontos (+1,1%) na quinta com queda dos juros longos",
+          "direction": "down",
+          "source": "Yahoo Finance/Benzinga (15/out)"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "13,75% a.a.",
+          "variation": "mantida; Copom se reúne em 03-04/nov e Focus já projeta corte para 13,25% até dezembro",
+          "direction": "neutral",
+          "source": "BCB (16/set)"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,75% – 4,00%",
+          "variation": "mantido; decisão do FOMC marcada para 28/out, mercado atribui ~87% de chance de manutenção",
+          "direction": "neutral",
+          "source": "Federal Reserve/Investing (16/out)"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "5,22%",
+          "variation": "alta ante 5,01% da semana anterior — 4ª elevação seguida",
+          "direction": "up",
+          "source": "BCB Focus (13/out)"
+        },
+        {
+          "name": "Focus PIB 2026",
+          "value": "1,85%",
+          "variation": "mantida, sem alteração ante a semana anterior",
+          "direction": "neutral",
+          "source": "BCB Focus (13/out)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": "R$ 6,54",
+          "variation": "-0,15% (semana, ante R$6,55)",
+          "direction": "down",
+          "source": "ANP Síntese Semanal ed.41 (ref. 04-10/out — sem edição 42 publicada até o fechamento)"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": "R$ 4,14",
+          "variation": "+0,24% (semana, ante R$4,13)",
+          "direction": "up",
+          "source": "ANP Síntese Semanal ed.41 (ref. 04-10/out — sem edição 42 publicada até o fechamento)"
+        },
+        {
+          "name": "Diesel B S10",
+          "value": "R$ 7,36",
+          "variation": "+0,14% (semana, ante R$7,35)",
+          "direction": "up",
+          "source": "ANP Síntese Semanal ed.41 (ref. 04-10/out — sem edição 42 publicada até o fechamento)"
+        },
+        {
+          "name": "GLP P-13",
+          "value": "R$ 114,61",
+          "variation": "-0,24% (semana, ante R$114,88)",
+          "direction": "down",
+          "source": "ANP Síntese Semanal ed.41 (ref. 04-10/out — sem edição 42 publicada até o fechamento)"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": "R$ 2,6374",
+          "variation": "+2,87% (semana 05-09/out); indicador passou a refletir só desconto de ICMS após zeramento do PIS/Cofins pelo Decreto 13.116 (vigente até 09/nov)",
+          "direction": "up",
+          "source": "CEPEA/ESALQ (09/out)"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": "R$ 3,0532",
+          "variation": "-0,15% (semana 05-09/out, ante R$3,0579)",
+          "direction": "down",
+          "source": "CEPEA/ESALQ (09/out)"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "111% (PPI)",
+          "variation": "alta ante 102% da semana anterior; sem valor em R$/L divulgado nesta leitura",
+          "direction": "up",
+          "source": "Abicom/Monitor do Mercado (ref. 29/set — sem atualização mais recente até o fechamento)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "28% (R$ 0,85/L)",
+          "variation": "queda ante 32% (R$0,95/L) da semana anterior",
+          "direction": "down",
+          "source": "Abicom/Monitor do Mercado (ref. 29/set — sem atualização mais recente até o fechamento)"
+        }
+      ]
+    }
+  ],
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "Brent chega a tocar US$110 no intradia de sexta (16/out) com escalada no Estreito de Hormuz e fecha a semana em US$105,92 (+3,26%)",
+      "resumo": "Irã intensificou ataques a petroleiros na rota por onde passa cerca de 20% do petróleo mundial, e Trump declarou que não quer mais acordo com Teerã, elevando o risco de bloqueio parcial do estreito. O WTI acompanhou, subindo 8,04% na semana para US$97,68, segundo TradingEconomics."
+    },
+    {
+      "numero": 2,
+      "headline": "Governo amplia pacote de R$5,2 bilhões: desconto na gasolina sobe a R$0,89/L e subsídio ao diesel importado ganha mais R$1,40/L por 30 dias",
+      "resumo": "Decreto publicado em 09/out eleva a desoneração de PIS/Cofins e Cide da gasolina e amplia a subvenção ao diesel importado para tentar absorver o choque do Brent acima de US$105. A alíquota zero de PIS/Cofins do etanol hidratado também foi prorrogada por mais um mês."
+    },
+    {
+      "numero": 3,
+      "headline": "Flávio Bolsonaro (47%) e Lula (45%) vão ao 2º turno em 25/out; PoderData mostra empate técnico de 50% a 50% a 9 dias da votação",
+      "resumo": "Pesquisa com 3.000 entrevistados entre 13-15/out aponta corrida estatisticamente empatada (margem de erro de 1,8 p.p.). O resultado moveu Ibovespa, dólar e Focus na semana, em reação direta às sondagens eleitorais."
+    },
+    {
+      "numero": 4,
+      "headline": "Defasagem Abicom sobe a 111% no diesel mesmo com subsídios, enquanto MP 1.393 eleva multa por preço abusivo a R$500 milhões e fiscalização já soma 12.279 ações",
+      "resumo": "A alta do Brent pressionou a paridade de importação do diesel a 111% acima do preço da Petrobras, mesmo após o governo somar novos subsídios. Em paralelo, a nova Medida Provisória recrudesce a punição para postos e distribuidoras flagrados com reajuste descolado do custo."
+    },
+    {
+      "numero": 5,
+      "headline": "BNDES libera R$181,8 milhões à Renault para desenvolver híbrido nacional, enquanto Volvo já vende mais elétrico (51,4%) do que híbrido no Brasil",
+      "resumo": "O financiamento do banco de fomento confirma a aposta da indústria na eletrificação parcial, no mesmo mês em que a Fenabrave sinaliza que pode revisar para até 8,6% a projeção de alta nas vendas de veículos em 2026, após avaliar o desempenho de outubro."
+    }
+  ],
+  "mercado": {
+    "headline": "Brent toca US$110 no intradia e fecha a semana em US$105,92; defasagem do diesel sobe a 111% mesmo com novo pacote de subsídio do governo",
+    "deck": "Escalada no Estreito de Hormuz empurra o petróleo para o maior nível desde a crise de abril; Brasília responde ampliando desoneração da gasolina e subvenção ao diesel importado por mais 30 dias",
+    "body": [
+      "A semana começou com o <strong>Brent</strong> ainda rondando os US$100 e terminou com o barril tocando <strong>US$110</strong> no intradia de sexta-feira (16/out), antes de fechar em <strong>US$105,92</strong> — alta de 3,26% ante os US$102,58 da semana passada. O gatilho foi a escalada no <strong>Estreito de Hormuz</strong>, com o Irã intensificando ataques a petroleiros na rota por onde passa cerca de 20% do petróleo e dos combustíveis do mundo, enquanto Washington sinalizava preparar ataques ao país antes das eleições de meio de mandato americanas.",
+      "O resultado prático pro posto chegou direto na paridade de importação: a <strong>Abicom</strong> registrou defasagem de <strong>111%</strong> no diesel frente ao preço da Petrobras na leitura de 29/set, piora ante os 102% da semana anterior, mesmo com o governo tentando segurar o repasse. O <strong>decreto</strong> publicado em 09/out elevou o desconto de PIS/Cofins e Cide da gasolina para <strong>R$0,89/litro</strong> e somou mais <strong>R$1,40/litro</strong> de subvenção ao diesel importado — pacote de R$5,2 bilhões, válido por 30 dias e renovável.",
+      "Para o revendedor, a leitura operacional é dupla: <strong>o subsídio compra tempo, não resolve o problema</strong> — ele cobre o choque de curto prazo, mas se o Brent mantiver a trajetória acima de US$105 por mais duas ou três semanas, a conta volta a fechar para o lado da Petrobras reajustar. Trave volume de diesel contratado para as próximas duas semanas e monitore qualquer sinalização sobre o Estreito de Hormuz — o mesmo mercado que levou o barril a US$110 numa sexta pode devolver tudo isso numa segunda, mas raramente os dois lados do movimento chegam ao posto na mesma velocidade."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "politica": {
+    "headline": "Flávio Bolsonaro e Lula vão ao 2º turno empatados tecnicamente, a 9 dias da eleição que decide a política de combustíveis dos próximos 4 anos",
+    "deck": "PoderData mostra 50% a 50% entre os dois candidatos; resultado do 1º turno (47% a 45%) já havia blindado o segundo turno marcado para 25/out",
+    "body": [
+      "O primeiro turno confirmou o cenário mais apertado da série: <strong>Flávio Bolsonaro (PL)</strong> terminou com <strong>47%</strong> dos votos válidos contra <strong>45%</strong> do presidente <strong>Lula (PT)</strong>, levando a disputa ao segundo turno marcado para <strong>25 de outubro</strong>. A pesquisa <strong>PoderData</strong>, feita entre 13 e 15/out com 3.000 entrevistados e margem de erro de 1,8 ponto percentual, mostra os dois candidatos estatisticamente empatados em <strong>50% a 50%</strong>.",
+      "O resultado eleitoral tem efeito direto na política de preços de combustíveis: foi o governo <strong>Lula</strong> que editou o decreto de 09/out ampliando desoneração da gasolina e subsídio ao diesel, e a continuidade — ou não — desse tipo de medida depende de quem assumir em janeiro. O mercado já reagiu: o <strong>Ibovespa</strong> oscilou forte na semana e o <strong>dólar</strong> fechou em alta de 1,87%, movimentos que a imprensa econômica atribui diretamente à disputa apertada no segundo turno.",
+      "Para o posto, a recomendação é não tomar decisão estrutural de precificação ou estoque baseada em expectativa de resultado eleitoral: <strong>a margem de poucos pontos percentuais entre os candidatos significa que qualquer política de subsídio a combustível pode ser revista a partir de 1º de janeiro</strong>, seja pela continuidade do pacote atual, seja por um desenho fiscal diferente. Acompanhe os debates da reta final — a pauta de combustíveis já entrou na agenda de campanha dos dois lados."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "economiaBrasil": {
+    "headline": "Focus eleva IPCA 2026 a 5,22% pela 4ª semana seguida, dólar sobe a R$5,08 e Ibovespa recua 2,29% na semana que antecede o 2º turno",
+    "deck": "Boletim de 13/out mantém PIB em 1,85% e já embute corte da Selic a 13,25% até dezembro; bolsa e câmbio reagem à proximidade da eleição e à escalada do petróleo",
+    "body": [
+      "O <strong>Boletim Focus</strong> de 13/out elevou pela quarta semana seguida a projeção de <strong>IPCA 2026</strong>, agora em <strong>5,22%</strong> — acima do teto da meta —, enquanto manteve o <strong>PIB 2026</strong> em 1,85%, sem alteração. Na mesma leitura, o mercado reduziu a estimativa para a <strong>Selic</strong> no fim do ano, de 13,50% para <strong>13,25%</strong>, mantendo a taxa atual em 13,75% até a próxima decisão do Copom, em 3 e 4 de novembro.",
+      "No mercado à vista, a semana foi de realização: o <strong>Ibovespa</strong> fechou em <strong>204.324,26 pontos</strong>, recuo de 2,29% ante o recorde da semana passada, com queda de 1,06% só na sessão de quinta-feira — movimento que a imprensa associa à proximidade do segundo turno e à alta simultânea do petróleo. O <strong>dólar</strong> acompanhou o apetite por cautela e subiu 1,87% na semana, fechando a PTAX em <strong>R$5,0826</strong>.",
+      "A combinação de inflação subindo, bolsa e câmbio reagindo à eleição e Brent acima de US$105 é a pior mistura possível pra quem compra combustível a prazo: <strong>o custo de capital segue alto e o dólar mais caro encarece qualquer insumo importado</strong>, do diesel ao lubrificante. Revise sua margem operacional considerando IPCA de 5,22% — não o número da semana passada — e não trate o recuo do Ibovespa como sinal de recessão: é reação pontual a evento eleitoral, não mudança de ciclo."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "economiaInternacional": {
+    "headline": "Aprovação de Trump cai a mínima histórica com gasolina e diesel em alta nos EUA, enquanto Fed sinaliza manutenção de juros em 28/out",
+    "deck": "Pressão de custo de vida ligada ao petróleo pesa sobre o presidente americano a menos de um mês das eleições de meio de mandato; mercado atribui ~87% de chance de o FOMC manter a taxa em 3,75%-4,00%",
+    "body": [
+      "A escalada no <strong>Estreito de Hormuz</strong> tem custo político direto nos <strong>Estados Unidos</strong>: a aprovação do presidente <strong>Donald Trump</strong> caiu à mínima histórica do mandato, puxada pela insatisfação com o custo de vida em meio à disparada da gasolina e do diesel americanos, segundo reportagens da imprensa dos EUA. Com as eleições de meio de mandato a menos de um mês, a Casa Branca enfrenta o dilema de precisar conter o Irã sem aprofundar o choque de preços que já a penaliza nas urnas.",
+      "No campo monetário, o <strong>Federal Reserve</strong> mantém a taxa em <strong>3,75%-4,00%</strong> desde a alta de 16/set, e o mercado — segundo o Kalshi e o CME FedWatch — atribui cerca de <strong>87% de chance</strong> de manutenção na decisão de <strong>28/out</strong>, com a possibilidade de alta adicional migrando para a reunião de dezembro. Os <strong>rendimentos dos Treasuries de 10 anos</strong> recuaram na semana, ajudando bolsas americanas a reagir apesar do petróleo mais caro.",
+      "O recado pro posto brasileiro é que <strong>a crise não é um evento isolado — é a mesma dinâmica que já pautou o Brent nas últimas semanas, só que agora com peso eleitoral nos dois lados do Atlântico</strong>. Enquanto Trump tiver incentivo político para evitar uma escalada que jogue a gasolina americana ainda mais alto, e o Irã mantiver pressão sobre Hormuz às vésperas do mesmo pleito, o barril seguirá andando por notícia e não por fundamento — planeje compra de combustível em janelas curtas, não em contratos longos."
+    ],
+    "carryover": true,
+    "opiniao": "Isso já é a terceira semana seguida em que o Brent sobe e desce mais de US$5 por causa de uma frase de Trump ou de um ataque no Hormuz, e o posto que trava compra grande apostando em estabilidade está, na prática, apostando contra duas eleições ao mesmo tempo — a brasileira e a americana. Quem segura estoque curto e renegocia a cada 10 dias está jogando o jogo certo neste cenário."
+  },
+  "varejo": {
+    "headline": "MP 1.393 eleva multa por preço abusivo a R$500 milhões e fiscalização de combustíveis já soma 12.279 ações no país",
+    "deck": "Medida Provisória publicada em outubro altera o Código de Defesa do Consumidor; Senacon e ANP somam ações em pelo menos 15 estados desde setembro, com margem de lucro apontada acima de 70% em postos autuados",
+    "body": [
+      "A <strong>Medida Provisória nº 1.393/2026</strong> alterou o <strong>Código de Defesa do Consumidor</strong> e criou faixa de multa específica para toda a cadeia de combustíveis — de <strong>R$20 mil a R$500 milhões</strong> por infração —, elevando substancialmente o teto que vinha sendo aplicado contra postos e distribuidoras flagrados com reajuste de preço descolado do custo. A norma chega no mesmo mês em que a soma das ações de fiscalização no setor atingiu <strong>12.279 registros</strong> em todo o país.",
+      "Parte dessa onda já tem nome e número: a <strong>Senacon</strong> abriu <strong>70 processos administrativos</strong> contra postos de São Paulo, Rio de Janeiro, Espírito Santo e Paraná, com fiscalizações da ANP apontando aumento de margem de lucro superior a <strong>70%</strong> nesses estabelecimentos — e multas que, pelo cálculo antigo do CDC, já podiam chegar a R$14 milhões. Somente entre <strong>5 e 7 de outubro</strong>, a própria ANP realizou <strong>129 ações</strong> de fiscalização própria em 13 unidades da federação.",
+      "Com o teto de multa agora em R$500 milhões e cruzamento de dados cada vez mais fino entre ANP, Senacon e secretarias estaduais, <strong>a margem para reajustar \"no olho\", sem documentação que sustente a variação de custo (CIF, frete, ICMS, PMPF), está próxima de zero</strong>. Reforce agora, antes do fim de outubro, o registro de cada componente de custo que justificou seu último reajuste — é a sua defesa caso apareça numa das próximas rodadas de notificação."
+    ],
+    "carryover": true,
+    "opiniao": "A diferença entre a MP de agora e as fiscalizações do primeiro semestre é a escala da pena: R$500 milhões de teto não é mais um número simbólico, é o tipo de multa que fecha uma distribuidora pequena. Quem ainda trata compliance de precificação como burocracia de fim de mês vai aprender, nas próximas semanas, que isso virou o item mais caro da planilha."
+  },
+  "automotivo": {
+    "headline": "BNDES libera R$181,8 milhões à Renault para híbrido nacional, enquanto Volvo já vende mais elétrico (51,4%) do que híbrido no Brasil",
+    "deck": "Financiamento do banco de fomento e avanço da Volvo confirmam a aceleração da eletrificação parcial, no mês em que a Fenabrave aguarda outubro para decidir se revisa a alta anual para até 8,6%",
+    "body": [
+      "O <strong>BNDES</strong> aprovou financiamento de <strong>R$181,8 milhões</strong> para a <strong>Renault</strong> desenvolver um veículo híbrido de produção nacional, reforçando a aposta do banco de fomento na eletrificação parcial como ponte entre o motor a combustão e o elétrico puro. O movimento acompanha um mês em que o <strong>Jeep Renegade híbrido</strong> já responde por <strong>53%</strong> das vendas do modelo e a <strong>Volvo</strong> cruzou um marco simbólico: carros 100% elétricos já somam <strong>51,4%</strong> do volume vendido pela marca entre janeiro e setembro, superando os híbridos.",
+      "O pano de fundo é um mercado em expansão recorde: a <strong>Fenabrave</strong> registrou <strong>509.686 emplacamentos em setembro</strong> — melhor resultado da história para o mês, alta de 8,32% sobre 2025 — e mantém projeção de crescimento de 7,9% a 8,6% para 2026, mas sinalizou que só vai confirmar o número após avaliar o desempenho de <strong>outubro</strong>. No acumulado do ano, já são 2,25 milhões de unidades emplacadas.",
+      "Pro posto, a leitura de curto prazo continua favorável — mais carro novo rodando sustenta volume de bomba nos próximos dois ou três anos, independente da motorização. Mas <strong>o financiamento público batendo na porta do híbrido nacional é sinal de que a eletrificação parou de ser aposta e virou política industrial</strong>: se sua praça tem concessionária de marca com forte avanço elétrico/híbrido (Volvo, Jeep, BYD, Chery), comece a dimensionar quanto da sua receita futura precisa vir de conveniência e serviço, não só do bico."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+  "fontes": "TradingEconomics/Fortune/Vantage Markets/ConvexTrade — Brent US$105,92, WTI US$97,68 (15-16/out/2026), BCB PTAX/Piranot — dólar R$5,0826 (16/out/2026), Wise/MyFin — euro R$5,71 (16/out/2026), TradingEconomics — DXY 102,00 pts, Nexo/CoinDesk — Bitcoin US$82.700 (16/out/2026), InfoMoney/Divulga Dinheiro/Yahoo Finance/Benzinga — Ibovespa 204.324,26 pts, S&P 500 7.744,06, Nasdaq 26.713,03, Dow Jones 52.177,69 (15/out/2026), BCB/Focus — Selic 13,75%, IPCA 2026 5,22%, PIB 2026 1,85% (13/out/2026), Federal Reserve/Investing/Kalshi (16/out/2026), ANP — Síntese Semanal de Preços dos Combustíveis, Edição 41/2026, gasolina R$6,54, etanol hidratado R$4,14, diesel B S10 R$7,36, GLP P-13 R$114,61 (ref. semana 04-10/out/2026, sem edição 42 publicada até o fechamento), CEPEA/ESALQ — etanol hidratado SP R$2,6374, etanol anidro SP R$3,0532 (ref. semana 05-09/out/2026), Abicom/Monitor do Mercado — defasagem diesel 111% e gasolina 28% (R$0,85/L) (ref. 29/set/2026, sem atualização nova), Washington Post/Al Jazeera/CNBC — escalada no Estreito de Hormuz, Trump abandona negociação com Irã (02-12/out/2026), Ministério da Fazenda/Agência Gov — decreto amplia desoneração da gasolina e subsídio ao diesel importado (09/out/2026), PoderData/Gazeta do Povo — 2º turno Flávio Bolsonaro x Lula, empate técnico 50%-50% (13-16/out/2026), Brasil Postos/Congresso em Foco/Agência Brasil — MP 1.393 eleva multa a R$500 milhões, fiscalização soma 12.279 ações (set-out/2026), Fenabrave/CanalVE/Mecânica Online — emplacamentos recordes em setembro, BNDES financia híbrido da Renault, Volvo com 51,4% de vendas elétricas (jan-set/2026)."
+}

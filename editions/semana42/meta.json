@@ -1,0 +1,11 @@
+{
+  "edicao": 42,
+  "periodo": "11 a 17 / Out / 2026",
+  "friday": "2026-10-16",
+  "generated_at": "2026-10-16T00:00:00.000Z",
+  "fontes": "TradingEconomics/Fortune/Vantage Markets/ConvexTrade — Brent US$105,92, WTI US$97,68 (15-16/out/2026), BCB PTAX/Piranot — dólar R$5,0826 (16/out/2026), Wise/MyFin — euro R$5,71 (16/out/2026), TradingEconomics — DXY 102,00 pts, Nexo/CoinDesk — Bitcoin US$82.700 (16/out/2026), InfoMoney/Divulga Dinheiro/Yahoo Finance/Benzinga — Ibovespa 204.324,26 pts, S&P 500 7.744,06, Nasdaq 26.713,03, Dow Jones 52.177,69 (15/out/2026), BCB/Focus — Selic 13,75%, IPCA 2026 5,22%, PIB 2026 1,85% (13/out/2026), Federal Reserve/Investing/Kalshi (16/out/2026), ANP — Síntese Semanal de Preços dos Combustíveis, Edição 41/2026, gasolina R$6,54, etanol hidratado R$4,14, diesel B S10 R$7,36, GLP P-13 R$114,61 (ref. semana 04-10/out/2026, sem edição 42 publicada até o fechamento), CEPEA/ESALQ — etanol hidratado SP R$2,6374, etanol anidro SP R$3,0532 (ref. semana 05-09/out/2026), Abicom/Monitor do Mercado — defasagem diesel 111% e gasolina 28% (R$0,85/L) (ref. 29/set/2026, sem atualização nova), Washington Post/Al Jazeera/CNBC — escalada no Estreito de Hormuz, Trump abandona negociação com Irã (02-12/out/2026), Ministério da Fazenda/Agência Gov — decreto amplia desoneração da gasolina e subsídio ao diesel importado (09/out/2026), PoderData/Gazeta do Povo — 2º turno Flávio Bolsonaro x Lula, empate técnico 50%-50% (13-16/out/2026), Brasil Postos/Congresso em Foco/Agência Brasil — MP 1.393 eleva multa a R$500 milhões, fiscalização soma 12.279 ações (set-out/2026), Fenabrave/CanalVE/Mecânica Online — emplacamentos recordes em setembro, BNDES financia híbrido da Renault, Volvo com 51,4% de vendas elétricas (jan-set/2026).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": false,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}
