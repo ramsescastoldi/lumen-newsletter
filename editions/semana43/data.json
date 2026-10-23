@@ -1,0 +1,223 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 113,17",
+          "variation": "+6,85% (semana, ante US$105,92); fechou em alta de 4% na quinta (22/out), maior nível desde 4 de maio, com nova escalada no Estreito de Hormuz",
+          "direction": "up",
+          "source": "CNN Brasil/Investing.com (22/out)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 99,47",
+          "variation": "+1,83% (semana, ante US$97,68); acompanhou o Brent e fechou perto da marca de US$100",
+          "direction": "up",
+          "source": "CNN Brasil/Investing.com (22/out)"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,0383",
+          "variation": "-0,87% (semana, ante R$5,0826); PTAX fechou a semana em queda, mesmo com o Brent em alta, às vésperas do 2º turno",
+          "direction": "down",
+          "source": "BCB PTAX/Piranot (22/out)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 5,65",
+          "variation": "-1,05% (semana, ante R$5,71)",
+          "direction": "down",
+          "source": "Remessa Online (22/out)"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": null,
+          "variation": "a confirmar",
+          "direction": "pending",
+          "source": "Fechamento do DXY desta semana sem confirmação nas fontes consultadas até o fechamento desta edição"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": null,
+          "variation": "a confirmar",
+          "direction": "pending",
+          "source": "Cotações encontradas sem data confirmável para a semana até o fechamento desta edição"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "204.120,12 pts",
+          "variation": "-0,10% (semana, ante 204.324,26); recuo de 1,15% só na quinta (22/out, giro de R$25,8 bi) em dia de cautela eleitoral, mas o mês de outubro ainda acumula alta de 9,54%",
+          "direction": "neutral",
+          "source": "Exame/O Povo/SBT News (22/out)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.663,43 pts",
+          "variation": "-1,04% (semana, ante 7.744,06); pior sessão desde julho, puxada por temor com gastos em IA",
+          "direction": "up",
+          "source": "Yahoo Finance/CNBC (22/out)"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "26.008,86 pts",
+          "variation": "-2,64% (semana, ante 26.713,03); maior queda desde junho, com a Meta liderando as perdas",
+          "direction": "up",
+          "source": "Yahoo Finance/Money Times (22/out)"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "52.867,98 pts",
+          "variation": "+1,32% (semana, ante 52.177,69); praticamente estável na quinta (+0,02%), sustentado por ações fora do setor de tecnologia",
+          "direction": "down",
+          "source": "Yahoo Finance (22/out)"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "13,75% a.a.",
+          "variation": "mantida; Copom se reúne em 03-04/nov e Focus de 19/out já projeta corte a 13,25% até dezembro",
+          "direction": "neutral",
+          "source": "BCB/Focus (19/out)"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,75% – 4,00%",
+          "variation": "mantido desde 16/set; FOMC decide em 28/out, sem sinalização clara nas fontes consultadas",
+          "direction": "neutral",
+          "source": "Federal Reserve (23/out)"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "5,22%",
+          "variation": "estável pela 2ª semana, ainda 0,72 p.p. acima do teto da meta",
+          "direction": "neutral",
+          "source": "BCB Focus (19/out)"
+        },
+        {
+          "name": "Focus PIB 2026",
+          "value": "1,83%",
+          "variation": "queda ante 1,85% da semana anterior; dólar projetado para o fim do ano também caiu, de R$5,15 para R$5,13",
+          "direction": "up",
+          "source": "BCB Focus (19/out)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": null,
+          "variation": "a confirmar",
+          "direction": "pending",
+          "source": "Edição 42/2026 (ref. 11-17/out) publicada pela ANP em 21/10, valores sem confirmação até o fechamento desta edição"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": null,
+          "variation": "a confirmar",
+          "direction": "pending",
+          "source": "Edição 42/2026 (ref. 11-17/out) publicada pela ANP em 21/10, valores sem confirmação até o fechamento desta edição"
+        },
+        {
+          "name": "Diesel B S10",
+          "value": null,
+          "variation": "a confirmar",
+          "direction": "pending",
+          "source": "Edição 42/2026 (ref. 11-17/out) publicada pela ANP em 21/10, valores sem confirmação até o fechamento desta edição"
+        },
+        {
+          "name": "GLP P-13",
+          "value": null,
+          "variation": "a confirmar",
+          "direction": "pending",
+          "source": "Edição 42/2026 (ref. 11-17/out) publicada pela ANP em 21/10, valores sem confirmação até o fechamento desta edição"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": "R$ 2,6892",
+          "variation": "+1,96% (semana 12-16/out, ante R$2,6374)",
+          "direction": "up",
+          "source": "CEPEA/ESALQ (16/out)"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": null,
+          "variation": "a confirmar",
+          "direction": "pending",
+          "source": "Fontes consultadas traziam valores conflitantes para o indicador do anidro SP, sem confirmação até o fechamento desta edição"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "108% (R$ 3,53/L)",
+          "variation": "hiato supera a subvenção de R$3,52/L pela 1ª vez no pacote de outubro; percentual recua ante 111%, mas o valor em R$/L nunca foi tão alto",
+          "direction": "up",
+          "source": "DGABC/Canal Rural/Repórter Diário (22-23/out)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "20% (R$ 0,43/L)",
+          "variation": "queda ante 28% (R$0,85/L) da semana anterior",
+          "direction": "down",
+          "source": "Jornal do Comércio/Abicom (19-20/out)"
+        }
+      ]
+    }
+  ],
+  "manchetes": [
+    {
+      "title": "Defasagem do diesel supera, por R$0,01/litro, a subvenção do governo ao combustível importado, enquanto o Brent fecha a semana em US$113,17 — maior nível desde maio",
+      "summary": "O hiato nas refinarias da Petrobras chegou a R$3,53/litro na quinta (22/out), passando o subsídio de R$3,52/litro. O Conselho de Administração da estatal se reúne na segunda (26/out) para discutir reajustes, na primeira decisão de preços após o 2º turno."
+    },
+    {
+      "title": "Flávio Bolsonaro (51%) e Lula (49%) seguem em empate técnico a dois dias do 2º turno que decide o futuro dos subsídios a combustíveis",
+      "summary": "Pesquisa PoderData/Aya com 4 mil entrevistas (19-21/out) mostra vantagem de Flávio encolhendo de 3 para 2 pontos em uma semana. Votação é domingo (25/out), e qualquer um dos lados assume em janeiro com a conta do petróleo mais caro em aberto."
+    },
+    {
+      "title": "Defasagem da gasolina despenca a 20% (R$0,43/litro), de 28% na semana anterior, enquanto a do diesel aperta e bate recorde nominal",
+      "summary": "O descompasso entre os dois combustíveis nunca foi tão grande, segundo a Abicom: a gasolina alivia, e o diesel vira o ponto de maior risco de reajuste na véspera da decisão do Conselho da Petrobras."
+    },
+    {
+      "title": "Nasdaq tem a maior queda desde junho (-2,60%) com temor sobre gastos em inteligência artificial, e Ibovespa recua 1,15% em dia de cautela eleitoral",
+      "summary": "S&P 500 tem a pior sessão desde julho e Dow Jones fica praticamente estável. O Fed decide juros em 28/out sem sinalização clara, no mesmo período em que o Brent dispara por tensão no Oriente Médio."
+    },
+    {
+      "title": "Híbridos disparam 108,4% em setembro e elétricos somam 165,6 mil emplacamentos no ano, segundo a Fenabrave, que aguarda outubro para confirmar projeção de 2026",
+      "summary": "A entidade mantém estimativa de alta de 7,9% a 8,6% nas vendas de veículos, mas só decide depois de avaliar o mês marcado por incerteza eleitoral e petróleo mais caro."
+    }
+  ],
+  "articles": [
+    { "section": "Mercado de Combustíveis" },
+    { "section": "Política · Quente" },
+    { "section": "Economia · Brasil" },
+    { "section": "Economia · Internacional" },
+    { "section": "Varejo", "carryover": true },
+    { "section": "Automotivo" }
+  ]
+}

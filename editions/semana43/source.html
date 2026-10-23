@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>Posto em Dia | Edição 43 — Lumen Posto Club</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; background: #f5f0e3; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #111;
+    background: #f5f0e3;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .paper {
+    max-width: 660px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #e1d7b8;
+    padding-bottom: 24px;
+  }
+
+  /* ============ MASTHEAD ============ */
+  .masthead {
+    border-bottom: 3px double #003459;
+    padding: 22px 20px 14px;
+    text-align: center;
+    background: #ffffff;
+  }
+  .masthead .top-rule {
+    border-top: 6px solid #003459;
+    margin: -22px -20px 16px;
+  }
+  .masthead h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #111;
+  }
+  .masthead .subtitle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #555;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+  .masthead .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #d0d0d0;
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .masthead .meta .edicao { color: #003459; font-weight: 800; }
+
+  /* ============ SECTION HEADER ============ */
+  .section-header {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #003459;
+    padding: 0 20px;
+    margin: 28px 0 14px;
+    border-top: 2px solid #003459;
+    padding-top: 10px;
+  }
+  .section-header::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #d0d0d0;
+    margin: 8px -20px 0;
+  }
+
+  /* ============ INDICADORES FINANCEIROS (TABLOIDE DE COTAÇÕES) ============ */
+  .indic-wrap { padding: 0 20px; }
+  .indic-block {
+    margin-bottom: 14px;
+    border: 1px solid #d8d8d8;
+    background: #fbfbf7;
+  }
+  .indic-block-title {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #003459;
+    padding: 6px 10px;
+    font-weight: 700;
+  }
+  .indic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .indic {
+    padding: 9px 12px;
+    border-bottom: 1px solid #ecece4;
+    border-right: 1px solid #ecece4;
+  }
+  .indic:nth-child(2n) { border-right: none; }
+  .indic-full {
+    grid-column: span 2;
+    border-right: none;
+  }
+  .indic-name {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #555;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+  .indic-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .indic-value {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #111;
+  }
+  .indic-var {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .indic-var.up { color: #c0392b; }
+  .indic-var.up::before { content: "▲ "; color: #c0392b; }
+  .indic-var.down { color: #1e8449; }
+  .indic-var.down::before { content: "▼ "; color: #1e8449; }
+  .indic-var.neutral { font-style: italic; color: #777; }
+  .indic-var.pending { font-style: italic; color: #777; }
+  .indic-source {
+    font-size: 9px;
+    color: #888;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* ============ MANCHETES (5) ============ */
+  .manchetes-wrap { padding: 0 20px; }
+  .manchete {
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .manchete:first-child { border-top: none; padding-top: 6px; }
+  .manchete-num {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #003459;
+    line-height: 0.85;
+    min-width: 46px;
+    text-align: center;
+    margin-top: -2px;
+  }
+  .manchete-body { flex: 1; }
+  .manchete-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.22;
+    margin-bottom: 8px;
+  }
+  .manchete-summary {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #333;
+  }
+
+  /* ============ ARTIGOS LONGOS ============ */
+  .article {
+    padding: 0 20px;
+    margin-bottom: 6px;
+  }
+  .article-headline {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .article-deck {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .article-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+  .article-body p:first-of-type::first-letter {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    font-weight: 900;
+    float: left;
+    line-height: 0.9;
+    padding: 4px 8px 0 0;
+    color: #003459;
+  }
+  .article-body strong { color: #003459; }
+
+  /* ============ VERIMO (RODAPÉ) ============ */
+  .verimo {
+    margin: 32px 20px 0;
+    border: 2px solid #003459;
+    padding: 22px;
+    background: #fbfbf7;
+  }
+  .verimo-kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #003459;
+    margin-bottom: 8px;
+    font-weight: 800;
+  }
+  .verimo-title {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .verimo p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .verimo p strong { color: #003459; }
+  .verimo .ramos {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .verimo .savings {
+    display: block;
+    margin: 14px 0 6px;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #003459;
+  }
+  .verimo .cta {
+    display: block;
+    background: #003459;
+    color: #fff !important;
+    text-align: center;
+    padding: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+
+  /* ============ BLOCO LUMEN POSTO CLUB ============ */
+  .cta-club {
+    margin: 32px 20px 0;
+    background: #003459;
+    padding: 30px 24px;
+    color: #fff;
+    text-align: center;
+  }
+  .cta-club .kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #C9A84C;
+    margin-bottom: 12px;
+    font-weight: 800;
+  }
+  .cta-club .title {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.22;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .cta-club .sub {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cfd6dd;
+    margin-bottom: 22px;
+  }
+  .cta-club .links {
+    border-top: 1px solid #1d4467;
+    padding-top: 18px;
+  }
+  .cta-club .link-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #fff;
+    margin: 8px 0;
+    line-height: 1.4;
+  }
+  .cta-club .link-row .lbl {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #C9A84C;
+    font-weight: 800;
+  }
+  .cta-club .link-row .val {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* ============ COLOFON ============ */
+  .colofon {
+    text-align: center;
+    padding: 30px 20px 12px;
+    border-top: 2px solid #003459;
+    margin-top: 30px;
+  }
+  .colofon .brand {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .colofon .tagline {
+    font-style: italic;
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+    font-family: Georgia, serif;
+  }
+  .colofon .fontes {
+    font-size: 11px;
+    color: #666;
+    margin-top: 14px;
+    line-height: 1.5;
+    padding-top: 12px;
+    border-top: 1px solid #d0d0d0;
+  }
+  .colofon .fontes strong {
+    color: #003459;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ============ CARRYOVER BADGE + ANÁLISE DO EDITOR ============ */
+  .carryover-badge {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    border-left: 3px solid #C9A84C;
+    padding-left: 8px;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .article-opiniao {
+    margin-top: 20px;
+    padding: 14px 16px;
+    background: #f5f0e3;
+    border-left: 4px solid #003459;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .opiniao-label {
+    font-family: Georgia, serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #003459;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .article-opiniao p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+  }
+
+  /* ============ PDF PAGE BREAKS (evitar quebra no meio de blocos) ============ */
+  /* Truque-chave: overflow:hidden cria novo block-formatting-context, forçando o */
+  /* Chromium a respeitar break-inside (sem isso, ele ignora quando há grid/flex). */
+
+  .indic-block {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+  .indic-grid  { break-inside: avoid; page-break-inside: avoid; }
+  .indic       { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Section header não fica órfão no fim de página */
+  .section-header { break-after: avoid; page-break-after: avoid; break-inside: avoid; page-break-inside: avoid; }
+
+  /* Cada manchete (1-5) fica unida */
+  .manchete {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Cada matéria longa começa em página própria (são >400mm, não cabem juntas) */
+  .article {
+    page-break-before: always; break-before: page;
+    break-inside: auto; /* parágrafos quebram dentro, mas headline+deck protegidos abaixo */
+  }
+  .article:first-of-type { page-break-before: auto; break-before: auto; }
+
+  /* Headline + deck precisam ficar juntos com o início do corpo */
+  .article-headline {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-deck {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-body p {
+    break-inside: avoid; page-break-inside: avoid;
+    orphans: 3; widows: 3;
+  }
+
+  /* Bloco Verimo (rodapé editorial) em página própria */
+  .verimo {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Colofon (lista de fontes) em página própria */
+  .colofon {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<div class="paper">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="top-rule"></div>
+    <h1>Posto em Dia</h1>
+    <div class="subtitle">O Semanário do Revendedor de Combustíveis</div>
+    <div class="meta">
+      <span class="edicao">Edição 43</span>
+      <span>18 a 24 / Out / 2026</span>
+    </div>
+  </div>
+
+  <!-- INDICADORES FINANCEIROS -->
+  <div class="section-header">Indicadores Financeiros</div>
+  <div class="indic-wrap">
+    <div class="indic-block">
+      <div class="indic-block-title">Petróleo &amp; Energia</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Brent (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 113,17</div>
+            <div class="indic-var up">+6,85% (semana, ante US$105,92); fechou em alta de 4% na quinta (22/out), maior nível desde 4 de maio, com nova escalada no Estreito de Hormuz</div>
+          </div>
+          <div class="indic-source">CNN Brasil/Investing.com (22/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">WTI (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 99,47</div>
+            <div class="indic-var up">+1,83% (semana, ante US$97,68); acompanhou o Brent e fechou perto da marca de US$100</div>
+          </div>
+          <div class="indic-source">CNN Brasil/Investing.com (22/out)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Moedas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">USD/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 5,0383</div>
+            <div class="indic-var down">-0,87% (semana, ante R$5,0826); PTAX fechou a semana em queda, mesmo com o Brent em alta, às vésperas do 2º turno</div>
+          </div>
+          <div class="indic-source">BCB PTAX/Piranot (22/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">EUR/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 5,65</div>
+            <div class="indic-var down">-1,05% (semana, ante R$5,71)</div>
+          </div>
+          <div class="indic-source">Remessa Online (22/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">DXY (Dollar Index)</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Fechamento do DXY desta semana sem confirmação nas fontes consultadas até o fechamento desta edição</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Bitcoin (USD)</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Cotações encontradas sem data confirmável para a semana até o fechamento desta edição</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Bolsas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Ibovespa</div>
+          <div class="indic-row">
+            <div class="indic-value">204.120,12 pts</div>
+            <div class="indic-var neutral">-0,10% (semana, ante 204.324,26); recuo de 1,15% só na quinta (22/out, giro de R$25,8 bi) em dia de cautela eleitoral, mas o mês de outubro ainda acumula alta de 9,54%</div>
+          </div>
+          <div class="indic-source">Exame/O Povo/SBT News (22/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">S&amp;P 500</div>
+          <div class="indic-row">
+            <div class="indic-value">7.663,43 pts</div>
+            <div class="indic-var up">-1,04% (semana, ante 7.744,06); pior sessão desde julho, puxada por temor com gastos em IA</div>
+          </div>
+          <div class="indic-source">Yahoo Finance/CNBC (22/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Nasdaq</div>
+          <div class="indic-row">
+            <div class="indic-value">26.008,86 pts</div>
+            <div class="indic-var up">-2,64% (semana, ante 26.713,03); maior queda desde junho, com a Meta liderando as perdas</div>
+          </div>
+          <div class="indic-source">Yahoo Finance/Money Times (22/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Dow Jones</div>
+          <div class="indic-row">
+            <div class="indic-value">52.867,98 pts</div>
+            <div class="indic-var down">+1,32% (semana, ante 52.177,69); praticamente estável na quinta (+0,02%), sustentado por ações fora do setor de tecnologia</div>
+          </div>
+          <div class="indic-source">Yahoo Finance (22/out)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Juros &amp; Inflação</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Selic</div>
+          <div class="indic-row">
+            <div class="indic-value">13,75% a.a.</div>
+            <div class="indic-var neutral">mantida; Copom se reúne em 03-04/nov e Focus de 19/out já projeta corte a 13,25% até dezembro</div>
+          </div>
+          <div class="indic-source">BCB/Focus (19/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Fed Funds</div>
+          <div class="indic-row">
+            <div class="indic-value">3,75% – 4,00%</div>
+            <div class="indic-var neutral">mantido desde 16/set; FOMC decide em 28/out, sem sinalização clara nas fontes consultadas</div>
+          </div>
+          <div class="indic-source">Federal Reserve (23/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Focus IPCA 2026</div>
+          <div class="indic-row">
+            <div class="indic-value">5,22%</div>
+            <div class="indic-var neutral">estável pela 2ª semana, ainda 0,72 p.p. acima do teto da meta</div>
+          </div>
+          <div class="indic-source">BCB Focus (19/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Focus PIB 2026</div>
+          <div class="indic-row">
+            <div class="indic-value">1,83%</div>
+            <div class="indic-var up">queda ante 1,85% da semana anterior; dólar projetado para o fim do ano também caiu, de R$5,15 para R$5,13</div>
+          </div>
+          <div class="indic-source">BCB Focus (19/out)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Preço na Bomba (ANP)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Gasolina C</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Edição 42/2026 (ref. 11-17/out) foi publicada pela ANP em 21/10, mas os valores numéricos não puderam ser confirmados nas fontes consultadas até o fechamento desta edição</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Edição 42/2026 (ref. 11-17/out) publicada pela ANP em 21/10, valores sem confirmação até o fechamento desta edição</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel B S10</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Edição 42/2026 (ref. 11-17/out) publicada pela ANP em 21/10, valores sem confirmação até o fechamento desta edição</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">GLP P-13</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Edição 42/2026 (ref. 11-17/out) publicada pela ANP em 21/10, valores sem confirmação até o fechamento desta edição</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Usina (CEPEA/ESALQ)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado SP</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 2,6892</div>
+            <div class="indic-var up">+1,96% (semana 12-16/out, ante R$2,6374)</div>
+          </div>
+          <div class="indic-source">CEPEA/ESALQ (16/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Anidro SP</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Fontes consultadas traziam valores conflitantes para o indicador do anidro SP, sem confirmação até o fechamento desta edição</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Defasagem Petrobras (Abicom)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Diesel</div>
+          <div class="indic-row">
+            <div class="indic-value">108% (R$ 3,53/L)</div>
+            <div class="indic-var up">hiato supera a subvenção de R$3,52/L pela 1ª vez no pacote de outubro; percentual recua ante 111%, mas o valor em R$/L nunca foi tão alto</div>
+          </div>
+          <div class="indic-source">DGABC/Canal Rural/Repórter Diário (22-23/out)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Gasolina</div>
+          <div class="indic-row">
+            <div class="indic-value">20% (R$ 0,43/L)</div>
+            <div class="indic-var down">queda ante 28% (R$0,85/L) da semana anterior</div>
+          </div>
+          <div class="indic-source">Jornal do Comércio/Abicom (19-20/out)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 MANCHETES -->
+  <div class="section-header">As 5 Manchetes da Semana</div>
+  <div class="manchetes-wrap">
+    <div class="manchete">
+      <div class="manchete-num">1</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Defasagem do diesel supera, por R$0,01/litro, a subvenção do governo ao combustível importado, enquanto o Brent fecha a semana em US$113,17 — maior nível desde maio</div>
+        <div class="manchete-summary">O hiato nas refinarias da Petrobras chegou a R$3,53/litro na quinta (22/out), passando o subsídio de R$3,52/litro. O Conselho de Administração da estatal se reúne na segunda (26/out) para discutir reajustes, na primeira decisão de preços após o 2º turno.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">2</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Flávio Bolsonaro (51%) e Lula (49%) seguem em empate técnico a dois dias do 2º turno que decide o futuro dos subsídios a combustíveis</div>
+        <div class="manchete-summary">Pesquisa PoderData/Aya com 4 mil entrevistas (19-21/out) mostra vantagem de Flávio encolhendo de 3 para 2 pontos em uma semana. Votação é domingo (25/out), e qualquer um dos lados assume em janeiro com a conta do petróleo mais caro em aberto.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">3</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Defasagem da gasolina despenca a 20% (R$0,43/litro), de 28% na semana anterior, enquanto a do diesel aperta e bate recorde nominal</div>
+        <div class="manchete-summary">O descompasso entre os dois combustíveis nunca foi tão grande, segundo a Abicom: a gasolina alivia, e o diesel vira o ponto de maior risco de reajuste na véspera da decisão do Conselho da Petrobras.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">4</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Nasdaq tem a maior queda desde junho (-2,60%) com temor sobre gastos em inteligência artificial, e Ibovespa recua 1,15% em dia de cautela eleitoral</div>
+        <div class="manchete-summary">S&amp;P 500 tem a pior sessão desde julho e Dow Jones fica praticamente estável. O Fed decide juros em 28/out sem sinalização clara, no mesmo período em que o Brent dispara por tensão no Oriente Médio.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">5</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Híbridos disparam 108,4% em setembro e elétricos somam 165,6 mil emplacamentos no ano, segundo a Fenabrave, que aguarda outubro para confirmar projeção de 2026</div>
+        <div class="manchete-summary">A entidade mantém estimativa de alta de 7,9% a 8,6% nas vendas de veículos, mas só decide depois de avaliar o mês marcado por incerteza eleitoral e petróleo mais caro.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MERCADO DE COMBUSTÍVEIS -->
+  <div class="section-header">Mercado de Combustíveis</div>
+    <div class="article">
+    <div class="article-headline">Defasagem do diesel supera a subvenção do governo e chega a R$3,53/litro, enquanto o Brent fecha a semana em US$113,17 — maior nível desde maio</div>
+    <div class="article-deck">Hiato nas refinarias da Petrobras ultrapassa em um centavo o subsídio federal de R$3,52/litro nesta quinta (22/out); Conselho de Administração da estatal se reúne na segunda-feira (26/out) para discutir reajustes</div>
+    <div class="article-body">
+      <p>A escalada no <strong>Estreito de Hormuz</strong>, com o Irã atacando sete navios petroleiros nesta semana, levou o <strong>Brent</strong> a fechar em <strong>US$113,17</strong> na quinta-feira (22/out) — alta de 4% no dia e o maior nível desde 4 de maio, segundo CNN Brasil e Investing.com. Na semana, o avanço acumulado foi de 6,85% ante os US$105,92 da sexta anterior. O <strong>WTI</strong> acompanhou, fechando em US$99,47, alta semanal de 1,83%.</p>
+      <p>O efeito direto na bomba chegou pela <strong>Abicom</strong>: a defasagem do diesel nas refinarias da Petrobras atingiu <strong>R$3,53 por litro</strong> no fechamento de quinta, superando pela primeira vez a <strong>subvenção federal</strong> ao diesel importado, de R$3,52/litro. Em termos percentuais, o hiato até recuou, de 111% para 108% — melhora aparente que esconde o fato de que, em valor nominal, o descompasso nunca foi tão alto. Na refinaria privada de Mataripe (BA), a defasagem do diesel chegou a 44%.</p>
+      <p>O <strong>Conselho de Administração da Petrobras</strong> se reúne na próxima segunda-feira (26/out) para avaliar os preços dos combustíveis — a primeira decisão depois do segundo turno das eleições. Para o posto, a leitura é dupla: <strong>o subsídio já não cobre o hiato integralmente</strong>, e qualquer novo salto do Brent pode forçar reajuste rápido. Trave volume de diesel só para o essencial da próxima semana e monitore o resultado do Conselho na segunda — é o evento que mais provavelmente vai mover seu preço de compra nos próximos dias.</p>
+    </div>
+    <div class="article-opiniao"><span class="opiniao-label">Análise do editor</span><p>Pela primeira vez neste ciclo, o subsídio do governo ficou menor que o próprio hiato que deveria cobrir — por um centavo, mas ficou. Isso é mais sintoma do que causa: com o Brent rondando US$113 e eleição no domingo, a Petrobras tem o incentivo político perfeito para esperar até segunda para decidir qualquer coisa. Quem compra diesel hoje sem saber o resultado do Conselho está comprando no escuro.</p></div>
+  </div>
+
+  <!-- POLÍTICA (notícia quente) -->
+  <div class="section-header">Política &middot; Quente</div>
+    <div class="article">
+    <div class="article-headline">Flávio Bolsonaro (51%) e Lula (49%) seguem em empate técnico a dois dias do 2º turno que decide o futuro dos subsídios a combustíveis</div>
+    <div class="article-deck">Pesquisa PoderData/Aya com 4 mil entrevistas realizadas entre 19 e 21/out mostra vantagem de Flávio encolhendo de 3 para 2 pontos em uma semana; votação é domingo (25/out)</div>
+    <div class="article-body">
+      <p>A disputa presidencial entra na reta final tecnicamente empatada: a pesquisa <strong>PoderData/Aya</strong> divulgada nesta quinta (22/out) mostra <strong>Flávio Bolsonaro (PL)</strong> com <strong>51%</strong> dos votos válidos contra <strong>49%</strong> de <strong>Lula (PT)</strong> — vantagem que encolheu dos 52%-48% da rodada anterior, de segunda (19/out). A margem de erro de 1,6 ponto percentual torna o resultado estatisticamente indefinido a três dias da votação, marcada para domingo (25/out).</p>
+      <p>A pauta de combustíveis entrou direto na campanha: foi o governo <strong>Lula</strong> que editou o pacote de desoneração da gasolina e subsídio ao diesel em vigor desde setembro, e a continuidade — ou substituição — desse desenho depende do resultado das urnas. Com a <strong>defasagem do diesel</strong> já superando a própria subvenção nesta semana, qualquer um dos dois lados assumirá em janeiro com a conta do petróleo mais caro em aberto.</p>
+      <p>Para o revendedor, a recomendação se mantém: <strong>não tome decisão estrutural de estoque ou precificação com base em pesquisa eleitoral</strong>. A margem de 2 pontos entre os candidatos — dentro do erro estatístico — significa que o resultado de domingo pode confirmar o pacote atual ou abrir uma rodada inteira de renegociação da política de subsídios já na primeira semana de governo. Acompanhe o resultado antes de travar qualquer contrato de médio prazo.</p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA BRASIL -->
+  <div class="section-header">Economia · Brasil</div>
+    <div class="article">
+    <div class="article-headline">Ibovespa recua 1,15% em dia de cautela eleitoral e tensão no Oriente Médio, enquanto Focus reduz o PIB 2026 a 1,83% e mantém o IPCA em 5,22%</div>
+    <div class="article-deck">Boletim de 19/out também baixou a projeção de dólar para o fim do ano, de R$5,15 para R$5,13; PTAX fecha a semana em R$5,0383, queda de 0,87%</div>
+    <div class="article-body">
+      <p>O <strong>Boletim Focus</strong> de 19/out manteve a projeção de <strong>IPCA 2026</strong> em <strong>5,22%</strong> — ainda 0,72 ponto acima do teto da meta —, mas reduziu a estimativa de crescimento do <strong>PIB</strong> de 1,85% para <strong>1,83%</strong>, leitura que os economistas associam ao custo mais alto de importação de combustíveis. A <strong>Selic</strong> de fim de ano permaneceu projetada em 13,25%, ante os atuais 13,75%, com a próxima decisão do Copom marcada para 3 e 4 de novembro.</p>
+      <p>No mercado à vista, o <strong>Ibovespa</strong> fechou em <strong>204.120,12 pontos</strong> na quinta (22/out), recuo de 1,15% no dia — numa sessão de giro de R$25,8 bilhões marcada por cautela pré-eleitoral e pela tensão no Estreito de Hormuz — mas ainda acumula alta de 9,54% no mês. O <strong>dólar</strong> fechou a PTAX em <strong>R$5,0383</strong>, queda semanal de 0,87% ante os R$5,0826 da sexta anterior, mesmo com o Brent em alta — sinal de que o mercado aposta na resolução do pleito, e não no custo do petróleo, como fator dominante da semana.</p>
+      <p>A combinação de PIB revisado para baixo e defasagem de combustíveis batendo recorde nominal é o tipo de notícia que normalmente pressionaria o câmbio para cima — e não pressionou, pelo menos ainda. <strong>Revise sua margem considerando o IPCA de 5,22%</strong>, não o número de duas semanas atrás, e não trate a queda do dólar como sinal de alívio duradouro: ela está mais ligada à expectativa eleitoral do que a qualquer fundamento de custo de combustível.</p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA INTERNACIONAL -->
+  <div class="section-header">Economia · Internacional</div>
+    <div class="article">
+    <div class="article-headline">Nasdaq tem a maior queda desde junho (-2,60%) com temor sobre gastos em inteligência artificial, enquanto o Fed se prepara para decidir juros em 28/out</div>
+    <div class="article-deck">S&amp;P 500 tem a pior sessão desde julho e Dow Jones fica praticamente estável; mercado não tem sinal claro sobre o resultado da reunião do FOMC da próxima semana</div>
+    <div class="article-body">
+      <p>Wall Street teve sessão de forte divergência na quinta (22/out): o <strong>Nasdaq Composto</strong> caiu <strong>2,60%</strong>, para 26.008,86 pontos — maior queda desde junho —, puxado por ações de tecnologia após a Meta decepcionar o mercado com gastos em inteligência artificial. O <strong>S&amp;P 500</strong> recuou 1,21%, para 7.663,43 pontos, sua pior sessão desde julho, enquanto o <strong>Dow Jones</strong> ficou praticamente estável, com alta de apenas 0,02%, a 52.867,98 pontos, sustentado por ações fora do setor de tecnologia.</p>
+      <p>O pano de fundo monetário segue inalterado: o <strong>Federal Reserve</strong> mantém a faixa de juros em <strong>3,75%-4,00%</strong> desde a alta de 16 de setembro, e a próxima decisão do FOMC sai em <strong>28 de outubro</strong>, sem sinalização clara nas fontes consultadas sobre corte ou nova alta. A tensão no <strong>Estreito de Hormuz</strong>, que levou o Brent a US$113, soma-se à preocupação com gastos em IA como os dois fatores que mais pesaram sobre o apetite a risco global nesta semana.</p>
+      <p>Para o posto brasileiro, o recado é que o custo do petróleo subiu por risco geopolítico, não por aperto de demanda — e o mesmo mercado que puniu as empresas de tecnologia por excesso de gasto em IA pode penalizar o petróleo na mesma velocidade se o Irã sinalizar qualquer trégua no estreito. <strong>Mantenha janelas curtas de compra de combustível</strong> até a decisão do Fed em 28/out e o resultado do Conselho da Petrobras em 26/out — dois eventos a poucos dias um do outro que podem mover o custo em direções opostas.</p>
+    </div>
+    <div class="article-opiniao"><span class="opiniao-label">Análise do editor</span><p>A combinação de Nasdaq caindo por medo de gasto em IA e Brent subindo por medo de guerra no Oriente Médio não tem relação direta — mas tem o mesmo efeito sobre o posto: mais volatilidade, menos previsibilidade de custo. Quem trava contrato de combustível pensando em uma tendência de longo prazo está ignorando que, nas últimas quatro semanas, o mercado trocou de narrativa a cada sete dias.</p></div>
+  </div>
+
+  <!-- VAREJO -->
+  <div class="section-header">Varejo</div>
+    <div class="article">
+    <div class="carryover-badge">Continuação · Semana anterior</div>
+    <div class="article-headline">Operação conjunta de Senacon, ANP e Procons fiscaliza 16 agentes econômicos na Paraíba, Rio Grande do Sul e DF, enquanto 70 processos contra postos seguem abertos</div>
+    <div class="article-deck">Ação de 15/out reforça a aplicação da MP 1.393, que eleva multa por preço abusivo a R$500 milhões; ANP já soma mais de R$700 milhões em multas aplicadas a distribuidoras</div>
+    <div class="article-body">
+      <p>A fiscalização de preços de combustíveis ganhou nova frente geográfica: em <strong>15 de outubro</strong>, <strong>Senacon</strong>, <strong>ANP</strong> e Procons estaduais realizaram operação conjunta que fiscalizou <strong>16 agentes econômicos</strong> na Paraíba, no Rio Grande do Sul e no Distrito Federal, com a ANP analisando notas fiscais de compra para identificar reajustes sem justificativa de custo. A ação reforça os <strong>70 processos administrativos sancionadores</strong> que a Senacon já mantém contra postos do Rio de Janeiro, Espírito Santo, São Paulo e Paraná, abertos em 21 de setembro com base em fiscalizações da ANP que apontaram margens de lucro acima de 70%.</p>
+      <p>O arcabouço legal que sustenta essa ofensiva é a <strong>Medida Provisória 1.393/2026</strong>, que alterou o Código de Defesa do Consumidor para criar faixa de multa específica para toda a cadeia de combustíveis — de <strong>R$20 mil a R$500 milhões</strong> por infração. Em frente separada, a própria ANP já aplicou <strong>mais de R$700 milhões</strong> em multas a distribuidoras de combustíveis por aumentos considerados abusivos, punições que ainda estão em primeira instância administrativa e sujeitas a recurso.</p>
+      <p>Com fiscalização chegando a estados que antes não apareciam nas rodadas anteriores — Paraíba e Rio Grande do Sul, além do Distrito Federal — e cruzamento de notas fiscais cada vez mais sistemático, <strong>a documentação de cada componente de custo do seu último reajuste (CIF, frete, ICMS, PMPF) deixou de ser burocracia opcional</strong>. Revise esse arquivo agora, antes que sua região entre na próxima rodada de notificação.</p>
+    </div>
+  </div>
+
+  <!-- AUTOMOTIVO -->
+  <div class="section-header">Automotivo</div>
+    <div class="article">
+    <div class="article-headline">Híbridos disparam 108,4% em setembro e elétricos somam 165,6 mil emplacamentos no acumulado do ano, segundo a Fenabrave</div>
+    <div class="article-deck">Entidade mantém projeção de alta de 7,9% a 8,6% para 2026, mas só confirma o número depois de avaliar o desempenho de outubro</div>
+    <div class="article-body">
+      <p>Os dados de setembro da <strong>Fenabrave</strong> confirmam a aceleração da eletrificação parcial da frota brasileira: foram emplacados <strong>39.771 veículos híbridos</strong> no mês, salto de <strong>108,40%</strong> sobre setembro de 2025, enquanto os <strong>elétricos puros</strong> somaram <strong>165.574 unidades</strong> no acumulado de janeiro a setembro, alta de 211,67% no comparativo anual. O total de emplacamentos do mês, segundo a entidade, cresceu na faixa de 15% sobre o mesmo período do ano passado.</p>
+      <p>A entidade mantém, por ora, a projeção de crescimento de <strong>7,9% a 8,6%</strong> nas vendas de veículos para 2026, divulgada em julho, mas já sinalizou que só confirma o número depois de avaliar o desempenho de outubro — mês marcado pela incerteza eleitoral e pelo Brent acima de US$110, dois fatores que podem pesar sobre o crédito automotivo e o apetite do consumidor nas próximas semanas.</p>
+      <p>Para o posto, o crescimento de emplacamentos sustenta volume de bomba no curto e médio prazo, independentemente da motorização — mas <strong>o ritmo de mais de 100% de alta em híbridos ano a ano é sinal de que a eletrificação parcial parou de ser nicho</strong>. Se sua praça tem concessionária com forte avanço elétrico ou híbrido, comece a dimensionar quanto da receita futura precisa vir de conveniência e serviço, não apenas do bico.</p>
+    </div>
+  </div>
+
+  <!-- VERIMO SEGUROS -->
+  <div class="verimo">
+    <div class="verimo-kicker">Benefício do Clube</div>
+    <div class="verimo-title">Seguros Verimo — Economia média de 25%</div>
+    <p>Acesso a <strong>todas as seguradoras</strong> via plataforma Verimo (Ramsés é franqueado). Cotação comparativa para qualquer apólice — pessoal, do posto, da família, dos funcionários.</p>
+    <p class="ramos">Auto · Patrimonial · Vida · Frota · RC Ambiental · RC Geral · Lucros Cessantes · Saúde &amp; Odonto · Vida em Grupo</p>
+    <span class="savings">25% de economia média</span>
+    <p>Apólice vencendo? Envie para análise:</p>
+    <a href="https://wa.me/5565992657008" class="cta">(65) 99265-7008</a>
+  </div>
+
+  <!-- LUMEN POSTO CLUB -->
+  <div class="cta-club">
+    <div class="kicker">Lumen Posto Club</div>
+    <div class="title">Inteligência semanal pro revendedor de combustíveis</div>
+    <div class="sub">Newsletter semanal, painel diário de cotações, comunidade de revendedores e as análises do Ramsés sobre o mercado de combustíveis no Brasil.</div>
+    <div class="links">
+      <div class="link-row">
+        <span class="lbl">Site</span>
+        <a href="https://lumenpostoclub.com.br" class="val">lumenpostoclub.com.br</a>
+      </div>
+      <div class="link-row">
+        <span class="lbl">Instagram</span>
+        <a href="https://instagram.com/eusouramses" class="val">@eusouramses</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLOFON -->
+  <div class="colofon">
+    <div class="brand">Lumen Posto Club</div>
+    <div class="tagline">Inteligência semanal para o revendedor de combustíveis</div>
+    <div class="fontes">
+      <strong>Fontes consultadas nesta edição</strong>
+      CNN Brasil/Investing.com — Brent US$113,17, WTI US$99,47 (22/out/2026), BCB PTAX/Piranot — dólar R$5,0383 (22/out/2026), Remessa Online — euro R$5,65 (22/out/2026), Exame/O Povo/SBT News/Yahoo Finance/Money Times — Ibovespa 204.120,12 pts, S&amp;P 500 7.663,43, Nasdaq 26.008,86, Dow Jones 52.867,98 (22/out/2026), BCB/Focus — Selic 13,75%, IPCA 2026 5,22%, PIB 2026 1,83%, dólar fim de 2026 R$5,13 (19/out/2026), Federal Reserve — Fed Funds 3,75%-4,00%, próxima decisão 28/out/2026, CEPEA/ESALQ — etanol hidratado SP R$2,6892 (ref. semana 12-16/out/2026; indicador do anidro SP sem confirmação até o fechamento), ANP — Síntese Semanal de Preços dos Combustíveis, Edição 42/2026 publicada em 21/10 mas valores numéricos sem confirmação nas fontes consultadas até o fechamento desta edição, DGABC/Canal Rural/Repórter Diário/Jornal do Comércio — Abicom: defasagem diesel 108% (R$3,53/L, supera subvenção de R$3,52/L) e gasolina 20% (R$0,43/L) (19-23/out/2026), PoderData/Aya/CNN Brasil/Tribuna PR — 2º turno Flávio Bolsonaro (51%) x Lula (49%), votação em 25/out/2026 (19-22/out/2026), CNN Brasil/SpaceMoney/Metrópoles — escalada no Estreito de Hormuz, ataque a sete navios-petroleiros (22-23/out/2026), Agência Brasil/Brasil Postos/Movimento Econômico — Senacon mantém 70 processos contra postos, operação conjunta de 15/out na Paraíba, RS e DF, MP 1.393 eleva multa a R$500 milhões, ANP soma mais de R$700 milhões em multas a distribuidoras (set-out/2026), Mercado&amp;Consumo/Webmotors/Movimento Econômico — Fenabrave: emplacamentos de setembro com híbridos +108,4% e elétricos somando 165.574 unidades no ano (out/2026).
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
