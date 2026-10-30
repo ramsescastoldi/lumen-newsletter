@@ -1,0 +1,295 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 110,80",
+          "variation": "-2,09% (semana, ante US$113,17 de 22/out); fechamento de quinta (29/out), após tocar US$114,50 na véspera — nesta sexta (30/out) voltou a subir, a US$113,4, com alta acumulada de mais de 15% no mês por tensão renovada no Estreito de Hormuz",
+          "direction": "down",
+          "source": "Investing.com/TradingEconomics (29-30/out)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Fontes consultadas traziam valores conflitantes para o fechamento de 29/out, sem confirmação até o fechamento desta edição"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,3744",
+          "variation": "+7,64% (semana, ante R$4,9930 de 23/out); disparada histórica na segunda (26/out, +8,41% no dia, acima de R$5,40) após a reeleição de Lula, com oscilação intradiária acima de 12%",
+          "direction": "up",
+          "source": "BCB PTAX/DGABC (29/out)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Sem cotação confirmada para a semana até o fechamento desta edição"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Fechamento do DXY desta semana sem confirmação nas fontes consultadas até o fechamento desta edição"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Cotações encontradas sem data confirmável para a semana até o fechamento desta edição"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "169.186,42 pts",
+          "variation": "-17,50% (semana, ante 205.082,56); circuit breaker acionado na segunda (26/out, -13,88%, 1ª vez desde março de 2020) após a reeleição de Lula, e 4ª sessão seguida de perdas na quinta (29/out, -1,06%), abaixo de 170 mil pts por 1ª vez desde agosto",
+          "direction": "up",
+          "source": "CNN Brasil/DGABC (29/out)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Fechamento de 29/out sem confirmação nas fontes consultadas até o fechamento desta edição"
+        },
+        {
+          "name": "Nasdaq",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Fechamento de 29/out sem confirmação nas fontes consultadas até o fechamento desta edição"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Fechamento de 29/out sem confirmação nas fontes consultadas até o fechamento desta edição"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "13,75% a.a.",
+          "variation": "mantida; Copom se reúne em 03-04/nov, e Focus de 26/out projeta 13,25% até o fim do ano",
+          "direction": "neutral",
+          "source": "BCB/Focus (26/out)"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,75% – 4,00%",
+          "variation": "mantido em 28/out com votação dividida (10 a 2); Lisa Cook e Beth Hammack defenderam alta de 0,25 p.p.; próxima decisão em 08-09/dez",
+          "direction": "neutral",
+          "source": "Federal Reserve/Poder360 (28/out)"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "5,19%",
+          "variation": "queda ante 5,22% da semana anterior; coleta anterior ao choque cambial de 26/out, já defasada",
+          "direction": "down",
+          "source": "BCB Focus (26/out)"
+        },
+        {
+          "name": "Focus PIB 2026",
+          "value": "1,80%",
+          "variation": "queda ante 1,83%; dólar de fim de 2026 projetado em R$5,05 — abaixo do nível que o próprio dólar já alcançou dois dias depois da coleta",
+          "direction": "down",
+          "source": "BCB Focus (26/out)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": "R$ 6,49/L",
+          "variation": "-0,61% (semana 18-24/out, ante R$6,53)",
+          "direction": "down",
+          "source": "ANP (ref. 18-24/out)"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": "R$ 4,11/L",
+          "variation": "-0,7% (semana anterior — confirmar; ref. 11-17/out)",
+          "direction": "neutral",
+          "source": "ANP (ref. 11-17/out, semana anterior — confirmar)"
+        },
+        {
+          "name": "Diesel S-10",
+          "value": "R$ 7,34/L",
+          "variation": "semana anterior — confirmar; ref. 11-17/out",
+          "direction": "neutral",
+          "source": "ANP (ref. 11-17/out, semana anterior — confirmar)"
+        },
+        {
+          "name": "GLP P-13",
+          "value": "R$ 106,80",
+          "variation": "+4,1% (média mensal de setembro/2026); dado semanal de outubro sem confirmação até o fechamento desta edição",
+          "direction": "up",
+          "source": "ANP, via O Liberal (26/out)"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": "R$ 2,637",
+          "variation": "+2,85% (ref. semana 05-09/out, ante R$2,564); indicador de CEPEA/ESALQ para a semana corrente sem confirmação até o fechamento desta edição",
+          "direction": "up",
+          "source": "Secretaria de Política Agrícola/MAPA (publ. 15/out)"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": "R$ 3,053",
+          "variation": "-0,16% (ref. semana 05-09/out, ante R$3,058)",
+          "direction": "neutral",
+          "source": "Secretaria de Política Agrícola/MAPA (publ. 15/out)"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "108% (R$ 3,53/L)",
+          "variation": "semana anterior — confirmar; Conselho da Petrobras discutiu o hiato em 26/out, classificado como insustentável; Abicom espera reajuste gradual",
+          "direction": "neutral",
+          "source": "Abicom (ref. 19-23/out, semana anterior — confirmar)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "20% (R$ 0,43/L)",
+          "variation": "semana anterior — confirmar",
+          "direction": "neutral",
+          "source": "Abicom (ref. 19-23/out, semana anterior — confirmar)"
+        }
+      ]
+    }
+  ],
+
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "Mercado financeiro tem pior sessão desde a pandemia: Ibovespa cai 13,88% e aciona circuit breaker, dólar dispara a R$5,40 na segunda (26/out), horas após a reeleição de Lula",
+      "resumo": "O pregão de segunda-feira teve o primeiro circuit breaker da B3 desde março de 2020. Analistas apontam dúvidas sobre a política fiscal do 4º mandato, não o resultado em si, como gatilho principal da aversão a risco que seguiu pressionando a bolsa até quinta (29/out)."
+    },
+    {
+      "numero": 2,
+      "headline": "Lula vence o 2º turno com 51,79% dos votos (64,2 milhões) contra 48,21% de Flávio Bolsonaro e assume o 4º mandato administrando o maior choque cambial desde a pandemia",
+      "resumo": "O TSE declarou o petista matematicamente eleito às 21h10 de domingo (25/out). Geraldo Alckmin foi reeleito vice. Menos de 24 horas depois, o mercado devolveu a reação mais dura a uma eleição brasileira em seis anos."
+    },
+    {
+      "numero": 3,
+      "headline": "Conselho da Petrobras chama defasagem de R$3,53/litro no diesel de \"insustentável\"; Abicom prevê reajuste gradual, não um choque, nas próximas semanas",
+      "resumo": "O Conselho de Administração se reuniu na mesma segunda-feira (26/out) do choque cambial. Nenhum reajuste havia sido confirmado até o fechamento desta edição, mas o timing político para qualquer decisão ficou mais delicado."
+    },
+    {
+      "numero": 4,
+      "headline": "Fed mantém juros em 3,75%-4,00% com votação dividida (10 a 2), e Brent acumula alta de mais de 15% em outubro com tensão no Estreito de Hormuz",
+      "resumo": "Lisa Cook e Beth Hammack votaram por uma alta de 0,25 ponto no FOMC de 28/out. O Brent fechou a quinta (29/out) em US$110,80, após tocar US$114,50 na véspera, e voltou a subir nesta sexta (30/out)."
+    },
+    {
+      "numero": 5,
+      "headline": "Senacon e ANP notificam postos em 21 estados e somam 70 processos abertos contra revendedores, com a Operação Carga Pesada avançando em outubro",
+      "resumo": "Entre 22/set e 2/out, houve 51 ações conjuntas Senacon-ANP em 14 unidades da federação. A MP 1.393/2026 eleva a multa por preço abusivo a até R$500 milhões por infração."
+    }
+  ],
+
+  "mercado": {
+    "headline": "Conselho da Petrobras chama defasagem de R$3,53/litro no diesel de \"insustentável\", e Abicom aposta em reajuste gradual em vez de choque de preços",
+    "deck": "Reunião de segunda-feira (26/out) ocorreu horas antes do mercado reagir à reeleição de Lula com o pior pregão desde a pandemia; decisão sobre preços ainda não foi confirmada",
+    "body": [
+      "O Conselho de Administração da Petrobras se reuniu na segunda-feira (26/out) para discutir a defasagem dos preços de combustíveis da companhia — descrita por conselheiros e pela própria administração como insustentável, segundo apurou o jornal O Liberal. O encontro ocorreu na mesma segunda em que a defasagem do diesel, medida pela Abicom na semana anterior, permanecia em R$3,53 por litro, acima da subvenção federal de R$3,52/litro. O Brent, que vinha sustentando a pressão sobre o hiato, fechou a quinta (29/out) em US$110,80, após ter tocado US$114,50 na véspera — alta acumulada de mais de 15% no mês com a escalada no Estreito de Hormuz.",
+      "A Abicom avalia que a Petrobras deve optar por um ajuste gradual nas próximas semanas, em vez de um choque único de preços, segundo reportagem do Mercado&Consumo. A leitura da associação é de que a companhia vai \"arrumar a casa\" aos poucos — mas o timing não poderia ser mais delicado: a decisão chega horas depois de o mercado financeiro reagir à reeleição de Lula com o pior pregão desde a pandemia, com o dólar acima de R$5,35. Qualquer reajuste nos combustíveis logo após o choque cambial amplia o risco de repasse direto ao IPCA, que já reagia a esse cenário na quinta-feira.",
+      "Para o revendedor, a mensagem é dupla: o hiato está maior do que nunca em valor nominal, e a resposta da Petrobras provavelmente virá em etapas, não de uma vez. Não trave grandes volumes de diesel no preço atual — se o reajuste for mesmo gradual, cada rodada tende a ser menor, mas mais frequente, nas próximas semanas. Acompanhe o site de preços da Petrobras diariamente a partir da segunda-feira que vem, porque o primeiro movimento pode vir sem aviso prévio longo."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "politica": {
+    "headline": "Lula é reeleito com 51,79% dos votos e assume o 4º mandato administrando o pior choque de mercado desde a pandemia, provocado pela própria vitória",
+    "deck": "TSE declarou o petista matematicamente eleito às 21h10 de domingo (25/out), com 64,2 milhões de votos contra 59,8 milhões de Flávio Bolsonaro; na segunda, dólar e bolsa tiveram a reação mais violenta a uma eleição brasileira em seis anos",
+    "body": [
+      "O Tribunal Superior Eleitoral declarou Luiz Inácio Lula da Silva (PT) reeleito às 21h10 do domingo (25/out), com 51,79% dos votos válidos — 64.256.232 votos — contra 48,21% de Flávio Bolsonaro (PL), uma margem de 4,43 milhões de votos. É o quarto mandato do petista, e o resultado inverteu a vantagem que Flávio detinha no primeiro turno, de 47,03% a 45,16%. Geraldo Alckmin foi reeleito vice-presidente, mantendo a chapa de 2022.",
+      "A reação do mercado na manhã seguinte não teve precedente recente: o dólar chegou a subir mais de 12% no pregão de segunda (26/out), fechando o dia em alta de cerca de 8,41%, acima de R$5,40, enquanto o Ibovespa caiu 13,88% e acionou o circuit breaker da B3 pela primeira vez desde março de 2020. Analistas atribuem o movimento menos ao resultado em si — já dado como possível pelas pesquisas da semana — e mais às dúvidas sobre a condução da política fiscal em um quarto mandato, segundo o Goldman Sachs, que vê reformas estruturais pouco prováveis neste cenário.",
+      "Para o posto, a politização do tema combustíveis não vai diminuir: o pacote de subsídios ao diesel e à gasolina, renovado em 9/out por mais 30 dias, vence antes da posse de janeiro, e qualquer governo que precise lidar com um dólar 7,6% mais caro em uma semana terá motivo extra para rever o desenho do subsídio. Monitore o Diário Oficial na primeira semana de novembro — é o prazo em que a prorrogação (ou não) do pacote normalmente é publicada, e o novo cenário cambial torna a decisão ainda mais incerta do que estava há sete dias."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaBrasil": {
+    "headline": "Ibovespa cai 13,88% e aciona circuit breaker na segunda (26/out), dólar dispara e a semana termina com o índice em 169.186 pontos",
+    "deck": "Pior semana da bolsa desde a pandemia aconteceu horas depois da reeleição de Lula; Focus de 26/out, coletado antes do choque, já reduzia o IPCA 2026 para 5,19% e o dólar de fim de ano para R$5,05",
+    "body": [
+      "A reeleição de Lula, confirmada no domingo (25/out), provocou na segunda-feira (26/out) o primeiro circuit breaker da B3 desde março de 2020: o Ibovespa fechou o dia em queda de 13,88%, a 176.608,23 pontos, e o dólar disparou, encerrando a sessão em alta de cerca de 8,41%, a R$5,409 — com oscilação intradiária que chegou a superar 12%. O índice não recuperou o fôlego ao longo da semana: na quinta (29/out), teve a quarta sessão seguida de perdas, caindo 1,06%, para 169.186,42 pontos, primeira vez abaixo de 170 mil desde agosto, com o dólar PTAX fechando em R$5,3744.",
+      "O choque chegou dias depois do Boletim Focus de 26/out, coletado antes da virada cambial: a pesquisa já havia reduzido o IPCA 2026 para 5,19% (de 5,22%) e o PIB para 1,80% (de 1,83%), com o dólar de fim de ano projetado em R$5,05 — abaixo até do nível que o próprio dólar alcançou dois dias depois. Essa defasagem entre a pesquisa e a realidade de mercado é o sintoma mais claro de que o Focus da próxima segunda (02/nov) deve trazer a maior revisão de câmbio e inflação do ano.",
+      "Para o posto, dólar 7,64% mais caro numa única semana (ante R$4,9930 da sexta anterior) significa custo de importação de diesel e GLP mais alto na próxima atualização de preços — mesmo sem nenhuma mudança no Brent. Revise o câmbio usado na sua precificação de insumos importados antes de qualquer nova compra, e não confie na projeção de R$5,05 do Focus de 26/out: ela já está defasada pelo próprio mercado."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaInternacional": {
+    "headline": "Fed mantém juros em 3,75%-4,00% com votação dividida (10 a 2), e Brent acumula alta de mais de 15% em outubro, puxado pela tensão no Estreito de Hormuz",
+    "deck": "Lisa Cook e Beth Hammack votaram por uma alta de 0,25 ponto no FOMC de 28/out; Brent fechou a quinta (29/out) em US$110,80, após tocar US$114,50 na véspera",
+    "body": [
+      "O Federal Reserve manteve a faixa de juros em 3,75%-4,00% na decisão de quarta-feira (28/out), mas com uma dissidência pouco comum: Lisa Cook e Beth Hammack votaram por uma alta de 0,25 ponto percentual, argumentando que a inflação segue acima da meta de 2%. A votação terminou em 10 a 2, e o comunicado oficial não deu sinalização clara sobre o rumo da próxima reunião, marcada para 8 e 9 de dezembro — mas análise do BTG Pactual já trata dezembro como um novo ponto de decisão, não uma pausa automática.",
+      "No mercado de petróleo, o Brent fechou a quinta (29/out) em US$110,80, recuo de 0,75% no dia, depois de ter tocado US$114,50 na quarta — e nesta sexta (30/out) voltou a subir, chegando a US$113,4 segundo a TradingEconomics. No acumulado de outubro, a alta já passa de 15%, com o mercado monitorando novos incidentes no Estreito de Hormuz, incluindo ataques a navios-petroleiros nas semanas anteriores. A combinação de Fed hawkish e petróleo em alta geopolítica é rara: normalmente andam em direções opostas.",
+      "Para o posto brasileiro, a lição da semana é que o custo de importação de combustível pode subir por dois canais ao mesmo tempo — petróleo mais caro em dólar e, agora, dólar mais caro em real, depois do choque cambial de segunda-feira. Não trate o recuo do Brent na quinta como alívio: a tensão em Ormuz não diminuiu, e o próprio índice voltou a subir já na sexta."
+    ],
+    "carryover": false,
+    "opiniao": "Juros americanos divididos e petróleo subindo por geopolítica, no mesmo mês em que o Brasil teve seu pior choque cambial em anos, é a receita perfeita para um novembro de margem apertada. Quem só olha o Brent está vendo metade do problema — a outra metade está na cotação do dólar que você vai usar pra fechar compra na segunda-feira."
+  },
+
+  "varejo": {
+    "headline": "Senacon e ANP notificam postos em 21 estados e somam 70 processos abertos contra revendedores, com a Operação Carga Pesada avançando em outubro",
+    "deck": "Entre 22/set e 2/out, fiscalização teve 51 ações conjuntas Senacon-ANP em 14 unidades da federação; MP 1.393/2026 eleva multa por preço abusivo a R$500 milhões",
+    "body": [
+      "A Operação Carga Pesada, iniciada pela Senacon em 23 de setembro para apurar aumentos abusivos de margem em postos, ganhou nova rodada em outubro: a fiscalização já alcançou 21 estados, com 39 notificações expedidas a revendedores, segundo a Agência Gov. Entre 22 de setembro e 2 de outubro, foram 51 ações conjuntas entre Senacon e ANP em 14 unidades da federação, incluindo uma inspeção que fiscalizou 13 postos em oito municípios de São Paulo.",
+      "O arcabouço que sustenta a ofensiva continua sendo a Medida Provisória 1.393/2026, que criou faixa de multa de R$20 mil a R$500 milhões por infração para toda a cadeia de combustíveis. Com base nessas fiscalizações, a Senacon já soma 70 processos administrativos sancionadores abertos contra postos — número que não mudou desde a semana passada, mas que deve crescer conforme as 39 notificações de outubro avancem para a fase de análise.",
+      "Para o revendedor, a ampliação para 21 estados confirma que a fiscalização deixou de ser regional: nenhuma praça está fora do radar. Mantenha a documentação de custo (CIF, frete, ICMS, PMPF) de cada reajuste dos últimos 60 dias organizada e acessível — é exatamente esse material que decide se uma notificação se transforma em processo ou é arquivada."
+    ],
+    "carryover": true,
+    "opiniao": "A fiscalização virou rotina, não blitz: quando o número de processos para de crescer mas o de notificações continua subindo, é sinal de que a Senacon trocou volume por profundidade de análise. Isso é pior para quem não guardou a planilha de custos do que para quem a guardou."
+  },
+
+  "automotivo": {
+    "headline": "Fenabrave ainda não divulgou outubro, mas setembro reforça avanço de híbridos (+108,4%) em mês que termina com dólar 7,6% mais caro para financiar carro novo",
+    "deck": "Entidade só confirma o fechamento mensal na primeira semana de novembro; choque cambial da segunda (26/out) chega depois do período medido pelos dados mais recentes",
+    "body": [
+      "A Fenabrave ainda não divulgou o fechamento de outubro — a entidade publica os números do mês corrente apenas na primeira semana do mês seguinte. O dado mais recente continua sendo setembro: 281.310 veículos emplacados, alta de 15,65% sobre setembro de 2025, com os híbridos somando 39.771 unidades (+108,40% no ano) e os elétricos puros recuando 18,13% no mês, para 22.227 unidades — ainda que o acumulado de elétricos no ano siga em 165.574 veículos.",
+      "O problema é que o mês que a Fenabrave vai medir em outubro inclui a reeleição de Lula e o choque cambial de 26/out, com o dólar passando de R$4,99 para mais de R$5,35 em poucos dias. Financiamento de veículo, sobretudo elétrico — que depende mais de componentes importados que o carro a combustão — tende a sentir o efeito do câmbio com alguma defasagem, geralmente no trimestre seguinte a uma alta abrupta como essa.",
+      "Para o posto, o crescimento de emplacamentos ainda sustenta volume de bomba no curto prazo, mas vale acompanhar o próprio boletim da Fenabrave no início de novembro antes de dimensionar expectativa de receita de conveniência ligada a carros elétricos — o choque cambial desta semana é exatamente o tipo de evento que pode interromper uma tendência de alta que já vinha perdendo força mês a mês."
+    ],
+    "carryover": true,
+    "opiniao": "Setembro já mostrava elétricos perdendo força mês a mês (-18% ante agosto) mesmo antes de qualquer choque cambial — o movimento de outubro só deve acentuar essa desaceleração, não criá-la. Se sua praça depende de concessionária com forte mix elétrico, é hora de rever a projeção de volume de bomba associada a esse segmento para o primeiro trimestre de 2027, não só para novembro."
+  },
+
+  "fontes": "Investing.com/TradingEconomics — Brent US$110,80 em 29/out, US$113,4 intraday em 30/out, alta mensal acima de 15% (29-30/out/2026), BCB PTAX/DGABC/CNN Brasil — dólar R$5,3744/R$5,3875 e Ibovespa 169.186,42 pts em 29/out (29/out/2026), Band/Poder360/Mercado&Consumo/Bemparaná/Times Brasil — circuit breaker na B3 em 26/out, Ibovespa -13,88% a 176.608,23 pts, dólar +8,41% a R$5,409 (26/out/2026), TSE/Diário do Pará/Tribuna de Jundiaí/Movimento Econômico/InvestNews — Lula reeleito com 51,79% dos votos (64.256.232) contra 48,21% de Flávio Bolsonaro, declarado às 21h10 de 25/out/2026, Poder360/BTG Pactual/InvestingLive — Fed mantém juros em 3,75%-4,00% em 28/out, votação 10 a 2, Lisa Cook e Beth Hammack dissidentes (28/out/2026), O Liberal/Mercado&Consumo — Conselho da Petrobras discute defasagem do diesel em R$3,53/L como insustentável, Abicom prevê reajuste gradual (26-27/out/2026), soubrasilia.com — Boletim Focus de 26/out: IPCA 2026 5,19%, PIB 2026 1,80%, Selic 13,25% projetada, dólar fim de 2026 R$5,05 (26/out/2026), ANP — Gasolina C R$6,49/L (ref. 18-24/out), Etanol Hidratado R$4,11/L e Diesel S-10 R$7,34/L (ref. 11-17/out, semana anterior), GLP P-13 R$106,80 (média mensal de setembro, via O Liberal), Secretaria de Política Agrícola/MAPA — Etanol Hidratado SP R$2,637/L e Anidro SP R$3,053/L (ref. semana 05-09/out, publ. 15/out/2026), Abicom — defasagem diesel 108% (R$3,53/L) e gasolina 20% (R$0,43/L) (ref. 19-23/out, semana anterior), Agência Gov/Senacon/ANP — Operação Carga Pesada: 39 notificações em 21 estados, 51 ações conjuntas em 14 UFs (22/set-2/out/2026), 70 processos administrativos sancionadores abertos, MP 1.393/2026 eleva multa a R$500 milhões, Mercado&Consumo/Webmotors/Movimento Econômico — Fenabrave: emplacamentos de setembro com híbridos +108,4% (39.771 unidades) e elétricos -18,13% no mês (22.227 unidades), acumulado de 165.574 elétricos no ano (out/2026)."
+}

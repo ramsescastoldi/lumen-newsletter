@@ -1,0 +1,11 @@
+{
+  "edicao": 44,
+  "periodo": "25 a 31 / Out / 2026",
+  "friday": "2026-10-30",
+  "generated_at": "2026-10-30T00:00:00.000Z",
+  "fontes": "Investing.com/TradingEconomics — Brent US$110,80 em 29/out, US$113,4 intraday em 30/out, alta mensal acima de 15% (29-30/out/2026), BCB PTAX/DGABC/CNN Brasil — dólar R$5,3744/R$5,3875 e Ibovespa 169.186,42 pts em 29/out (29/out/2026), Band/Poder360/Mercado&Consumo/Bemparaná/Times Brasil — circuit breaker na B3 em 26/out, Ibovespa -13,88% a 176.608,23 pts, dólar +8,41% a R$5,409 (26/out/2026), TSE/Diário do Pará/Tribuna de Jundiaí/Movimento Econômico/InvestNews — Lula reeleito com 51,79% dos votos (64.256.232) contra 48,21% de Flávio Bolsonaro, declarado às 21h10 de 25/out/2026, Poder360/BTG Pactual/InvestingLive — Fed mantém juros em 3,75%-4,00% em 28/out, votação 10 a 2, Lisa Cook e Beth Hammack dissidentes (28/out/2026), O Liberal/Mercado&Consumo — Conselho da Petrobras discute defasagem do diesel em R$3,53/L como insustentável, Abicom prevê reajuste gradual (26-27/out/2026), soubrasilia.com — Boletim Focus de 26/out: IPCA 2026 5,19%, PIB 2026 1,80%, Selic 13,25% projetada, dólar fim de 2026 R$5,05 (26/out/2026), ANP — Gasolina C R$6,49/L (ref. 18-24/out), Etanol Hidratado R$4,11/L e Diesel S-10 R$7,34/L (ref. 11-17/out, semana anterior), GLP P-13 R$106,80 (média mensal de setembro, via O Liberal), Secretaria de Política Agrícola/MAPA — Etanol Hidratado SP R$2,637/L e Anidro SP R$3,053/L (ref. semana 05-09/out, publ. 15/out/2026), Abicom — defasagem diesel 108% (R$3,53/L) e gasolina 20% (R$0,43/L) (ref. 19-23/out, semana anterior), Agência Gov/Senacon/ANP — Operação Carga Pesada: 39 notificações em 21 estados, 51 ações conjuntas em 14 UFs (22/set-2/out/2026), 70 processos administrativos sancionadores abertos, MP 1.393/2026 eleva multa a R$500 milhões, Mercado&Consumo/Webmotors/Movimento Econômico — Fenabrave: emplacamentos de setembro com híbridos +108,4% (39.771 unidades) e elétricos -18,13% no mês (22.227 unidades), acumulado de 165.574 elétricos no ano (out/2026).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}
