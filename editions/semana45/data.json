@@ -1,0 +1,295 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        {
+          "name": "Brent (USD/barril)",
+          "value": "US$ 98,47",
+          "variation": "-11,12% (semana, ante US$110,80 de 29/out); TradingEconomics mostra cotação CFD de hoje (06/nov), não o fechamento oficial do contrato ICE",
+          "direction": "down",
+          "source": "TradingEconomics (06/nov)"
+        },
+        {
+          "name": "WTI (USD/barril)",
+          "value": "US$ 91,08",
+          "variation": "+0,62% no dia; sem comparação direta com a semana anterior (indicador estava pendente na edição 44)",
+          "direction": "neutral",
+          "source": "TradingEconomics, cotação CFD (06/nov)"
+        }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        {
+          "name": "USD/BRL",
+          "value": "R$ 5,5207",
+          "variation": "+2,72% (semana, ante R$5,3744 de 29/out); câmbio ainda não estabilizou após o choque da reeleição — PTAX oficial do BCB não confirmada para a semana",
+          "direction": "up",
+          "source": "TradingEconomics, cotação CFD (06/nov)"
+        },
+        {
+          "name": "EUR/BRL",
+          "value": "R$ 6,15",
+          "variation": "calculado via EUR/USD (1,11379) × USD/BRL do dia; sem base de comparação semanal (indicador estava pendente na edição 44)",
+          "direction": "neutral",
+          "source": "TradingEconomics, cálculo cruzado (06/nov)"
+        },
+        {
+          "name": "DXY (Dollar Index)",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Sem cotação datada e confiável localizada até o fechamento desta edição"
+        },
+        {
+          "name": "Bitcoin (USD)",
+          "value": "US$ 75.651",
+          "variation": "-0,34% no dia; página sem data/hora exibida e sem base de comparação semanal",
+          "direction": "neutral",
+          "source": "TradingEconomics (06/nov, aprox.)"
+        }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        {
+          "name": "Ibovespa",
+          "value": "168.369,00 pts",
+          "variation": "-0,48% (semana, ante 169.186,42 de 29/out) — praticamente estável, após o tombo de 17,5% na semana da reeleição",
+          "direction": "neutral",
+          "source": "TradingEconomics, cotação CFD (06/nov)"
+        },
+        {
+          "name": "S&P 500",
+          "value": "7.394,76 pts",
+          "variation": "+0,56% no dia; sem base de comparação semanal (indicador estava pendente na edição 44)",
+          "direction": "neutral",
+          "source": "TradingEconomics, cotação CFD (06/nov)"
+        },
+        {
+          "name": "Nasdaq 100",
+          "value": "27.032,17 pts",
+          "variation": "+1,51% no dia; refere-se ao Nasdaq 100, não ao Composite; sem base de comparação semanal",
+          "direction": "neutral",
+          "source": "TradingEconomics, cotação CFD (06/nov)"
+        },
+        {
+          "name": "Dow Jones",
+          "value": "51.410,94 pts",
+          "variation": "-0,22% no dia; sem base de comparação semanal",
+          "direction": "neutral",
+          "source": "TradingEconomics, cotação CFD (06/nov)"
+        }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        {
+          "name": "Selic",
+          "value": "13,75% a.a.",
+          "variation": "mantida por unanimidade no Copom de 03-04/nov (282ª reunião), interrompendo sequência de 5 cortes consecutivos iniciada em março; mercado já esperava a pausa (72 de 105 instituições previam manutenção)",
+          "direction": "neutral",
+          "source": "BCB/Copom (04/nov)"
+        },
+        {
+          "name": "Fed Funds",
+          "value": "3,75% – 4,00%",
+          "variation": "mantido; sem reunião do FOMC nesta semana — próxima decisão em 08-09/dez",
+          "direction": "neutral",
+          "source": "Federal Reserve (ref. 28/out, sem mudança na semana)"
+        },
+        {
+          "name": "Focus IPCA 2026",
+          "value": "5,22%",
+          "variation": "alta ante 5,19% da semana anterior; primeira leitura do Focus após o choque cambial da reeleição de Lula",
+          "direction": "up",
+          "source": "BCB Focus (02/nov)"
+        },
+        {
+          "name": "Focus IPCA 2027",
+          "value": "4,76%",
+          "variation": "alta ante 4,34%; ultrapassa o teto da meta de inflação (4,5%) pela primeira vez",
+          "direction": "up",
+          "source": "BCB Focus (02/nov)"
+        }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        {
+          "name": "Gasolina C",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "ANP atrasou a síntese semanal (ref. 25-31/out) para 03/11 por feriado; conteúdo numérico do PDF não pôde ser extraído até o fechamento desta edição"
+        },
+        {
+          "name": "Etanol Hidratado",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "ANP atrasou a síntese semanal para 03/11; dado não extraído até o fechamento desta edição"
+        },
+        {
+          "name": "Diesel S-10",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "ANP atrasou a síntese semanal para 03/11; dado não extraído até o fechamento desta edição"
+        },
+        {
+          "name": "GLP P-13",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "ANP atrasou a síntese semanal para 03/11; dado não extraído até o fechamento desta edição"
+        }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        {
+          "name": "Etanol Hidratado SP",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Sem boletim do MAPA/CEPEA de novembro localizado até o fechamento desta edição; último dado confirmado é de 05-09/out (R$2,637/L)"
+        },
+        {
+          "name": "Etanol Anidro SP",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Sem boletim do MAPA/CEPEA de novembro localizado; último dado confirmado é de 05-09/out (R$3,053/L)"
+        }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        {
+          "name": "Diesel",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Sem boletim semanal da Abicom de novembro localizado; último dado confirmado permanece o de 19-23/out, citado na edição anterior (108%/R$3,53)"
+        },
+        {
+          "name": "Gasolina",
+          "value": "a confirmar",
+          "variation": null,
+          "direction": "pending",
+          "source": "Sem boletim semanal da Abicom de novembro localizado; último dado confirmado permanece o de 19-23/out, citado na edição anterior (20%/R$0,43)"
+        }
+      ]
+    }
+  ],
+
+  "manchetes": [
+    {
+      "numero": 1,
+      "headline": "Copom interrompe sequência de cinco cortes e mantém a Selic em 13,75% por unanimidade, dias depois do pior choque cambial da reeleição de Lula",
+      "resumo": "A decisão de 03-04/11, na 282ª reunião do Comitê, foi unânime entre os sete integrantes, incluindo o presidente Gabriel Galípolo. O mercado já esperava a pausa — mas ela chega enquanto o dólar ainda não estabilizou."
+    },
+    {
+      "numero": 2,
+      "headline": "Governo prorroga por 30 dias a subvenção básica de R$2,12/litro ao diesel, mas o adicional de R$1,40 ao diesel importado vence sem confirmação de renovação",
+      "resumo": "O anúncio de 27/10 renova o subsídio principal a um custo de R$10,5 bilhões. Já o adicional de R$1,40, formalizado em 13/10 por portaria própria, tem prazo separado — e nenhuma fonte confirma se será renovado."
+    },
+    {
+      "numero": 3,
+      "headline": "Focus de 02/11 eleva o IPCA de 2027 para 4,76%, acima do teto da meta, na primeira leitura após o choque cambial da reeleição",
+      "resumo": "A pesquisa também subiu o IPCA de 2026 para 5,22%. É o primeiro boletim do Focus a capturar integralmente o efeito do dólar acima de R$5,40 sobre as expectativas de inflação."
+    },
+    {
+      "numero": 4,
+      "headline": "Conselho da Petrobras chamou a defasagem do diesel de \"insustentável\" em 26/10, mas nenhum reajuste foi confirmado até esta sexta (06/11)",
+      "resumo": "A Abicom apostava em um ajuste gradual, não um choque único. Dez dias depois da reunião, o mercado segue sem saber quando — ou se — a companhia vai mexer no preço do diesel."
+    },
+    {
+      "numero": 5,
+      "headline": "Brent recua a US$98,47 nesta sexta, quase 11% abaixo da semana passada, enquanto o dólar sobe a R$5,52 e o Ibovespa se estabiliza perto de 168 mil pontos",
+      "resumo": "A queda do petróleo tende a aliviar o custo de importação de combustível — mas o real mais depreciado anula parte desse alívio para quem compra em dólar."
+    }
+  ],
+
+  "mercado": {
+    "headline": "Subvenção de R$2,12/litro ao diesel é prorrogada por mais 30 dias, mas o adicional de R$1,40 ao diesel importado vence sem confirmação de renovação",
+    "deck": "Governo anunciou a prorrogação do subsídio básico em 27/10; o complemento ao diesel importado, de prazo próprio, se aproxima do vencimento sem sinal de uma nova portaria",
+    "body": [
+      "O governo federal anunciou em 27 de outubro a prorrogação, por mais 30 dias, da subvenção básica de R$2,12 por litro ao diesel rodoviário — medida que, segundo o Ministério da Fazenda, deve custar cerca de R$10,5 bilhões ao longo do novo período. A portaria com as regras específicas dessa etapa ainda não havia sido publicada no Diário Oficial da União até o fechamento desta edição, mas a decisão de renovar já estava confirmada publicamente.",
+      "Separado dessa subvenção básica, existe um adicional de R$1,40 por litro exclusivo para o diesel importado, formalizado pela Portaria MF nº 3.082 em 13 de outubro, que elevou o apoio total a essas operações para R$3,52 por litro. Esse adicional tem prazo próprio de 30 dias a partir da publicação — o que o coloca perto do vencimento nestes dias — e nenhuma fonte consultada confirma se o governo vai renová-lo. A situação corre em paralelo a outra pendência: o Conselho de Administração da Petrobras discutiu, também em 26/10, a defasagem do diesel como \"insustentável\", e a Abicom segue apostando em um reajuste gradual da companhia — sem data definida.",
+      "Para o revendedor que opera com diesel importado, a mensagem é dupla: o subsídio básico está garantido por mais um mês, mas a vantagem extra de R$1,40/litro pode desaparecer de um dia para o outro se a portaria não for renovada. Acompanhe o Diário Oficial da União diariamente nos próximos dias e não feche contratos de importação de diesel assumindo que o adicional vai continuar — trate-o como benefício temporário até ver a renovação publicada em preto e branco."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "politica": {
+    "headline": "Copom interrompe sequência de cinco cortes e mantém a Selic em 13,75% por unanimidade, dias depois do pior choque cambial da reeleição de Lula",
+    "deck": "Decisão de 03-04/11, na 282ª reunião do Comitê, foi unânime entre os sete integrantes, incluindo o presidente Gabriel Galípolo; o mercado já esperava a pausa, mas o timing reforça a cautela após o choque de 26/10",
+    "body": [
+      "O Comitê de Política Monetária manteve a Selic em 13,75% ao ano na reunião de 3 e 4 de novembro, a 282ª da série, interrompendo uma sequência de cinco cortes consecutivos iniciada em março. A decisão foi unânime entre os sete integrantes do Copom, incluindo o presidente Gabriel Galípolo. O mercado já precificava esse desfecho: de 105 instituições consultadas, 72 previam manutenção e 33 esperavam um corte de 0,25 ponto percentual.",
+      "A pausa chega poucos dias depois do pior choque cambial em anos — o dólar, que fechou a semana anterior em R$5,3744, opera agora perto de R$5,52 nesta sexta-feira, segundo cotações de mercado. O próprio Boletim Focus, coletado em 2 de novembro, ainda projetava a Selic terminando o ano em 13,50% — número que a decisão do Copom já superou ao manter a taxa mais alta. É um sinal de que o Comitê está lendo o cenário cambial e inflacionário como mais arriscado do que o mercado assumia dias antes.",
+      "Para o posto, juro parado em 13,75% por mais tempo significa que o custo de capital de giro — usado para financiar estoque de combustível — não deve aliviar no curto prazo. Não projete queda do custo de crédito para o primeiro trimestre de 2027 nas suas contas: o próprio Copom sinalizou, ao romper a sequência de cortes, que essa conta ficou mais incerta depois do choque cambial de outubro."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaBrasil": {
+    "headline": "Focus de 02/11 eleva o IPCA de 2027 para 4,76%, acima do teto da meta, na primeira leitura após o choque cambial da reeleição",
+    "deck": "Pesquisa também subiu o IPCA de 2026 para 5,22%; é o primeiro boletim do Focus a capturar integralmente o efeito do dólar acima de R$5,40 sobre as expectativas de inflação",
+    "body": [
+      "O Boletim Focus do Banco Central, divulgado em 2 de novembro, elevou a projeção de IPCA para 2027 a 4,76% — a primeira vez que a mediana do mercado coloca a inflação do próximo ano acima do teto da meta, de 4,5%. A projeção para 2026 também subiu, de 5,19% para 5,22%. É a primeira leitura do Focus a refletir integralmente o choque cambial provocado pela reeleição de Lula em 25 de outubro, que levou o dólar a saltar mais de 7% numa única semana.",
+      "A revisão chega dois dias antes de o Copom decidir manter a Selic em 13,75%, rompendo uma sequência de cinco cortes — e reforça a leitura de que o Comitê agiu com cautela justamente porque via esse tipo de revisão de inflação se desenhando. Nesta sexta-feira, o dólar operava perto de R$5,52 e o Ibovespa, perto de 168.369 pontos, mostrando que o mercado ainda não encontrou um novo piso de estabilidade quase duas semanas depois do choque inicial.",
+      "Para o revendedor, inflação de 2027 acima do teto da meta é sinal de que o alívio de custos — seja de insumos importados, seja de crédito — pode demorar mais do que o esperado. Revise para cima a margem de segurança usada no planejamento de custos para o próximo ano, e não conte com uma rodada de cortes de juros tão rápida quanto a que vinha ocorrendo desde março."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaInternacional": {
+    "headline": "Brent recua a US$98,47 nesta sexta, quase 11% abaixo da semana passada, enquanto Wall Street tem pregão misto",
+    "deck": "WTI opera em leve alta intradiária; S&P 500 e Nasdaq sobem, mas o Dow Jones cede, em semana sem reunião do Fed — a próxima decisão só vem em 08-09/dez",
+    "body": [
+      "O Brent operava a US$98,47 por barril nesta sexta-feira (06/nov), segundo a TradingEconomics — uma queda de cerca de 11,1% frente ao fechamento de US$110,80 registrado na edição anterior, em 29 de outubro. O WTI, por sua vez, estava em US$91,08, com alta intradiária de 0,62%, sem base de comparação direta com a semana passada. A queda do Brent ocorre em meio a visões divergentes entre analistas: a XP cortou sua projeção para o segundo semestre de US$85 para US$75, enquanto o HSBC elevou a sua para US$90 no quarto trimestre — um sinal de que o mercado ainda não tem consenso sobre o rumo do petróleo nos próximos meses.",
+      "Em Nova York, o pregão desta sexta foi misto: o S&P 500 subia 0,56%, a 7.394,76 pontos, e o Nasdaq 100 avançava 1,51%, a 27.032,17 pontos, enquanto o Dow Jones recuava 0,22%, a 51.410,94 pontos. Não há reunião do Federal Reserve nesta semana — a decisão mais recente, de 28 de outubro, manteve os juros em 3,75%-4,00% por votação dividida (10 a 2), e a próxima só ocorre em 8 e 9 de dezembro.",
+      "Para o posto brasileiro, o Brent mais barato tende a aliviar o custo de importação de combustível no curto prazo — mas não comemore antes de fazer a conta em reais: o dólar mais caro desde o choque cambial de outubro consome parte relevante desse alívio. Calcule o custo de importação na moeda local antes de travar qualquer compra de diesel ou GLP importado nas próximas semanas."
+    ],
+    "carryover": false,
+    "opiniao": "Brent caindo quase 11% numa semana é, em condições normais, a melhor notícia possível para quem compra combustível importado. Mas com o dólar 2,7% mais caro na mesma semana, boa parte desse alívio evapora antes de chegar no seu caixa — faça sempre a conta em reais, nunca em dólar, antes de decidir se o momento é bom para comprar."
+  },
+
+  "varejo": {
+    "headline": "Operação Carga Pesada completa dois meses sem novo balanço: Senacon mantém 70 processos abertos contra postos enquanto fiscalização aguarda próxima rodada",
+    "deck": "Força-tarefa iniciada em 23/09 já notificou postos em 21 estados e multou distribuidoras em R$200 milhões; nenhuma atualização nova foi divulgada nesta semana",
+    "body": [
+      "A Operação Carga Pesada, lançada pela Senacon em 23 de setembro após cerca de 330 denúncias recebidas pela ANP sobre aumentos abusivos de margem em postos, não teve nenhum balanço novo divulgado entre 1º e 6 de novembro. O quadro mais recente continua sendo o de outubro: 39 notificações expedidas a revendedores em 21 estados, somando-se aos 70 processos administrativos sancionadores já abertos contra postos desde a primeira fase da operação.",
+      "Em paralelo à fiscalização de postos, a ANP já havia aplicado mais de R$200 milhões em multas a distribuidoras por aumentos abusivos de preços, em setembro. O pano de fundo regulatório da operação inclui o Decreto nº 13.134, de 9 de outubro, que ampliou desonerações tributárias e subvenções ao setor — mostrando que fiscalização e subsídio estão sendo usados como ferramentas simultâneas pelo governo.",
+      "Para o revendedor, dois meses sem balanço novo não significa trégua: normalmente indica que o órgão está processando o volume de notificações da fase mais recente antes de abrir uma nova rodada. Mantenha a documentação de custo (CIF, frete, ICMS, PMPF) de cada reajuste dos últimos 60 dias organizada e acessível — é esse material que decide se uma eventual notificação se transforma em processo ou é arquivada."
+    ],
+    "carryover": true,
+    "opiniao": "Silêncio de dois meses em uma operação que já abriu 70 processos não é notícia tranquilizadora — é sinal de que a Senacon trocou volume por profundidade de análise, e isso tende a gerar notificações mais bem fundamentadas, não menos frequentes. Quem relaxou a organização de documentos nas últimas semanas corre risco real de ser pego de surpresa quando a próxima rodada vier."
+  },
+
+  "automotivo": {
+    "headline": "Fenabrave ainda não divulgou emplacamentos de outubro, mesmo já na primeira semana de novembro — mercado opera no escuro sobre o impacto do choque cambial nas vendas",
+    "deck": "Último dado oficial continua sendo setembro, com alta de 15% nos emplacamentos; a entidade mantinha projeção de crescimento de 8,6% para 2026 antes da disparada do dólar",
+    "body": [
+      "A Fenabrave ainda não divulgou o fechamento de outubro até esta sexta-feira (06/11), embora a entidade costume publicar o balanço do mês anterior já na primeira semana do mês seguinte. O dado mais recente continua sendo o de setembro: 281.310 emplacamentos de automóveis e comerciais leves, alta de 15,05% sobre setembro de 2025, com o acumulado de janeiro a setembro somando 2.256.037 unidades, crescimento de 18,09% no ano. Incluindo motocicletas, o total de setembro chega a 509.686 unidades.",
+      "O atraso chama atenção porque outubro foi exatamente o mês da reeleição de Lula (25/10) e do choque cambial que levou o dólar de R$4,99 para a faixa de R$5,35-5,52 em poucos dias. A Fenabrave mantinha, desde julho, a projeção de alta de 8,6% nos emplacamentos para 2026 — uma meta definida antes de o dólar disparar, e que pode exigir revisão quando o balanço de outubro finalmente for publicado.",
+      "Para o posto, o volume de emplacamentos ainda sustenta receita de bomba no curto prazo, mas vale aguardar a divulgação da Fenabrave — esperada nos próximos dias — antes de ajustar qualquer expectativa de receita de conveniência ligada à venda de veículos novos. Financiamento de carro, sobretudo elétrico ou híbrido com maior componente importado, tende a sentir o dólar mais caro com alguma defasagem, normalmente no trimestre seguinte a um choque como o de outubro."
+    ],
+    "carryover": true,
+    "opiniao": "Um atraso na divulgação não é, por si só, má notícia — mas a coincidência com o mês do choque cambial levanta a suspeita de que o número pode vir pior do que o esperado. Se sua praça depende de concessionária com mix relevante de importados, comece a revisar a projeção de volume para o primeiro trimestre de 2027 antes mesmo de o dado oficial sair."
+  },
+
+  "fontes": "TradingEconomics — Brent US$98,47/barril (-11,12% na semana), WTI US$91,08, USD/BRL R$5,5207 (+2,72% na semana), EUR/USD 1,11379, Bitcoin US$75.651, Ibovespa 168.369,00 pts (CFD, -0,48% na semana), S&P 500 7.394,76 pts, Nasdaq 100 27.032,17 pts, Dow Jones 51.410,94 pts (todas cotações CFD de 06/nov/2026), Poder360/Soubrasilia/NC News — Copom mantém Selic em 13,75% por unanimidade na reunião de 03-04/nov/2026, interrompendo sequência de 5 cortes, Paraíba Business — Boletim Focus de 02/nov: IPCA 2026 em 5,22% e IPCA 2027 em 4,76% (acima do teto da meta), Poder360/Garagem360 — governo prorroga subvenção de R$2,12/litro ao diesel por mais 30 dias (anúncio de 27/10/2026, custo de R$10,5 bilhões) e subvenção adicional de R$1,40/litro ao diesel importado via Portaria MF nº 3.082 (13/10/2026), sem confirmação de renovação, O Liberal/Mercado&Consumo — Conselho da Petrobras discutiu defasagem do diesel como insustentável em 26/10/2026, Abicom prevê reajuste gradual sem data confirmada, Agência Gov/Agência Brasil/JB — Operação Carga Pesada: 39 notificações em 21 estados, 70 processos administrativos sancionadores abertos, R$200 milhões em multas da ANP a distribuidoras (set-out/2026), Mercado&Consumo/O Liberal/Poder360 — Fenabrave: emplacamentos de setembro/2026 com alta de 15,05% (281.310 unidades leves) e acumulado de 2.256.037 unidades no ano (+18,09%), balanço de outubro ainda não divulgado até 06/11/2026. Pendentes nesta edição por ausência de boletim datado até o fechamento: DXY, ANP síntese semanal (Gasolina C, Etanol Hidratado, Diesel S-10, GLP P-13), CEPEA/ESALQ (Etanol Hidratado e Anidro SP) e Abicom (defasagem diesel e gasolina)."
+}

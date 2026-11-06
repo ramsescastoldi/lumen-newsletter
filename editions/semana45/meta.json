@@ -1,0 +1,11 @@
+{
+  "edicao": 45,
+  "periodo": "01 a 06 / Nov / 2026",
+  "friday": "2026-11-06",
+  "generated_at": "2026-11-06T20:02:07.416Z",
+  "fontes": "TradingEconomics — Brent US$98,47/barril (-11,12% na semana), WTI US$91,08, USD/BRL R$5,5207 (+2,72% na semana), EUR/USD 1,11379, Bitcoin US$75.651, Ibovespa 168.369,00 pts (CFD, -0,48% na semana), S&P 500 7.394,76 pts, Nasdaq 100 27.032,17 pts, Dow Jones 51.410,94 pts (todas cotações CFD de 06/nov/2026), Poder360/Soubrasilia/NC News — Copom mantém Selic em 13,75% por unanimidade na reunião de 03-04/nov/2026, interrompendo sequência de 5 cortes, Paraíba Business — Boletim Focus de 02/nov: IPCA 2026 em 5,22% e IPCA 2027 em 4,76% (acima do teto da meta), Poder360/Garagem360 — governo prorroga subvenção de R$2,12/litro ao diesel por mais 30 dias (anúncio de 27/10/2026, custo de R$10,5 bilhões) e subvenção adicional de R$1,40/litro ao diesel importado via Portaria MF nº 3.082 (13/10/2026), sem confirmação de renovação, O Liberal/Mercado&Consumo — Conselho da Petrobras discutiu defasagem do diesel como insustentável em 26/10/2026, Abicom prevê reajuste gradual sem data confirmada, Agência Gov/Agência Brasil/JB — Operação Carga Pesada: 39 notificações em 21 estados, 70 processos administrativos sancionadores abertos, R$200 milhões em multas da ANP a distribuidoras (set-out/2026), Mercado&Consumo/O Liberal/Poder360 — Fenabrave: emplacamentos de setembro/2026 com alta de 15,05% (281.310 unidades leves) e acumulado de 2.256.037 unidades no ano (+18,09%), balanço de outubro ainda não divulgado até 06/11/2026. Pendentes nesta edição por ausência de boletim datado até o fechamento: DXY, ANP síntese semanal (Gasolina C, Etanol Hidratado, Diesel S-10, GLP P-13), CEPEA/ESALQ (Etanol Hidratado e Anidro SP) e Abicom (defasagem diesel e gasolina).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}
