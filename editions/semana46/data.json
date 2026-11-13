@@ -1,0 +1,144 @@
+{
+  "indicadores": [
+    {
+      "title": "Petróleo & Energia",
+      "items": [
+        { "name": "Brent (USD/barril)", "value": "US$ 95,78", "variation": "-2,73% (semana, ante US$98,47 de 06/nov)", "direction": "down", "source": "TradingEconomics (13/nov)" },
+        { "name": "WTI (USD/barril)", "value": "US$ 88,61", "variation": "-2,71% (semana, ante US$91,08 de 06/nov)", "direction": "down", "source": "TradingEconomics, cotação CFD (13/nov)" }
+      ]
+    },
+    {
+      "title": "Moedas",
+      "items": [
+        { "name": "USD/BRL", "value": "R$ 5,6547", "variation": "+2,43% (semana, ante R$5,5207 de 06/nov)", "direction": "up", "source": "TradingEconomics, cotação CFD (13/nov)" },
+        { "name": "EUR/BRL", "value": "R$ 6,23", "variation": "+1,36% (semana, ante R$6,15 de 06/nov)", "direction": "up", "source": "TradingEconomics, cálculo cruzado (13/nov)" },
+        { "name": "DXY (Dollar Index)", "value": "103,41", "variation": "primeira leitura confiável; sem base semanal", "direction": "neutral", "source": "TradingEconomics (13/nov)" },
+        { "name": "Bitcoin (USD)", "value": "US$ 68.902", "variation": "-8,92% no período", "direction": "neutral", "source": "TradingEconomics (13/nov)" }
+      ]
+    },
+    {
+      "title": "Bolsas",
+      "items": [
+        { "name": "Ibovespa", "value": "172.224,00 pts", "variation": "+2,29% (semana, ante 168.369,00 de 06/nov)", "direction": "down", "source": "TradingEconomics, cotação CFD (13/nov)" },
+        { "name": "S&P 500", "value": "7.550,34 pts", "variation": "+2,10% (semana, ante 7.394,76 de 06/nov)", "direction": "down", "source": "TradingEconomics, cotação CFD (13/nov)" },
+        { "name": "Nasdaq 100", "value": "27.915,35 pts", "variation": "+3,27% (semana, ante 27.032,17 de 06/nov)", "direction": "down", "source": "TradingEconomics, cotação CFD (13/nov)" },
+        { "name": "Dow Jones", "value": "52.291,74 pts", "variation": "+1,71% (semana, ante 51.410,94 de 06/nov)", "direction": "down", "source": "TradingEconomics, cotação CFD (13/nov)" }
+      ]
+    },
+    {
+      "title": "Juros & Inflação",
+      "items": [
+        { "name": "Selic", "value": "13,75% a.a.", "variation": "mantida desde 03-04/nov", "direction": "neutral", "source": "Banco Central do Brasil" },
+        { "name": "Fed Funds", "value": "3,75% – 4,00%", "variation": "mantida desde 28/out", "direction": "neutral", "source": "Federal Reserve" },
+        { "name": "IPCA-15 (novembro)", "value": "a confirmar", "variation": null, "direction": "pending", "source": "IBGE não divulgou até o fechamento desta edição" },
+        { "name": "Focus IPCA 2026/2027", "value": "a confirmar", "variation": null, "direction": "pending", "source": "Boletim de 09/nov não confirmado por fonte primária" }
+      ]
+    },
+    {
+      "title": "Preço na Bomba (ANP)",
+      "items": [
+        { "name": "Gasolina C (média Brasil)", "value": "R$ 6,48/L", "variation": "-0,15% (ref. 25-31/out, ante R$6,49)", "direction": "neutral", "source": "ANP (ref. 25-31/out, publ. 03/nov)" },
+        { "name": "Etanol Hidratado (média Brasil)", "value": "R$ 4,11/L", "variation": "sem atualização confirmada", "direction": "neutral", "source": "ANP (ref. 18-24/out — semana anterior, confirmar)" },
+        { "name": "Diesel S-10 (média Brasil)", "value": "R$ 7,31/L", "variation": "-0,41% (ref. 25-31/out, ante R$7,34)", "direction": "down", "source": "ANP (ref. 25-31/out, publ. 03/nov)" },
+        { "name": "Diesel comum (S-500)", "value": "a confirmar", "variation": null, "direction": "pending", "source": "Não localizado em fonte oficial datada" },
+        { "name": "GLP P-13 (média Brasil)", "value": "R$ 106,80", "variation": "média mensal de setembro", "direction": "neutral", "source": "ANP (média mensal de setembro — não atualizado)" }
+      ]
+    },
+    {
+      "title": "Usina (CEPEA/ESALQ)",
+      "items": [
+        { "name": "Etanol Hidratado SP", "value": "a confirmar", "variation": null, "direction": "pending", "source": "Sem indicador semanal datado de novembro/2026" },
+        { "name": "Etanol Anidro SP", "value": "a confirmar", "variation": null, "direction": "pending", "source": "Sem indicador semanal datado de novembro/2026" }
+      ]
+    },
+    {
+      "title": "Defasagem Petrobras (Abicom)",
+      "items": [
+        { "name": "Diesel", "value": "a confirmar", "variation": null, "direction": "pending", "source": "Abicom não publicou percentual exato desta semana" },
+        { "name": "Gasolina", "value": "a confirmar", "variation": null, "direction": "pending", "source": "Abicom não publicou percentual exato desta semana" }
+      ]
+    }
+  ],
+
+  "manchetes": [
+    { "numero": 1, "headline": "Congresso aprova crédito extraordinário de R$6,6 bilhões para honrar subsídio ao diesel, mas fatia extra de R$1,40/litro ao importado vence sem confirmação de renovação", "resumo": "A Comissão Mista de Orçamento aprovou em 10/11 parecer favorável à MP 1.389/2026, abrindo R$6,605 bilhões para a ANP pagar produtores e importadores que já baixaram preço ao consumidor. Em paralelo, a parcela extra de R$1,40/litro ao diesel importado, criada por 30 dias em 13/10, venceria por volta de 12/11 sem anúncio oficial de prorrogação até o fechamento desta edição." },
+    { "numero": 2, "headline": "Fenabrave confirma outubro com recuo mensal de 4,06% nos emplacamentos, mas eleva projeção de crescimento de 2026 de 8,6% para 12,8%", "resumo": "Com 489.119 veículos emplacados — queda de 4,06% sobre setembro e de 0,85% sobre outubro de 2025, atribuída a dois dias úteis a menos no calendário —, a entidade revisou para cima a expectativa anual, com o acumulado de dez meses somando 4,7 milhões de unidades, alta de 12,62% sobre 2025." },
+    { "numero": 3, "headline": "Brent cai 2,73% na semana a US$95,78, mas alívio no petróleo é anulado pelo dólar, que sobe 2,43% a R$5,65 em meio à espera por sinalização fiscal", "resumo": "O barril do tipo Brent opera na casa dos US$95,78 nesta sexta-feira, no segundo pregão seguido de queda. O real perdeu terreno na mesma proporção: o dólar sobe a R$5,65, pressionado pela incerteza sobre o rumo fiscal do governo. Na conta em reais, o alívio do petróleo evapora quase por completo." },
+    { "numero": 4, "headline": "Governo adia proposta de ajuste fiscal para depois da volta de Lula da COP31; ministro Durigan só deve se posicionar a partir de 15/11", "resumo": "Com o presidente na conferência do clima na Turquia entre 9 e 20/11, o ministro da Fazenda, Dario Durigan, descartou apresentar medidas concretas de corte de gastos nos próximos dias e disse que vai discutir o tema com Lula só após o retorno dele. O mercado opera em banho-maria à espera de um sinal mais claro sobre as contas públicas." },
+    { "numero": 5, "headline": "Ibovespa e bolsas americanas fecham a semana em alta de mais de 2%, mas recuam nesta sexta-feira em dia de aversão a risco global", "resumo": "O Ibovespa fechou a semana em 172.224 pontos, alta de 2,29% frente à sexta anterior, acompanhando o S&P 500 (+2,10%) e o Nasdaq 100 (+3,27%) em Nova York. O clima virou nesta sexta: os três índices recuam no pregão do dia, com o Nasdaq cedendo mais de 1%, em meio à realização de lucros em ações de tecnologia." }
+  ],
+
+  "mercado": {
+    "headline": "Subvenção ao diesel soma R$3,52/litro, mas fatia extra de R$1,40 ao importado vence em meio a silêncio do governo sobre renovação",
+    "deck": "Petrobras não reajusta diesel há mais de 160 dias nem gasolina há cerca de dois meses, segundo a Abicom; queda do Brent nesta semana ajuda a acomodar o preço da estatal ao subsídio, mas a parcela extra para importados pode cair pela metade sem aviso",
+    "body": [
+      "O apoio ao diesel rodoviário segue dividido em duas camadas: a subvenção-base de R$2,12 por litro, renovada em 6 de novembro até o fim de 2026, e uma fatia extra de R$1,40 por litro exclusiva para o diesel importado, criada por portaria em 13 de outubro com validade de 30 dias — somando um benefício total de R$3,52/litro. Essa parcela adicional venceria por volta de 12 de novembro, e até o fechamento desta edição não havia confirmação oficial de prorrogação em Diário Oficial ou comunicado do Ministério da Fazenda.",
+      "Segundo a Abicom, a Petrobras não reajusta o preço do diesel nas refinarias há 162 dias, e o da gasolina, há cerca de dois meses. A queda do Brent nesta semana — a US$95,78, segundo pregão seguido de recuo — ajuda a aproximar o preço praticado pela estatal do nível sustentado pelo subsídio, aliviando parte da pressão que, no fim de outubro, havia levado o Conselho da Petrobras a classificar a defasagem do diesel como insustentável.",
+      "Para o revendedor, a dúvida sobre o R$1,40 extra não é de detalhe: se a fatia não for renovada, o apoio efetivo ao diesel importado cai de R$3,52 para R$2,12 por litro de uma hora para outra. Não baseie a margem de diesel importado na continuidade automática do benefício — monte o cenário sem a parcela extra e trate qualquer renovação como notícia boa, não como ponto de partida."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "politica": {
+    "headline": "Comissão Mista aprova R$6,6 bi em crédito extra para a ANP pagar dívida com produtores e importadores de combustíveis",
+    "deck": "MP 1.389/2026 é a mais recente de uma série de créditos bilionários abertos ao longo de 2026 para sustentar os subsídios a diesel e gasolina — e expõe a dependência do setor de aprovações recorrentes no Congresso",
+    "body": [
+      "A Comissão Mista de Planos, Orçamentos Públicos e Fiscalização (CMO) aprovou, em 10 de novembro, parecer favorável à MP 1.389/2026, que abre crédito extraordinário de R$6,605 bilhões em favor do Ministério de Minas e Energia, destinado à ANP para pagar obrigações já devidas a produtores e importadores que anteciparam a redução de preços ao consumidor. A votação na comissão foi simbólica, sem registro de votos individuais. Dias antes, em 6 de novembro, o presidente do Congresso, Davi Alcolumbre, havia prorrogado a validade de três medidas provisórias de subsídio a combustíveis.",
+      "A MP 1.389 entra numa fileira longa de créditos abertos neste ano para sustentar o pacote de subvenções: a MP 1.380/2026 liberou R$3,33 bilhões, a MP 1.381/2026 abriu R$3,473 bilhões, e outras edições ao longo de 2026 somaram ainda mais recursos emergenciais para o mesmo fim. O padrão mostra que o programa de subsídio ao diesel e à gasolina não tem uma linha orçamentária permanente — ele depende de uma sucessão de créditos extraordinários aprovados um a um pelo Congresso.",
+      "Para o posto, a boa notícia de curto prazo é que o financiamento do subsídio segue garantido por ora. Mas a dependência de aprovações recorrentes é um risco estrutural: uma única MP que não seja prorrogada ou aprovada a tempo pode interromper o repasse sem aviso prévio longo. Acompanhe o calendário de tramitação dessas MPs no Congresso como parte da rotina de gestão de risco do posto, não como nota de rodapé."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "economiaBrasil": {
+    "headline": "Durigan adia proposta de ajuste fiscal para depois do retorno de Lula da COP31, e mercado opera à espera de sinal mais claro",
+    "deck": "Ministro da Fazenda disse que só vai discutir medidas de corte de gastos com o presidente após a volta da Turquia, em 20/11; dólar sobe a R$5,65 em semana marcada pela indefinição",
+    "body": [
+      "O ministro da Fazenda, Dario Durigan, descartou apresentar propostas concretas de ajuste fiscal nos próximos dias e afirmou que vai tratar o tema com o presidente Lula somente após o retorno dele da COP31, na Turquia, viagem que vai de 9 a 20 de novembro. Durigan disse que o arcabouço fiscal será mantido e que a melhora do resultado primário deve ocorrer de forma gradual, sem mudanças abruptas de rumo.",
+      "A Selic segue em 13,75% ao ano, mantida desde a reunião de 3 e 4 de novembro, que interrompeu uma sequência de cinco cortes consecutivos. Sem um sinal fiscal concreto do governo, o dólar operava nesta sexta a R$5,6547, alta de 2,43% na semana — um movimento que analistas atribuem diretamente à falta de clareza sobre o rumo das contas públicas, mais do que a fatores externos.",
+      "Para o posto, duas semanas de silêncio fiscal, somadas à Selic parada em dois dígitos altos, significam que o custo de capital de giro para financiar estoque de combustível não deve aliviar antes do fim do ano. Mantenha a margem de segurança elevada no planejamento de custos até que o governo apresente algo mais concreto do que a promessa de falar \"depois da COP31\"."
+    ],
+    "carryover": true,
+    "opiniao": "Quase três semanas depois do choque cambial de outubro, o governo ainda não apresentou um número concreto de corte de gastos — e cada semana de silêncio tem custado pontos no câmbio. Se você trava preço de insumo importado apostando em alívio fiscal de curto prazo, está apostando contra o próprio calendário do governo, que só promete falar depois do dia 20."
+  },
+
+  "economiaInternacional": {
+    "headline": "Fed segue em pausa e Wall Street fecha a semana em alta, mas Brent e WTI caem pelo segundo pregão seguido",
+    "deck": "S&P 500 sobe 2,10% e Nasdaq 100 avança 3,27% na semana, mesmo recuando nesta sexta; petróleo perde força com dúvidas sobre o ritmo da demanda global, sem reunião do Fed nesta semana",
+    "body": [
+      "O Federal Reserve segue com a taxa entre 3,75% e 4,00%, mantida na decisão de 28 de outubro por votação dividida de 10 a 2, e não há reunião do FOMC nesta semana nem data confirmada para a próxima. Mesmo assim, Wall Street fechou a semana em alta: o S&P 500 avançou 2,10% e o Nasdaq 100, 3,27%, frente ao fechamento da sexta anterior — ainda que nesta própria sexta-feira os três principais índices tenham recuado, com o Nasdaq cedendo mais de 1% em meio à realização de lucros em ações de tecnologia.",
+      "No mercado de petróleo, o Brent opera a US$95,78 e o WTI, a US$88,61, ambos no segundo pregão consecutivo de queda e com recuo de cerca de 2,7% na semana. O movimento ocorre em meio a dúvidas persistentes entre analistas sobre o ritmo da demanda global nos próximos meses, num mercado que segue sem consenso sobre o rumo dos preços até o fim do ano.",
+      "Para o posto brasileiro, o petróleo mais barato ajudaria a aliviar o custo de importação — mas faça sempre a conta em reais, nunca em dólar: o real perdeu 2,43% na mesma semana, consumindo boa parte do alívio antes que ele chegue ao seu caixa. Calcule o custo de qualquer compra de diesel ou GLP importado na moeda local antes de travar preço."
+    ],
+    "carryover": false,
+    "opiniao": null
+  },
+
+  "varejo": {
+    "headline": "Operação Carga Pesada completa um mês sem novo balanço: Senacon mantém 70 processos abertos contra postos",
+    "deck": "Desde o balanço de 24/10, com 39 notificações em 21 estados, não há atualização nova até esta sexta-feira (13/11); MP 1.393/2026 segue sustentando multas de até R$500 milhões por infração",
+    "body": [
+      "A Operação Carga Pesada, da Senacon, completa um mês sem balanço novo desde a atualização de 24 de outubro, quando a força-tarefa somava 39 notificações expedidas a postos em 21 estados. O número de 70 processos administrativos sancionadores abertos contra revendedores não muda desde então. O arcabouço legal que sustenta a operação continua sendo a MP 1.393/2026, que fixou multa de R$20 mil a R$500 milhões por infração para toda a cadeia de combustíveis.",
+      "A fase mais recente da força-tarefa, em outubro, reuniu 51 ações conjuntas entre Senacon e ANP em 14 unidades da federação, entre 22 de setembro e 2 de outubro, em paralelo ao Decreto nº 13.134, que ampliou desonerações tributárias e subvenções ao setor na mesma janela — mostrando que fiscalização e subsídio continuam operando lado a lado como ferramentas do governo.",
+      "Para o revendedor, um mês de silêncio depois de uma fase ativa normalmente indica que o órgão está processando o volume de notificações de outubro antes de abrir uma nova rodada, não que a fiscalização afrouxou. Mantenha a documentação de custo (CIF, frete, ICMS, PMPF) dos últimos 60 dias organizada e acessível — é esse material que decide se uma eventual notificação se transforma em processo ou é arquivada."
+    ],
+    "carryover": true,
+    "opiniao": "Um mês de silêncio, numa operação que notificou 39 postos em outubro, não é trégua — normalmente é sinal de que a fase de análise está em andamento e uma nova rodada de processos pode sair sem aviso prévio longo. Quem ainda não organizou a planilha de custos dos últimos dois meses está correndo um risco maior do que imagina."
+  },
+
+  "automotivo": {
+    "headline": "Fenabrave resolve o mistério de outubro: emplacamentos recuam 4,06% no mês, mas entidade eleva projeção de 2026 de 8,6% para 12,8%",
+    "deck": "Com 489.119 veículos emplacados — dois dias úteis a menos no calendário explicam boa parte da queda —, acumulado do ano chega a 4,7 milhões de unidades, alta de 12,62% sobre 2025",
+    "body": [
+      "A Fenabrave divulgou em 4 de novembro o fechamento de outubro que a edição passada desta newsletter havia deixado em aberto: 489.119 emplacamentos de veículos, queda de 4,06% frente a setembro e de 0,85% frente a outubro de 2025. A entidade atribui o recuo ao calendário — outubro deste ano teve 21 dias úteis, contra 23 no mesmo mês do ano passado —, não a uma perda real de demanda.",
+      "Mesmo com o número mensal mais fraco, a Fenabrave revisou para cima a projeção de crescimento dos emplacamentos em 2026, de 8,6% para 12,8%, apoiada no acumulado de dez meses: 4,7 milhões de unidades, alta de 12,62% sobre o mesmo período de 2025. É a entidade dizendo, na prática, que lê o ano como mais forte do que a própria base de comparação de outubro sugere isoladamente.",
+      "Para o posto, o recado é duplo: o calendário mais curto de outubro foi estatística, não mudança de tendência, e o volume de bomba ligado a veículos novos deve seguir sustentado pelo crescimento acumulado do ano. Ainda assim, acompanhe o número de novembro com atenção — é o primeiro mês a capturar integralmente o efeito do choque cambial de outubro sobre o financiamento de veículos, especialmente os com maior componente importado."
+    ],
+    "carryover": true,
+    "opiniao": "Queda mensal com dois dias úteis a menos no calendário é estatística, não tendência — o que importa é que a Fenabrave, mesmo vendo o número fraco de outubro antes de publicá-lo, decidiu subir a projeção do ano. Isso é um voto de confiança de quem olha os dados em primeira mão, e vale mais do que o print de um único mês."
+  },
+
+  "fontes": "TradingEconomics — Brent US$95,78/barril (-2,73% na semana), WTI US$88,61 (-2,71%), USD/BRL R$5,6547 (+2,43%), EUR/USD 1,10233, DXY 103,41, Bitcoin US$68.902 (-8,92%), Ibovespa 172.224 pts (+2,29%), S&P 500 7.550,34 pts (+2,10%), Nasdaq 100 27.915,35 pts (+3,27%), Dow Jones 52.291,74 pts (+1,71%) (cotações CFD de 13/nov/2026); Banco Central do Brasil (Selic 13,75%); Federal Reserve (Fed Funds 3,75%-4,00%); Congresso Nacional/CMO (MP 1.389/2026, R$6,605 bi); Garagem360/Eixos (subvenção diesel R$2,12 + R$1,40); Novacana/Abicom via reportagens (Petrobras sem reajuste); ANP (Gasolina C, Diesel S-10, Etanol Hidratado, GLP P-13); O Tempo/Jornal do Comércio/Acessa (Durigan/COP31); Agência Gov/Senacon (Operação Carga Pesada); Correio da Manhã/Agência Brasil/Acritica (Fenabrave outubro)."
+}

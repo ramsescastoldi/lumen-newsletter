@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>Posto em Dia | Edição 46 — Lumen Posto Club</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; background: #f5f0e3; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #111;
+    background: #f5f0e3;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .paper {
+    max-width: 660px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #e1d7b8;
+    padding-bottom: 24px;
+  }
+
+  /* ============ MASTHEAD ============ */
+  .masthead {
+    border-bottom: 3px double #003459;
+    padding: 22px 20px 14px;
+    text-align: center;
+    background: #ffffff;
+  }
+  .masthead .top-rule {
+    border-top: 6px solid #003459;
+    margin: -22px -20px 16px;
+  }
+  .masthead h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #111;
+  }
+  .masthead .subtitle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #555;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+  .masthead .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #d0d0d0;
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .masthead .meta .edicao { color: #003459; font-weight: 800; }
+
+  /* ============ SECTION HEADER ============ */
+  .section-header {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #003459;
+    padding: 0 20px;
+    margin: 28px 0 14px;
+    border-top: 2px solid #003459;
+    padding-top: 10px;
+  }
+  .section-header::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #d0d0d0;
+    margin: 8px -20px 0;
+  }
+
+  /* ============ INDICADORES FINANCEIROS (TABLOIDE DE COTAÇÕES) ============ */
+  .indic-wrap { padding: 0 20px; }
+  .indic-block {
+    margin-bottom: 14px;
+    border: 1px solid #d8d8d8;
+    background: #fbfbf7;
+  }
+  .indic-block-title {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #003459;
+    padding: 6px 10px;
+    font-weight: 700;
+  }
+  .indic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .indic {
+    padding: 9px 12px;
+    border-bottom: 1px solid #ecece4;
+    border-right: 1px solid #ecece4;
+  }
+  .indic:nth-child(2n) { border-right: none; }
+  .indic-full {
+    grid-column: span 2;
+    border-right: none;
+  }
+  .indic-name {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #555;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+  .indic-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .indic-value {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #111;
+  }
+  .indic-var {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .indic-var.up { color: #c0392b; }
+  .indic-var.up::before { content: "▲ "; color: #c0392b; }
+  .indic-var.down { color: #1e8449; }
+  .indic-var.down::before { content: "▼ "; color: #1e8449; }
+  .indic-var.neutral { font-style: italic; color: #777; }
+  .indic-var.pending { font-style: italic; color: #777; }
+  .indic-source {
+    font-size: 9px;
+    color: #888;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* ============ MANCHETES (5) ============ */
+  .manchetes-wrap { padding: 0 20px; }
+  .manchete {
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .manchete:first-child { border-top: none; padding-top: 6px; }
+  .manchete-num {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #003459;
+    line-height: 0.85;
+    min-width: 46px;
+    text-align: center;
+    margin-top: -2px;
+  }
+  .manchete-body { flex: 1; }
+  .manchete-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.22;
+    margin-bottom: 8px;
+  }
+  .manchete-summary {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #333;
+  }
+
+  /* ============ ARTIGOS LONGOS ============ */
+  .article {
+    padding: 0 20px;
+    margin-bottom: 6px;
+  }
+  .article-headline {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .article-deck {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .article-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+  .article-body p:first-of-type::first-letter {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    font-weight: 900;
+    float: left;
+    line-height: 0.9;
+    padding: 4px 8px 0 0;
+    color: #003459;
+  }
+  .article-body strong { color: #003459; }
+
+  /* ============ VERIMO (RODAPÉ) ============ */
+  .verimo {
+    margin: 32px 20px 0;
+    border: 2px solid #003459;
+    padding: 22px;
+    background: #fbfbf7;
+  }
+  .verimo-kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #003459;
+    margin-bottom: 8px;
+    font-weight: 800;
+  }
+  .verimo-title {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .verimo p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .verimo p strong { color: #003459; }
+  .verimo .ramos {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .verimo .savings {
+    display: block;
+    margin: 14px 0 6px;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #003459;
+  }
+  .verimo .cta {
+    display: block;
+    background: #003459;
+    color: #fff !important;
+    text-align: center;
+    padding: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+
+  /* ============ BLOCO LUMEN POSTO CLUB ============ */
+  .cta-club {
+    margin: 32px 20px 0;
+    background: #003459;
+    padding: 30px 24px;
+    color: #fff;
+    text-align: center;
+  }
+  .cta-club .kicker {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #C9A84C;
+    margin-bottom: 12px;
+    font-weight: 800;
+  }
+  .cta-club .title {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.22;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .cta-club .sub {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cfd6dd;
+    margin-bottom: 22px;
+  }
+  .cta-club .links {
+    border-top: 1px solid #1d4467;
+    padding-top: 18px;
+  }
+  .cta-club .link-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #fff;
+    margin: 8px 0;
+    line-height: 1.4;
+  }
+  .cta-club .link-row .lbl {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #C9A84C;
+    font-weight: 800;
+  }
+  .cta-club .link-row .val {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* ============ COLOFON ============ */
+  .colofon {
+    text-align: center;
+    padding: 30px 20px 12px;
+    border-top: 2px solid #003459;
+    margin-top: 30px;
+  }
+  .colofon .brand {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .colofon .tagline {
+    font-style: italic;
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+    font-family: Georgia, serif;
+  }
+  .colofon .fontes {
+    font-size: 11px;
+    color: #666;
+    margin-top: 14px;
+    line-height: 1.5;
+    padding-top: 12px;
+    border-top: 1px solid #d0d0d0;
+  }
+  .colofon .fontes strong {
+    color: #003459;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ============ CARRYOVER BADGE + ANÁLISE DO EDITOR ============ */
+  .carryover-badge {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    border-left: 3px solid #C9A84C;
+    padding-left: 8px;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .article-opiniao {
+    margin-top: 20px;
+    padding: 14px 16px;
+    background: #f5f0e3;
+    border-left: 4px solid #003459;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .opiniao-label {
+    font-family: Georgia, serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #003459;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .article-opiniao p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+  }
+
+  /* ============ PDF PAGE BREAKS (evitar quebra no meio de blocos) ============ */
+  /* Truque-chave: overflow:hidden cria novo block-formatting-context, forçando o */
+  /* Chromium a respeitar break-inside (sem isso, ele ignora quando há grid/flex). */
+
+  .indic-block {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+  .indic-grid  { break-inside: avoid; page-break-inside: avoid; }
+  .indic       { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Section header não fica órfão no fim de página */
+  .section-header { break-after: avoid; page-break-after: avoid; break-inside: avoid; page-break-inside: avoid; }
+
+  /* Cada manchete (1-5) fica unida */
+  .manchete {
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Cada matéria longa começa em página própria (são >400mm, não cabem juntas) */
+  .article {
+    page-break-before: always; break-before: page;
+    break-inside: auto; /* parágrafos quebram dentro, mas headline+deck protegidos abaixo */
+  }
+  .article:first-of-type { page-break-before: auto; break-before: auto; }
+
+  /* Headline + deck precisam ficar juntos com o início do corpo */
+  .article-headline {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-deck {
+    break-inside: avoid; page-break-inside: avoid;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .article-body p {
+    break-inside: avoid; page-break-inside: avoid;
+    orphans: 3; widows: 3;
+  }
+
+  /* Bloco Verimo (rodapé editorial) em página própria */
+  .verimo {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+
+  /* Colofon (lista de fontes) em página própria */
+  .colofon {
+    page-break-before: always; break-before: page;
+    break-inside: avoid; page-break-inside: avoid;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<div class="paper">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="top-rule"></div>
+    <h1>Posto em Dia</h1>
+    <div class="subtitle">O Semanário do Revendedor de Combustíveis</div>
+    <div class="meta">
+      <span class="edicao">Edição 46</span>
+      <span>08 a 13 / Nov / 2026</span>
+    </div>
+  </div>
+
+  <!-- INDICADORES FINANCEIROS -->
+  <div class="section-header">Indicadores Financeiros</div>
+  <div class="indic-wrap">
+    <div class="indic-block">
+      <div class="indic-block-title">Petróleo &amp; Energia</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Brent (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 95,78</div>
+            <div class="indic-var down">-2,73% (semana, ante US$98,47 de 06/nov); segundo pregão seguido de queda — cotação CFD de hoje (13/nov), não o fechamento oficial do contrato ICE</div>
+          </div>
+          <div class="indic-source">TradingEconomics (13/nov)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">WTI (USD/barril)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 88,61</div>
+            <div class="indic-var down">-2,71% (semana, ante US$91,08 de 06/nov)</div>
+          </div>
+          <div class="indic-source">TradingEconomics, cotação CFD (13/nov)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Moedas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">USD/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 5,6547</div>
+            <div class="indic-var up">+2,43% (semana, ante R$5,5207 de 06/nov); câmbio pressionado pela espera do mercado por sinalização fiscal do governo</div>
+          </div>
+          <div class="indic-source">TradingEconomics, cotação CFD (13/nov)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">EUR/BRL</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,23</div>
+            <div class="indic-var up">+1,36% (semana, ante R$6,15 de 06/nov); calculado via EUR/USD (1,10233) × USD/BRL do dia</div>
+          </div>
+          <div class="indic-source">TradingEconomics, cálculo cruzado (13/nov)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">DXY (Dollar Index)</div>
+          <div class="indic-row">
+            <div class="indic-value">103,41</div>
+            <div class="indic-var neutral">primeira leitura confiável localizada nesta edição; sem base de comparação semanal (estava pendente na edição 45)</div>
+          </div>
+          <div class="indic-source">TradingEconomics (13/nov)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Bitcoin (USD)</div>
+          <div class="indic-row">
+            <div class="indic-value">US$ 68.902</div>
+            <div class="indic-var neutral">-8,92% no período (ante US$75.651 de 06/nov); sem direção operacional direta pro posto</div>
+          </div>
+          <div class="indic-source">TradingEconomics (13/nov)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Bolsas</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Ibovespa</div>
+          <div class="indic-row">
+            <div class="indic-value">172.224,00 pts</div>
+            <div class="indic-var down">+2,29% (semana, ante 168.369,00 de 06/nov); recua na sessão desta sexta em dia de aversão a risco global, mas fecha a semana em alta</div>
+          </div>
+          <div class="indic-source">TradingEconomics, cotação CFD (13/nov)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">S&amp;P 500</div>
+          <div class="indic-row">
+            <div class="indic-value">7.550,34 pts</div>
+            <div class="indic-var down">+2,10% (semana, ante 7.394,76 de 06/nov)</div>
+          </div>
+          <div class="indic-source">TradingEconomics, cotação CFD (13/nov)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Nasdaq 100</div>
+          <div class="indic-row">
+            <div class="indic-value">27.915,35 pts</div>
+            <div class="indic-var down">+3,27% (semana, ante 27.032,17 de 06/nov); recua mais de 1% na sessão desta sexta com realização de lucros em techs</div>
+          </div>
+          <div class="indic-source">TradingEconomics, cotação CFD (13/nov)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Dow Jones</div>
+          <div class="indic-row">
+            <div class="indic-value">52.291,74 pts</div>
+            <div class="indic-var down">+1,71% (semana, ante 51.410,94 de 06/nov)</div>
+          </div>
+          <div class="indic-source">TradingEconomics, cotação CFD (13/nov)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Juros &amp; Inflação</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Selic</div>
+          <div class="indic-row">
+            <div class="indic-value">13,75% a.a.</div>
+            <div class="indic-var neutral">mantida desde a reunião de 03-04/nov; Copom não se reúne nesta semana</div>
+          </div>
+          <div class="indic-source">Banco Central do Brasil</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Fed Funds</div>
+          <div class="indic-row">
+            <div class="indic-value">3,75% – 4,00%</div>
+            <div class="indic-var neutral">mantida desde a decisão de 28/out (10 a 2); próxima data do FOMC não confirmada nesta edição</div>
+          </div>
+          <div class="indic-source">Federal Reserve</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">IPCA-15 (novembro)</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">IBGE ainda não divulgou a leitura de novembro até o fechamento desta edição</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Focus IPCA 2026/2027</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Boletim de 09/nov não confirmado por fonte primária (BCB) até o fechamento desta edição</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Preço na Bomba (ANP)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Gasolina C (média Brasil)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 6,48/L</div>
+            <div class="indic-var neutral">-0,15% (ref. 25-31/out, ante R$6,49 da semana 18-24/out); síntese da semana 01-07/nov, anunciada para 09/nov, não confirmada até o fechamento desta edição</div>
+          </div>
+          <div class="indic-source">ANP (ref. 25-31/out, publ. 03/nov)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado (média Brasil)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 4,11/L</div>
+            <div class="indic-var neutral">sem atualização confirmada nesta edição; valor mantido da semana 18-24/out</div>
+          </div>
+          <div class="indic-source">ANP (ref. 18-24/out — semana anterior, confirmar)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel S-10 (média Brasil)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 7,31/L</div>
+            <div class="indic-var down">-0,41% (ref. 25-31/out, ante R$7,34 da semana 11-17/out)</div>
+          </div>
+          <div class="indic-source">ANP (ref. 25-31/out, publ. 03/nov)</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Diesel comum (S-500)</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Não localizado em fonte oficial datada até o fechamento desta edição</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">GLP P-13 (média Brasil)</div>
+          <div class="indic-row">
+            <div class="indic-value">R$ 106,80</div>
+            <div class="indic-var neutral">média mensal de setembro; sem atualização confirmada nesta edição</div>
+          </div>
+          <div class="indic-source">ANP (média mensal de setembro — não atualizado)</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Usina (CEPEA/ESALQ)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Etanol Hidratado SP</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Sem indicador semanal datado de novembro/2026 localizado até o fechamento desta edição</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Etanol Anidro SP</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Sem indicador semanal datado de novembro/2026 localizado até o fechamento desta edição</div>
+        </div>
+      </div>
+    </div>
+    <div class="indic-block">
+      <div class="indic-block-title">Defasagem Petrobras (Abicom)</div>
+      <div class="indic-grid">
+        <div class="indic">
+          <div class="indic-name">Diesel</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Abicom não publicou percentual exato desta semana — ver matéria "Mercado de Combustíveis" para contexto qualitativo</div>
+        </div>
+        <div class="indic">
+          <div class="indic-name">Gasolina</div>
+          <div class="indic-row">
+            <div class="indic-var pending">a confirmar</div>
+          </div>
+          <div class="indic-source">Abicom não publicou percentual exato desta semana</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 MANCHETES -->
+  <div class="section-header">As 5 Manchetes da Semana</div>
+  <div class="manchetes-wrap">
+    <div class="manchete">
+      <div class="manchete-num">1</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Congresso aprova crédito extraordinário de R$6,6 bilhões para honrar subsídio ao diesel, mas fatia extra de R$1,40/litro ao importado vence sem confirmação de renovação</div>
+        <div class="manchete-summary">A Comissão Mista de Orçamento aprovou em 10/11 parecer favorável à MP 1.389/2026, abrindo R$6,605 bilhões para a ANP pagar produtores e importadores que já baixaram preço ao consumidor. Em paralelo, a parcela extra de R$1,40/litro ao diesel importado, criada por 30 dias em 13/10, venceria por volta de 12/11 sem anúncio oficial de prorrogação até o fechamento desta edição.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">2</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Fenabrave confirma outubro com recuo mensal de 4,06% nos emplacamentos, mas eleva projeção de crescimento de 2026 de 8,6% para 12,8%</div>
+        <div class="manchete-summary">Com 489.119 veículos emplacados — queda de 4,06% sobre setembro e de 0,85% sobre outubro de 2025, atribuída a dois dias úteis a menos no calendário —, a entidade revisou para cima a expectativa anual, com o acumulado de dez meses somando 4,7 milhões de unidades, alta de 12,62% sobre 2025.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">3</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Brent cai 2,73% na semana a US$95,78, mas alívio no petróleo é anulado pelo dólar, que sobe 2,43% a R$5,65 em meio à espera por sinalização fiscal</div>
+        <div class="manchete-summary">O barril do tipo Brent opera na casa dos US$95,78 nesta sexta-feira, no segundo pregão seguido de queda. O real perdeu terreno na mesma proporção: o dólar sobe a R$5,65, pressionado pela incerteza sobre o rumo fiscal do governo. Na conta em reais, o alívio do petróleo evapora quase por completo.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">4</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Governo adia proposta de ajuste fiscal para depois da volta de Lula da COP31; ministro Durigan só deve se posicionar a partir de 15/11</div>
+        <div class="manchete-summary">Com o presidente na conferência do clima na Turquia entre 9 e 20/11, o ministro da Fazenda, Dario Durigan, descartou apresentar medidas concretas de corte de gastos nos próximos dias e disse que vai discutir o tema com Lula só após o retorno dele. O mercado opera em banho-maria à espera de um sinal mais claro sobre as contas públicas.</div>
+      </div>
+    </div>
+    <div class="manchete">
+      <div class="manchete-num">5</div>
+      <div class="manchete-body">
+        <div class="manchete-title">Ibovespa e bolsas americanas fecham a semana em alta de mais de 2%, mas recuam nesta sexta-feira em dia de aversão a risco global</div>
+        <div class="manchete-summary">O Ibovespa fechou a semana em 172.224 pontos, alta de 2,29% frente à sexta anterior, acompanhando o S&amp;P 500 (+2,10%) e o Nasdaq 100 (+3,27%) em Nova York. O clima virou nesta sexta: os três índices recuam no pregão do dia, com o Nasdaq cedendo mais de 1%, em meio à realização de lucros em ações de tecnologia.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MERCADO DE COMBUSTÍVEIS -->
+  <div class="section-header">Mercado de Combustíveis</div>
+  <div class="article">
+    <div class="article-headline">Subvenção ao diesel soma R$3,52/litro, mas fatia extra de R$1,40 ao importado vence em meio a silêncio do governo sobre renovação</div>
+    <div class="article-deck">Petrobras não reajusta diesel há mais de 160 dias nem gasolina há cerca de dois meses, segundo a Abicom; queda do Brent nesta semana ajuda a acomodar o preço da estatal ao subsídio, mas a parcela extra para importados pode cair pela metade sem aviso</div>
+    <div class="article-body">
+      <p>O apoio ao diesel rodoviário segue dividido em duas camadas: a subvenção-base de <strong>R$2,12 por litro</strong>, renovada em 6 de novembro até o fim de 2026, e uma fatia extra de <strong>R$1,40 por litro</strong> exclusiva para o diesel importado, criada por portaria em 13 de outubro com validade de 30 dias — somando um benefício total de <strong>R$3,52/litro</strong>. Essa parcela adicional venceria por volta de 12 de novembro, e até o fechamento desta edição não havia confirmação oficial de prorrogação em Diário Oficial ou comunicado do Ministério da Fazenda.</p>
+      <p>Segundo a Abicom, a Petrobras não reajusta o preço do diesel nas refinarias há <strong>162 dias</strong>, e o da gasolina, há cerca de <strong>dois meses</strong>. A queda do Brent nesta semana — a US$95,78, segundo pregão seguido de recuo — ajuda a aproximar o preço praticado pela estatal do nível sustentado pelo subsídio, aliviando parte da pressão que, no fim de outubro, havia levado o Conselho da Petrobras a classificar a defasagem do diesel como insustentável.</p>
+      <p>Para o revendedor, a dúvida sobre o R$1,40 extra não é de detalhe: se a fatia não for renovada, o apoio efetivo ao diesel importado cai de R$3,52 para R$2,12 por litro de uma hora para outra. <strong>Não baseie a margem de diesel importado na continuidade automática do benefício</strong> — monte o cenário sem a parcela extra e trate qualquer renovação como notícia boa, não como ponto de partida.</p>
+    </div>
+  </div>
+
+  <!-- POLÍTICA (notícia quente) -->
+  <div class="section-header">Política &middot; Quente</div>
+  <div class="article">
+    <div class="article-headline">Comissão Mista aprova R$6,6 bi em crédito extra para a ANP pagar dívida com produtores e importadores de combustíveis</div>
+    <div class="article-deck">MP 1.389/2026 é a mais recente de uma série de créditos bilionários abertos ao longo de 2026 para sustentar os subsídios a diesel e gasolina — e expõe a dependência do setor de aprovações recorrentes no Congresso</div>
+    <div class="article-body">
+      <p>A Comissão Mista de Planos, Orçamentos Públicos e Fiscalização (CMO) aprovou, em 10 de novembro, parecer favorável à <strong>MP 1.389/2026</strong>, que abre crédito extraordinário de <strong>R$6,605 bilhões</strong> em favor do Ministério de Minas e Energia, destinado à ANP para pagar obrigações já devidas a produtores e importadores que anteciparam a redução de preços ao consumidor. A votação na comissão foi simbólica, sem registro de votos individuais. Dias antes, em 6 de novembro, o presidente do Congresso, Davi Alcolumbre, havia prorrogado a validade de três medidas provisórias de subsídio a combustíveis.</p>
+      <p>A MP 1.389 entra numa fileira longa de créditos abertos neste ano para sustentar o pacote de subvenções: a MP 1.380/2026 liberou R$3,33 bilhões, a MP 1.381/2026 abriu R$3,473 bilhões, e outras edições ao longo de 2026 somaram ainda mais recursos emergenciais para o mesmo fim. O padrão mostra que o programa de subsídio ao diesel e à gasolina não tem uma linha orçamentária permanente — ele depende de uma sucessão de créditos extraordinários aprovados um a um pelo Congresso.</p>
+      <p>Para o posto, a boa notícia de curto prazo é que o financiamento do subsídio segue garantido por ora. Mas a dependência de aprovações recorrentes é um risco estrutural: <strong>uma única MP que não seja prorrogada ou aprovada a tempo pode interromper o repasse</strong> sem aviso prévio longo. Acompanhe o calendário de tramitação dessas MPs no Congresso como parte da rotina de gestão de risco do posto, não como nota de rodapé.</p>
+    </div>
+  </div>
+
+  <!-- ECONOMIA BRASIL -->
+  <div class="section-header">Economia · Brasil</div>
+  <div class="article">
+    <div class="carryover-badge">Continuação · Semana anterior</div>
+    <div class="article-headline">Durigan adia proposta de ajuste fiscal para depois do retorno de Lula da COP31, e mercado opera à espera de sinal mais claro</div>
+    <div class="article-deck">Ministro da Fazenda disse que só vai discutir medidas de corte de gastos com o presidente após a volta da Turquia, em 20/11; dólar sobe a R$5,65 em semana marcada pela indefinição</div>
+    <div class="article-body">
+      <p>O ministro da Fazenda, <strong>Dario Durigan</strong>, descartou apresentar propostas concretas de ajuste fiscal nos próximos dias e afirmou que vai tratar o tema com o presidente Lula somente após o retorno dele da COP31, na Turquia, viagem que vai de 9 a 20 de novembro. Durigan disse que o arcabouço fiscal será mantido e que a melhora do resultado primário deve ocorrer de forma gradual, sem mudanças abruptas de rumo.</p>
+      <p>A Selic segue em <strong>13,75% ao ano</strong>, mantida desde a reunião de 3 e 4 de novembro, que interrompeu uma sequência de cinco cortes consecutivos. Sem um sinal fiscal concreto do governo, o dólar operava nesta sexta a R$5,6547, alta de 2,43% na semana — um movimento que analistas atribuem diretamente à falta de clareza sobre o rumo das contas públicas, mais do que a fatores externos.</p>
+      <p>Para o posto, duas semanas de silêncio fiscal, somadas à Selic parada em dois dígitos altos, significam que o custo de capital de giro para financiar estoque de combustível não deve aliviar antes do fim do ano. <strong>Mantenha a margem de segurança elevada no planejamento de custos</strong> até que o governo apresente algo mais concreto do que a promessa de falar "depois da COP31".</p>
+    </div>
+    <div class="article-opiniao"><span class="opiniao-label">Análise do editor</span><p>Quase três semanas depois do choque cambial de outubro, o governo ainda não apresentou um número concreto de corte de gastos — e cada semana de silêncio tem custado pontos no câmbio. Se você trava preço de insumo importado apostando em alívio fiscal de curto prazo, está apostando contra o próprio calendário do governo, que só promete falar depois do dia 20.</p></div>
+  </div>
+
+  <!-- ECONOMIA INTERNACIONAL -->
+  <div class="section-header">Economia · Internacional</div>
+  <div class="article">
+    <div class="article-headline">Fed segue em pausa e Wall Street fecha a semana em alta, mas Brent e WTI caem pelo segundo pregão seguido</div>
+    <div class="article-deck">S&amp;P 500 sobe 2,10% e Nasdaq 100 avança 3,27% na semana, mesmo recuando nesta sexta; petróleo perde força com dúvidas sobre o ritmo da demanda global, sem reunião do Fed nesta semana</div>
+    <div class="article-body">
+      <p>O <strong>Federal Reserve</strong> segue com a taxa entre 3,75% e 4,00%, mantida na decisão de 28 de outubro por votação dividida de 10 a 2, e não há reunião do FOMC nesta semana nem data confirmada para a próxima. Mesmo assim, Wall Street fechou a semana em alta: o <strong>S&amp;P 500</strong> avançou 2,10% e o <strong>Nasdaq 100</strong>, 3,27%, frente ao fechamento da sexta anterior — ainda que nesta própria sexta-feira os três principais índices tenham recuado, com o Nasdaq cedendo mais de 1% em meio à realização de lucros em ações de tecnologia.</p>
+      <p>No mercado de petróleo, o <strong>Brent</strong> opera a US$95,78 e o <strong>WTI</strong>, a US$88,61, ambos no segundo pregão consecutivo de queda e com recuo de cerca de 2,7% na semana. O movimento ocorre em meio a dúvidas persistentes entre analistas sobre o ritmo da demanda global nos próximos meses, num mercado que segue sem consenso sobre o rumo dos preços até o fim do ano.</p>
+      <p>Para o posto brasileiro, o petróleo mais barato ajudaria a aliviar o custo de importação — mas <strong>faça sempre a conta em reais, nunca em dólar</strong>: o real perdeu 2,43% na mesma semana, consumindo boa parte do alívio antes que ele chegue ao seu caixa. Calcule o custo de qualquer compra de diesel ou GLP importado na moeda local antes de travar preço.</p>
+    </div>
+  </div>
+
+  <!-- VAREJO -->
+  <div class="section-header">Varejo</div>
+  <div class="article">
+    <div class="carryover-badge">Continuação · Semana anterior</div>
+    <div class="article-headline">Operação Carga Pesada completa um mês sem novo balanço: Senacon mantém 70 processos abertos contra postos</div>
+    <div class="article-deck">Desde o balanço de 24/10, com 39 notificações em 21 estados, não há atualização nova até esta sexta-feira (13/11); MP 1.393/2026 segue sustentando multas de até R$500 milhões por infração</div>
+    <div class="article-body">
+      <p>A <strong>Operação Carga Pesada</strong>, da Senacon, completa um mês sem balanço novo desde a atualização de 24 de outubro, quando a força-tarefa somava 39 notificações expedidas a postos em 21 estados. O número de <strong>70 processos administrativos sancionadores</strong> abertos contra revendedores não muda desde então. O arcabouço legal que sustenta a operação continua sendo a <strong>MP 1.393/2026</strong>, que fixou multa de R$20 mil a R$500 milhões por infração para toda a cadeia de combustíveis.</p>
+      <p>A fase mais recente da força-tarefa, em outubro, reuniu 51 ações conjuntas entre Senacon e ANP em 14 unidades da federação, entre 22 de setembro e 2 de outubro, em paralelo ao <strong>Decreto nº 13.134</strong>, que ampliou desonerações tributárias e subvenções ao setor na mesma janela — mostrando que fiscalização e subsídio continuam operando lado a lado como ferramentas do governo.</p>
+      <p>Para o revendedor, um mês de silêncio depois de uma fase ativa normalmente indica que o órgão está processando o volume de notificações de outubro antes de abrir uma nova rodada, não que a fiscalização afrouxou. <strong>Mantenha a documentação de custo (CIF, frete, ICMS, PMPF) dos últimos 60 dias organizada e acessível</strong> — é esse material que decide se uma eventual notificação se transforma em processo ou é arquivada.</p>
+    </div>
+    <div class="article-opiniao"><span class="opiniao-label">Análise do editor</span><p>Um mês de silêncio, numa operação que notificou 39 postos em outubro, não é trégua — normalmente é sinal de que a fase de análise está em andamento e uma nova rodada de processos pode sair sem aviso prévio longo. Quem ainda não organizou a planilha de custos dos últimos dois meses está correndo um risco maior do que imagina.</p></div>
+  </div>
+
+  <!-- AUTOMOTIVO -->
+  <div class="section-header">Automotivo</div>
+  <div class="article">
+    <div class="carryover-badge">Continuação · Semana anterior</div>
+    <div class="article-headline">Fenabrave resolve o mistério de outubro: emplacamentos recuam 4,06% no mês, mas entidade eleva projeção de 2026 de 8,6% para 12,8%</div>
+    <div class="article-deck">Com 489.119 veículos emplacados — dois dias úteis a menos no calendário explicam boa parte da queda —, acumulado do ano chega a 4,7 milhões de unidades, alta de 12,62% sobre 2025</div>
+    <div class="article-body">
+      <p>A <strong>Fenabrave</strong> divulgou em 4 de novembro o fechamento de outubro que a edição passada desta newsletter havia deixado em aberto: <strong>489.119 emplacamentos</strong> de veículos, queda de 4,06% frente a setembro e de 0,85% frente a outubro de 2025. A entidade atribui o recuo ao calendário — outubro deste ano teve 21 dias úteis, contra 23 no mesmo mês do ano passado —, não a uma perda real de demanda.</p>
+      <p>Mesmo com o número mensal mais fraco, a Fenabrave revisou para cima a projeção de crescimento dos emplacamentos em 2026, de 8,6% para <strong>12,8%</strong>, apoiada no acumulado de dez meses: <strong>4,7 milhões de unidades</strong>, alta de 12,62% sobre o mesmo período de 2025. É a entidade dizendo, na prática, que lê o ano como mais forte do que a própria base de comparação de outubro sugere isoladamente.</p>
+      <p>Para o posto, o recado é duplo: o calendário mais curto de outubro foi estatística, não mudança de tendência, e o volume de bomba ligado a veículos novos deve seguir sustentado pelo crescimento acumulado do ano. Ainda assim, <strong>acompanhe o número de novembro com atenção</strong> — é o primeiro mês a capturar integralmente o efeito do choque cambial de outubro sobre o financiamento de veículos, especialmente os com maior componente importado.</p>
+    </div>
+    <div class="article-opiniao"><span class="opiniao-label">Análise do editor</span><p>Queda mensal com dois dias úteis a menos no calendário é estatística, não tendência — o que importa é que a Fenabrave, mesmo vendo o número fraco de outubro antes de publicá-lo, decidiu subir a projeção do ano. Isso é um voto de confiança de quem olha os dados em primeira mão, e vale mais do que o print de um único mês.</p></div>
+  </div>
+
+  <!-- VERIMO SEGUROS -->
+  <div class="verimo">
+    <div class="verimo-kicker">Benefício do Clube</div>
+    <div class="verimo-title">Seguros Verimo — Economia média de 25%</div>
+    <p>Acesso a <strong>todas as seguradoras</strong> via plataforma Verimo (Ramsés é franqueado). Cotação comparativa para qualquer apólice — pessoal, do posto, da família, dos funcionários.</p>
+    <p class="ramos">Auto · Patrimonial · Vida · Frota · RC Ambiental · RC Geral · Lucros Cessantes · Saúde &amp; Odonto · Vida em Grupo</p>
+    <span class="savings">25% de economia média</span>
+    <p>Apólice vencendo? Envie para análise:</p>
+    <a href="https://wa.me/5565992657008" class="cta">(65) 99265-7008</a>
+  </div>
+
+  <!-- LUMEN POSTO CLUB -->
+  <div class="cta-club">
+    <div class="kicker">Lumen Posto Club</div>
+    <div class="title">Inteligência semanal pro revendedor de combustíveis</div>
+    <div class="sub">Newsletter semanal, painel diário de cotações, comunidade de revendedores e as análises do Ramsés sobre o mercado de combustíveis no Brasil.</div>
+    <div class="links">
+      <div class="link-row">
+        <span class="lbl">Site</span>
+        <a href="https://lumenpostoclub.com.br" class="val">lumenpostoclub.com.br</a>
+      </div>
+      <div class="link-row">
+        <span class="lbl">Instagram</span>
+        <a href="https://instagram.com/eusouramses" class="val">@eusouramses</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLOFON -->
+  <div class="colofon">
+    <div class="brand">Lumen Posto Club</div>
+    <div class="tagline">Inteligência semanal para o revendedor de combustíveis</div>
+    <div class="fontes">
+      <strong>Fontes consultadas nesta edição</strong>
+      TradingEconomics — Brent US$95,78/barril (-2,73% na semana), WTI US$88,61 (-2,71% na semana), USD/BRL R$5,6547 (+2,43% na semana), EUR/USD 1,10233, DXY 103,41, Bitcoin US$68.902 (-8,92% na semana), Ibovespa 172.224 pts (CFD, +2,29% na semana), S&amp;P 500 7.550,34 pts (+2,10% na semana), Nasdaq 100 27.915,35 pts (+3,27% na semana), Dow Jones 52.291,74 pts (+1,71% na semana) (todas cotações CFD de 13/nov/2026), Banco Central do Brasil — Selic mantida em 13,75% a.a. na reunião de 03-04/nov/2026, Federal Reserve — Fed Funds mantido em 3,75%-4,00% na decisão de 28/out/2026 (10 a 2), Congresso Nacional/CMO — Comissão Mista aprova em 10/11/2026 parecer favorável à MP 1.389/2026, crédito extraordinário de R$6,605 bilhões ao MME/ANP para subsídios a combustíveis, Garagem360/Eixos — subvenção de R$2,12/litro ao diesel renovada em 06/11/2026 até o fim do ano; parcela adicional de R$1,40/litro ao diesel importado (criada em 13/10/2026 por 30 dias) sem confirmação de renovação até o fechamento desta edição, Novacana/Abicom (via reportagens) — Petrobras sem reajuste no diesel há 162 dias e na gasolina há cerca de dois meses, queda do Brent volta a acomodar preço ao subsídio, ANP — Gasolina C R$6,48/L e Diesel S-10 R$7,31/L (ref. 25-31/out, publ. 03/nov/2026), Etanol Hidratado R$4,11/L (ref. 18-24/out, semana anterior) e GLP P-13 R$106,80 (média mensal de setembro, sem atualização), O Tempo/Jornal do Comércio/Acessa — ministro Dario Durigan adia proposta de ajuste fiscal para depois da volta de Lula da COP31 (viagem de 09 a 20/11/2026), Agência Gov/Senacon — Operação Carga Pesada sem balanço novo desde 24/10/2026, 70 processos administrativos sancionadores mantidos, Correio da Manhã/Agência Brasil/Acritica — Fenabrave: emplacamentos de outubro/2026 em 489.119 unidades (-4,06% no mês, -0,85% no ano), projeção de crescimento de 2026 elevada de 8,6% para 12,8%, acumulado de 4,7 milhões de unidades (+12,62%). Pendentes nesta edição por ausência de boletim datado até o fechamento: IPCA-15 de novembro, Boletim Focus de 09/11, CEPEA/ESALQ (Etanol Hidratado e Anidro SP), Abicom (percentual exato da defasagem de diesel e gasolina) e ANP (Diesel comum S-500 e síntese da semana 01-07/nov).
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

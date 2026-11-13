@@ -1,0 +1,11 @@
+{
+  "edicao": 46,
+  "periodo": "08 a 13 / Nov / 2026",
+  "friday": "2026-11-13",
+  "generated_at": "2026-11-13T00:00:00.000Z",
+  "fontes": "TradingEconomics — Brent US$95,78/barril (-2,73% na semana), WTI US$88,61 (-2,71%), USD/BRL R$5,6547 (+2,43%), EUR/USD 1,10233, DXY 103,41, Bitcoin US$68.902 (-8,92%), Ibovespa 172.224 pts (+2,29%), S&P 500 7.550,34 pts (+2,10%), Nasdaq 100 27.915,35 pts (+3,27%), Dow Jones 52.291,74 pts (+1,71%) (cotações CFD de 13/nov/2026); Banco Central do Brasil (Selic 13,75%); Federal Reserve (Fed Funds 3,75%-4,00%); Congresso Nacional/CMO (MP 1.389/2026, R$6,605 bi de crédito extraordinário aprovado em 10/11); Garagem360/Eixos (subvenção diesel R$2,12 renovada em 06/11 até fim de 2026 + parcela extra R$1,40/litro ao importado sem confirmação de renovação em 12/11); Novacana/Abicom via reportagens (Petrobras sem reajuste no diesel há 162 dias, na gasolina há ~2 meses); ANP (Gasolina C R$6,48/L e Diesel S-10 R$7,31/L, ref. 25-31/out, publ. 03/nov; Etanol Hidratado R$4,11/L ref. 18-24/out; GLP P-13 R$106,80 média de setembro); O Tempo/Jornal do Comércio/Acessa (ministro Durigan adia ajuste fiscal para depois da COP31, viagem de Lula 09-20/11); Agência Gov/Senacon (Operação Carga Pesada sem balanço novo desde 24/10, 70 processos mantidos); Correio da Manhã/Agência Brasil/Acritica (Fenabrave: outubro com 489.119 emplacamentos, -4,06% no mês, projeção 2026 elevada de 8,6% para 12,8%). Pendentes nesta edição: IPCA-15 de novembro, Boletim Focus de 09/11, CEPEA/ESALQ (Etanol Hidratado e Anidro SP), Abicom (percentual exato da defasagem de diesel e gasolina) e ANP (Diesel comum S-500 e síntese da semana 01-07/nov).",
+  "indicadores_blocks": 7,
+  "manchetes_count": 5,
+  "has_pending_data": true,
+  "generated_by": "manual (Claude, sem chamada à API Anthropic) — gerador antigo scripts/gerar-newsletter.mjs descontinuado"
+}
